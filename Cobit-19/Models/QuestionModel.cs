@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cobit_19.Models
@@ -12,10 +13,11 @@ namespace Cobit_19.Models
         public int DesignFactorID { get; set; }
         [Required]
         public string Question { get; set; }
+        [DefaultValue(0)]
         public int? DefaultAnswer { get; set; }
 
         public virtual DesignFactorModel DesignFactor { get; set; }
-        public virtual ICollection<MapModel> Maps { get; set; }
-        public virtual ICollection<AnswerModel> Answers { get; set; }
+        public ICollection<MapModel> Maps { get; set; }
+        public ICollection<AnswerModel> Answers { get; set; }
     }
 }
