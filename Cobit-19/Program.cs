@@ -1,4 +1,4 @@
-using Cobit_19.Data;
+using Cobit_19.Models;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
