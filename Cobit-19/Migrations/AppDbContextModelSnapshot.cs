@@ -25,10 +25,12 @@ namespace Cobit_19.Migrations
             modelBuilder.Entity("Cobit_19.Models.AnswerModel", b =>
                 {
                     b.Property<int>("AuditID")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
 
                     b.Property<int>("QuestionID")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnOrder(2);
 
                     b.Property<int>("Answer")
                         .HasColumnType("int");
