@@ -17,10 +17,10 @@ namespace Cobit_19.Models
         [Column(Order =2)]
         [ForeignKey("Question")]
         public int QuestionID { get; set; }
-        [DefaultValue(1)]
+        [DefaultValue(0)]
         public int Answer { get; set; }
 
-        public virtual AuditModel Audit { get; set; }
-        public virtual QuestionModel Question { get; set; }
+        public AuditModel Audit { get; set; }
+        public QuestionModel Question { get; set; }
     }
 }

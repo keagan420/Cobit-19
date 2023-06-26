@@ -13,7 +13,7 @@ namespace Cobit_19.Models
         public int ObjectiveID { get; set; }
         public int UserID { get; set; }
 
-        public virtual AuditModel Audits { get; set; }
-        public virtual ObjectiveModel Objectives { get; set; }
+        public AuditModel Audits { get; set; }
+        public ObjectiveModel Objectives { get; set; }
     }
 }
