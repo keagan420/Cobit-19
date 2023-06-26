@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cobit_19.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230626175650_Init")]
-    partial class Init
+    [Migration("20230626110443_InitialScopeDb4")]
+    partial class InitialScopeDb4
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,14 +41,6 @@ namespace Cobit_19.Migrations
                     b.HasIndex("QuestionID");
 
                     b.ToTable("Answers");
-
-                    b.HasData(
-                        new
-                        {
-                            AuditID = 1,
-                            QuestionID = 1,
-                            Answer = 1
-                        });
                 });
 
             modelBuilder.Entity("Cobit_19.Models.AuditModel", b =>
@@ -59,13 +51,16 @@ namespace Cobit_19.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<DateTime?>("DateCompleted")
+                    b.Property<DateTime>("DateCompleted")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("FocusAreaID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FocusAreasID")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -80,20 +75,9 @@ namespace Cobit_19.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("FocusAreaID");
+                    b.HasIndex("FocusAreasID");
 
                     b.ToTable("Audits");
-
-                    b.HasData(
-                        new
-                        {
-                            ID = 1,
-                            DateCreated = new DateTime(2009, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FocusAreaID = 1,
-                            Name = "Audit 1",
-                            Status = 0,
-                            UserID = 1
-                        });
                 });
 
             modelBuilder.Entity("Cobit_19.Models.AuditScopeModel", b =>
@@ -146,15 +130,6 @@ namespace Cobit_19.Migrations
                     b.HasIndex("FocusAreaID");
 
                     b.ToTable("DesignFactors");
-
-                    b.HasData(
-                        new
-                        {
-                            ID = 1,
-                            Description = "Ensure Governance Framework Setting and Maintenance",
-                            FocusAreaID = 1,
-                            Name = "EDM01"
-                        });
                 });
 
             modelBuilder.Entity("Cobit_19.Models.FocusAreaModel", b =>
@@ -182,16 +157,6 @@ namespace Cobit_19.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("FocusAreas");
-
-                    b.HasData(
-                        new
-                        {
-                            ID = 1,
-                            DateCreated = new DateTime(2009, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "General Core Model",
-                            Name = "Cobit Core Model",
-                            UserID = 0
-                        });
                 });
 
             modelBuilder.Entity("Cobit_19.Models.MapModel", b =>
@@ -260,15 +225,6 @@ namespace Cobit_19.Migrations
                     b.HasIndex("DesignFactorID");
 
                     b.ToTable("Questions");
-
-                    b.HasData(
-                        new
-                        {
-                            ID = 1,
-                            DefaultAnswer = 1,
-                            DesignFactorID = 1,
-                            Question = "Is there a governance framework that includes the organisational structure, as well as the assignment of authorities and responsibilities for executing governance activities and monitoring their adequacy and effectiveness?"
-                        });
                 });
 
             modelBuilder.Entity("Cobit_19.Models.AnswerModel", b =>
@@ -276,13 +232,13 @@ namespace Cobit_19.Migrations
                     b.HasOne("Cobit_19.Models.AuditModel", "Audit")
                         .WithMany("Answers")
                         .HasForeignKey("AuditID")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Cobit_19.Models.QuestionModel", "Question")
                         .WithMany("Answers")
                         .HasForeignKey("QuestionID")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Audit");
@@ -294,7 +250,7 @@ namespace Cobit_19.Migrations
                 {
                     b.HasOne("Cobit_19.Models.FocusAreaModel", "FocusAreas")
                         .WithMany("Audits")
-                        .HasForeignKey("FocusAreaID")
+                        .HasForeignKey("FocusAreasID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
