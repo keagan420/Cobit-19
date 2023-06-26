@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cobit_19.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230626110443_InitialScopeDb4")]
-    partial class InitialScopeDb4
+    [Migration("20230626153105_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,10 +28,12 @@ namespace Cobit_19.Migrations
             modelBuilder.Entity("Cobit_19.Models.AnswerModel", b =>
                 {
                     b.Property<int>("AuditID")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
 
                     b.Property<int>("QuestionID")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnOrder(2);
 
                     b.Property<int>("Answer")
                         .HasColumnType("int");
