@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace Cobit_19.Migrations
 {
     /// <inheritdoc />
@@ -19,7 +21,7 @@ namespace Cobit_19.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserID = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -35,7 +37,7 @@ namespace Cobit_19.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -74,7 +76,7 @@ namespace Cobit_19.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FocusAreaID = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -93,22 +95,20 @@ namespace Cobit_19.Migrations
                 {
                     AuditID = table.Column<int>(type: "int", nullable: false),
                     ObjectiveID = table.Column<int>(type: "int", nullable: false),
-                    UserID = table.Column<int>(type: "int", nullable: false),
-                    AuditsID = table.Column<int>(type: "int", nullable: false),
-                    ObjectivesID = table.Column<int>(type: "int", nullable: false)
+                    UserID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AuditScopes", x => new { x.AuditID, x.ObjectiveID });
                     table.ForeignKey(
-                        name: "FK_AuditScopes_Audits_AuditsID",
-                        column: x => x.AuditsID,
+                        name: "FK_AuditScopes_Audits_AuditID",
+                        column: x => x.AuditID,
                         principalTable: "Audits",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_AuditScopes_Objectives_ObjectivesID",
-                        column: x => x.ObjectivesID,
+                        name: "FK_AuditScopes_Objectives_ObjectiveID",
+                        column: x => x.ObjectiveID,
                         principalTable: "Objectives",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
@@ -191,24 +191,78 @@ namespace Cobit_19.Migrations
                 values: new object[] { 1, new DateTime(2009, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "General Core Model", "Cobit Core Model", 0 });
 
             migrationBuilder.InsertData(
+                table: "Objectives",
+                columns: new[] { "ID", "Code", "Description", "Name" },
+                values: new object[,]
+                {
+                    { 1, "EDM01", "Ensure Governance Framework Setting and Maintenance", "EDM01" },
+                    { 2, "EDM02", "Ensure Benefits Delivery", "EDM02" },
+                    { 3, "EDM03", "Ensure Risk Optimisation", "EDM03" },
+                    { 4, "EDM04", "Ensure Resource Optimisation", "EDM04" },
+                    { 5, "EDM05", "Ensure Stakeholder Transparency", "EDM05" },
+                    { 6, "APO01", "Manage the IT Management Framework", "APO01" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Audits",
                 columns: new[] { "ID", "DateCompleted", "DateCreated", "FocusAreaID", "Name", "Status", "UserID" },
-                values: new object[] { 1, null, new DateTime(2009, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 1", 0, 1 });
+                values: new object[,]
+                {
+                    { 1, null, new DateTime(2009, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 1", 0, 1 },
+                    { 2, null, new DateTime(2009, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 2", 0, 1 }
+                });
 
             migrationBuilder.InsertData(
                 table: "DesignFactors",
                 columns: new[] { "ID", "Description", "FocusAreaID", "Name" },
-                values: new object[] { 1, "Ensure Governance Framework Setting and Maintenance", 1, "EDM01" });
+                values: new object[,]
+                {
+                    { 1, "Ensure Governance Framework Setting and Maintenance", 1, "1" },
+                    { 2, "Ensure Benefits Delivery", 1, "2" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AuditScopes",
+                columns: new[] { "AuditID", "ObjectiveID", "UserID" },
+                values: new object[,]
+                {
+                    { 1, 1, 1 },
+                    { 1, 2, 1 },
+                    { 1, 3, 1 }
+                });
 
             migrationBuilder.InsertData(
                 table: "Questions",
                 columns: new[] { "ID", "DefaultAnswer", "DesignFactorID", "Question" },
-                values: new object[] { 1, 1, 1, "Is there a governance framework that includes the organisational structure, as well as the assignment of authorities and responsibilities for executing governance activities and monitoring their adequacy and effectiveness?" });
+                values: new object[,]
+                {
+                    { 1, 1, 1, "Is there a governance framework that includes the organisational structure, as well as the assignment of authorities and responsibilities for executing governance activities and monitoring their adequacy and effectiveness?" },
+                    { 2, 1, 1, "Is there a governance framework that includes the organisational structure, as well as the assignment of authorities and responsibilities for executing governance activities and monitoring their adequacy and effectiveness?" },
+                    { 3, 1, 1, "Is there a governance framework that includes the organisational structure, as well as the assignment of authorities and responsibilities for executing governance activities and monitoring their adequacy and effectiveness?" }
+                });
 
             migrationBuilder.InsertData(
                 table: "Answers",
                 columns: new[] { "AuditID", "QuestionID", "Answer" },
-                values: new object[] { 1, 1, 1 });
+                values: new object[,]
+                {
+                    { 1, 1, 1 },
+                    { 1, 2, 1 },
+                    { 1, 3, 1 },
+                    { 2, 1, 1 },
+                    { 2, 2, 1 },
+                    { 2, 3, 1 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Maps",
+                columns: new[] { "ObjectiveID", "QuestionID", "Weight" },
+                values: new object[,]
+                {
+                    { 1, 1, 1f },
+                    { 1, 2, 0.5f },
+                    { 1, 3, 0.1f }
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Answers_QuestionID",
@@ -221,14 +275,9 @@ namespace Cobit_19.Migrations
                 column: "FocusAreaID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AuditScopes_AuditsID",
+                name: "IX_AuditScopes_ObjectiveID",
                 table: "AuditScopes",
-                column: "AuditsID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_AuditScopes_ObjectivesID",
-                table: "AuditScopes",
-                column: "ObjectivesID");
+                column: "ObjectiveID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_DesignFactors_FocusAreaID",
