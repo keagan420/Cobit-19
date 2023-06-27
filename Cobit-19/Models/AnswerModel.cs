@@ -19,7 +19,6 @@ namespace Cobit_19.Models
         public int QuestionID { get; set; }
         [DefaultValue(0)]
         public int Answer { get; set; }
-
         public AuditModel Audit { get; set; }
         public QuestionModel Question { get; set; }
     }
