@@ -133,6 +133,5 @@ namespace Cobit_19.Models
                 new MapModel { ObjectiveID = 1, QuestionID = 3, Weight = 0.1f }
                 );
         }
-
     }
 }
