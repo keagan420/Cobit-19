@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cobit_19.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230627151547_Initial")]
+    [Migration("20230627173046_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -409,7 +409,7 @@ namespace Cobit_19.Migrations
                         {
                             ID = 5,
                             Code = "EDM05",
-                            Description = "Ensure Stakeholder Transparency",
+                            Description = "Ensure Stakeholder Engagement",
                             Name = "EDM05"
                         },
                         new
@@ -418,6 +418,244 @@ namespace Cobit_19.Migrations
                             Code = "APO01",
                             Description = "Manage the IT Management Framework",
                             Name = "APO01"
+                        },
+                        new
+                        {
+                            ID = 7,
+                            Code = "APO02",
+                            Description = "Manage Strategy",
+                            Name = "APO02"
+                        },
+                        new
+                        {
+                            ID = 8,
+                            Code = "APO03",
+                            Description = "Manage Enterprise Architecture",
+                            Name = "APO03"
+                        },
+                        new
+                        {
+                            ID = 9,
+                            Code = "APO04",
+                            Description = "Manage Innovation",
+                            Name = "APO04"
+                        },
+                        new
+                        {
+                            ID = 10,
+                            Code = "APO05",
+                            Description = "Manage Portfolio",
+                            Name = "APO05"
+                        },
+                        new
+                        {
+                            ID = 11,
+                            Code = "APO06",
+                            Description = "Manage Budget and Costs",
+                            Name = "APO06"
+                        },
+                        new
+                        {
+                            ID = 12,
+                            Code = "APO07",
+                            Description = "Manage Human Resources",
+                            Name = "APO07"
+                        },
+                        new
+                        {
+                            ID = 13,
+                            Code = "APO08",
+                            Description = "Manage Relationships",
+                            Name = "APO08"
+                        },
+                        new
+                        {
+                            ID = 14,
+                            Code = "APO09",
+                            Description = "Manage Service Agreements",
+                            Name = "APO09"
+                        },
+                        new
+                        {
+                            ID = 15,
+                            Code = "APO010",
+                            Description = "Manage Vendors",
+                            Name = "APO010"
+                        },
+                        new
+                        {
+                            ID = 16,
+                            Code = "APO011",
+                            Description = "Manage Quality",
+                            Name = "APO011"
+                        },
+                        new
+                        {
+                            ID = 17,
+                            Code = "APO012",
+                            Description = "Manage Risk",
+                            Name = "APO012"
+                        },
+                        new
+                        {
+                            ID = 18,
+                            Code = "APO013",
+                            Description = "Manage Security",
+                            Name = "APO013"
+                        },
+                        new
+                        {
+                            ID = 19,
+                            Code = "APO014",
+                            Description = "Manage Data",
+                            Name = "APO014"
+                        },
+                        new
+                        {
+                            ID = 20,
+                            Code = "BAI12",
+                            Description = "Manage Programs",
+                            Name = "BAI01"
+                        },
+                        new
+                        {
+                            ID = 21,
+                            Code = "BAI02",
+                            Description = "Manage Requirements Definition",
+                            Name = "BAI02"
+                        },
+                        new
+                        {
+                            ID = 22,
+                            Code = "BAI03",
+                            Description = "Manage Solutions Identification and Build",
+                            Name = "BAI03"
+                        },
+                        new
+                        {
+                            ID = 23,
+                            Code = "BAI04",
+                            Description = "Manage Availability and Capacity",
+                            Name = "BAI04"
+                        },
+                        new
+                        {
+                            ID = 24,
+                            Code = "BAI05",
+                            Description = "Manage Organizational Change",
+                            Name = "BAI05"
+                        },
+                        new
+                        {
+                            ID = 25,
+                            Code = "BAI06",
+                            Description = "Manage IT Changes",
+                            Name = "BAI06"
+                        },
+                        new
+                        {
+                            ID = 26,
+                            Code = "BAI07",
+                            Description = "Manage IT Change Acceptance and Transitioning",
+                            Name = "BAI07"
+                        },
+                        new
+                        {
+                            ID = 27,
+                            Code = "BAI08",
+                            Description = "Manage Knowledge",
+                            Name = "BAI08"
+                        },
+                        new
+                        {
+                            ID = 28,
+                            Code = "BAI09",
+                            Description = "Manage Assets",
+                            Name = "BAI09"
+                        },
+                        new
+                        {
+                            ID = 29,
+                            Code = "BAI010",
+                            Description = "Manage Configuration",
+                            Name = "BAI10"
+                        },
+                        new
+                        {
+                            ID = 30,
+                            Code = "BAI011",
+                            Description = "Manage Projects",
+                            Name = "BAI11"
+                        },
+                        new
+                        {
+                            ID = 31,
+                            Code = "DSS01",
+                            Description = "Manage Operations",
+                            Name = "DSS01"
+                        },
+                        new
+                        {
+                            ID = 32,
+                            Code = "DSS02",
+                            Description = "Manage Service Requests and Incidents",
+                            Name = "DSS02"
+                        },
+                        new
+                        {
+                            ID = 33,
+                            Code = "DSS03",
+                            Description = "Manage Problems",
+                            Name = "DSS03"
+                        },
+                        new
+                        {
+                            ID = 34,
+                            Code = "DSS04",
+                            Description = "Manage Continuity",
+                            Name = "DSS04"
+                        },
+                        new
+                        {
+                            ID = 35,
+                            Code = "DSS05",
+                            Description = "Manage Security Services",
+                            Name = "DSS05"
+                        },
+                        new
+                        {
+                            ID = 36,
+                            Code = "DSS06",
+                            Description = "Manage Business Process Controls",
+                            Name = "DSS06"
+                        },
+                        new
+                        {
+                            ID = 37,
+                            Code = "MEA01",
+                            Description = "Manage Perfomance and Comformance Monitoring",
+                            Name = "MEA01"
+                        },
+                        new
+                        {
+                            ID = 38,
+                            Code = "MEA02",
+                            Description = "Manage System of Internal Control",
+                            Name = "MEA02"
+                        },
+                        new
+                        {
+                            ID = 39,
+                            Code = "MEA03",
+                            Description = "Manage Compliance With External Requirement",
+                            Name = "MEA03"
+                        },
+                        new
+                        {
+                            ID = 40,
+                            Code = "MEA04",
+                            Description = "Manage Assurance",
+                            Name = "MEA04"
                         });
                 });
 
@@ -428,9 +666,6 @@ namespace Cobit_19.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
-
-                    b.Property<int?>("DefaultAnswer")
-                        .HasColumnType("int");
 
                     b.Property<int>("DesignFactorID")
                         .HasColumnType("int");
@@ -449,518 +684,444 @@ namespace Cobit_19.Migrations
                         new
                         {
                             ID = 1,
-                            DefaultAnswer = 3,
                             DesignFactorID = 1,
                             Question = "Growth/Acquisition"
                         },
                         new
                         {
                             ID = 2,
-                            DefaultAnswer = 3,
                             DesignFactorID = 1,
                             Question = "Innovation/Differentiation"
                         },
                         new
                         {
                             ID = 3,
-                            DefaultAnswer = 3,
                             DesignFactorID = 1,
                             Question = "Cost Leadership"
                         },
                         new
                         {
                             ID = 4,
-                            DefaultAnswer = 3,
                             DesignFactorID = 1,
                             Question = "Client Service/Stability"
                         },
                         new
                         {
                             ID = 5,
-                            DefaultAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG01—Portfolio of competitive products and services"
                         },
                         new
                         {
                             ID = 6,
-                            DefaultAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG02—Managed business risk"
                         },
                         new
                         {
                             ID = 7,
-                            DefaultAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG03—Compliance with external laws and regulations"
                         },
                         new
                         {
                             ID = 8,
-                            DefaultAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG04—Quality of financial information"
                         },
                         new
                         {
                             ID = 9,
-                            DefaultAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG05—Customer-oriented service culture"
                         },
                         new
                         {
                             ID = 10,
-                            DefaultAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG06—Business-service continuity and availability"
                         },
                         new
                         {
                             ID = 11,
-                            DefaultAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG07—Quality of management information"
                         },
                         new
                         {
                             ID = 12,
-                            DefaultAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG08—Optimization of internal business process functionality"
                         },
                         new
                         {
                             ID = 13,
-                            DefaultAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG09—Optimization of business process costs"
                         },
                         new
                         {
                             ID = 14,
-                            DefaultAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG10—Staff skills, motivation and productivity"
                         },
                         new
                         {
                             ID = 15,
-                            DefaultAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG11—Compliance with internal policies"
                         },
                         new
                         {
                             ID = 16,
-                            DefaultAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG12—Managed digital transformation programs"
                         },
                         new
                         {
                             ID = 17,
-                            DefaultAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG13—Product and business innovation"
                         },
                         new
                         {
                             ID = 18,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "IT investment decision-making, portfolio definition & maintenance"
                         },
                         new
                         {
                             ID = 19,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "Program & projects life cycle management"
                         },
                         new
                         {
                             ID = 20,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "IT cost & oversight"
                         },
                         new
                         {
                             ID = 21,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "IT expertise, skills & behaviour"
                         },
                         new
                         {
                             ID = 22,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "Enterprise/IT architecture"
                         },
                         new
                         {
                             ID = 23,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "IT operational infrastructure incidents"
                         },
                         new
                         {
                             ID = 24,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "Unauthorized actions"
                         },
                         new
                         {
                             ID = 25,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "Software adoption/usage problems"
                         },
                         new
                         {
                             ID = 26,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "Hardware incidents"
                         },
                         new
                         {
                             ID = 27,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "Software failures"
                         },
                         new
                         {
                             ID = 28,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "Logical attacks (hacking, malware, etc.)"
                         },
                         new
                         {
                             ID = 29,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "Third-party/supplier incidents"
                         },
                         new
                         {
                             ID = 30,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "Noncompliance"
                         },
                         new
                         {
                             ID = 31,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "Geopolitical Issues"
                         },
                         new
                         {
                             ID = 32,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "Industrial action"
                         },
                         new
                         {
                             ID = 33,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "Acts of nature"
                         },
                         new
                         {
                             ID = 34,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "Technology-based innovation"
                         },
                         new
                         {
                             ID = 35,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "Environmental"
                         },
                         new
                         {
                             ID = 36,
-                            DefaultAnswer = 9,
                             DesignFactorID = 3,
                             Question = "Data & information management"
                         },
                         new
                         {
                             ID = 37,
-                            DefaultAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Frustration between different IT entities across the organization because of a perception of low contribution to business value"
                         },
                         new
                         {
                             ID = 38,
-                            DefaultAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Frustration between business departments (i.e., the IT customer) and the IT department because of failed initiatives or a perception of low contribution to business value"
                         },
                         new
                         {
                             ID = 39,
-                            DefaultAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Significant IT-related incidents, such as data loss, security breaches, project failure and application errors, linked to IT"
                         },
                         new
                         {
                             ID = 40,
-                            DefaultAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Service delivery problems by the IT outsourcer(s)"
                         },
                         new
                         {
                             ID = 41,
-                            DefaultAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Failures to meet IT-related regulatory or contractual requirements"
                         },
                         new
                         {
                             ID = 42,
-                            DefaultAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Regular audit findings or other assessment reports about poor IT performance or reported IT quality or service problems"
                         },
                         new
                         {
                             ID = 43,
-                            DefaultAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Substantial hidden and rogue IT spending, that is, IT spending by user departments outside the control of the normal IT investment decision mechanisms and approved budgets"
                         },
                         new
                         {
                             ID = 44,
-                            DefaultAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Duplications or overlaps between various initiatives, or other forms of wasted resources"
                         },
                         new
                         {
                             ID = 45,
-                            DefaultAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Insufficient IT resources, staff with inadequate skills or staff burnout/dissatisfaction"
                         },
                         new
                         {
                             ID = 46,
-                            DefaultAnswer = 1,
                             DesignFactorID = 4,
                             Question = "IT-enabled changes or projects frequently failing to meet business needs and delivered late or over budget"
                         },
                         new
                         {
                             ID = 47,
-                            DefaultAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Reluctance by board members, executives or senior management to engage with IT, or a lack of committed business sponsorship for IT"
                         },
                         new
                         {
                             ID = 48,
-                            DefaultAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Complex IT operating model and/or unclear decision mechanisms for IT-related decisions"
                         },
                         new
                         {
                             ID = 49,
-                            DefaultAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Excessively high cost of IT"
                         },
                         new
                         {
                             ID = 50,
-                            DefaultAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Obstructed or failed implementation of new initiatives or innovations caused by the current IT architecture and systems"
                         },
                         new
                         {
                             ID = 51,
-                            DefaultAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Gap between business and technical knowledge, which leads to business users and information and/or technology specialists speaking different languages"
                         },
                         new
                         {
                             ID = 52,
-                            DefaultAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Regular issues with data quality and integration of data across various sources"
                         },
                         new
                         {
                             ID = 53,
-                            DefaultAnswer = 2,
                             DesignFactorID = 4,
                             Question = "High level of end-user computing, creating (among other problems) a lack of oversight and quality control over the applications that are being developed and put in operation"
                         },
                         new
                         {
                             ID = 54,
-                            DefaultAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Business departments implementing their own information solutions with little or no involvement of the enterprise IT department (related to end-user computing, which often stems from dissatisfaction with IT solutions and services)"
                         },
                         new
                         {
                             ID = 55,
-                            DefaultAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Ignorance of and/or noncompliance with privacy regulations"
                         },
                         new
                         {
                             ID = 56,
-                            DefaultAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Inability to exploit new technologies or innovate using I&T"
                         },
                         new
                         {
                             ID = 57,
-                            DefaultAnswer = 33,
                             DesignFactorID = 5,
                             Question = "High"
                         },
                         new
                         {
                             ID = 58,
-                            DefaultAnswer = 67,
                             DesignFactorID = 5,
                             Question = "Normal"
                         },
                         new
                         {
                             ID = 59,
-                            DefaultAnswer = 0,
                             DesignFactorID = 6,
                             Question = "High compliance requirements"
                         },
                         new
                         {
                             ID = 60,
-                            DefaultAnswer = 100,
                             DesignFactorID = 6,
                             Question = "Normal compliance requirements"
                         },
                         new
                         {
                             ID = 61,
-                            DefaultAnswer = 0,
                             DesignFactorID = 6,
                             Question = "Low compliance requirements"
                         },
                         new
                         {
                             ID = 62,
-                            DefaultAnswer = 3,
                             DesignFactorID = 7,
                             Question = "Support"
                         },
                         new
                         {
                             ID = 63,
-                            DefaultAnswer = 3,
                             DesignFactorID = 7,
                             Question = "Factory"
                         },
                         new
                         {
                             ID = 64,
-                            DefaultAnswer = 3,
                             DesignFactorID = 7,
                             Question = "Turnaround"
                         },
                         new
                         {
                             ID = 65,
-                            DefaultAnswer = 3,
                             DesignFactorID = 7,
                             Question = "Strategic"
                         },
                         new
                         {
                             ID = 66,
-                            DefaultAnswer = 33,
                             DesignFactorID = 8,
                             Question = "Outsourcing"
                         },
                         new
                         {
                             ID = 67,
-                            DefaultAnswer = 33,
                             DesignFactorID = 8,
                             Question = "Cloud"
                         },
                         new
                         {
                             ID = 68,
-                            DefaultAnswer = 34,
                             DesignFactorID = 8,
                             Question = "Insourced"
                         },
                         new
                         {
                             ID = 69,
-                            DefaultAnswer = 15,
                             DesignFactorID = 9,
                             Question = "Agile"
                         },
                         new
                         {
                             ID = 70,
-                            DefaultAnswer = 10,
                             DesignFactorID = 9,
                             Question = "DevOps"
                         },
                         new
                         {
                             ID = 71,
-                            DefaultAnswer = 75,
                             DesignFactorID = 9,
                             Question = "Traditional"
                         },
                         new
                         {
                             ID = 72,
-                            DefaultAnswer = 15,
                             DesignFactorID = 10,
                             Question = "First mover"
                         },
                         new
                         {
                             ID = 73,
-                            DefaultAnswer = 70,
                             DesignFactorID = 10,
                             Question = "Follower"
                         },
                         new
                         {
                             ID = 74,
-                            DefaultAnswer = 15,
                             DesignFactorID = 10,
                             Question = "Slow adopter"
                         });

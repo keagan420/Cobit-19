@@ -232,10 +232,10 @@ namespace Cobit_19.Models
                 new ObjectiveModel { ID = 23, Name = "BAI04", Code = "BAI04", Description = "Manage Availability and Capacity" },
                 new ObjectiveModel { ID = 24, Name = "BAI05", Code = "BAI05", Description = "Manage Organizational Change" },
                 new ObjectiveModel { ID = 25, Name = "BAI06", Code = "BAI06", Description = "Manage IT Changes" },
-                new ObjectiveModel { ID = 27, Name = "BAI07", Code = "BAI07", Description = "Manage IT Change Acceptance and Transitioning" },
+                new ObjectiveModel { ID = 26, Name = "BAI07", Code = "BAI07", Description = "Manage IT Change Acceptance and Transitioning" },
                 new ObjectiveModel { ID = 27, Name = "BAI08", Code = "BAI08", Description = "Manage Knowledge" },
                 new ObjectiveModel { ID = 28, Name = "BAI09", Code = "BAI09", Description = "Manage Assets" },
-                new ObjectiveModel { ID = 39, Name = "BAI10", Code = "BAI010", Description = "Manage Configuration" },
+                new ObjectiveModel { ID = 29, Name = "BAI10", Code = "BAI010", Description = "Manage Configuration" },
                 new ObjectiveModel { ID = 30, Name = "BAI11", Code = "BAI011", Description = "Manage Projects" },
 
                 //Deliver, Service and Support (DSS)
@@ -250,7 +250,7 @@ namespace Cobit_19.Models
                 new ObjectiveModel { ID = 37, Name = "MEA01", Code = "MEA01", Description = "Manage Perfomance and Comformance Monitoring" },
                 new ObjectiveModel { ID = 38, Name = "MEA02", Code = "MEA02", Description = "Manage System of Internal Control" },
                 new ObjectiveModel { ID = 39, Name = "MEA03", Code = "MEA03", Description = "Manage Compliance With External Requirement" },
-                new ObjectiveModel { ID = 39, Name = "MEA04", Code = "MEA04", Description = "Manage Assurance" }
+                new ObjectiveModel { ID = 40, Name = "MEA04", Code = "MEA04", Description = "Manage Assurance" }
                 );
 
             builder.Entity<AuditScopeModel>().HasData(
