@@ -191,7 +191,10 @@ namespace Cobit_19.Models
 
             builder.Entity<AuditModel>().HasData(
                 new AuditModel { ID = 1, FocusAreaID = 1, UserID = 1, Name = "Audit 1", DateCreated = DateTime.Parse("Jan 1, 2009"), Status = AuditStatus.InProgress },
-                new AuditModel { ID = 2, FocusAreaID = 1, UserID = 1, Name = "Audit 2", DateCreated = DateTime.Parse("Jan 2, 2009"), Status = AuditStatus.InProgress }
+                new AuditModel { ID = 2, FocusAreaID = 1, UserID = 1, Name = "Audit 2", DateCreated = DateTime.Parse("Jan 2, 2009"), Status = AuditStatus.InProgress },
+                new AuditModel { ID = 3, FocusAreaID = 1, UserID = 1, Name = "Audit 3", DateCreated = DateTime.Parse("Jan 3, 2009"), Status = AuditStatus.InProgress },
+                new AuditModel { ID = 4, FocusAreaID = 1, UserID = 1, Name = "Audit 4", DateCreated = DateTime.Parse("Jan 4, 2009"), Status = AuditStatus.InProgress },
+                new AuditModel { ID = 5, FocusAreaID = 1, UserID = 1, Name = "Audit 5", DateCreated = DateTime.Parse("Jan 5, 2009"), Status = AuditStatus.InProgress }
                 );
             builder.Entity<AnswerModel>().HasData(
                 new AnswerModel { AuditID = 1, QuestionID = 1, Answer = 1 },
@@ -254,9 +257,30 @@ namespace Cobit_19.Models
                 );
 
             builder.Entity<AuditScopeModel>().HasData(
+                //Audit ID 1
                 new AuditScopeModel { AuditID = 1, ObjectiveID = 1, UserID = 1 },
                 new AuditScopeModel { AuditID = 1, ObjectiveID = 2, UserID = 1 },
-                new AuditScopeModel { AuditID = 1, ObjectiveID = 3, UserID = 1 }
+                new AuditScopeModel { AuditID = 1, ObjectiveID = 3, UserID = 1 },
+
+                //Audit ID 2
+                new AuditScopeModel { AuditID = 2, ObjectiveID = 1, UserID = 1 },
+                new AuditScopeModel { AuditID = 2, ObjectiveID = 2, UserID = 1 },
+                new AuditScopeModel { AuditID = 2, ObjectiveID = 3, UserID = 1 },
+
+                //Audit ID 3
+                new AuditScopeModel { AuditID = 3, ObjectiveID = 1, UserID = 1 },
+                new AuditScopeModel { AuditID = 3, ObjectiveID = 2, UserID = 1 },
+                new AuditScopeModel { AuditID = 3, ObjectiveID = 3, UserID = 1 },
+
+                //Audit ID 4
+                new AuditScopeModel { AuditID = 4, ObjectiveID = 1, UserID = 1 },
+                new AuditScopeModel { AuditID = 4, ObjectiveID = 2, UserID = 1 },
+                new AuditScopeModel { AuditID = 4, ObjectiveID = 3, UserID = 1 },
+
+                //Audit ID 5
+                new AuditScopeModel { AuditID = 5, ObjectiveID = 1, UserID = 1 },
+                new AuditScopeModel { AuditID = 5, ObjectiveID = 2, UserID = 1 },
+                new AuditScopeModel { AuditID = 5, ObjectiveID = 3, UserID = 1 }
                 );
 
             /// Mapping 4 Questions and 40 Objectives with their weights for design factor 1
@@ -381,8 +405,7 @@ namespace Cobit_19.Models
                 }
             }
 
-
-
+            /// Mapping 20 Questions and 40 Objectives with their weights for design factor 4
             float[,] weights4 = new float[,]
             {
                 { 3.0f, 3.0f, 1.0f, 1.0f, 2.0f, 2.0f, 2.0f, 1.0f, 1.0f, 1.0f, 3.0f, 3.5f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 3.0f, 1.5f, 1.0f },    // EDM01
@@ -445,12 +468,13 @@ namespace Cobit_19.Models
                     {
                         float dsweight4 = weights4 [i, j];
                         builder.Entity<MapModel>().HasData(
-                        new MapModel { ObjectiveID = i + 1, QuestionID = j + 1, Weight = dsweight4 }
+                        new MapModel { ObjectiveID = i + 1, QuestionID = j + 37, Weight = dsweight4 }
                         );
                     };
                 }
             }
 
+            /// Mapping 2 Questions and 40 Objectives with their weights for design factor 5
             float[,] weights5 = new float[,]
             {
                 { 3.0f, 1.0f },    // EDM01
@@ -502,7 +526,7 @@ namespace Cobit_19.Models
                     {
                         float dsweight5 = weights5 [i, j];
                         builder.Entity<MapModel>().HasData(
-                        new MapModel { ObjectiveID = i + 1, QuestionID = j + 1, Weight = dsweight5 }
+                        new MapModel { ObjectiveID = i + 1, QuestionID = j + 57, Weight = dsweight5 }
                         );
                     };
                 }
@@ -561,7 +585,7 @@ namespace Cobit_19.Models
                     {
                         float dsweight6 = weights6 [i, j];
                         builder.Entity<MapModel>().HasData(
-                        new MapModel { ObjectiveID = i + 1, QuestionID = j + 1, Weight = dsweight6 }
+                        new MapModel { ObjectiveID = i + 1, QuestionID = j + 59, Weight = dsweight6 }
                         );
                     };
                 }
