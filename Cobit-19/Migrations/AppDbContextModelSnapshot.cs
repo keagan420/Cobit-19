@@ -131,6 +131,33 @@ namespace Cobit_19.Migrations
                             Name = "Audit 2",
                             Status = 0,
                             UserID = 1
+                        },
+                        new
+                        {
+                            ID = 3,
+                            DateCreated = new DateTime(2009, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FocusAreaID = 1,
+                            Name = "Audit 3",
+                            Status = 0,
+                            UserID = 1
+                        },
+                        new
+                        {
+                            ID = 4,
+                            DateCreated = new DateTime(2009, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FocusAreaID = 1,
+                            Name = "Audit 4",
+                            Status = 0,
+                            UserID = 1
+                        },
+                        new
+                        {
+                            ID = 5,
+                            DateCreated = new DateTime(2009, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FocusAreaID = 1,
+                            Name = "Audit 5",
+                            Status = 0,
+                            UserID = 1
                         });
                 });
 
@@ -167,6 +194,78 @@ namespace Cobit_19.Migrations
                         new
                         {
                             AuditID = 1,
+                            ObjectiveID = 3,
+                            UserID = 1
+                        },
+                        new
+                        {
+                            AuditID = 2,
+                            ObjectiveID = 1,
+                            UserID = 1
+                        },
+                        new
+                        {
+                            AuditID = 2,
+                            ObjectiveID = 2,
+                            UserID = 1
+                        },
+                        new
+                        {
+                            AuditID = 2,
+                            ObjectiveID = 3,
+                            UserID = 1
+                        },
+                        new
+                        {
+                            AuditID = 3,
+                            ObjectiveID = 1,
+                            UserID = 1
+                        },
+                        new
+                        {
+                            AuditID = 3,
+                            ObjectiveID = 2,
+                            UserID = 1
+                        },
+                        new
+                        {
+                            AuditID = 3,
+                            ObjectiveID = 3,
+                            UserID = 1
+                        },
+                        new
+                        {
+                            AuditID = 4,
+                            ObjectiveID = 1,
+                            UserID = 1
+                        },
+                        new
+                        {
+                            AuditID = 4,
+                            ObjectiveID = 2,
+                            UserID = 1
+                        },
+                        new
+                        {
+                            AuditID = 4,
+                            ObjectiveID = 3,
+                            UserID = 1
+                        },
+                        new
+                        {
+                            AuditID = 5,
+                            ObjectiveID = 1,
+                            UserID = 1
+                        },
+                        new
+                        {
+                            AuditID = 5,
+                            ObjectiveID = 2,
+                            UserID = 1
+                        },
+                        new
+                        {
+                            AuditID = 5,
                             ObjectiveID = 3,
                             UserID = 1
                         });
@@ -5849,6 +5948,6006 @@ namespace Cobit_19.Migrations
                             ObjectiveID = 40,
                             QuestionID = 36,
                             Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 37,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 38,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 39,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 40,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 41,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 42,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 43,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 44,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 45,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 46,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 47,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 48,
+                            Weight = 3.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 49,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 50,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 51,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 52,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 53,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 54,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 55,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 56,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 37,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 38,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 39,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 40,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 41,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 42,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 43,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 44,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 45,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 46,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 47,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 48,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 49,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 50,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 51,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 52,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 53,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 54,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 55,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 56,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 37,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 38,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 39,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 40,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 41,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 42,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 43,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 44,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 46,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 47,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 49,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 50,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 51,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 52,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 54,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 55,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 56,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 37,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 38,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 39,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 40,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 41,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 42,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 43,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 44,
+                            Weight = 3.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 45,
+                            Weight = 3.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 46,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 47,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 49,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 50,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 51,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 52,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 53,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 54,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 56,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 37,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 38,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 39,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 40,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 41,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 42,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 43,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 44,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 46,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 47,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 48,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 49,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 50,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 51,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 52,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 54,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 55,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 56,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 37,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 38,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 39,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 40,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 41,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 42,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 43,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 44,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 46,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 47,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 48,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 49,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 50,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 51,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 52,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 53,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 54,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 55,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 56,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 37,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 38,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 39,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 40,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 41,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 42,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 43,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 44,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 46,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 47,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 48,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 49,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 50,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 51,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 52,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 53,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 54,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 56,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 37,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 38,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 39,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 40,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 41,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 42,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 43,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 44,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 45,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 46,
+                            Weight = 3.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 47,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 48,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 49,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 50,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 51,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 52,
+                            Weight = 3.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 53,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 54,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 56,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 37,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 38,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 39,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 40,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 41,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 42,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 43,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 44,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 46,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 47,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 48,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 49,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 50,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 51,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 52,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 53,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 54,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 56,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 37,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 38,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 39,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 40,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 41,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 42,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 43,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 44,
+                            Weight = 3.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 45,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 46,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 47,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 48,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 49,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 50,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 51,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 52,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 53,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 54,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 56,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 37,
+                            Weight = 3.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 38,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 39,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 40,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 41,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 42,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 43,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 44,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 45,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 46,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 47,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 48,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 49,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 50,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 51,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 52,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 54,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 56,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 37,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 38,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 39,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 40,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 41,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 42,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 43,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 44,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 45,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 46,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 49,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 50,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 51,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 52,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 53,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 54,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 55,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 56,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 37,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 38,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 39,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 40,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 41,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 42,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 43,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 44,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 45,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 46,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 47,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 48,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 49,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 50,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 51,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 52,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 53,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 54,
+                            Weight = 3.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 56,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 37,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 38,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 39,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 40,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 41,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 42,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 43,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 44,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 45,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 46,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 49,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 50,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 51,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 52,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 54,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 56,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 37,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 38,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 39,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 40,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 41,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 42,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 43,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 44,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 45,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 46,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 49,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 50,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 51,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 52,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 53,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 54,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 55,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 56,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 37,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 38,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 39,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 40,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 41,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 42,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 43,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 44,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 46,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 49,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 50,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 51,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 52,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 53,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 54,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 56,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 37,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 38,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 39,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 40,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 41,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 42,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 43,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 44,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 45,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 46,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 47,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 48,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 49,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 50,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 51,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 52,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 54,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 55,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 56,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 37,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 38,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 39,
+                            Weight = 3.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 40,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 41,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 42,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 43,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 44,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 46,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 49,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 50,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 51,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 52,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 53,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 54,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 55,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 56,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 37,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 38,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 39,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 40,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 41,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 42,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 43,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 44,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 46,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 49,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 50,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 51,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 52,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 53,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 54,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 55,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 56,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 37,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 38,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 39,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 40,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 41,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 42,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 43,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 44,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 45,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 46,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 47,
+                            Weight = 3.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 49,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 50,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 51,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 52,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 53,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 54,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 56,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 37,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 38,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 39,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 40,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 41,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 42,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 43,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 44,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 45,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 46,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 47,
+                            Weight = 3.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 49,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 50,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 51,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 52,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 53,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 54,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 55,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 56,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 37,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 38,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 39,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 40,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 41,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 42,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 43,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 44,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 45,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 46,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 47,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 49,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 50,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 51,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 52,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 53,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 54,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 55,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 56,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 37,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 38,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 39,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 40,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 41,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 42,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 43,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 44,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 45,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 46,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 49,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 50,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 51,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 52,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 54,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 56,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 37,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 38,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 39,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 40,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 41,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 42,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 43,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 44,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 46,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 47,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 49,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 50,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 51,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 52,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 53,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 54,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 56,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 37,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 38,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 39,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 40,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 41,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 42,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 43,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 44,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 46,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 48,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 49,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 50,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 51,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 52,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 53,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 54,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 55,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 56,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 37,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 38,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 39,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 40,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 41,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 42,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 43,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 44,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 46,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 48,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 49,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 50,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 51,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 52,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 53,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 54,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 56,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 37,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 38,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 39,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 40,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 41,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 42,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 43,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 44,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 45,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 46,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 48,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 49,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 50,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 51,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 52,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 54,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 56,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 37,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 38,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 39,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 40,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 41,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 42,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 43,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 44,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 46,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 49,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 50,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 51,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 52,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 54,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 56,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 37,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 38,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 39,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 40,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 41,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 42,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 43,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 44,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 46,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 49,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 50,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 51,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 52,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 54,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 56,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 37,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 38,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 39,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 40,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 41,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 42,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 43,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 44,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 45,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 46,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 49,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 50,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 51,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 52,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 54,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 56,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 37,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 38,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 39,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 40,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 41,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 42,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 43,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 44,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 46,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 49,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 50,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 51,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 52,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 54,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 56,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 37,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 38,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 39,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 40,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 41,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 42,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 43,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 44,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 46,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 49,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 50,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 51,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 52,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 54,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 56,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 37,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 38,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 39,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 40,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 41,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 42,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 43,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 44,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 46,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 49,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 50,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 51,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 52,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 54,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 55,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 56,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 37,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 38,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 39,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 40,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 41,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 42,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 43,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 44,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 46,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 49,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 50,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 51,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 52,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 54,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 55,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 56,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 37,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 38,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 39,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 40,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 41,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 42,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 43,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 44,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 46,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 49,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 50,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 51,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 52,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 54,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 55,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 56,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 37,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 38,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 39,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 40,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 41,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 42,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 43,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 44,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 46,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 49,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 50,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 51,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 52,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 53,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 54,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 55,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 56,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 37,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 38,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 39,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 40,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 41,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 42,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 43,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 44,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 45,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 46,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 47,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 48,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 49,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 50,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 51,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 52,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 53,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 54,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 55,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 56,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 37,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 38,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 39,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 40,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 41,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 42,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 43,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 44,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 45,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 46,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 47,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 48,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 49,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 50,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 51,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 52,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 54,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 55,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 56,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 37,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 38,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 39,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 40,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 41,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 42,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 43,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 44,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 45,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 46,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 47,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 48,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 49,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 50,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 51,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 52,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 53,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 54,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 55,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 56,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 37,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 38,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 39,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 40,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 41,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 42,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 43,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 44,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 45,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 46,
+                            Weight = 0.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 47,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 48,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 49,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 50,
+                            Weight = 0f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 51,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 52,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 53,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 54,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 55,
+                            Weight = 2.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 56,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 57,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 57,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 57,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 57,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 57,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 57,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 57,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 57,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 57,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 57,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 57,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 57,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 57,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 57,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 57,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 57,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 57,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 57,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 57,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 57,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 57,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 57,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 57,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 57,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 57,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 57,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 57,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 58,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 57,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 57,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 57,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 57,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 57,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 57,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 57,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 57,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 57,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 57,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 57,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 57,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 57,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 58,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 59,
+                            Weight = 3f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 60,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 1,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 2,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 59,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 60,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 3,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 4,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 59,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 5,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 59,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 60,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 6,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 7,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 8,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 9,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 10,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 11,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 12,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 13,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 14,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 59,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 15,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 16,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 59,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 60,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 17,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 59,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 18,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 59,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 60,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 19,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 20,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 21,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 22,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 23,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 24,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 25,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 26,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 60,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 27,
+                            QuestionID = 61,
+                            Weight = 1.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 28,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 29,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 30,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 31,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 32,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 33,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 34,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 59,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 35,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 36,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 37,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 59,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 60,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 38,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 59,
+                            Weight = 4f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 60,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 39,
+                            QuestionID = 61,
+                            Weight = 1f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 59,
+                            Weight = 3.5f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 60,
+                            Weight = 2f
+                        },
+                        new
+                        {
+                            ObjectiveID = 40,
+                            QuestionID = 61,
+                            Weight = 1f
                         },
                         new
                         {
