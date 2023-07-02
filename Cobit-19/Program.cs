@@ -15,6 +15,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<AppDbContext>();
+builder.Services.AddAuthentication("Identity.Application")
+    .AddCookie();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
@@ -34,6 +36,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();
+app.UseAuthentication();
 
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");

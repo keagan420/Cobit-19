@@ -40,44 +40,6 @@ namespace Cobit_19.Migrations
                     b.HasIndex("QuestionID");
 
                     b.ToTable("Answers", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            AuditID = 1,
-                            QuestionID = 1,
-                            Answer = 1
-                        },
-                        new
-                        {
-                            AuditID = 1,
-                            QuestionID = 2,
-                            Answer = 1
-                        },
-                        new
-                        {
-                            AuditID = 1,
-                            QuestionID = 3,
-                            Answer = 1
-                        },
-                        new
-                        {
-                            AuditID = 2,
-                            QuestionID = 1,
-                            Answer = 1
-                        },
-                        new
-                        {
-                            AuditID = 2,
-                            QuestionID = 2,
-                            Answer = 1
-                        },
-                        new
-                        {
-                            AuditID = 2,
-                            QuestionID = 3,
-                            Answer = 1
-                        });
                 });
 
             modelBuilder.Entity("Cobit_19.Models.AuditModel", b =>
@@ -87,6 +49,10 @@ namespace Cobit_19.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("ApplicationUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime?>("DateCompleted")
                         .HasColumnType("datetime2");
@@ -109,56 +75,11 @@ namespace Cobit_19.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("ApplicationUserId");
+
                     b.HasIndex("FocusAreaID");
 
                     b.ToTable("Audits", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            ID = 1,
-                            DateCreated = new DateTime(2009, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FocusAreaID = 1,
-                            Name = "Audit 1",
-                            Status = 0,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            ID = 2,
-                            DateCreated = new DateTime(2009, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FocusAreaID = 1,
-                            Name = "Audit 2",
-                            Status = 0,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            ID = 3,
-                            DateCreated = new DateTime(2009, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FocusAreaID = 1,
-                            Name = "Audit 3",
-                            Status = 0,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            ID = 4,
-                            DateCreated = new DateTime(2009, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FocusAreaID = 1,
-                            Name = "Audit 4",
-                            Status = 0,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            ID = 5,
-                            DateCreated = new DateTime(2009, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FocusAreaID = 1,
-                            Name = "Audit 5",
-                            Status = 0,
-                            UserID = 1
-                        });
                 });
 
             modelBuilder.Entity("Cobit_19.Models.AuditScopeModel", b =>
@@ -177,98 +98,6 @@ namespace Cobit_19.Migrations
                     b.HasIndex("ObjectiveID");
 
                     b.ToTable("AuditScopes", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            AuditID = 1,
-                            ObjectiveID = 1,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            AuditID = 1,
-                            ObjectiveID = 2,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            AuditID = 1,
-                            ObjectiveID = 3,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            AuditID = 2,
-                            ObjectiveID = 1,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            AuditID = 2,
-                            ObjectiveID = 2,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            AuditID = 2,
-                            ObjectiveID = 3,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            AuditID = 3,
-                            ObjectiveID = 1,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            AuditID = 3,
-                            ObjectiveID = 2,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            AuditID = 3,
-                            ObjectiveID = 3,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            AuditID = 4,
-                            ObjectiveID = 1,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            AuditID = 4,
-                            ObjectiveID = 2,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            AuditID = 4,
-                            ObjectiveID = 3,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            AuditID = 5,
-                            ObjectiveID = 1,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            AuditID = 5,
-                            ObjectiveID = 2,
-                            UserID = 1
-                        },
-                        new
-                        {
-                            AuditID = 5,
-                            ObjectiveID = 3,
-                            UserID = 1
-                        });
                 });
 
             modelBuilder.Entity("Cobit_19.Models.DesignFactorModel", b =>
@@ -15909,6 +15738,10 @@ namespace Cobit_19.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -15960,6 +15793,10 @@ namespace Cobit_19.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -16047,6 +15884,13 @@ namespace Cobit_19.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Cobit_19.Models.ApplicationUser", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+                    b.HasDiscriminator().HasValue("ApplicationUser");
+                });
+
             modelBuilder.Entity("Cobit_19.Models.AnswerModel", b =>
                 {
                     b.HasOne("Cobit_19.Models.AuditModel", "Audit")
@@ -16068,11 +15912,19 @@ namespace Cobit_19.Migrations
 
             modelBuilder.Entity("Cobit_19.Models.AuditModel", b =>
                 {
+                    b.HasOne("Cobit_19.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany("Audit")
+                        .HasForeignKey("ApplicationUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Cobit_19.Models.FocusAreaModel", "FocusAreas")
                         .WithMany("Audits")
                         .HasForeignKey("FocusAreaID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("ApplicationUser");
 
                     b.Navigation("FocusAreas");
                 });
@@ -16219,6 +16071,11 @@ namespace Cobit_19.Migrations
                     b.Navigation("Answers");
 
                     b.Navigation("Maps");
+                });
+
+            modelBuilder.Entity("Cobit_19.Models.ApplicationUser", b =>
+                {
+                    b.Navigation("Audit");
                 });
 #pragma warning restore 612, 618
         }

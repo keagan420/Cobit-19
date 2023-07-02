@@ -191,21 +191,21 @@ namespace Cobit_19.Models
                 new QuestionModel { ID = 74, DesignFactorID = 10, Question = "Slow adopter" }
                 );
 
-            builder.Entity<AuditModel>().HasData(
+            /*builder.Entity<AuditModel>().HasData(
                 new AuditModel { ID = 1, FocusAreaID = 1, UserID = 1, Name = "Audit 1", DateCreated = DateTime.Parse("Jan 1, 2009"), Status = AuditStatus.InProgress },
                 new AuditModel { ID = 2, FocusAreaID = 1, UserID = 1, Name = "Audit 2", DateCreated = DateTime.Parse("Jan 2, 2009"), Status = AuditStatus.InProgress },
                 new AuditModel { ID = 3, FocusAreaID = 1, UserID = 1, Name = "Audit 3", DateCreated = DateTime.Parse("Jan 3, 2009"), Status = AuditStatus.InProgress },
                 new AuditModel { ID = 4, FocusAreaID = 1, UserID = 1, Name = "Audit 4", DateCreated = DateTime.Parse("Jan 4, 2009"), Status = AuditStatus.InProgress },
                 new AuditModel { ID = 5, FocusAreaID = 1, UserID = 1, Name = "Audit 5", DateCreated = DateTime.Parse("Jan 5, 2009"), Status = AuditStatus.InProgress }
-                );
-            builder.Entity<AnswerModel>().HasData(
+                );*/
+           /* builder.Entity<AnswerModel>().HasData(
                 new AnswerModel { AuditID = 1, QuestionID = 1, Answer = 1 },
                 new AnswerModel { AuditID = 1, QuestionID = 2, Answer = 1 },
                 new AnswerModel { AuditID = 1, QuestionID = 3, Answer = 1 },
                 new AnswerModel { AuditID = 2, QuestionID = 1, Answer = 1 },
                 new AnswerModel { AuditID = 2, QuestionID = 2, Answer = 1 },
                 new AnswerModel { AuditID = 2, QuestionID = 3, Answer = 1 }
-                );
+                );*/
             builder.Entity<ObjectiveModel>().HasData(
                 //Evaluate, Direct and Monitor (EDM) 
                 new ObjectiveModel { ID = 1, Name = "EDM01", Code = "EDM01", Description = "Ensure Governance Framework Setting and Maintenance" },
@@ -258,7 +258,7 @@ namespace Cobit_19.Models
                 new ObjectiveModel { ID = 40, Name = "MEA04", Code = "MEA04", Description = "Manage Assurance" }
                 );
 
-            builder.Entity<AuditScopeModel>().HasData(
+            /*builder.Entity<AuditScopeModel>().HasData(
                 //Audit ID 1
                 new AuditScopeModel { AuditID = 1, ObjectiveID = 1, UserID = 1 },
                 new AuditScopeModel { AuditID = 1, ObjectiveID = 2, UserID = 1 },
@@ -283,7 +283,7 @@ namespace Cobit_19.Models
                 new AuditScopeModel { AuditID = 5, ObjectiveID = 1, UserID = 1 },
                 new AuditScopeModel { AuditID = 5, ObjectiveID = 2, UserID = 1 },
                 new AuditScopeModel { AuditID = 5, ObjectiveID = 3, UserID = 1 }
-                );
+                );*/
 
             /// Mapping 4 Questions and 40 Objectives with their weights for design factor 1
             // Define the weights as a 2D array

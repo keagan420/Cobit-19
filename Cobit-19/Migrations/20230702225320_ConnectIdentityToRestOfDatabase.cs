@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Cobit_19.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class ConnectIdentityToRestOfDatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -32,6 +32,7 @@ namespace Cobit_19.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -200,11 +201,18 @@ namespace Cobit_19.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DateCompleted = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    DateCompleted = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ApplicationUserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Audits", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Audits_AspNetUsers_ApplicationUserId",
+                        column: x => x.ApplicationUserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Audits_FocusAreas_FocusAreaID",
                         column: x => x.FocusAreaID,
@@ -382,18 +390,6 @@ namespace Cobit_19.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Audits",
-                columns: new[] { "ID", "DateCompleted", "DateCreated", "FocusAreaID", "Name", "Status", "UserID" },
-                values: new object[,]
-                {
-                    { 1, null, new DateTime(2009, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 1", 0, 1 },
-                    { 2, null, new DateTime(2009, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 2", 0, 1 },
-                    { 3, null, new DateTime(2009, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 3", 0, 1 },
-                    { 4, null, new DateTime(2009, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 4", 0, 1 },
-                    { 5, null, new DateTime(2009, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 5", 0, 1 }
-                });
-
-            migrationBuilder.InsertData(
                 table: "DesignFactors",
                 columns: new[] { "ID", "Description", "FocusAreaID", "Name" },
                 values: new object[,]
@@ -409,28 +405,6 @@ namespace Cobit_19.Migrations
                     { 9, "IT implementation methods", 1, "Cobit Core Model - Design Factor 9" },
                     { 10, "Technology adoption strategy", 1, "Cobit Core Model - Design Factor 10" },
                     { 11, "Enterprise Size", 1, "Cobit Core Model - Design Factor 11" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "AuditScopes",
-                columns: new[] { "AuditID", "ObjectiveID", "UserID" },
-                values: new object[,]
-                {
-                    { 1, 1, 1 },
-                    { 1, 2, 1 },
-                    { 1, 3, 1 },
-                    { 2, 1, 1 },
-                    { 2, 2, 1 },
-                    { 2, 3, 1 },
-                    { 3, 1, 1 },
-                    { 3, 2, 1 },
-                    { 3, 3, 1 },
-                    { 4, 1, 1 },
-                    { 4, 2, 1 },
-                    { 4, 3, 1 },
-                    { 5, 1, 1 },
-                    { 5, 2, 1 },
-                    { 5, 3, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -512,19 +486,6 @@ namespace Cobit_19.Migrations
                     { 72, 10, "First mover" },
                     { 73, 10, "Follower" },
                     { 74, 10, "Slow adopter" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Answers",
-                columns: new[] { "AuditID", "QuestionID", "Answer" },
-                values: new object[,]
-                {
-                    { 1, 1, 1 },
-                    { 1, 2, 1 },
-                    { 1, 3, 1 },
-                    { 2, 1, 1 },
-                    { 2, 2, 1 },
-                    { 2, 3, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -3019,6 +2980,11 @@ namespace Cobit_19.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Audits_ApplicationUserId",
+                table: "Audits",
+                column: "ApplicationUserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Audits_FocusAreaID",
                 table: "Audits",
                 column: "FocusAreaID");
@@ -3075,9 +3041,6 @@ namespace Cobit_19.Migrations
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
                 name: "Audits");
 
             migrationBuilder.DropTable(
@@ -3085,6 +3048,9 @@ namespace Cobit_19.Migrations
 
             migrationBuilder.DropTable(
                 name: "Questions");
+
+            migrationBuilder.DropTable(
+                name: "AspNetUsers");
 
             migrationBuilder.DropTable(
                 name: "DesignFactors");
