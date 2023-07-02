@@ -4,12 +4,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cobit_19.Data.Models
 {
-    public class QuestionModel
+    public class QuestionModel : AppModel<int>
     {
         public QuestionModel()
         {
         }
-        public int ID { get; set; }
         public int DesignFactorID { get; set; }
         [Required]
         public string Question { get; set; }

@@ -3,13 +3,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cobit_19.Data.Models
 {
-    public class DesignFactorModel
+    public class DesignFactorModel : AppModel<int>
     {
         public DesignFactorModel()
         {
         }
 
-        public int ID { get; set; }
         [ForeignKey("FocusArea")]
         public int FocusAreaID { get; set; }
         [Required]

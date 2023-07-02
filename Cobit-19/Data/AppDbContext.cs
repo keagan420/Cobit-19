@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using System.Reflection.Emit;
+using Cobit_19.Shared.Enums;
+using Cobit_19.Data.Models;
 
-namespace Cobit_19.Data.Models
+namespace Cobit_19.Data
 {
     public class AppDbContext : IdentityDbContext<IdentityUser>
     {

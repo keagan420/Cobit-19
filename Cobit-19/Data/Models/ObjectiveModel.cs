@@ -2,13 +2,12 @@
 
 namespace Cobit_19.Data.Models
 {
-    public class ObjectiveModel
+    public class ObjectiveModel : AppModel<int>
     {
         public ObjectiveModel()
         {
         }
 
-        public int ID { get; set; }
         public string Name { get; set; }
         [Required]
         public string Code { get; set; }
