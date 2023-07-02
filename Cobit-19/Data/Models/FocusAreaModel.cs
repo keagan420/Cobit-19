@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Cobit_19.Models
+namespace Cobit_19.Data.Models
 {
     public class FocusAreaModel
     {

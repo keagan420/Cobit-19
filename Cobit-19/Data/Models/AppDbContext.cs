@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using System.Reflection.Emit;
 
-namespace Cobit_19.Models
+namespace Cobit_19.Data.Models
 {
     public class AppDbContext : IdentityDbContext<IdentityUser>
     {
@@ -39,10 +39,11 @@ namespace Cobit_19.Models
             // Relationships
 
             builder.Entity<AnswerModel>()
-                .HasKey(table => new {
+                .HasKey(table => new
+                {
                     table.AuditID,
                     table.QuestionID
-            });
+                });
 
             builder.Entity<AnswerModel>()
                .HasOne(d => d.Audit)
@@ -52,13 +53,14 @@ namespace Cobit_19.Models
             builder.Entity<AnswerModel>()
                .HasOne(d => d.Question)
                .WithMany(d => d.Answers)
-               .OnDelete(DeleteBehavior.Restrict); 
+               .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<AuditScopeModel>()
-                .HasKey(table => new {
+                .HasKey(table => new
+                {
                     table.AuditID,
                     table.ObjectiveID
-            });
+                });
 
             builder.Entity<AuditModel>()
                 .HasMany(d => d.AuditScopes)
@@ -71,10 +73,11 @@ namespace Cobit_19.Models
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.Entity<MapModel>()
-                .HasKey(table => new {
+                .HasKey(table => new
+                {
                     table.ObjectiveID,
                     table.QuestionID
-            });
+                });
 
             builder.Entity<ObjectiveModel>()
                 .HasMany(d => d.Maps)
@@ -468,7 +471,7 @@ namespace Cobit_19.Models
                 for (int j = 0; j < 20; j++)
                 {
                     {
-                        float dsweight4 = weights4 [i, j];
+                        float dsweight4 = weights4[i, j];
                         builder.Entity<MapModel>().HasData(
                         new MapModel { ObjectiveID = i + 1, QuestionID = j + 37, Weight = dsweight4 }
                         );
@@ -526,7 +529,7 @@ namespace Cobit_19.Models
                 for (int j = 0; j < 2; j++)
                 {
                     {
-                        float dsweight5 = weights5 [i, j];
+                        float dsweight5 = weights5[i, j];
                         builder.Entity<MapModel>().HasData(
                         new MapModel { ObjectiveID = i + 1, QuestionID = j + 57, Weight = dsweight5 }
                         );
@@ -585,7 +588,7 @@ namespace Cobit_19.Models
                 for (int j = 0; j < 3; j++)
                 {
                     {
-                        float dsweight6 = weights6 [i, j];
+                        float dsweight6 = weights6[i, j];
                         builder.Entity<MapModel>().HasData(
                         new MapModel { ObjectiveID = i + 1, QuestionID = j + 59, Weight = dsweight6 }
                         );

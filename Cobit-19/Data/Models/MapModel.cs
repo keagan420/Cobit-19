@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Cobit_19.Models
+namespace Cobit_19.Data.Models
 {
     public class MapModel
     {
@@ -11,7 +11,7 @@ namespace Cobit_19.Models
         }
         [Key]
         [ForeignKey("Question")]
-        public int QuestionID { get; set; } 
+        public int QuestionID { get; set; }
         [Key]
         [ForeignKey("Objective")]
         public int ObjectiveID { get; set; }

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Cobit_19.Models
+namespace Cobit_19.Data.Models
 {
     public class DesignFactorModel
     {
@@ -15,7 +15,7 @@ namespace Cobit_19.Models
         [Required]
         public string Name { get; set; }
         public string? Description { get; set; }
-        
+
         public virtual FocusAreaModel FocusArea { get; set; }
         public virtual ICollection<QuestionModel> Questions { get; set; }
     }

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Cobit_19.Models
+namespace Cobit_19.Data.Models
 {
     public class ObjectiveModel
     {

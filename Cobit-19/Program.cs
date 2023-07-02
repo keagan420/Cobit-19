@@ -1,11 +1,10 @@
-using Cobit_19.Models;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
 using Microsoft.AspNetCore.Identity;
-
+using Cobit_19.Data.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
