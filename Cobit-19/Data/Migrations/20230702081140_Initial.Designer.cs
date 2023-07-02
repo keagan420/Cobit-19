@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Cobit_19.Migrations
+namespace Cobit_19.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20230702081140_Initial")]
