@@ -1,15 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Cobit_19.Models
+namespace Cobit_19.Data.Models
 {
-    public class FocusAreaModel
+    public class FocusAreaModel : AppModel<int>
     {
         public FocusAreaModel()
         {
         }
 
-        public int ID { get; set; }
         public int UserID { get; set; }
         [Required]
         public string Name { get; set; }

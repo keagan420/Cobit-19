@@ -1,24 +1,20 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Cobit_19.Shared.Enums;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Cobit_19.Models
+namespace Cobit_19.Data.Models
 {
-    public enum AuditStatus
-    {
-        InProgress = 0,
-        Completed = 1
-    }
-    public class AuditModel
+    public class AuditModel : AppModel<int>
     {
         public AuditModel()
         {
         }
-        public int ID { get; set; }
+
         [ForeignKey("FocusAreas")]
         public int FocusAreaID { get; set; }
         public int UserID { get; set; }
         [Required]
-        public string Name { get; set; }
+        public string Name { get; set; } = default!;
         public AuditStatus Status { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
