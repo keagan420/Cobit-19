@@ -28,6 +28,7 @@ namespace Testing
                 mc.AddProfile(new AnswerProfile());
                 mc.AddProfile(new MapProfile());
                 mc.AddProfile(new ObjectiveProfile());
+                mc.AddProfile(new UserProfile());
             });
             _mapper = mapperConfig.CreateMapper();
             
@@ -132,10 +133,14 @@ namespace Testing
 
             //Act
             await _auditProvider.deleteAsync(audit.ID);
-
             // Assert
             Assert.Null(await _auditProvider.getAsync(audit.ID));           
-            Assert.Empty(await _auditProvider.getDesignFactorsAsync(audit.ID)); 
+            Assert.Empty(await _auditProvider.getDesignFactorsAsync(audit.ID));
+
+            //Act
+            var falseDel = await _auditProvider.deleteAsync(999);
+            // Assert
+            Assert.Null(falseDel);
         }
 
         [Fact]
@@ -157,13 +162,20 @@ namespace Testing
             Assert.NotNull(audit);         
 
             // Act
-            audit.Name = "Updated Audit";
-            audit.Status = AuditStatus.Completed;
+            var edt = new AuditEditorDto() 
+            {
+                ID = audit.ID,
+                Name = "Working Audit",
+                FocusAreaID = 1,
+                UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
+                Status = AuditStatus.Completed,
+                DateCreated = DateTime.Now
+            };
 
-            await _auditProvider.updateAsync(audit);
+            await _auditProvider.updateAsync(edt);
 
             // Assert
-            Assert.Equal("Updated Audit", (await _auditProvider.getAsync(audit.ID)).Name);           
+            Assert.Equal("Working Audit", (await _auditProvider.getAsync(audit.ID)).Name);           
 
             // Act
             await _auditProvider.deleteAsync(audit.ID);

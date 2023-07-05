@@ -8,9 +8,13 @@ namespace Cobit_19.Shared.Profiles
     {
         public AuditProfile()
         {
-            CreateMap<AuditModel, AuditDto>().ReverseMap();
-            CreateMap<AuditDto, AuditEditorDto>();
-            CreateMap<AuditEditorDto, AuditModel>().ReverseMap();
+            CreateMap<AuditModel, AuditDto>()
+                .ForMember(a => a.User, o => o.MapFrom(a => a.ApplicationUser));
+            CreateMap<AuditDto, AuditModel>()
+                .ForMember(a => a.ApplicationUser, o => o.MapFrom(a => a.User));
+
+            CreateMap<AuditEditorDto, AuditModel>()
+                .ForMember(a => a.ApplicationUserID, o => o.MapFrom(a => a.UserID));
         }
     }
 }
