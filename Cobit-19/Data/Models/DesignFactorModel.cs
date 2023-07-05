@@ -8,7 +8,6 @@ namespace Cobit_19.Data.Models
         public DesignFactorModel()
         {
         }
-
         [ForeignKey("FocusArea")]
         public int FocusAreaID { get; set; }
         [Required]

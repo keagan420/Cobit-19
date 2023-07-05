@@ -18,8 +18,8 @@ namespace Cobit_19.Data.Models
         [Required]
         public float Weight { get; set; }
 
-        public QuestionModel Question { get; set; }
-        public ObjectiveModel Objective { get; set; }
+        public virtual QuestionModel Question { get; set; }
+        public virtual ObjectiveModel Objective { get; set; }
 
     }
 }

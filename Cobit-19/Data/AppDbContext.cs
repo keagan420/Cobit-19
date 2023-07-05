@@ -91,6 +91,21 @@ namespace Cobit_19.Data
                 .WithOne(d => d.Question)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            builder.Entity<ApplicationUser>()
+                .HasMany(d => d.Audits)
+                .WithOne(d => d.ApplicationUser)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<ApplicationUser>()
+                .HasMany(d => d.FocusAreas)
+                .WithOne(d => d.ApplicationUser)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<ApplicationUser>()
+                .HasMany(d => d.AuditScopes)
+                .WithOne(d => d.ApplicationUser)
+                .OnDelete(DeleteBehavior.Restrict);
+
             // Data seeding
 
             //Seeding a  'Administrator' role to AspNetRoles table
@@ -295,29 +310,29 @@ namespace Cobit_19.Data
 
             builder.Entity<AuditScopeModel>().HasData(
                 //Audit ID 1
-                new AuditScopeModel { AuditID = 1, ObjectiveID = 1, UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 1, ObjectiveID = 2, UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 1, ObjectiveID = 3, UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new AuditScopeModel { AuditID = 1, ObjectiveID = 1, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new AuditScopeModel { AuditID = 1, ObjectiveID = 2, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new AuditScopeModel { AuditID = 1, ObjectiveID = 3, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
 
                 //Audit ID 2
-                new AuditScopeModel { AuditID = 2, ObjectiveID = 1, UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 2, ObjectiveID = 2, UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 2, ObjectiveID = 3, UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new AuditScopeModel { AuditID = 2, ObjectiveID = 1, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new AuditScopeModel { AuditID = 2, ObjectiveID = 2, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new AuditScopeModel { AuditID = 2, ObjectiveID = 3, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
 
                 //Audit ID 3
-                new AuditScopeModel { AuditID = 3, ObjectiveID = 1, UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 3, ObjectiveID = 2, UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 3, ObjectiveID = 3, UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new AuditScopeModel { AuditID = 3, ObjectiveID = 1, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new AuditScopeModel { AuditID = 3, ObjectiveID = 2, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new AuditScopeModel { AuditID = 3, ObjectiveID = 3, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
 
                 //Audit ID 4
-                new AuditScopeModel { AuditID = 4, ObjectiveID = 1, UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 4, ObjectiveID = 2, UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 4, ObjectiveID = 3, UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new AuditScopeModel { AuditID = 4, ObjectiveID = 1, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new AuditScopeModel { AuditID = 4, ObjectiveID = 2, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new AuditScopeModel { AuditID = 4, ObjectiveID = 3, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
 
                 //audit ID 5
-                new AuditScopeModel { AuditID = 5, ObjectiveID = 1, UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 5, ObjectiveID = 2, UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 5, ObjectiveID = 3, UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" }
+                new AuditScopeModel { AuditID = 5, ObjectiveID = 1, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new AuditScopeModel { AuditID = 5, ObjectiveID = 2, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new AuditScopeModel { AuditID = 5, ObjectiveID = 3, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" }
                 );
 
             /// Mapping 4 Questions and 40 Objectives with their weights for design factor 1

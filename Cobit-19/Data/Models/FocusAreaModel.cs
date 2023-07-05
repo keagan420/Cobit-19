@@ -8,13 +8,12 @@ namespace Cobit_19.Data.Models
         public FocusAreaModel()
         {
         }
-
+        [ForeignKey("ApplicationUser")]
         public string ApplicationUserID { get; set; }
         [Required]
         public string Name { get; set; }
         public string? Description { get; set; }
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DateCreated { get; set; }
 
         public virtual ICollection<AuditModel> Audits { get; set; }

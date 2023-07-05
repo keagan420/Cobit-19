@@ -8,12 +8,11 @@ namespace Cobit_19.Shared.Dtos
     public class AuditDto
     {
         public int ID { get; set; }
-        public int FocusAreaID { get; set; }
-        public int UserID { get; set; }
+        public UserDto User { get; set; } = default!;
+        public FocusAreaDto FocusArea { get; set; } = default!;
         public string Name { get; set; } = default!;
         public AuditStatus Status { get; set; } = default!;
         public DateTime DateCreated { get; set; }
         public DateTime? DateCompleted { get; set; }
-        public List<AnswerDto>? Answers { get; set; } 
     }
 }
