@@ -21,6 +21,7 @@ namespace Cobit_19.Business.Audits
         public async Task<AuditDto> getAsync(int id)
         {
             var quary = await _dbContext.Audits
+            .Include(a => a.ApplicationUser)
             .Include(a => a.FocusArea)
             .ThenInclude(a => a.DesignFactors)
                 .ThenInclude(df => df.Questions)
@@ -80,17 +81,10 @@ namespace Cobit_19.Business.Audits
             return _mapper.Map<DesignFactorDto>(DesignFactor);
         }
 
-        public async Task<AuditEditorDto> createAsync(AuditEditorDto auditEditorDto)
+        public async Task<AuditDto> createAsync(AuditEditorDto auditEditorDto)
         {
             // Create Audit
-            var audit = new AuditModel
-            {
-                Name = auditEditorDto.Name,
-                FocusAreaID = auditEditorDto.FocusAreaID,
-                ApplicationUserID = auditEditorDto.UserID,
-                Status = auditEditorDto.Status,
-                DateCreated = auditEditorDto.DateCreated,
-            };
+            var audit = _mapper.Map<AuditModel>(auditEditorDto);
 
             await _dbContext.Audits.AddAsync(audit);
 
@@ -111,27 +105,38 @@ namespace Cobit_19.Business.Audits
 
             await _dbContext.SaveChangesAsync();
 
-            return _mapper.Map<AuditEditorDto>(audit);
+            return _mapper.Map<AuditDto>(audit);
         }
 
-        public async Task deleteAsync(int id)
+        public async Task<AuditDto> deleteAsync(int id)
         {
+            var audit = _dbContext.Audits.Find(id);
+            if(audit == null)
+            {
+                return null;
+            }
+
+            var answers = _dbContext.Answers.Where(a => a.AuditID == audit.ID).ToList();
             // Remove answers
-            foreach (var answer in _dbContext.Answers.Where(a => a.AuditID == id))
+            foreach (var answer in answers)
             {
                 _dbContext.Answers.Remove(answer);
             }
 
-            var audit = _dbContext.Audits.Find(id);
             _dbContext.Audits.Remove(audit);
+
             await _dbContext.SaveChangesAsync();
+
+            return _mapper.Map<AuditDto>(audit);
         }
 
         public async Task<AuditDto> updateAsync(AuditEditorDto auditEditorDto)
         {
-            var audit = _dbContext.Audits
-                .Where(a => a.ID == auditEditorDto.ID)
-                .First();
+            var audit = _dbContext.Audits.Find(auditEditorDto.ID);
+            if(audit == null)
+            {
+                return null;
+            }
 
             _mapper.Map(auditEditorDto, audit);
 
