@@ -2,7 +2,8 @@
 {
     public enum AuditStatus
     {
-        InProgress = 0,
-        Completed = 1
+        NotStarted = 0,
+        InProgress = 1,
+        Completed = 2
     }
 }

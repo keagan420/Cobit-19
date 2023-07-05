@@ -23,7 +23,7 @@ namespace Cobit_19.Data.Models
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime? DateCompleted { get; set; }
 
-        public virtual FocusAreaModel FocusAreas { get; set; }
+        public virtual FocusAreaModel FocusArea { get; set; }
         public ICollection<AuditScopeModel> AuditScopes { get; set; }
         public ICollection<AnswerModel> Answers { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }

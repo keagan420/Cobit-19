@@ -17,14 +17,14 @@ namespace Cobit_19.Data
             await _dbContext.SaveChangesAsync();
         }
 
-        public Task DeleteAsync(TKey id)
+        protected Task DeleteAsync(TKey id)
         {
             var query = _dbContext.Set<T>()
               .Where(m => id.Equals(m.ID));
             return DeleteInternalAsync(query);
         }
 
-        public Task DeleteAsync(IEnumerable<TKey>? ids)
+        protected Task DeleteAsync(IEnumerable<TKey>? ids)
         {
             if (ids != null && ids.Any())
             {
