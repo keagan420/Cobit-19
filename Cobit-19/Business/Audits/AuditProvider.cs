@@ -7,11 +7,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Cobit_19.Business.Audits
 {
-    public class AuditProvider : AppProvider<AuditModel, int>
+    public class AuditProvider
     {
         private readonly IMapper _mapper;
-        public AuditProvider(IMapper mapper, AppDbContext dbContext) : base(dbContext)
+        private readonly AppDbContext _dbContext;
+        public AuditProvider(IMapper mapper, AppDbContext dbContext)
         {
+            _dbContext = dbContext;
             _mapper = mapper;
         }
 
@@ -90,7 +92,7 @@ namespace Cobit_19.Business.Audits
                 DateCreated = auditEditorDto.DateCreated,
             };
 
-            await AddAsync(audit);
+            await _dbContext.Audits.AddAsync(audit);
 
             // Create Answers
             var DesignFactors = await getDesignFactorsAsync(audit.ID);
@@ -112,19 +114,17 @@ namespace Cobit_19.Business.Audits
             return _mapper.Map<AuditEditorDto>(audit);
         }
 
-        public async Task<AuditDto> deleteAsync(int id)
+        public async Task deleteAsync(int id)
         {
-            var audit = await getAsync(id);
             // Remove answers
             foreach (var answer in _dbContext.Answers.Where(a => a.AuditID == id))
             {
                 _dbContext.Answers.Remove(answer);
             }
+
+            var audit = _dbContext.Audits.Find(id);
+            _dbContext.Audits.Remove(audit);
             await _dbContext.SaveChangesAsync();
-
-            await DeleteAsync(id);
-
-            return audit;
         }
 
         public async Task<AuditDto> updateAsync(AuditEditorDto auditEditorDto)
