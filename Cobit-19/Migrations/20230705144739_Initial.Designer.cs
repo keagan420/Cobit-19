@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cobit_19.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230704154501_Initial-Create")]
-    partial class InitialCreate
+    [Migration("20230705144739_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -83,6 +83,92 @@ namespace Cobit_19.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Cobit_19.Data.Models.ApplicationUser", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CustomTag")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "e633d22f-f4fb-45e6-952c-b608071b502a",
+                            CustomTag = "Custom",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            NormalizedUserName = "MYUSER",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGwH22INK+H6LzuADEjZhbNjUqmZLoBYFSFE1OP2oDaqa2TdMfP0o0JfdeHpSay9nQ==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "5b0de9ce-0dd3-4745-a260-9672daf1b562",
+                            TwoFactorEnabled = false,
+                            UserName = "myuser"
+                        });
+                });
+
             modelBuilder.Entity("Cobit_19.Data.Models.AuditModel", b =>
                 {
                     b.Property<int>("ID")
@@ -127,7 +213,7 @@ namespace Cobit_19.Migrations
                             DateCreated = new DateTime(2009, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FocusAreaID = 1,
                             Name = "Audit 1",
-                            Status = 0
+                            Status = 1
                         },
                         new
                         {
@@ -136,7 +222,7 @@ namespace Cobit_19.Migrations
                             DateCreated = new DateTime(2009, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FocusAreaID = 1,
                             Name = "Audit 2",
-                            Status = 0
+                            Status = 1
                         },
                         new
                         {
@@ -145,7 +231,7 @@ namespace Cobit_19.Migrations
                             DateCreated = new DateTime(2009, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FocusAreaID = 1,
                             Name = "Audit 3",
-                            Status = 0
+                            Status = 1
                         },
                         new
                         {
@@ -154,7 +240,7 @@ namespace Cobit_19.Migrations
                             DateCreated = new DateTime(2009, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FocusAreaID = 1,
                             Name = "Audit 4",
-                            Status = 0
+                            Status = 1
                         },
                         new
                         {
@@ -163,7 +249,7 @@ namespace Cobit_19.Migrations
                             DateCreated = new DateTime(2009, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             FocusAreaID = 1,
                             Name = "Audit 5",
-                            Status = 0
+                            Status = 1
                         });
                 });
 
@@ -175,11 +261,13 @@ namespace Cobit_19.Migrations
                     b.Property<int>("ObjectiveID")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserID")
+                    b.Property<string>("ApplicationUserID")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("AuditID", "ObjectiveID");
+
+                    b.HasIndex("ApplicationUserID");
 
                     b.HasIndex("ObjectiveID");
 
@@ -190,91 +278,91 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             ObjectiveID = 1,
-                            UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
                         },
                         new
                         {
                             AuditID = 1,
                             ObjectiveID = 2,
-                            UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
                         },
                         new
                         {
                             AuditID = 1,
                             ObjectiveID = 3,
-                            UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
                         },
                         new
                         {
                             AuditID = 2,
                             ObjectiveID = 1,
-                            UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
                         },
                         new
                         {
                             AuditID = 2,
                             ObjectiveID = 2,
-                            UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
                         },
                         new
                         {
                             AuditID = 2,
                             ObjectiveID = 3,
-                            UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
                         },
                         new
                         {
                             AuditID = 3,
                             ObjectiveID = 1,
-                            UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
                         },
                         new
                         {
                             AuditID = 3,
                             ObjectiveID = 2,
-                            UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
                         },
                         new
                         {
                             AuditID = 3,
                             ObjectiveID = 3,
-                            UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
                         },
                         new
                         {
                             AuditID = 4,
                             ObjectiveID = 1,
-                            UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
                         },
                         new
                         {
                             AuditID = 4,
                             ObjectiveID = 2,
-                            UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
                         },
                         new
                         {
                             AuditID = 4,
                             ObjectiveID = 3,
-                            UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
                         },
                         new
                         {
                             AuditID = 5,
                             ObjectiveID = 1,
-                            UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
                         },
                         new
                         {
                             AuditID = 5,
                             ObjectiveID = 2,
-                            UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
                         },
                         new
                         {
                             AuditID = 5,
                             ObjectiveID = 3,
-                            UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9"
                         });
                 });
 
@@ -15885,7 +15973,7 @@ namespace Cobit_19.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "f78bc324-2c61-406d-bdd9-124bcc30a877",
+                            ConcurrencyStamp = "92ff907b-b726-4501-b828-2915f6c70721",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });
@@ -15914,79 +16002,6 @@ namespace Cobit_19.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetRoleClaims", (string)null);
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedEmail")
-                        .HasDatabaseName("EmailIndex");
-
-                    b.HasIndex("NormalizedUserName")
-                        .IsUnique()
-                        .HasDatabaseName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-                    b.ToTable("AspNetUsers", (string)null);
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
-
-                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -16081,29 +16096,6 @@ namespace Cobit_19.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Cobit_19.Data.Models.ApplicationUser", b =>
-                {
-                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
-
-                    b.HasDiscriminator().HasValue("ApplicationUser");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "4e6a781d-9eda-4f0b-852e-5dcf690efe15",
-                            EmailConfirmed = false,
-                            LockoutEnabled = false,
-                            NormalizedUserName = "MYUSER",
-                            PasswordHash = "AQAAAAEAACcQAAAAECnAd2ZHx0f/4/DaG81GasAYsHlvfPQTmevc2DPoL91QDKRHjtlQOcTpWnItmTk9UQ==",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "24b5019f-29b3-4ee1-8be8-13e16cf231c5",
-                            TwoFactorEnabled = false,
-                            UserName = "myuser"
-                        });
-                });
-
             modelBuilder.Entity("Cobit_19.Data.Models.AnswerModel", b =>
                 {
                     b.HasOne("Cobit_19.Data.Models.AuditModel", "Audit")
@@ -16126,12 +16118,12 @@ namespace Cobit_19.Migrations
             modelBuilder.Entity("Cobit_19.Data.Models.AuditModel", b =>
                 {
                     b.HasOne("Cobit_19.Data.Models.ApplicationUser", "ApplicationUser")
-                        .WithMany("Audit")
+                        .WithMany("Audits")
                         .HasForeignKey("ApplicationUserID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Cobit_19.Data.Models.FocusAreaModel", "FocusAreas")
+                    b.HasOne("Cobit_19.Data.Models.FocusAreaModel", "FocusArea")
                         .WithMany("Audits")
                         .HasForeignKey("FocusAreaID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -16139,11 +16131,17 @@ namespace Cobit_19.Migrations
 
                     b.Navigation("ApplicationUser");
 
-                    b.Navigation("FocusAreas");
+                    b.Navigation("FocusArea");
                 });
 
             modelBuilder.Entity("Cobit_19.Data.Models.AuditScopeModel", b =>
                 {
+                    b.HasOne("Cobit_19.Data.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany("AuditScopes")
+                        .HasForeignKey("ApplicationUserID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("Cobit_19.Data.Models.AuditModel", "Audit")
                         .WithMany("AuditScopes")
                         .HasForeignKey("AuditID")
@@ -16155,6 +16153,8 @@ namespace Cobit_19.Migrations
                         .HasForeignKey("ObjectiveID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("ApplicationUser");
 
                     b.Navigation("Audit");
 
@@ -16177,7 +16177,7 @@ namespace Cobit_19.Migrations
                     b.HasOne("Cobit_19.Data.Models.ApplicationUser", "ApplicationUser")
                         .WithMany("FocusAreas")
                         .HasForeignKey("ApplicationUserID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("ApplicationUser");
@@ -16224,7 +16224,7 @@ namespace Cobit_19.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("Cobit_19.Data.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -16233,7 +16233,7 @@ namespace Cobit_19.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("Cobit_19.Data.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -16248,7 +16248,7 @@ namespace Cobit_19.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("Cobit_19.Data.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -16257,11 +16257,20 @@ namespace Cobit_19.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("Cobit_19.Data.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Cobit_19.Data.Models.ApplicationUser", b =>
+                {
+                    b.Navigation("AuditScopes");
+
+                    b.Navigation("Audits");
+
+                    b.Navigation("FocusAreas");
                 });
 
             modelBuilder.Entity("Cobit_19.Data.Models.AuditModel", b =>
@@ -16295,13 +16304,6 @@ namespace Cobit_19.Migrations
                     b.Navigation("Answers");
 
                     b.Navigation("Maps");
-                });
-
-            modelBuilder.Entity("Cobit_19.Data.Models.ApplicationUser", b =>
-                {
-                    b.Navigation("Audit");
-
-                    b.Navigation("FocusAreas");
                 });
 #pragma warning restore 612, 618
         }

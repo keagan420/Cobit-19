@@ -9,12 +9,13 @@ namespace Cobit_19.Data.Models
         public QuestionModel()
         {
         }
+        [ForeignKey("DesignFactor")]
         public int DesignFactorID { get; set; }
         [Required]
-        public string Question { get; set; }
+        public string Question { get; set; } = default!;
 
         public virtual DesignFactorModel DesignFactor { get; set; }
-        public ICollection<MapModel> Maps { get; set; }
-        public ICollection<AnswerModel> Answers { get; set; }
+        public virtual ICollection<MapModel> Maps { get; set; }
+        public virtual ICollection<AnswerModel> Answers { get; set; }
     }
 }

@@ -7,13 +7,12 @@ namespace Cobit_19.Data.Models
         public ObjectiveModel()
         {
         }
-
         public string Name { get; set; }
         [Required]
         public string Code { get; set; }
         public string? Description { get; set; }
 
-        public ICollection<MapModel> Maps { get; set; }
-        public ICollection<AuditScopeModel> AuditScopes { get; set; }
+        public virtual ICollection<MapModel> Maps { get; set; }
+        public virtual ICollection<AuditScopeModel> AuditScopes { get; set; }
     }
 }

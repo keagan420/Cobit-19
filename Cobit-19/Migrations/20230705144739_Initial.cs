@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Cobit_19.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -32,7 +32,7 @@ namespace Cobit_19.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CustomTag = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -193,7 +193,7 @@ namespace Cobit_19.Migrations
                         column: x => x.ApplicationUserID,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -223,7 +223,7 @@ namespace Cobit_19.Migrations
                         column: x => x.FocusAreaID,
                         principalTable: "FocusAreas",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -253,11 +253,17 @@ namespace Cobit_19.Migrations
                 {
                     AuditID = table.Column<int>(type: "int", nullable: false),
                     ObjectiveID = table.Column<int>(type: "int", nullable: false),
-                    UserID = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ApplicationUserID = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AuditScopes", x => new { x.AuditID, x.ObjectiveID });
+                    table.ForeignKey(
+                        name: "FK_AuditScopes_AspNetUsers_ApplicationUserID",
+                        column: x => x.ApplicationUserID,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_AuditScopes_Audits_AuditID",
                         column: x => x.AuditID,
@@ -345,12 +351,12 @@ namespace Cobit_19.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "2c5e174e-3b0e-446f-86af-483d56fd7210", "f78bc324-2c61-406d-bdd9-124bcc30a877", "Administrator", "ADMINISTRATOR" });
+                values: new object[] { "2c5e174e-3b0e-446f-86af-483d56fd7210", "92ff907b-b726-4501-b828-2915f6c70721", "Administrator", "ADMINISTRATOR" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
-                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Discriminator", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "8e445865-a24d-4543-a6c6-9443d048cdb9", 0, "4e6a781d-9eda-4f0b-852e-5dcf690efe15", "ApplicationUser", null, false, false, null, null, "MYUSER", "AQAAAAEAACcQAAAAECnAd2ZHx0f/4/DaG81GasAYsHlvfPQTmevc2DPoL91QDKRHjtlQOcTpWnItmTk9UQ==", null, false, "24b5019f-29b3-4ee1-8be8-13e16cf231c5", false, "myuser" });
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "CustomTag", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[] { "8e445865-a24d-4543-a6c6-9443d048cdb9", 0, "e633d22f-f4fb-45e6-952c-b608071b502a", "Custom", null, false, false, null, null, "MYUSER", "AQAAAAEAACcQAAAAEGwH22INK+H6LzuADEjZhbNjUqmZLoBYFSFE1OP2oDaqa2TdMfP0o0JfdeHpSay9nQ==", null, false, "5b0de9ce-0dd3-4745-a260-9672daf1b562", false, "myuser" });
 
             migrationBuilder.InsertData(
                 table: "Objectives",
@@ -414,11 +420,11 @@ namespace Cobit_19.Migrations
                 columns: new[] { "ID", "ApplicationUserID", "DateCompleted", "DateCreated", "FocusAreaID", "Name", "Status" },
                 values: new object[,]
                 {
-                    { 1, "8e445865-a24d-4543-a6c6-9443d048cdb9", null, new DateTime(2009, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 1", 0 },
-                    { 2, "8e445865-a24d-4543-a6c6-9443d048cdb9", null, new DateTime(2009, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 2", 0 },
-                    { 3, "8e445865-a24d-4543-a6c6-9443d048cdb9", null, new DateTime(2009, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 3", 0 },
-                    { 4, "8e445865-a24d-4543-a6c6-9443d048cdb9", null, new DateTime(2009, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 4", 0 },
-                    { 5, "8e445865-a24d-4543-a6c6-9443d048cdb9", null, new DateTime(2009, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 5", 0 }
+                    { 1, "8e445865-a24d-4543-a6c6-9443d048cdb9", null, new DateTime(2009, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 1", 1 },
+                    { 2, "8e445865-a24d-4543-a6c6-9443d048cdb9", null, new DateTime(2009, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 2", 1 },
+                    { 3, "8e445865-a24d-4543-a6c6-9443d048cdb9", null, new DateTime(2009, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 3", 1 },
+                    { 4, "8e445865-a24d-4543-a6c6-9443d048cdb9", null, new DateTime(2009, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 4", 1 },
+                    { 5, "8e445865-a24d-4543-a6c6-9443d048cdb9", null, new DateTime(2009, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Audit 5", 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -441,7 +447,7 @@ namespace Cobit_19.Migrations
 
             migrationBuilder.InsertData(
                 table: "AuditScopes",
-                columns: new[] { "AuditID", "ObjectiveID", "UserID" },
+                columns: new[] { "AuditID", "ObjectiveID", "ApplicationUserID" },
                 values: new object[,]
                 {
                     { 1, 1, "8e445865-a24d-4543-a6c6-9443d048cdb9" },
@@ -3055,6 +3061,11 @@ namespace Cobit_19.Migrations
                 name: "IX_Audits_FocusAreaID",
                 table: "Audits",
                 column: "FocusAreaID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AuditScopes_ApplicationUserID",
+                table: "AuditScopes",
+                column: "ApplicationUserID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AuditScopes_ObjectiveID",

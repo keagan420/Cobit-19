@@ -35,10 +35,10 @@ namespace Cobit_19.Business.Audits
             return _mapper.Map<IEnumerable<AuditDto>>(quary);
         }
 
-        public async Task<IEnumerable<AuditDto>> getAllByUserAsync(int userId)
+        public async Task<IEnumerable<AuditDto>> getAllByUserAsync(string userId)
         {
             var quary = await _dbContext.Audits
-                .Where(a => a.UserID == userId)
+                .Where(a => a.ApplicationUserID == userId)
                 .ToListAsync();
             return _mapper.Map<IEnumerable<AuditDto>>(quary);
         }
@@ -85,7 +85,7 @@ namespace Cobit_19.Business.Audits
             {
                 Name = auditEditorDto.Name,
                 FocusAreaID = auditEditorDto.FocusAreaID,
-                UserID = auditEditorDto.UserID,
+                ApplicationUserID = auditEditorDto.UserID,
                 Status = auditEditorDto.Status,
                 DateCreated = auditEditorDto.DateCreated,
             };

@@ -95,7 +95,7 @@ namespace Testing
             {
                 Name = "Test Audit",
                 FocusAreaID = 1,
-                UserID = 1,
+                UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                 Status = AuditStatus.InProgress,
                 DateCreated = DateTime.Now
             };
@@ -120,7 +120,7 @@ namespace Testing
             {
                 Name = "Delete Audit",
                 FocusAreaID = 1,
-                UserID = 1,
+                UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                 Status = AuditStatus.InProgress,
                 DateCreated = DateTime.Now
             };
@@ -146,7 +146,7 @@ namespace Testing
             {
                 Name = "Update Audit",
                 FocusAreaID = 1,
-                UserID = 1,
+                UserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                 Status = AuditStatus.InProgress,
                 DateCreated = DateTime.Now
             };
@@ -169,7 +169,7 @@ namespace Testing
             await _auditProvider.deleteAsync(audit.ID);
 
             // Assert
-            Assert.Null(await _auditProvider.getAsync(audit.ID))
+            Assert.Null(await _auditProvider.getAsync(audit.ID));
             Assert.Empty(await _auditProvider.getDesignFactorsAsync(audit.ID)); 
         }
     }

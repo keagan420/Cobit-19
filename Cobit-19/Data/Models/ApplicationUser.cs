@@ -7,5 +7,6 @@ namespace Cobit_19.Data.Models
         public string CustomTag { get; set; }
         public virtual ICollection<AuditModel> Audits { get; set; }
         public virtual ICollection<FocusAreaModel> FocusAreas { get; set; }
+        public virtual ICollection<AuditScopeModel> AuditScopes { get; set; }
     }
 }
