@@ -10,6 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Business\FocusArea\**" />
+    <Content Remove="Business\FocusArea\**" />
+    <EmbeddedResource Remove="Business\FocusArea\**" />
+    <None Remove="Business\FocusArea\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.19" />
@@ -25,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Business\FocusArea\" />
+    <Folder Include="Data\Migrations\" />
   </ItemGroup>
 
 </Project>

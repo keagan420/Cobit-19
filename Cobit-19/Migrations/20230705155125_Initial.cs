@@ -351,12 +351,12 @@ namespace Cobit_19.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "2c5e174e-3b0e-446f-86af-483d56fd7210", "92ff907b-b726-4501-b828-2915f6c70721", "Administrator", "ADMINISTRATOR" });
+                values: new object[] { "2c5e174e-3b0e-446f-86af-483d56fd7210", "aa7f815d-b0e9-4c02-b098-4358a7eccc24", "Administrator", "ADMINISTRATOR" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "CustomTag", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "8e445865-a24d-4543-a6c6-9443d048cdb9", 0, "e633d22f-f4fb-45e6-952c-b608071b502a", "Custom", null, false, false, null, null, "MYUSER", "AQAAAAEAACcQAAAAEGwH22INK+H6LzuADEjZhbNjUqmZLoBYFSFE1OP2oDaqa2TdMfP0o0JfdeHpSay9nQ==", null, false, "5b0de9ce-0dd3-4745-a260-9672daf1b562", false, "myuser" });
+                values: new object[] { "8e445865-a24d-4543-a6c6-9443d048cdb9", 0, "80524b78-9b67-4946-972b-74983bb3cf19", "Custom", null, false, false, null, null, "MYUSER", "AQAAAAEAACcQAAAAEIbVjpIDljxt2qH/PeRuphPO/x1nvRdeEcOAfugj2IH/UZ7z/eCFAomaMCUlYeKj/w==", null, false, "b4602869-29e5-4a4f-997c-dc61d3720698", false, "myuser" });
 
             migrationBuilder.InsertData(
                 table: "Objectives",
