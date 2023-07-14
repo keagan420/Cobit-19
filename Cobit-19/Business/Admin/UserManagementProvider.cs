@@ -20,26 +20,35 @@ namespace Cobit_19.Business.Admin
 
         public IEnumerable<UserDto> GetAllUsers()
         {
-            throw new NotImplementedException();
+            var users = _userManager.Users.ToList();
+            var userDtos = _mapper.Map<IEnumerable<UserDto>>(users);
+
+            return userDtos;
         }
 
-        public UserDto GetUserById(int id)
+        public UserDto GetUserById(string id)
         {
-            throw new NotImplementedException();
+            var user = _userManager.FindByIdAsync(id);
+            var userDto = _mapper.Map<UserDto>(user);
+
+            return userDto;
         }
 
-        public bool CreateUser()
+        public async Task<bool> CreateUser(ApplicationUser user, string password)
         {
-            throw new NotImplementedException();
+            var result = await _userManager.CreateAsync(user,password);
+            return result.Succeeded;
         }
 
-        public bool UpdateUser()
+        public async Task<bool> UpdateUser(ApplicationUser user)
         {
-            throw new NotImplementedException();
+            var result = await _userManager.UpdateAsync(user);
+            return result.Succeeded;
         }
-        public bool DeleteUser()
+        public async Task<bool> DeleteUser(ApplicationUser user)
         {
-            throw new NotImplementedException();
+            var result = await _userManager.DeleteAsync(user);
+            return result.Succeeded;
         }
     }
 }

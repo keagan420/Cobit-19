@@ -124,7 +124,6 @@ namespace Cobit_19.Data
                     UserName = "myuser",
                     NormalizedUserName = "MYUSER",
                     PasswordHash = hasher.HashPassword(null, "Pa$$w0rd"),
-                    CustomTag = "Custom"
                 }
             );;
 
