@@ -155,13 +155,15 @@ namespace Cobit_19.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1717c256-e824-4e95-b4cd-f0fcd2c163be",
+                            ConcurrencyStamp = "eba5d039-6060-4b31-a0cb-8315deae5fef",
                             EmailConfirmed = false,
+                            FirstName = "Daniel",
+                            LastName = "Coetzee",
                             LockoutEnabled = false,
                             NormalizedUserName = "MYUSER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEC9wWGbEI+N9irKuwObArECTVzlaqW5tYIGZy0FqL0NLZa4aOmeHODPp4hLO/0he1A==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENoLOETxXwa8HmQCiRVOshcjjRX9xE4qlY/OZ4ERGoVqo/xfFuDkEwYirRLpwhIIMQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8fde05c7-2e34-4b95-b2b8-29f2fc70dc68",
+                            SecurityStamp = "3fb8a624-521c-4f7c-b6df-64c8069535b4",
                             TwoFactorEnabled = false,
                             UserName = "myuser"
                         });
@@ -15971,7 +15973,7 @@ namespace Cobit_19.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "9bbe14ba-2ca2-4dda-ac72-dc829c615146",
+                            ConcurrencyStamp = "9b769c01-22b3-42e7-a3a1-9f009c72f713",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });

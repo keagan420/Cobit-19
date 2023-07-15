@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Cobit_19.Data;
 using Cobit_19.Data.Models;
 using Microsoft.Extensions.DependencyInjection;
+using Cobit_19.Business.Admin;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,9 +16,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<AppDbContext>();  
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<AppDbContext>();
 builder.Services.AddAuthentication("Identity.Application")
     .AddCookie();
+builder.Services.AddScoped<UserManagementProvider>();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

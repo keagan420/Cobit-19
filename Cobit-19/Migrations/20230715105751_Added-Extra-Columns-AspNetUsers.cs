@@ -5,7 +5,7 @@
 namespace Cobit_19.Migrations
 {
     /// <inheritdoc />
-    public partial class AddedColumnsToAspnetusers : Migration
+    public partial class AddedExtraColumnsAspNetUsers : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -31,14 +31,14 @@ namespace Cobit_19.Migrations
                 keyColumn: "Id",
                 keyValue: "2c5e174e-3b0e-446f-86af-483d56fd7210",
                 column: "ConcurrencyStamp",
-                value: "9bbe14ba-2ca2-4dda-ac72-dc829c615146");
+                value: "9b769c01-22b3-42e7-a3a1-9f009c72f713");
 
             migrationBuilder.UpdateData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
                 keyValue: "8e445865-a24d-4543-a6c6-9443d048cdb9",
                 columns: new[] { "ConcurrencyStamp", "FirstName", "LastName", "PasswordHash", "SecurityStamp" },
-                values: new object[] { "1717c256-e824-4e95-b4cd-f0fcd2c163be", null, null, "AQAAAAEAACcQAAAAEC9wWGbEI+N9irKuwObArECTVzlaqW5tYIGZy0FqL0NLZa4aOmeHODPp4hLO/0he1A==", "8fde05c7-2e34-4b95-b2b8-29f2fc70dc68" });
+                values: new object[] { "eba5d039-6060-4b31-a0cb-8315deae5fef", "Daniel", "Coetzee", "AQAAAAEAACcQAAAAENoLOETxXwa8HmQCiRVOshcjjRX9xE4qlY/OZ4ERGoVqo/xfFuDkEwYirRLpwhIIMQ==", "3fb8a624-521c-4f7c-b6df-64c8069535b4" });
         }
 
         /// <inheritdoc />
