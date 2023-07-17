@@ -8,7 +8,7 @@ namespace Cobit_19.Shared.Dtos
         public string Name { get; set; } = default!;
         public string Code { get; set; } = default!;
         public string? Description { get; set; } 
-        public ICollection<MapDto>? Maps { get; set; } 
-        public ICollection<AuditScopeDto>? AuditScopes { get; set; }
+        public IList<MapDto>? Maps { get; set; } 
+        public IList<AuditScopeDto>? AuditScopes { get; set; }
     }
 }

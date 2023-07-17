@@ -9,6 +9,6 @@ namespace Cobit_19.Shared.Dtos
         public string Description { get; set; } = default!;
         public DateTime DateCreated { get; set; }
         public UserDto User { get; set; } = default!;
-        public ICollection<DesignFactorDto>? DesignFactors { get; set; }
+        public IList<DesignFactorDto>? DesignFactors { get; set; }
     }
 }

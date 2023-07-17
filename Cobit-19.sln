@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cobit-19", "Cobit-19\Cobit-19.csproj", "{5336C69E-14F0-41B7-871C-C01763AD9F29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{FB4817CF-C776-4B76-8C19-99255778431E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{FB4817CF-C776-4B76-8C19-99255778431E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

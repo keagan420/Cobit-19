@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Cobit_19.Data;
 using Cobit_19.Data.Models;
 using Microsoft.Extensions.DependencyInjection;
+using Cobit_19.Business.Audits;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+builder.Services.AddScoped<AuditProvider>();
 
 var app = builder.Build();
 

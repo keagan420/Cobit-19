@@ -25,7 +25,7 @@ namespace Cobit_19.Business.Audits
             .Include(a => a.FocusArea)
             .ThenInclude(a => a.DesignFactors)
                 .ThenInclude(df => df.Questions)
-                    .ThenInclude(q => q.Answers)
+                    .ThenInclude(q => q.Answers.Where(a => a.AuditID == auditId))
             .FirstOrDefaultAsync(a => a.ID == id);
             return _mapper.Map<AuditDto>(quary);
         }
@@ -60,7 +60,6 @@ namespace Cobit_19.Business.Audits
                 .Where(f => f.Audits.Any(a => a.ID == auditId))
                 .SelectMany(f => f.DesignFactors)
                 .Include(df => df.Questions)
-                    .ThenInclude(q => q.Answers)
                 .ToListAsync();
 
             return _mapper.Map<IEnumerable<DesignFactorDto>>(DesignFactors);
@@ -72,7 +71,7 @@ namespace Cobit_19.Business.Audits
                 .Where(f => f.Audits.Any(a => a.ID == auditId))
                 .SelectMany(f => f.DesignFactors)
                 .Include(df => df.Questions)
-                    .ThenInclude(q => q.Answers)
+                    .ThenInclude(q => q.Answers.Where(a => a.AuditID == auditId))
                 .Include(df => df.Questions)
                     .ThenInclude(q => q.Maps)
                         .ThenInclude(m => m.Objective)

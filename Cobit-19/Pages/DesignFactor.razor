@@ -1,0 +1,82 @@
+﻿@page "/DesignFactor"
+@using Cobit_19.Business.Audits
+@using Cobit_19.Shared.Dtos
+@inject AuditProvider auditProvider
+
+@code {
+    protected DesignFactorDto _designFactorDto;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if(_designFactorDto == null)
+        {
+        _designFactorDto = await auditProvider.getDesignFactorFullAsync(1, 4);
+            
+        }
+    }
+
+    private void Add()
+    {
+        // Add your logic here
+    }
+
+    private void Click()
+    {
+        // Add your logic here
+    }
+}
+
+<div class="row">
+    <div class="col-lg-9">
+        <div>
+            <div>
+                <div>
+                    @if (_designFactorDto is null)
+                    {
+                        <p><em>Loading...</em></p>
+                    }
+                    else
+                    {
+                        <div>
+                            <h5>@_designFactorDto.Description</h5>
+                        </div>
+                        <EditForm Model="_designFactorDto" OnSubmit="@Add">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        @for (int i = 1; i <= 5; i++)
+                                        {
+                                            <th>@i</th>
+                                        }
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var q in _designFactorDto.Questions)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @q.Question
+                                            </td>
+                                            <InputRadioGroup Name="@($"Answer_{q.ID}")" @bind-Value="@q.Answers.FirstOrDefault().Answer">
+                                                @for (int i = 1; i <= 5; i++)
+                                                {
+                                                    <td>
+                                                        <InputRadio @bind-Value=@i />
+                                                    </td>
+                                                }
+                                            </InputRadioGroup>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <button type="submit">Submit</button>
+                        </EditForm>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
