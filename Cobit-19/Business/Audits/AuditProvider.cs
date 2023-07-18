@@ -25,7 +25,7 @@ namespace Cobit_19.Business.Audits
             .Include(a => a.FocusArea)
             .ThenInclude(a => a.DesignFactors)
                 .ThenInclude(df => df.Questions)
-                    .ThenInclude(q => q.Answers.Where(a => a.AuditID == auditId))
+                    .ThenInclude(q => q.Answers.Where(a => a.AuditID == id))
             .FirstOrDefaultAsync(a => a.ID == id);
             return _mapper.Map<AuditDto>(quary);
         }
@@ -153,6 +153,23 @@ namespace Cobit_19.Business.Audits
             await _dbContext.SaveChangesAsync();
 
             return _mapper.Map<AuditDto>(audit);
+        }
+
+        public async Task<AnswerDto> updateAnswerAsync(AnswerEditorDto answerEditorDto)
+        {
+            var answer = _dbContext.Answers.Find(answerEditorDto.AuditID, answerEditorDto.QuestionID);
+            if(answer == null)
+            {
+                return null;
+            }
+
+            _mapper.Map(answerEditorDto, answer);
+
+            _dbContext.Answers.Update(answer);
+
+            await _dbContext.SaveChangesAsync();
+
+            return _mapper.Map<AnswerDto>(answer);
         }
     }
 }

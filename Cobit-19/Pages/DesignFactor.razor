@@ -4,25 +4,44 @@
 @inject AuditProvider auditProvider
 
 @code {
+    protected int auditId = 1;
     protected DesignFactorDto _designFactorDto;
 
     protected override async Task OnInitializedAsync()
     {
         if(_designFactorDto == null)
         {
-        _designFactorDto = await auditProvider.getDesignFactorFullAsync(1, 4);
-            
+            _designFactorDto = await auditProvider.getDesignFactorFullAsync(1, 1);
         }
     }
 
-    private void Add()
+    private int Answer;
+
+    public int MyProperty
     {
-        // Add your logic here
+        get { return Answer; }
+        set { Answer = value; }
     }
 
-    private void Click()
+    private async void RadioSelection(int questionId, ChangeEventArgs args)
     {
-        // Add your logic here
+        int answ = -1;
+        if (int.TryParse(args.Value.ToString(), out answ))
+        {
+            AnswerEditorDto answerEditorDto = new AnswerEditorDto()
+            {
+                AuditID = auditId,
+                QuestionID = questionId,
+                Answer = answ
+            };
+
+            await auditProvider.updateAnswerAsync(answerEditorDto);
+        }
+    }
+
+    private bool IsAnswerSelected(int answer, int option)
+    {
+        return answer == option;
     }
 }
 
@@ -40,40 +59,35 @@
                         <div>
                             <h5>@_designFactorDto.Description</h5>
                         </div>
-                        <EditForm Model="_designFactorDto" OnSubmit="@Add">
-                            <DataAnnotationsValidator />
-                            <ValidationSummary />
-                            <table class="table">
-                                <thead>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    @for (int i = 1; i <= 5; i++)
+                                    {
+                                        <th>@i</th>
+                                    }
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var q in _designFactorDto.Questions)
+                                {
                                     <tr>
-                                        <th>Description</th>
+                                        <td>
+                                            @q.Question
+                                        </td>
                                         @for (int i = 1; i <= 5; i++)
                                         {
-                                            <th>@i</th>
+                                            <td>
+                                                <input type="radio" name="@q.ID" id="@q.ID" value="@i"
+                                                    @onchange="((e) => RadioSelection(q.ID, e))"
+                                                    checked="@IsAnswerSelected(q.Answers.First().Answer, i)" />
+                                            </td>
                                         }
                                     </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach (var q in _designFactorDto.Questions)
-                                    {
-                                        <tr>
-                                            <td>
-                                                @q.Question
-                                            </td>
-                                            <InputRadioGroup Name="@($"Answer_{q.ID}")" @bind-Value="@q.Answers.FirstOrDefault().Answer">
-                                                @for (int i = 1; i <= 5; i++)
-                                                {
-                                                    <td>
-                                                        <InputRadio @bind-Value=@i />
-                                                    </td>
-                                                }
-                                            </InputRadioGroup>
-                                        </tr>
-                                    }
-                                </tbody>
-                            </table>
-                            <button type="submit">Submit</button>
-                        </EditForm>
+                                }
+                            </tbody>
+                        </table>
                     }
                 </div>
             </div>
