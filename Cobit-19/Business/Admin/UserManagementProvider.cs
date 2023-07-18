@@ -24,7 +24,7 @@ namespace Cobit_19.Business.Admin
             return userDtos;
         }
 
-        public async Task<UserDto> GetUserById(string id)
+        public async Task<UserDto> GetUserByIdAsync(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
             var userDto = _mapper.Map<UserDto>(user);
@@ -32,19 +32,28 @@ namespace Cobit_19.Business.Admin
             return userDto;
         }
 
-        public async Task<bool> CreateUser(ApplicationUser user, string password)
+        public async Task<bool> CreateUserAsync(UserEditorDto userDto)
         {
-            var result = await _userManager.CreateAsync(user,password);
+            var user = _mapper.Map<ApplicationUser>(userDto);
+
+            var passwordHasher = new PasswordHasher<ApplicationUser>();
+            user.PasswordHash = passwordHasher.HashPassword(user, userDto.Password);
+
+            var result = await _userManager.CreateAsync(user);
             return result.Succeeded;
         }
 
-        public async Task<bool> UpdateUser(ApplicationUser user)
+        public async Task<bool> UpdateUserAsync(UserEditorDto userDto)
         {
+            var user = _mapper.Map<ApplicationUser>(userDto);
+
             var result = await _userManager.UpdateAsync(user);
             return result.Succeeded;
         }
-        public async Task<bool> DeleteUser(ApplicationUser user)
+        public async Task<bool> DeleteUserAsync(string id)
         {
+            var user = await _userManager.FindByIdAsync(id);
+
             var result = await _userManager.DeleteAsync(user);
             return result.Succeeded;
         }
