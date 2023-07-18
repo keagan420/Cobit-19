@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cobit_19.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230705155125_Initial")]
-    partial class Initial
+    [Migration("20230717111648_answerSeedValue")]
+    partial class answerSeedValue
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -55,13 +55,19 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             QuestionID = 2,
-                            Answer = 1
+                            Answer = 2
                         },
                         new
                         {
                             AuditID = 1,
                             QuestionID = 3,
-                            Answer = 1
+                            Answer = 3
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 4,
+                            Answer = 4
                         },
                         new
                         {
@@ -156,14 +162,14 @@ namespace Cobit_19.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "80524b78-9b67-4946-972b-74983bb3cf19",
+                            ConcurrencyStamp = "ce2378e7-7337-4241-8998-e13ed2c52342",
                             CustomTag = "Custom",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "MYUSER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIbVjpIDljxt2qH/PeRuphPO/x1nvRdeEcOAfugj2IH/UZ7z/eCFAomaMCUlYeKj/w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEOgcWcZOfs9CJDiDfYEd8rwPDMi/bcQsJHROK79uxl705khUygznl+JyA3aIbzOoqg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b4602869-29e5-4a4f-997c-dc61d3720698",
+                            SecurityStamp = "3cc5a8f8-1899-43dd-b125-a8928b18e83e",
                             TwoFactorEnabled = false,
                             UserName = "myuser"
                         });
@@ -15973,7 +15979,7 @@ namespace Cobit_19.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "aa7f815d-b0e9-4c02-b098-4358a7eccc24",
+                            ConcurrencyStamp = "b4cb6162-f85a-4334-915d-dd60ba76e6e3",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });

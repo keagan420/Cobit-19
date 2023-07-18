@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Cobit_19.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class answerSeedValue : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -351,12 +351,12 @@ namespace Cobit_19.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "2c5e174e-3b0e-446f-86af-483d56fd7210", "aa7f815d-b0e9-4c02-b098-4358a7eccc24", "Administrator", "ADMINISTRATOR" });
+                values: new object[] { "2c5e174e-3b0e-446f-86af-483d56fd7210", "b4cb6162-f85a-4334-915d-dd60ba76e6e3", "Administrator", "ADMINISTRATOR" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "CustomTag", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "8e445865-a24d-4543-a6c6-9443d048cdb9", 0, "80524b78-9b67-4946-972b-74983bb3cf19", "Custom", null, false, false, null, null, "MYUSER", "AQAAAAEAACcQAAAAEIbVjpIDljxt2qH/PeRuphPO/x1nvRdeEcOAfugj2IH/UZ7z/eCFAomaMCUlYeKj/w==", null, false, "b4602869-29e5-4a4f-997c-dc61d3720698", false, "myuser" });
+                values: new object[] { "8e445865-a24d-4543-a6c6-9443d048cdb9", 0, "ce2378e7-7337-4241-8998-e13ed2c52342", "Custom", null, false, false, null, null, "MYUSER", "AQAAAAEAACcQAAAAEOgcWcZOfs9CJDiDfYEd8rwPDMi/bcQsJHROK79uxl705khUygznl+JyA3aIbzOoqg==", null, false, "3cc5a8f8-1899-43dd-b125-a8928b18e83e", false, "myuser" });
 
             migrationBuilder.InsertData(
                 table: "Objectives",
@@ -554,8 +554,9 @@ namespace Cobit_19.Migrations
                 values: new object[,]
                 {
                     { 1, 1, 1 },
-                    { 1, 2, 1 },
-                    { 1, 3, 1 },
+                    { 1, 2, 2 },
+                    { 1, 3, 3 },
+                    { 1, 4, 4 },
                     { 2, 1, 1 },
                     { 2, 2, 1 },
                     { 2, 3, 1 }
