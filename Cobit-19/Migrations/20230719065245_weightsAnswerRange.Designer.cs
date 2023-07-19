@@ -4,6 +4,7 @@ using Cobit_19.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cobit_19.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230719065245_weightsAnswerRange")]
+    partial class weightsAnswerRange
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -715,14 +718,14 @@ namespace Cobit_19.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a28a2388-1a32-4880-aa5b-0b3868bea83e",
+                            ConcurrencyStamp = "384e6383-cd2d-408b-b7d8-7e55b357956f",
                             CustomTag = "Custom",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "MYUSER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMA3A042Nq7JLmgrX9GtyhDq6dZp2tAaQixyUSlROpMejsAIzxxp0LdM3vaZF7FlTA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEI2kjbWyCHDX5pEkJ5ooAgtoR8q+9x3jBwrhJtsPlns2u/a2YCa2e6/p+OhQwUMIZg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6eca69f6-5235-422d-b97a-441a29825ac7",
+                            SecurityStamp = "f2949758-6a5f-4a19-ad92-b3ffef859858",
                             TwoFactorEnabled = false,
                             UserName = "myuser"
                         });
@@ -16042,9 +16045,6 @@ namespace Cobit_19.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<int>("BaseAnswer")
-                        .HasColumnType("int");
-
                     b.Property<int>("DesignFactorID")
                         .HasColumnType("int");
 
@@ -16062,518 +16062,444 @@ namespace Cobit_19.Migrations
                         new
                         {
                             ID = 1,
-                            BaseAnswer = 3,
                             DesignFactorID = 1,
                             Question = "Growth/Acquisition"
                         },
                         new
                         {
                             ID = 2,
-                            BaseAnswer = 3,
                             DesignFactorID = 1,
                             Question = "Innovation/Differentiation"
                         },
                         new
                         {
                             ID = 3,
-                            BaseAnswer = 3,
                             DesignFactorID = 1,
                             Question = "Cost Leadership"
                         },
                         new
                         {
                             ID = 4,
-                            BaseAnswer = 3,
                             DesignFactorID = 1,
                             Question = "Client Service/Stability"
                         },
                         new
                         {
                             ID = 5,
-                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG01—Portfolio of competitive products and services"
                         },
                         new
                         {
                             ID = 6,
-                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG02—Managed business risk"
                         },
                         new
                         {
                             ID = 7,
-                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG03—Compliance with external laws and regulations"
                         },
                         new
                         {
                             ID = 8,
-                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG04—Quality of financial information"
                         },
                         new
                         {
                             ID = 9,
-                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG05—Customer-oriented service culture"
                         },
                         new
                         {
                             ID = 10,
-                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG06—Business-service continuity and availability"
                         },
                         new
                         {
                             ID = 11,
-                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG07—Quality of management information"
                         },
                         new
                         {
                             ID = 12,
-                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG08—Optimization of internal business process functionality"
                         },
                         new
                         {
                             ID = 13,
-                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG09—Optimization of business process costs"
                         },
                         new
                         {
                             ID = 14,
-                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG10—Staff skills, motivation and productivity"
                         },
                         new
                         {
                             ID = 15,
-                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG11—Compliance with internal policies"
                         },
                         new
                         {
                             ID = 16,
-                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG12—Managed digital transformation programs"
                         },
                         new
                         {
                             ID = 17,
-                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG13—Product and business innovation"
                         },
                         new
                         {
                             ID = 18,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "IT investment decision-making, portfolio definition & maintenance"
                         },
                         new
                         {
                             ID = 19,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Program & projects life cycle management"
                         },
                         new
                         {
                             ID = 20,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "IT cost & oversight"
                         },
                         new
                         {
                             ID = 21,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "IT expertise, skills & behaviour"
                         },
                         new
                         {
                             ID = 22,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Enterprise/IT architecture"
                         },
                         new
                         {
                             ID = 23,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "IT operational infrastructure incidents"
                         },
                         new
                         {
                             ID = 24,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Unauthorized actions"
                         },
                         new
                         {
                             ID = 25,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Software adoption/usage problems"
                         },
                         new
                         {
                             ID = 26,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Hardware incidents"
                         },
                         new
                         {
                             ID = 27,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Software failures"
                         },
                         new
                         {
                             ID = 28,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Logical attacks (hacking, malware, etc.)"
                         },
                         new
                         {
                             ID = 29,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Third-party/supplier incidents"
                         },
                         new
                         {
                             ID = 30,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Noncompliance"
                         },
                         new
                         {
                             ID = 31,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Geopolitical Issues"
                         },
                         new
                         {
                             ID = 32,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Industrial action"
                         },
                         new
                         {
                             ID = 33,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Acts of nature"
                         },
                         new
                         {
                             ID = 34,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Technology-based innovation"
                         },
                         new
                         {
                             ID = 35,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Environmental"
                         },
                         new
                         {
                             ID = 36,
-                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Data & information management"
                         },
                         new
                         {
                             ID = 37,
-                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Frustration between different IT entities across the organization because of a perception of low contribution to business value"
                         },
                         new
                         {
                             ID = 38,
-                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Frustration between business departments (i.e., the IT customer) and the IT department because of failed initiatives or a perception of low contribution to business value"
                         },
                         new
                         {
                             ID = 39,
-                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Significant IT-related incidents, such as data loss, security breaches, project failure and application errors, linked to IT"
                         },
                         new
                         {
                             ID = 40,
-                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Service delivery problems by the IT outsourcer(s)"
                         },
                         new
                         {
                             ID = 41,
-                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Failures to meet IT-related regulatory or contractual requirements"
                         },
                         new
                         {
                             ID = 42,
-                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Regular audit findings or other assessment reports about poor IT performance or reported IT quality or service problems"
                         },
                         new
                         {
                             ID = 43,
-                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Substantial hidden and rogue IT spending, that is, IT spending by user departments outside the control of the normal IT investment decision mechanisms and approved budgets"
                         },
                         new
                         {
                             ID = 44,
-                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Duplications or overlaps between various initiatives, or other forms of wasted resources"
                         },
                         new
                         {
                             ID = 45,
-                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Insufficient IT resources, staff with inadequate skills or staff burnout/dissatisfaction"
                         },
                         new
                         {
                             ID = 46,
-                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "IT-enabled changes or projects frequently failing to meet business needs and delivered late or over budget"
                         },
                         new
                         {
                             ID = 47,
-                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Reluctance by board members, executives or senior management to engage with IT, or a lack of committed business sponsorship for IT"
                         },
                         new
                         {
                             ID = 48,
-                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Complex IT operating model and/or unclear decision mechanisms for IT-related decisions"
                         },
                         new
                         {
                             ID = 49,
-                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Excessively high cost of IT"
                         },
                         new
                         {
                             ID = 50,
-                            BaseAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Obstructed or failed implementation of new initiatives or innovations caused by the current IT architecture and systems"
                         },
                         new
                         {
                             ID = 51,
-                            BaseAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Gap between business and technical knowledge, which leads to business users and information and/or technology specialists speaking different languages"
                         },
                         new
                         {
                             ID = 52,
-                            BaseAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Regular issues with data quality and integration of data across various sources"
                         },
                         new
                         {
                             ID = 53,
-                            BaseAnswer = 2,
                             DesignFactorID = 4,
                             Question = "High level of end-user computing, creating (among other problems) a lack of oversight and quality control over the applications that are being developed and put in operation"
                         },
                         new
                         {
                             ID = 54,
-                            BaseAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Business departments implementing their own information solutions with little or no involvement of the enterprise IT department (related to end-user computing, which often stems from dissatisfaction with IT solutions and services)"
                         },
                         new
                         {
                             ID = 55,
-                            BaseAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Ignorance of and/or noncompliance with privacy regulations"
                         },
                         new
                         {
                             ID = 56,
-                            BaseAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Inability to exploit new technologies or innovate using I&T"
                         },
                         new
                         {
                             ID = 57,
-                            BaseAnswer = 33,
                             DesignFactorID = 5,
                             Question = "High"
                         },
                         new
                         {
                             ID = 58,
-                            BaseAnswer = 67,
                             DesignFactorID = 5,
                             Question = "Normal"
                         },
                         new
                         {
                             ID = 59,
-                            BaseAnswer = 0,
                             DesignFactorID = 6,
                             Question = "High compliance requirements"
                         },
                         new
                         {
                             ID = 60,
-                            BaseAnswer = 100,
                             DesignFactorID = 6,
                             Question = "Normal compliance requirements"
                         },
                         new
                         {
                             ID = 61,
-                            BaseAnswer = 0,
                             DesignFactorID = 6,
                             Question = "Low compliance requirements"
                         },
                         new
                         {
                             ID = 62,
-                            BaseAnswer = 3,
                             DesignFactorID = 7,
                             Question = "Support"
                         },
                         new
                         {
                             ID = 63,
-                            BaseAnswer = 3,
                             DesignFactorID = 7,
                             Question = "Factory"
                         },
                         new
                         {
                             ID = 64,
-                            BaseAnswer = 3,
                             DesignFactorID = 7,
                             Question = "Turnaround"
                         },
                         new
                         {
                             ID = 65,
-                            BaseAnswer = 3,
                             DesignFactorID = 7,
                             Question = "Strategic"
                         },
                         new
                         {
                             ID = 66,
-                            BaseAnswer = 33,
                             DesignFactorID = 8,
                             Question = "Outsourcing"
                         },
                         new
                         {
                             ID = 67,
-                            BaseAnswer = 33,
                             DesignFactorID = 8,
                             Question = "Cloud"
                         },
                         new
                         {
                             ID = 68,
-                            BaseAnswer = 33,
                             DesignFactorID = 8,
                             Question = "Insourced"
                         },
                         new
                         {
                             ID = 69,
-                            BaseAnswer = 15,
                             DesignFactorID = 9,
                             Question = "Agile"
                         },
                         new
                         {
                             ID = 70,
-                            BaseAnswer = 10,
                             DesignFactorID = 9,
                             Question = "DevOps"
                         },
                         new
                         {
                             ID = 71,
-                            BaseAnswer = 75,
                             DesignFactorID = 9,
                             Question = "Traditional"
                         },
                         new
                         {
                             ID = 72,
-                            BaseAnswer = 15,
                             DesignFactorID = 10,
                             Question = "First mover"
                         },
                         new
                         {
                             ID = 73,
-                            BaseAnswer = 70,
                             DesignFactorID = 10,
                             Question = "Follower"
                         },
                         new
                         {
                             ID = 74,
-                            BaseAnswer = 15,
                             DesignFactorID = 10,
                             Question = "Slow adopter"
                         });
@@ -16609,7 +16535,7 @@ namespace Cobit_19.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "3521a8ed-1ecc-4d63-becd-1114ff5c9253",
+                            ConcurrencyStamp = "c61da866-8ea4-4d8d-86cc-7f9469f3e534",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });

@@ -15,28 +15,26 @@
         }
     }
 
-    private int Answer;
-
-    public int MyProperty
-    {
-        get { return Answer; }
-        set { Answer = value; }
-    }
-
-    private async void RadioSelection(int questionId, ChangeEventArgs args)
+    private void Submit(int questionId, ChangeEventArgs args)
     {
         int answ = -1;
         if (int.TryParse(args.Value.ToString(), out answ))
         {
-            AnswerEditorDto answerEditorDto = new AnswerEditorDto()
+            UpdateAnswer(auditId, questionId, answ);
+        }
+    }
+
+    private async void UpdateAnswer(int AuditId, int QuestionId, int Answer, int Odds=0)
+    {
+        AnswerEditorDto answerEditorDto = new AnswerEditorDto()
             {
-                AuditID = auditId,
-                QuestionID = questionId,
-                Answer = answ
+                AuditID = AuditId,
+                QuestionID = QuestionId,
+                Answer = Answer,
+                Odds = Odds
             };
 
-            await auditProvider.updateAnswerAsync(answerEditorDto);
-        }
+        await auditProvider.updateAnswerAsync(answerEditorDto);
     }
 
     private bool IsAnswerSelected(int answer, int option)
@@ -45,52 +43,101 @@
     }
 }
 
-<div class="row">
-    <div class="col-lg-9">
-        <div>
-            <div>
+<div class="container-md bg-light mt-4">
+    <div class="row">
+        <div class="col-lg-9">
+            @if (_designFactorDto is null)
+            {
+                <p><em>Loading...</em></p>
+            }
+            else
+            {
                 <div>
-                    @if (_designFactorDto is null)
-                    {
-                        <p><em>Loading...</em></p>
-                    }
-                    else
-                    {
-                        <div>
-                            <h5>@_designFactorDto.Description</h5>
-                        </div>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Description</th>
-                                    @for (int i = 1; i <= 5; i++)
+                    <h3> Design Factor : @_designFactorDto.Description</h3>
+                </div>
+                <table class="table table-responsive-md">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Description</th>
+                            @if (_designFactorDto.Questions.First().Answers.First().Odds == 0)
+                            {
+                                @if (_designFactorDto.Questions.First().Answers.First().AnswerRange <= 8)
+                                {
+                                    @for (int i = 1; i <= _designFactorDto.Questions.First().Answers.First().AnswerRange; i++)
                                     {
                                         <th>@i</th>
                                     }
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var q in _designFactorDto.Questions)
+                                }
+                                else if (_designFactorDto.Questions.First().Answers.First().AnswerRange == 100)
                                 {
-                                    <tr>
-                                        <td>
-                                            @q.Question
-                                        </td>
-                                        @for (int i = 1; i <= 5; i++)
+                                    <th>Value(%)</th>
+                                }
+                                else
+                                {
+                                    <th>Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
+                                }
+                            }
+                            else
+                            {
+                                <th>Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
+                                <th>Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
+                            }
+                            <th>Baseline</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var q in _designFactorDto.Questions)
+                        {
+                            <tr>
+                                <td>
+                                    @q.Question
+                                </td>
+                                @if (_designFactorDto.Questions.First().Answers.First().Odds == 0)
+                                {
+
+                                    @if (q.Answers.First().AnswerRange <= 8)
+                                    {
+                                        @for (int i = 1; i <= q.Answers.First().AnswerRange; i++)
                                         {
                                             <td>
                                                 <input type="radio" name="@q.ID" id="@q.ID" value="@i"
-                                                    @onchange="((e) => RadioSelection(q.ID, e))"
-                                                    checked="@IsAnswerSelected(q.Answers.First().Answer, i)" />
+                                                class="form-check-input"
+                                                @onchange="((e) => Submit(q.ID, e))"
+                                                checked="@IsAnswerSelected(q.Answers.First().Answer, i)" />
                                             </td>
                                         }
-                                    </tr>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
+                                            class="form-control"
+                                            @onchange="((e) => Submit(q.ID, e))" />
+                                        </td>
+                                    }
                                 }
-                            </tbody>
-                        </table>
-                    }
-                </div>
-            </div>
+                                else
+                                {
+                                    <td>
+                                        <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
+                                               class="form-control"
+                                        @onchange="((e) => {})" />
+                                    </td>
+                                    <td>
+                                        <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Odds"
+                                               class="form-control"
+                                        @onchange="((e) => {})" />
+                                    </td>
+                                }
+                                <td>
+                                    @q.BaseAnswer
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
         </div>
     </div>
 </div>
+

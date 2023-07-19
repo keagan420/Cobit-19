@@ -19,6 +19,9 @@ namespace Cobit_19.Data.Models
         public int QuestionID { get; set; }
         [DefaultValue(0)]
         public int Answer { get; set; }
+        public int AnswerRange { get; set; }
+        [DefaultValue(null)]
+        public int Odds { get; set; }
         public virtual AuditModel Audit { get; set; }
         public virtual QuestionModel Question { get; set; }
     }
