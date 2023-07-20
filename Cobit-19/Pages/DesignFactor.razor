@@ -2,11 +2,19 @@
 @using Cobit_19.Business.Audits
 @using Cobit_19.Shared.Dtos
 @using Syncfusion.Blazor.Charts
+@using Microsoft.AspNetCore.WebUtilities
 @inject AuditProvider auditProvider
+@inject NavigationManager navigationManager
 
 @code {
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public int AuditId { get; set; }
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public int DFId { get; set; }
+
     SfChart sfChart;
-    protected int auditId = 1;
     protected DesignFactorDto _designFactorDto;
     protected List<ObjectiveDto> _objectiveDtos;
     protected List<ObjectiveValueDto> _mappedObjectives { get; set; }
@@ -15,7 +23,7 @@
     {
         if(_designFactorDto == null)
         {
-            _designFactorDto = await auditProvider.getDesignFactorFullAsync(1, 5);
+            _designFactorDto = await auditProvider.getDesignFactorFullAsync(AuditId, DFId);
             _objectiveDtos = _designFactorDto.Questions.First().Maps.Select(x => x.Objective).ToList();
             _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
         }
@@ -26,13 +34,13 @@
         int answ = -1;
         if (int.TryParse(args.Value.ToString(), out answ))
         {
-            UpdateAnswer(auditId, questionId, answ);
+            UpdateAnswer(AuditId, questionId, answ);
         }
 
         _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Answer = answ;
         _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
         sfChart.RefreshAsync();
-        
+
     }
 
     private async void UpdateAnswer(int AuditId, int QuestionId, int Answer, int Odds=0)
@@ -52,11 +60,35 @@
     {
         return answer == option;
     }
+
+    private void NextButtonPress()
+    {
+        var queryStrDict = new Dictionary<string, string>
+            {
+                ["AuditId"] = (AuditId).ToString(),
+                ["DFId"] = (DFId+1).ToString(),
+            };
+        navigationManager.NavigateTo(
+            QueryHelpers.AddQueryString("/DesignFactor", queryStrDict)
+        );
+    }
+
+    private void PreviousButtonPress()
+    {
+        var queryStrDict = new Dictionary<string, string>
+            {
+                ["AuditId"] = (AuditId).ToString(),
+                ["DFId"] = (DFId - 1).ToString(),
+            };
+        navigationManager.NavigateTo(
+            QueryHelpers.AddQueryString("/DesignFactor", queryStrDict)
+        );
+    }
 }
 
 <div class="container-md bg-light mt-4">
     <div class="row">
-        <div class="col-lg-9">
+        <div class="col-lg-8">
             @if (_designFactorDto is null)
             {
                 <p><em>Loading...</em></p>
@@ -66,7 +98,7 @@
                 <div>
                     <h3> Design Factor : @_designFactorDto.Description</h3>
                 </div>
-                <table class="table table-responsive-md">
+                <table class="table border-3 table-bordered" >
                     <thead class="table-primary">
                         <tr>
                             <th>Description</th>
@@ -147,19 +179,30 @@
                         }
                     </tbody>
                 </table>
-            }
-        </div>
-        <div>
-            <SfChart @ref="sfChart">
-                <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-                </ChartPrimaryXAxis>
+                <figure class="figure flex-lg-fill">
+                    <figcaption class="figure-caption">Design Factor Visualizaion</figcaption>
+                    <div class="figure img-fluid rounded">
+                        <SfChart @ref="sfChart">
+                            <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+                            </ChartPrimaryXAxis>
 
-                <ChartSeriesCollection>
-                    <ChartSeries DataSource="@_mappedObjectives" XName="Objective" YName="RelativeInportance"
-                                 Type="ChartSeriesType.Radar" DrawType="ChartDrawType.Line" >
-                    </ChartSeries>
-                </ChartSeriesCollection>
-            </SfChart>
+                            <ChartSeriesCollection>
+                                <ChartSeries DataSource="@_mappedObjectives" XName="Objective" YName="RelativeInportance"
+                                             Type="ChartSeriesType.Radar" DrawType="ChartDrawType.Line">
+                                </ChartSeries>
+                            </ChartSeriesCollection>
+                        </SfChart>
+                    </div>
+                </figure>
+                <div class="row">
+                    <div class="col">
+                        <button type="button" onclick="@(() => PreviousButtonPress())" class="btn btn-primary">Back</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" onclick="@(() => NextButtonPress())" class="btn btn-primary" >Next</button>
+                    </div>
+                </div>
+            }
         </div>
     </div>
 </div>
