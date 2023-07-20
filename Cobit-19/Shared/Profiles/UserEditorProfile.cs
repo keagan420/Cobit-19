@@ -4,7 +4,7 @@ using Cobit_19.Shared.Dtos;
 
 namespace Cobit_19.Shared.Profiles
 {
-    public class UserEditorProfile :Profile
+    public class UserEditorProfile : Profile
     {
         public UserEditorProfile()
         {
