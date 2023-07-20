@@ -1,17 +1,23 @@
 ﻿@page "/DesignFactor"
 @using Cobit_19.Business.Audits
 @using Cobit_19.Shared.Dtos
+@using Syncfusion.Blazor.Charts
 @inject AuditProvider auditProvider
 
 @code {
+    SfChart sfChart;
     protected int auditId = 1;
     protected DesignFactorDto _designFactorDto;
+    protected List<ObjectiveDto> _objectiveDtos;
+    protected List<ObjectiveValueDto> _mappedObjectives { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         if(_designFactorDto == null)
         {
-            _designFactorDto = await auditProvider.getDesignFactorFullAsync(1, 1);
+            _designFactorDto = await auditProvider.getDesignFactorFullAsync(1, 5);
+            _objectiveDtos = _designFactorDto.Questions.First().Maps.Select(x => x.Objective).ToList();
+            _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
         }
     }
 
@@ -22,6 +28,11 @@
         {
             UpdateAnswer(auditId, questionId, answ);
         }
+
+        _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Answer = answ;
+        _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
+        sfChart.RefreshAsync();
+        
     }
 
     private async void UpdateAnswer(int AuditId, int QuestionId, int Answer, int Odds=0)
@@ -137,6 +148,18 @@
                     </tbody>
                 </table>
             }
+        </div>
+        <div>
+            <SfChart @ref="sfChart">
+                <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+                </ChartPrimaryXAxis>
+
+                <ChartSeriesCollection>
+                    <ChartSeries DataSource="@_mappedObjectives" XName="Objective" YName="RelativeInportance"
+                                 Type="ChartSeriesType.Radar" DrawType="ChartDrawType.Line" >
+                    </ChartSeries>
+                </ChartSeriesCollection>
+            </SfChart>
         </div>
     </div>
 </div>

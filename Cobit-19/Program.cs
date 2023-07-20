@@ -8,6 +8,7 @@ using Cobit_19.Data;
 using Cobit_19.Data.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Cobit_19.Business.Audits;
+using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,8 +23,9 @@ builder.Services.AddAuthentication("Identity.Application")
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddSyncfusionBlazor();
 
-builder.Services.AddScoped<AuditProvider>();
+builder.Services.AddTransient<AuditProvider>();
 
 var app = builder.Build();
 

@@ -20,9 +20,9 @@ namespace Cobit_19.Business.Audits
 
                 foreach (var question in designFactorDto.Questions)
                 {
-                    float weight = question.Maps.Where(m => m.ObjectiveID == objective.ID).First().Weight;
-                    float answer = question.Answers.First().Answer;
-                    float baseline = question.BaseAnswer;
+                    double weight = question.Maps.Where(m => m.ObjectiveID == objective.ID).First().Weight;
+                    double answer = question.Answers.First().Answer;
+                    double baseline = question.BaseAnswer;
 
                     objectiveValue.Score += weight * answer;
                     objectiveValue.BaselineScore += weight * baseline;

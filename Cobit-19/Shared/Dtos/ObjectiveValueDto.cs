@@ -3,8 +3,8 @@
     public class ObjectiveValueDto
     {
         public string Objective { get; set; }
-        public float Score { get; set; }
-        public float BaselineScore { get; set; }
-        public float RelativeInportance { get; set; } 
+        public double Score { get; set; }
+        public double BaselineScore { get; set; }
+        public double RelativeInportance { get; set; } 
     }
 }
