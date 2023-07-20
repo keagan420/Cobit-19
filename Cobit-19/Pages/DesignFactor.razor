@@ -7,6 +7,10 @@
 @inject NavigationManager navigationManager
 
 @code {
+    protected SfChart sfChart;
+    protected DesignFactorDto _designFactorDto;
+    protected List<ObjectiveDto>? _objectiveDtos;
+
     [Parameter]
     [SupplyParameterFromQuery]
     public int AuditId { get; set; }
@@ -14,19 +18,21 @@
     [SupplyParameterFromQuery]
     public int DFId { get; set; }
 
-    SfChart sfChart;
-    protected DesignFactorDto _designFactorDto;
-    protected List<ObjectiveDto> _objectiveDtos;
-    protected List<ObjectiveValueDto> _mappedObjectives { get; set; }
+    public List<ObjectiveValueDto>? _mappedObjectives { get; set; }
+    public int _isNextButtonDFId { get; set; } = -1;
+    public int _isPreviousButtonDFId { get; set; } = -1;
 
+    //Constructor
     protected override async Task OnInitializedAsync()
     {
         if(_designFactorDto == null)
         {
             _designFactorDto = await auditProvider.getDesignFactorFullAsync(AuditId, DFId);
-            _objectiveDtos = _designFactorDto.Questions.First().Maps.Select(x => x.Objective).ToList();
+            _objectiveDtos = await auditProvider.getObjectivesAsync();
             _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
+            await CheckNavButtons();
         }
+
     }
 
     private void Submit(int questionId, ChangeEventArgs args)
@@ -56,9 +62,21 @@
         await auditProvider.updateAnswerAsync(answerEditorDto);
     }
 
+    // Used to check if the answer is selected
     private bool IsAnswerSelected(int answer, int option)
     {
         return answer == option;
+    }
+
+    private async Task CheckNavButtons()
+    {
+        var Audit = await auditProvider.getAsync(AuditId);
+        var DF = Audit.FocusArea.DesignFactors.OrderBy(x => x.ID).ToList();
+        var currentDF = DF.Find(x => x.ID == DFId);
+        var currentDFIndex = DF.IndexOf(currentDF);
+
+        if (DF.IndexOf(currentDF) >= 1) _isPreviousButtonDFId = DF[DF.IndexOf(currentDF) - 1].ID;
+        if (DF.IndexOf(currentDF) < DF.Count - 1) _isNextButtonDFId = DF[DF.IndexOf(currentDF) + 1].ID;
     }
 
     private void NextButtonPress()
@@ -88,7 +106,7 @@
 
 <div class="container-md bg-light mt-4">
     <div class="row">
-        <div class="col-lg-8">
+        <div class="">
             @if (_designFactorDto is null)
             {
                 <p><em>Loading...</em></p>
@@ -98,55 +116,72 @@
                 <div>
                     <h3> Design Factor : @_designFactorDto.Description</h3>
                 </div>
-                <table class="table border-3 table-bordered" >
-                    <thead class="table-primary">
-                        <tr>
-                            <th>Description</th>
-                            @if (_designFactorDto.Questions.First().Answers.First().Odds == 0)
-                            {
-                                @if (_designFactorDto.Questions.First().Answers.First().AnswerRange <= 8)
+                @if (_designFactorDto.Questions.Count == 0)
+                {
+                    <tr>
+                        <td colspan="4">No questions found.</td>
+                    </tr>
+                }
+                else
+                {
+                    <table class="table border-3 table-bordered" >
+                        <thead class="table-primary">
+                            <tr>
+                                <th>Description</th>
+                                @if (_designFactorDto.Questions.First().Answers.First().Odds == 0)
                                 {
-                                    @for (int i = 1; i <= _designFactorDto.Questions.First().Answers.First().AnswerRange; i++)
+                                    @if (_designFactorDto.Questions.First().Answers.First().AnswerRange <= 8)
                                     {
-                                        <th>@i</th>
+                                        @for (int i = 1; i <= _designFactorDto.Questions.First().Answers.First().AnswerRange; i++)
+                                        {
+                                            <th>@i</th>
+                                        }
                                     }
-                                }
-                                else if (_designFactorDto.Questions.First().Answers.First().AnswerRange == 100)
-                                {
-                                    <th>Value(%)</th>
+                                    else if (_designFactorDto.Questions.First().Answers.First().AnswerRange == 100)
+                                    {
+                                        <th>Value(%)</th>
+                                    }
+                                    else
+                                    {
+                                        <th>Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
+                                    }
                                 }
                                 else
                                 {
                                     <th>Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
+                                    <th>Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
                                 }
-                            }
-                            else
+                                <th>Baseline</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var q in _designFactorDto.Questions)
                             {
-                                <th>Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
-                                <th>Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
-                            }
-                            <th>Baseline</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var q in _designFactorDto.Questions)
-                        {
-                            <tr>
-                                <td>
-                                    @q.Question
-                                </td>
-                                @if (_designFactorDto.Questions.First().Answers.First().Odds == 0)
-                                {
-
-                                    @if (q.Answers.First().AnswerRange <= 8)
+                                <tr>
+                                    <td>
+                                        @q.Question
+                                    </td>
+                                    @if (_designFactorDto.Questions.First().Answers.First().Odds == 0)
                                     {
-                                        @for (int i = 1; i <= q.Answers.First().AnswerRange; i++)
+
+                                        @if (q.Answers.First().AnswerRange <= 8)
+                                        {
+                                            @for (int i = 1; i <= q.Answers.First().AnswerRange; i++)
+                                            {
+                                                <td>
+                                                    <input type="radio" name="@q.ID" id="@q.ID" value="@i"
+                                                    class="form-check-input"
+                                                    @onchange="((e) => Submit(q.ID, e))"
+                                                    checked="@IsAnswerSelected(q.Answers.First().Answer, i)" />
+                                                </td>
+                                            }
+                                        }
+                                        else
                                         {
                                             <td>
-                                                <input type="radio" name="@q.ID" id="@q.ID" value="@i"
-                                                class="form-check-input"
-                                                @onchange="((e) => Submit(q.ID, e))"
-                                                checked="@IsAnswerSelected(q.Answers.First().Answer, i)" />
+                                                <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
+                                                class="form-control"
+                                                @onchange="((e) => Submit(q.ID, e))" />
                                             </td>
                                         }
                                     }
@@ -155,51 +190,51 @@
                                         <td>
                                             <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
                                             class="form-control"
-                                            @onchange="((e) => Submit(q.ID, e))" />
+                                            @onchange="((e) => {})" />
+                                        </td>
+                                        <td>
+                                            <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Odds"
+                                            class="form-control"
+                                            @onchange="((e) => {})" />
                                         </td>
                                     }
-                                }
-                                else
-                                {
                                     <td>
-                                        <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
-                                               class="form-control"
-                                        @onchange="((e) => {})" />
+                                        @q.BaseAnswer
                                     </td>
-                                    <td>
-                                        <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Odds"
-                                               class="form-control"
-                                        @onchange="((e) => {})" />
-                                    </td>
-                                }
-                                <td>
-                                    @q.BaseAnswer
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-                <figure class="figure flex-lg-fill">
-                    <figcaption class="figure-caption">Design Factor Visualizaion</figcaption>
-                    <div class="figure img-fluid rounded">
-                        <SfChart @ref="sfChart">
-                            <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-                            </ChartPrimaryXAxis>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <figure class="figure flex-lg-fill">
+                        <figcaption class="figure-caption">Design Factor Visualizaion</figcaption>
+                        <div class="figure img-fluid rounded">
+                            <SfChart @ref="sfChart">
+                                <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+                                </ChartPrimaryXAxis>
 
-                            <ChartSeriesCollection>
-                                <ChartSeries DataSource="@_mappedObjectives" XName="Objective" YName="RelativeInportance"
-                                             Type="ChartSeriesType.Radar" DrawType="ChartDrawType.Line">
-                                </ChartSeries>
-                            </ChartSeriesCollection>
-                        </SfChart>
-                    </div>
-                </figure>
+                                <ChartSeriesCollection>
+                                    <ChartSeries DataSource="@_mappedObjectives" XName="Objective" YName="RelativeInportance"
+                                    Type="ChartSeriesType.Radar" DrawType="ChartDrawType.Line">
+                                    </ChartSeries>
+                                </ChartSeriesCollection>
+                            </SfChart>
+                        </div>
+                    </figure>
+                }
                 <div class="row">
                     <div class="col">
-                        <button type="button" onclick="@(() => PreviousButtonPress())" class="btn btn-primary">Back</button>
+                        @if (_isPreviousButtonDFId != -1)
+                        {
+                            <button type="button" onclick="@(() => PreviousButtonPress())" class="btn btn-primary">Back</button>
+                        }
                     </div>
                     <div class="col">
-                        <button type="button" onclick="@(() => NextButtonPress())" class="btn btn-primary" >Next</button>
+                        <div class="float-end">
+                            @if (_isNextButtonDFId != -1)
+                            {
+                                <button type="button" onclick="@(() => NextButtonPress())" class="btn btn-primary">Next</button>
+                            }
+                        </div>
                     </div>
                 </div>
             }

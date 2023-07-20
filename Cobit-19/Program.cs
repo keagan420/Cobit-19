@@ -22,13 +22,13 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.R
     .AddEntityFrameworkStores<AppDbContext>();
 builder.Services.AddAuthentication("Identity.Application")
     .AddCookie();
-builder.Services.AddScoped<UserManagementProvider>();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddSyncfusionBlazor();
 
-builder.Services.AddTransient<AuditProvider>();
+builder.Services.AddScoped<UserManagementProvider>();
+builder.Services.AddScoped<AuditProvider>();
 
 var app = builder.Build();
 

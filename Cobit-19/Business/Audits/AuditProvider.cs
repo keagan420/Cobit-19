@@ -80,6 +80,15 @@ namespace Cobit_19.Business.Audits
             return _mapper.Map<DesignFactorDto>(DesignFactor);
         }
 
+        // This may be more usefull in ObjectiveProvider
+        public async Task<List<ObjectiveDto>> getObjectivesAsync()
+        {
+            var objectives = await _dbContext.Objectives
+                .ToListAsync();
+
+            return _mapper.Map<List<ObjectiveDto>>(objectives);
+        }
+
         public async Task<AuditDto> createAsync(AuditEditorDto auditEditorDto)
         {
             // Create Audit
