@@ -25,4 +25,8 @@
     <PackageReference Include="Syncfusion.Blazor.Charts" Version="22.1.39" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>
