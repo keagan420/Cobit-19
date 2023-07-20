@@ -120,11 +120,12 @@ namespace Cobit_19.Data
             builder.Entity<ApplicationUser>().HasData(
                 new ApplicationUser
                 {
+                    FirstName = "Daniel",
+                    LastName = "Coetzee",
                     Id = "8e445865-a24d-4543-a6c6-9443d048cdb9", // primary key
                     UserName = "myuser",
                     NormalizedUserName = "MYUSER",
                     PasswordHash = hasher.HashPassword(null, "Pa$$w0rd"),
-                    CustomTag = "Custom"
                 }
             );;
 
