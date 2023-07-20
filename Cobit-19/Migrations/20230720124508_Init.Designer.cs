@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cobit_19.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230719122231_QuestionBaseAnswer")]
-    partial class QuestionBaseAnswer
+    [Migration("20230720124508_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -657,16 +657,18 @@ namespace Cobit_19.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CustomTag")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -718,14 +720,15 @@ namespace Cobit_19.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a28a2388-1a32-4880-aa5b-0b3868bea83e",
-                            CustomTag = "Custom",
+                            ConcurrencyStamp = "cd026a10-874d-490d-8939-056280587113",
                             EmailConfirmed = false,
+                            FirstName = "Daniel",
+                            LastName = "Coetzee",
                             LockoutEnabled = false,
                             NormalizedUserName = "MYUSER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMA3A042Nq7JLmgrX9GtyhDq6dZp2tAaQixyUSlROpMejsAIzxxp0LdM3vaZF7FlTA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAECE+nHYGJkIhBvtUkCWgyKZQH5ZrCZ71b96cA7rJbviJJ9A3ugrLo91NDFSlmwP9cw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6eca69f6-5235-422d-b97a-441a29825ac7",
+                            SecurityStamp = "53f344f8-a258-479b-8cd7-c4658bf5e62b",
                             TwoFactorEnabled = false,
                             UserName = "myuser"
                         });
@@ -16612,7 +16615,7 @@ namespace Cobit_19.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "3521a8ed-1ecc-4d63-becd-1114ff5c9253",
+                            ConcurrencyStamp = "d3504dce-6861-4ba0-b9a2-4b155b85b38f",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });
