@@ -8,7 +8,7 @@ namespace Cobit_19.Shared.Profiles
     {
         public ObjectiveProfile()
         {
-            CreateMap<ObjectiveDto, ObjectiveModel>();
+            CreateMap<ObjectiveDto, ObjectiveModel>().ReverseMap();
         }
     }
 }

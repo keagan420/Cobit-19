@@ -4,7 +4,8 @@
     { 
         public int ID { get; set; }
         public string Question { get; set; } = default!;
-        public AnswerDto Answer { get; set; } = default!;
-        public IEnumerable<MapDto>? Maps { get; set; } = default!;
+        public IList<AnswerDto> Answers { get; set; } = default!;
+        public int BaseAnswer { get; set; } = default!;
+        public IList<MapDto>? Maps { get; set; } = default!;
     }
 }

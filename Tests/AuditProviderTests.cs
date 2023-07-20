@@ -106,7 +106,7 @@ namespace Testing
             var dbAudit = await _auditProvider.getAsync(audit.ID);
             var DF = await _auditProvider.getDesignFactorsAsync(audit.ID);
 
-            var answers = DF.Select(q => q.Questions.Select(a => a.Answer));
+            var answers = DF.Select(q => q.Questions.Select(a => a.Answers));
 
             // Assert
             Assert.NotNull(dbAudit);  

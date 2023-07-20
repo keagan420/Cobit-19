@@ -35,6 +35,12 @@ namespace Cobit_19.Migrations
                     b.Property<int>("Answer")
                         .HasColumnType("int");
 
+                    b.Property<int>("AnswerRange")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Odds")
+                        .HasColumnType("int");
+
                     b.HasKey("AuditID", "QuestionID");
 
                     b.HasIndex("QuestionID");
@@ -46,37 +52,593 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             QuestionID = 1,
-                            Answer = 1
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 0
                         },
                         new
                         {
                             AuditID = 1,
                             QuestionID = 2,
-                            Answer = 1
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 0
                         },
                         new
                         {
                             AuditID = 1,
                             QuestionID = 3,
-                            Answer = 1
+                            Answer = 2,
+                            AnswerRange = 5,
+                            Odds = 0
                         },
                         new
                         {
-                            AuditID = 2,
-                            QuestionID = 1,
-                            Answer = 1
+                            AuditID = 1,
+                            QuestionID = 4,
+                            Answer = 3,
+                            AnswerRange = 5,
+                            Odds = 0
                         },
                         new
                         {
-                            AuditID = 2,
-                            QuestionID = 2,
-                            Answer = 1
+                            AuditID = 1,
+                            QuestionID = 5,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 0
                         },
                         new
                         {
-                            AuditID = 2,
-                            QuestionID = 3,
-                            Answer = 1
+                            AuditID = 1,
+                            QuestionID = 6,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 7,
+                            Answer = 2,
+                            AnswerRange = 5,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 8,
+                            Answer = 3,
+                            AnswerRange = 5,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 9,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 10,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 11,
+                            Answer = 2,
+                            AnswerRange = 5,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 12,
+                            Answer = 3,
+                            AnswerRange = 5,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 13,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 14,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 15,
+                            Answer = 2,
+                            AnswerRange = 5,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 16,
+                            Answer = 3,
+                            AnswerRange = 5,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 17,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 18,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 19,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 20,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 21,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 22,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 23,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 24,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 25,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 26,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 27,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 28,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 29,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 30,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 31,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 32,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 33,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 34,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 35,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 36,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 5
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 37,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 38,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 39,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 40,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 41,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 42,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 43,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 44,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 45,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 46,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 47,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 48,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 49,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 50,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 51,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 52,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 53,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 54,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 55,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 56,
+                            Answer = 1,
+                            AnswerRange = 3,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 57,
+                            Answer = 1,
+                            AnswerRange = 100,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 58,
+                            Answer = 1,
+                            AnswerRange = 100,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 59,
+                            Answer = 1,
+                            AnswerRange = 100,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 60,
+                            Answer = 1,
+                            AnswerRange = 100,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 61,
+                            Answer = 1,
+                            AnswerRange = 100,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 62,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 63,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 64,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 65,
+                            Answer = 1,
+                            AnswerRange = 5,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 66,
+                            Answer = 1,
+                            AnswerRange = 100,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 67,
+                            Answer = 1,
+                            AnswerRange = 100,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 68,
+                            Answer = 1,
+                            AnswerRange = 100,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 69,
+                            Answer = 1,
+                            AnswerRange = 100,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 70,
+                            Answer = 1,
+                            AnswerRange = 100,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 71,
+                            Answer = 1,
+                            AnswerRange = 100,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 72,
+                            Answer = 1,
+                            AnswerRange = 100,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 73,
+                            Answer = 1,
+                            AnswerRange = 100,
+                            Odds = 0
+                        },
+                        new
+                        {
+                            AuditID = 1,
+                            QuestionID = 74,
+                            Answer = 1,
+                            AnswerRange = 100,
+                            Odds = 0
                         });
                 });
 
@@ -155,15 +717,15 @@ namespace Cobit_19.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "eba5d039-6060-4b31-a0cb-8315deae5fef",
+                            ConcurrencyStamp = "cd026a10-874d-490d-8939-056280587113",
                             EmailConfirmed = false,
                             FirstName = "Daniel",
                             LastName = "Coetzee",
                             LockoutEnabled = false,
                             NormalizedUserName = "MYUSER",
-                            PasswordHash = "AQAAAAEAACcQAAAAENoLOETxXwa8HmQCiRVOshcjjRX9xE4qlY/OZ4ERGoVqo/xfFuDkEwYirRLpwhIIMQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAECE+nHYGJkIhBvtUkCWgyKZQH5ZrCZ71b96cA7rJbviJJ9A3ugrLo91NDFSlmwP9cw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3fb8a624-521c-4f7c-b6df-64c8069535b4",
+                            SecurityStamp = "53f344f8-a258-479b-8cd7-c4658bf5e62b",
                             TwoFactorEnabled = false,
                             UserName = "myuser"
                         });
@@ -15483,6 +16045,9 @@ namespace Cobit_19.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
+                    b.Property<int>("BaseAnswer")
+                        .HasColumnType("int");
+
                     b.Property<int>("DesignFactorID")
                         .HasColumnType("int");
 
@@ -15500,444 +16065,518 @@ namespace Cobit_19.Migrations
                         new
                         {
                             ID = 1,
+                            BaseAnswer = 3,
                             DesignFactorID = 1,
                             Question = "Growth/Acquisition"
                         },
                         new
                         {
                             ID = 2,
+                            BaseAnswer = 3,
                             DesignFactorID = 1,
                             Question = "Innovation/Differentiation"
                         },
                         new
                         {
                             ID = 3,
+                            BaseAnswer = 3,
                             DesignFactorID = 1,
                             Question = "Cost Leadership"
                         },
                         new
                         {
                             ID = 4,
+                            BaseAnswer = 3,
                             DesignFactorID = 1,
                             Question = "Client Service/Stability"
                         },
                         new
                         {
                             ID = 5,
+                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG01—Portfolio of competitive products and services"
                         },
                         new
                         {
                             ID = 6,
+                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG02—Managed business risk"
                         },
                         new
                         {
                             ID = 7,
+                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG03—Compliance with external laws and regulations"
                         },
                         new
                         {
                             ID = 8,
+                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG04—Quality of financial information"
                         },
                         new
                         {
                             ID = 9,
+                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG05—Customer-oriented service culture"
                         },
                         new
                         {
                             ID = 10,
+                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG06—Business-service continuity and availability"
                         },
                         new
                         {
                             ID = 11,
+                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG07—Quality of management information"
                         },
                         new
                         {
                             ID = 12,
+                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG08—Optimization of internal business process functionality"
                         },
                         new
                         {
                             ID = 13,
+                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG09—Optimization of business process costs"
                         },
                         new
                         {
                             ID = 14,
+                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG10—Staff skills, motivation and productivity"
                         },
                         new
                         {
                             ID = 15,
+                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG11—Compliance with internal policies"
                         },
                         new
                         {
                             ID = 16,
+                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG12—Managed digital transformation programs"
                         },
                         new
                         {
                             ID = 17,
+                            BaseAnswer = 3,
                             DesignFactorID = 2,
                             Question = "EG13—Product and business innovation"
                         },
                         new
                         {
                             ID = 18,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "IT investment decision-making, portfolio definition & maintenance"
                         },
                         new
                         {
                             ID = 19,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Program & projects life cycle management"
                         },
                         new
                         {
                             ID = 20,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "IT cost & oversight"
                         },
                         new
                         {
                             ID = 21,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "IT expertise, skills & behaviour"
                         },
                         new
                         {
                             ID = 22,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Enterprise/IT architecture"
                         },
                         new
                         {
                             ID = 23,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "IT operational infrastructure incidents"
                         },
                         new
                         {
                             ID = 24,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Unauthorized actions"
                         },
                         new
                         {
                             ID = 25,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Software adoption/usage problems"
                         },
                         new
                         {
                             ID = 26,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Hardware incidents"
                         },
                         new
                         {
                             ID = 27,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Software failures"
                         },
                         new
                         {
                             ID = 28,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Logical attacks (hacking, malware, etc.)"
                         },
                         new
                         {
                             ID = 29,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Third-party/supplier incidents"
                         },
                         new
                         {
                             ID = 30,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Noncompliance"
                         },
                         new
                         {
                             ID = 31,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Geopolitical Issues"
                         },
                         new
                         {
                             ID = 32,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Industrial action"
                         },
                         new
                         {
                             ID = 33,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Acts of nature"
                         },
                         new
                         {
                             ID = 34,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Technology-based innovation"
                         },
                         new
                         {
                             ID = 35,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Environmental"
                         },
                         new
                         {
                             ID = 36,
+                            BaseAnswer = 3,
                             DesignFactorID = 3,
                             Question = "Data & information management"
                         },
                         new
                         {
                             ID = 37,
+                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Frustration between different IT entities across the organization because of a perception of low contribution to business value"
                         },
                         new
                         {
                             ID = 38,
+                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Frustration between business departments (i.e., the IT customer) and the IT department because of failed initiatives or a perception of low contribution to business value"
                         },
                         new
                         {
                             ID = 39,
+                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Significant IT-related incidents, such as data loss, security breaches, project failure and application errors, linked to IT"
                         },
                         new
                         {
                             ID = 40,
+                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Service delivery problems by the IT outsourcer(s)"
                         },
                         new
                         {
                             ID = 41,
+                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Failures to meet IT-related regulatory or contractual requirements"
                         },
                         new
                         {
                             ID = 42,
+                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Regular audit findings or other assessment reports about poor IT performance or reported IT quality or service problems"
                         },
                         new
                         {
                             ID = 43,
+                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Substantial hidden and rogue IT spending, that is, IT spending by user departments outside the control of the normal IT investment decision mechanisms and approved budgets"
                         },
                         new
                         {
                             ID = 44,
+                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Duplications or overlaps between various initiatives, or other forms of wasted resources"
                         },
                         new
                         {
                             ID = 45,
+                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Insufficient IT resources, staff with inadequate skills or staff burnout/dissatisfaction"
                         },
                         new
                         {
                             ID = 46,
+                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "IT-enabled changes or projects frequently failing to meet business needs and delivered late or over budget"
                         },
                         new
                         {
                             ID = 47,
+                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Reluctance by board members, executives or senior management to engage with IT, or a lack of committed business sponsorship for IT"
                         },
                         new
                         {
                             ID = 48,
+                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Complex IT operating model and/or unclear decision mechanisms for IT-related decisions"
                         },
                         new
                         {
                             ID = 49,
+                            BaseAnswer = 1,
                             DesignFactorID = 4,
                             Question = "Excessively high cost of IT"
                         },
                         new
                         {
                             ID = 50,
+                            BaseAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Obstructed or failed implementation of new initiatives or innovations caused by the current IT architecture and systems"
                         },
                         new
                         {
                             ID = 51,
+                            BaseAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Gap between business and technical knowledge, which leads to business users and information and/or technology specialists speaking different languages"
                         },
                         new
                         {
                             ID = 52,
+                            BaseAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Regular issues with data quality and integration of data across various sources"
                         },
                         new
                         {
                             ID = 53,
+                            BaseAnswer = 2,
                             DesignFactorID = 4,
                             Question = "High level of end-user computing, creating (among other problems) a lack of oversight and quality control over the applications that are being developed and put in operation"
                         },
                         new
                         {
                             ID = 54,
+                            BaseAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Business departments implementing their own information solutions with little or no involvement of the enterprise IT department (related to end-user computing, which often stems from dissatisfaction with IT solutions and services)"
                         },
                         new
                         {
                             ID = 55,
+                            BaseAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Ignorance of and/or noncompliance with privacy regulations"
                         },
                         new
                         {
                             ID = 56,
+                            BaseAnswer = 2,
                             DesignFactorID = 4,
                             Question = "Inability to exploit new technologies or innovate using I&T"
                         },
                         new
                         {
                             ID = 57,
+                            BaseAnswer = 33,
                             DesignFactorID = 5,
                             Question = "High"
                         },
                         new
                         {
                             ID = 58,
+                            BaseAnswer = 67,
                             DesignFactorID = 5,
                             Question = "Normal"
                         },
                         new
                         {
                             ID = 59,
+                            BaseAnswer = 0,
                             DesignFactorID = 6,
                             Question = "High compliance requirements"
                         },
                         new
                         {
                             ID = 60,
+                            BaseAnswer = 100,
                             DesignFactorID = 6,
                             Question = "Normal compliance requirements"
                         },
                         new
                         {
                             ID = 61,
+                            BaseAnswer = 0,
                             DesignFactorID = 6,
                             Question = "Low compliance requirements"
                         },
                         new
                         {
                             ID = 62,
+                            BaseAnswer = 3,
                             DesignFactorID = 7,
                             Question = "Support"
                         },
                         new
                         {
                             ID = 63,
+                            BaseAnswer = 3,
                             DesignFactorID = 7,
                             Question = "Factory"
                         },
                         new
                         {
                             ID = 64,
+                            BaseAnswer = 3,
                             DesignFactorID = 7,
                             Question = "Turnaround"
                         },
                         new
                         {
                             ID = 65,
+                            BaseAnswer = 3,
                             DesignFactorID = 7,
                             Question = "Strategic"
                         },
                         new
                         {
                             ID = 66,
+                            BaseAnswer = 33,
                             DesignFactorID = 8,
                             Question = "Outsourcing"
                         },
                         new
                         {
                             ID = 67,
+                            BaseAnswer = 33,
                             DesignFactorID = 8,
                             Question = "Cloud"
                         },
                         new
                         {
                             ID = 68,
+                            BaseAnswer = 33,
                             DesignFactorID = 8,
                             Question = "Insourced"
                         },
                         new
                         {
                             ID = 69,
+                            BaseAnswer = 15,
                             DesignFactorID = 9,
                             Question = "Agile"
                         },
                         new
                         {
                             ID = 70,
+                            BaseAnswer = 10,
                             DesignFactorID = 9,
                             Question = "DevOps"
                         },
                         new
                         {
                             ID = 71,
+                            BaseAnswer = 75,
                             DesignFactorID = 9,
                             Question = "Traditional"
                         },
                         new
                         {
                             ID = 72,
+                            BaseAnswer = 15,
                             DesignFactorID = 10,
                             Question = "First mover"
                         },
                         new
                         {
                             ID = 73,
+                            BaseAnswer = 70,
                             DesignFactorID = 10,
                             Question = "Follower"
                         },
                         new
                         {
                             ID = 74,
+                            BaseAnswer = 15,
                             DesignFactorID = 10,
                             Question = "Slow adopter"
                         });
@@ -15973,7 +16612,7 @@ namespace Cobit_19.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "9b769c01-22b3-42e7-a3a1-9f009c72f713",
+                            ConcurrencyStamp = "d3504dce-6861-4ba0-b9a2-4b155b85b38f",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });

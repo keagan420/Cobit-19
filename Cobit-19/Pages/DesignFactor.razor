@@ -1,0 +1,209 @@
+﻿@page "/DesignFactor"
+@using Cobit_19.Business.Audits
+@using Cobit_19.Shared.Dtos
+@using Syncfusion.Blazor.Charts
+@using Microsoft.AspNetCore.WebUtilities
+@inject AuditProvider auditProvider
+@inject NavigationManager navigationManager
+
+@code {
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public int AuditId { get; set; }
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public int DFId { get; set; }
+
+    SfChart sfChart;
+    protected DesignFactorDto _designFactorDto;
+    protected List<ObjectiveDto> _objectiveDtos;
+    protected List<ObjectiveValueDto> _mappedObjectives { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if(_designFactorDto == null)
+        {
+            _designFactorDto = await auditProvider.getDesignFactorFullAsync(AuditId, DFId);
+            _objectiveDtos = _designFactorDto.Questions.First().Maps.Select(x => x.Objective).ToList();
+            _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
+        }
+    }
+
+    private void Submit(int questionId, ChangeEventArgs args)
+    {
+        int answ = -1;
+        if (int.TryParse(args.Value.ToString(), out answ))
+        {
+            UpdateAnswer(AuditId, questionId, answ);
+        }
+
+        _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Answer = answ;
+        _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
+        sfChart.RefreshAsync();
+
+    }
+
+    private async void UpdateAnswer(int AuditId, int QuestionId, int Answer, int Odds=0)
+    {
+        AnswerEditorDto answerEditorDto = new AnswerEditorDto()
+            {
+                AuditID = AuditId,
+                QuestionID = QuestionId,
+                Answer = Answer,
+                Odds = Odds
+            };
+
+        await auditProvider.updateAnswerAsync(answerEditorDto);
+    }
+
+    private bool IsAnswerSelected(int answer, int option)
+    {
+        return answer == option;
+    }
+
+    private void NextButtonPress()
+    {
+        var queryStrDict = new Dictionary<string, string>
+            {
+                ["AuditId"] = (AuditId).ToString(),
+                ["DFId"] = (DFId+1).ToString(),
+            };
+        navigationManager.NavigateTo(
+            QueryHelpers.AddQueryString("/DesignFactor", queryStrDict)
+        );
+    }
+
+    private void PreviousButtonPress()
+    {
+        var queryStrDict = new Dictionary<string, string>
+            {
+                ["AuditId"] = (AuditId).ToString(),
+                ["DFId"] = (DFId - 1).ToString(),
+            };
+        navigationManager.NavigateTo(
+            QueryHelpers.AddQueryString("/DesignFactor", queryStrDict)
+        );
+    }
+}
+
+<div class="container-md bg-light mt-4">
+    <div class="row">
+        <div class="col-lg-8">
+            @if (_designFactorDto is null)
+            {
+                <p><em>Loading...</em></p>
+            }
+            else
+            {
+                <div>
+                    <h3> Design Factor : @_designFactorDto.Description</h3>
+                </div>
+                <table class="table border-3 table-bordered" >
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Description</th>
+                            @if (_designFactorDto.Questions.First().Answers.First().Odds == 0)
+                            {
+                                @if (_designFactorDto.Questions.First().Answers.First().AnswerRange <= 8)
+                                {
+                                    @for (int i = 1; i <= _designFactorDto.Questions.First().Answers.First().AnswerRange; i++)
+                                    {
+                                        <th>@i</th>
+                                    }
+                                }
+                                else if (_designFactorDto.Questions.First().Answers.First().AnswerRange == 100)
+                                {
+                                    <th>Value(%)</th>
+                                }
+                                else
+                                {
+                                    <th>Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
+                                }
+                            }
+                            else
+                            {
+                                <th>Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
+                                <th>Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
+                            }
+                            <th>Baseline</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var q in _designFactorDto.Questions)
+                        {
+                            <tr>
+                                <td>
+                                    @q.Question
+                                </td>
+                                @if (_designFactorDto.Questions.First().Answers.First().Odds == 0)
+                                {
+
+                                    @if (q.Answers.First().AnswerRange <= 8)
+                                    {
+                                        @for (int i = 1; i <= q.Answers.First().AnswerRange; i++)
+                                        {
+                                            <td>
+                                                <input type="radio" name="@q.ID" id="@q.ID" value="@i"
+                                                class="form-check-input"
+                                                @onchange="((e) => Submit(q.ID, e))"
+                                                checked="@IsAnswerSelected(q.Answers.First().Answer, i)" />
+                                            </td>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
+                                            class="form-control"
+                                            @onchange="((e) => Submit(q.ID, e))" />
+                                        </td>
+                                    }
+                                }
+                                else
+                                {
+                                    <td>
+                                        <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
+                                               class="form-control"
+                                        @onchange="((e) => {})" />
+                                    </td>
+                                    <td>
+                                        <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Odds"
+                                               class="form-control"
+                                        @onchange="((e) => {})" />
+                                    </td>
+                                }
+                                <td>
+                                    @q.BaseAnswer
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <figure class="figure flex-lg-fill">
+                    <figcaption class="figure-caption">Design Factor Visualizaion</figcaption>
+                    <div class="figure img-fluid rounded">
+                        <SfChart @ref="sfChart">
+                            <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+                            </ChartPrimaryXAxis>
+
+                            <ChartSeriesCollection>
+                                <ChartSeries DataSource="@_mappedObjectives" XName="Objective" YName="RelativeInportance"
+                                             Type="ChartSeriesType.Radar" DrawType="ChartDrawType.Line">
+                                </ChartSeries>
+                            </ChartSeriesCollection>
+                        </SfChart>
+                    </div>
+                </figure>
+                <div class="row">
+                    <div class="col">
+                        <button type="button" onclick="@(() => PreviousButtonPress())" class="btn btn-primary">Back</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" onclick="@(() => NextButtonPress())" class="btn btn-primary" >Next</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

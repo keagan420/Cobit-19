@@ -9,6 +9,7 @@ namespace Cobit_19.Shared.Profiles
         public AnswerProfile()
         {
             CreateMap<AnswerModel, AnswerDto>().ReverseMap();
+            CreateMap<AnswerModel, AnswerEditorDto>().ReverseMap();
         }
     }
 }

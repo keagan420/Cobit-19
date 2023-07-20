@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Identity;
 using Cobit_19.Data;
 using Cobit_19.Data.Models;
 using Microsoft.Extensions.DependencyInjection;
+using Cobit_19.Business.Audits;
+using Syncfusion.Blazor;
 using Cobit_19.Business.Admin;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,7 +26,9 @@ builder.Services.AddScoped<UserManagementProvider>();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddSyncfusionBlazor();
 
+builder.Services.AddTransient<AuditProvider>();
 
 var app = builder.Build();
 
