@@ -30,7 +30,11 @@ builder.Services.AddSyncfusionBlazor();
 builder.Services.AddScoped<UserManagementProvider>();
 builder.Services.AddScoped<AuditProvider>();
 
+var syncfusionKey = builder.Configuration["Syncfusion:ServiceApiKey"];
+
 var app = builder.Build();
+
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionKey);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
