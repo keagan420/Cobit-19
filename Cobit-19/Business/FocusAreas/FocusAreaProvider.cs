@@ -20,10 +20,16 @@ namespace Cobit_19.Business.FocusAreas
 
         public IEnumerable<FocusAreaDto> GetFocusAreasByUserID(string userID)
         {
-            var query = _dbContext.FocusAreas
-                .Where(fa => fa.ApplicationUserID == userID);
+            var subscriptions = _dbContext.Subscriptions
+                .Where(sub => sub.ApplicationUserID == userID)
+                .Select(sub => sub.FocusAreaID)
+                .ToList();
 
-            return _mapper.Map<IEnumerable<FocusAreaDto>>(query);
+            var focusAreaList = _dbContext.FocusAreas
+                .Where(fa => subscriptions.Contains(fa.ID))
+                .ToList();
+
+            return _mapper.Map<IEnumerable<FocusAreaDto>>(focusAreaList);
         }
 
         public IEnumerable<AuditDto> GetAuditsForFocusAreaByUserID(string userID, int focusAreaID)
@@ -48,5 +54,39 @@ namespace Cobit_19.Business.FocusAreas
 
             return _mapper.Map<IEnumerable<AuditDto>>(query);
         }
+
+        public AuditStatus GetFocusAreaCompletionStatus(string userID, int focusAreaID)
+        {
+            var audit = GetLastAuditForFocusAreaByUserID(userID, focusAreaID);
+            return audit.Status;
+        }
+
+        public bool GetFocusAreaActivityStatus(string userID, int focusAreaID)
+        {
+            var audits = GetAuditsForFocusAreaByUserID(userID, focusAreaID);
+            bool focusAreaActivityStatus = false;
+
+            foreach(var audit in audits)
+            {
+                if (audit.Status == AuditStatus.InProgress || audit.Status == AuditStatus.NotStarted)
+                {
+                    focusAreaActivityStatus = true;
+                }
+            }
+
+            return focusAreaActivityStatus;
+        }
+
+        public AuditDto GetLastAuditForFocusAreaByUserID(string userID, int focusAreaID)
+        {
+            var query = _dbContext.Audits
+                .Where(audit => audit.FocusAreaID == focusAreaID && audit.ApplicationUserID == userID)
+                .OrderByDescending(audit => audit.DateCreated)
+                .FirstOrDefault();
+                           
+            return _mapper.Map<AuditDto>(query);
+        }
+
+            
     }
 }

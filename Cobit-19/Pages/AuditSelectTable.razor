@@ -1,0 +1,40 @@
+﻿@using Cobit_19.Business.FocusAreas;
+@using Cobit_19.Shared.Dtos;
+@using Cobit_19.Shared.Enums;
+@inject FocusAreaProvider focusAreaProvider
+
+@code {
+    [Parameter]
+    public string userID { get; set; }
+    [Parameter]
+    public int focusAreaID { get; set; }
+    protected IEnumerable<AuditDto> audits;
+    protected int rowCounter = 1;
+
+    protected override void OnInitialized()
+    {
+        audits = focusAreaProvider.GetAuditsForFocusAreaByUserID(userID, focusAreaID);
+    }
+}
+
+<table class="table border-3 table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Status</th>
+        <th>Name</th>
+        <th>Date Created</th>
+    </tr>
+
+    @foreach(var audit in audits)
+    {
+        <tr>
+            <td>@(rowCounter++)</td>
+            <td>@audit.Status</td>
+            <td>@audit.Name</td>
+            <td>@audit.DateCreated</td>
+            <td><button>Select</button></td>
+        </tr>
+    }
+</table>
+
+

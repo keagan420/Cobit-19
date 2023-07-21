@@ -19,5 +19,6 @@ namespace Cobit_19.Data.Models
         public virtual ICollection<AuditModel> Audits { get; set; }
         public virtual ICollection<DesignFactorModel> DesignFactors { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
+        public virtual ICollection<SubscriptionModel> Subscriptions { get; set; }
     }
 }
