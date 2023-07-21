@@ -35,31 +35,51 @@
 
     }
 
-    private void Submit(int questionId, ChangeEventArgs args)
+    private async void SubmitAnswer(int questionId, ChangeEventArgs args)
     {
         int answ = -1;
         if (int.TryParse(args.Value.ToString(), out answ))
         {
-            UpdateAnswer(AuditId, questionId, answ);
+            var old = _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First();
+
+            AnswerEditorDto answerEditorDto = new AnswerEditorDto()
+                {
+                    AuditID = AuditId,
+                    QuestionID = questionId,
+                    Answer = answ,
+                    Odds = old.Odds
+                };
+
+            await auditProvider.updateAnswerAsync(answerEditorDto);
         }
 
         _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Answer = answ;
         _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
-        sfChart.RefreshAsync();
+        await sfChart.RefreshAsync();
 
     }
 
-    private async void UpdateAnswer(int AuditId, int QuestionId, int Answer, int Odds=0)
+    private async void SubmitOdds(int questionId, ChangeEventArgs args)
     {
-        AnswerEditorDto answerEditorDto = new AnswerEditorDto()
-            {
-                AuditID = AuditId,
-                QuestionID = QuestionId,
-                Answer = Answer,
-                Odds = Odds
-            };
+        int odds = -1;
+        if (int.TryParse(args.Value.ToString(), out odds))
+        {
+            var old = _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First();
 
-        await auditProvider.updateAnswerAsync(answerEditorDto);
+            AnswerEditorDto answerEditorDto = new AnswerEditorDto()
+                {
+                    AuditID = AuditId,
+                    QuestionID = questionId,
+                    Answer = old.Answer,
+                    Odds = odds
+                };
+
+            await auditProvider.updateAnswerAsync(answerEditorDto);
+        }
+
+        _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Odds = odds;
+        _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
+        await sfChart.RefreshAsync();
     }
 
     // Used to check if the answer is selected
@@ -127,31 +147,31 @@
                     <table class="table border-3 table-bordered" >
                         <thead class="table-primary">
                             <tr>
-                                <th>Description</th>
+                                <th scope="col">Description</th>
                                 @if (_designFactorDto.Questions.First().Answers.First().Odds == 0)
                                 {
                                     @if (_designFactorDto.Questions.First().Answers.First().AnswerRange <= 8)
                                     {
                                         @for (int i = 1; i <= _designFactorDto.Questions.First().Answers.First().AnswerRange; i++)
                                         {
-                                            <th>@i</th>
+                                            <th scope="col">@i</th>
                                         }
                                     }
                                     else if (_designFactorDto.Questions.First().Answers.First().AnswerRange == 100)
                                     {
-                                        <th>Value(%)</th>
+                                        <th scope="col">Value(%)</th>
                                     }
                                     else
                                     {
-                                        <th>Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
+                                        <th scope="col">Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
                                     }
                                 }
                                 else
                                 {
-                                    <th>Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
-                                    <th>Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
+                                    <th scope="col">Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
+                                    <th scope="col">Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
                                 }
-                                <th>Baseline</th>
+                                <th scope="col">Baseline</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -171,7 +191,7 @@
                                                 <td>
                                                     <input type="radio" name="@q.ID" id="@q.ID" value="@i"
                                                     class="form-check-input"
-                                                    @onchange="((e) => Submit(q.ID, e))"
+                                                    @onchange="((e) => SubmitAnswer(q.ID, e))"
                                                     checked="@IsAnswerSelected(q.Answers.First().Answer, i)" />
                                                 </td>
                                             }
@@ -181,7 +201,7 @@
                                             <td>
                                                 <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
                                                 class="form-control"
-                                                @onchange="((e) => Submit(q.ID, e))" />
+                                                @onchange="((e) => SubmitAnswer(q.ID, e))" />
                                             </td>
                                         }
                                     }
@@ -190,12 +210,12 @@
                                         <td>
                                             <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
                                             class="form-control"
-                                            @onchange="((e) => {})" />
+                                            @onchange="((e) => SubmitAnswer(q.ID, e))" />
                                         </td>
                                         <td>
                                             <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Odds"
                                             class="form-control"
-                                            @onchange="((e) => {})" />
+                                            @onchange="((e) => SubmitOdds(q.ID, e))" />
                                         </td>
                                     }
                                     <td>
@@ -205,21 +225,41 @@
                             }
                         </tbody>
                     </table>
-                    <figure class="figure flex-lg-fill">
-                        <figcaption class="figure-caption">Design Factor Visualizaion</figcaption>
-                        <div class="figure img-fluid rounded">
-                            <SfChart @ref="sfChart">
-                                <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-                                </ChartPrimaryXAxis>
+                    @if (_mappedObjectives != null)
+                    {
+                        <div class="col-lg-12">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <i class="fa fa-info-circle"></i> Info Panel - Technology adoption strategy
+                                </div>
+                                <div class="panel-body">
+                                    <p>
+                                        The output section of this tab contains the calculated relative importance of each of the 40 COBIT
+                                        2019 governance and management objectives. The results are represented as a bar chart and as a spider diagram.
+                                    </p>
+                                </div>
+                                <figure class="figure flex-lg-fill">
+                                    <div class="figure img-fluid rounded">
+                                        <SfChart @ref="sfChart">
+                                            <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+                                            </ChartPrimaryXAxis>
 
-                                <ChartSeriesCollection>
-                                    <ChartSeries DataSource="@_mappedObjectives" XName="Objective" YName="RelativeInportance"
-                                    Type="ChartSeriesType.Radar" DrawType="ChartDrawType.Line">
-                                    </ChartSeries>
-                                </ChartSeriesCollection>
-                            </SfChart>
+                                            <ChartSeriesCollection>
+                                                <ChartSeries DataSource="@_mappedObjectives" XName="Objective" YName="RelativeInportance"
+                                                             Type="ChartSeriesType.Radar" DrawType="ChartDrawType.Line">
+                                                </ChartSeries>
+                                            </ChartSeriesCollection>
+                                        </SfChart>
+                                    </div>
+                                </figure>
+                            </div>
                         </div>
-                    </figure>
+
+                        <div class="align-items-center justify-content-center">\
+                            <h3> Radial Chart</h3>
+                            
+                        </div>
+                    }
                 }
                 <div class="row">
                     <div class="col">
