@@ -20,13 +20,7 @@ namespace Cobit_19.Business.Audits
         // Get audit by id with focus area and design factors
         public async Task<AuditDto> getAsync(int id)
         {
-            var quary = await _dbContext.Audits
-            .Include(a => a.ApplicationUser)
-            .Include(a => a.FocusArea)
-            .ThenInclude(a => a.DesignFactors)
-                .ThenInclude(df => df.Questions)
-                    .ThenInclude(q => q.Answers.Where(a => a.AuditID == id))
-            .FirstOrDefaultAsync(a => a.ID == id);
+            var quary = await _dbContext.Audits.FindAsync(id);
             return _mapper.Map<AuditDto>(quary);
         }
 
@@ -54,7 +48,7 @@ namespace Cobit_19.Business.Audits
             return _mapper.Map<IEnumerable<AuditDto>>(quary);
         }
 
-        public async Task<IEnumerable<DesignFactorDto>> getDesignFactorsAsync(int auditId)
+        public async Task<List<DesignFactorDto>> getDesignFactorsAsync(int auditId)
         {
             var DesignFactors = await _dbContext.FocusAreas
                 .Where(f => f.Audits.Any(a => a.ID == auditId))
@@ -62,7 +56,7 @@ namespace Cobit_19.Business.Audits
                 .Include(df => df.Questions)
                 .ToListAsync();
 
-            return _mapper.Map<IEnumerable<DesignFactorDto>>(DesignFactors);
+            return _mapper.Map<List<DesignFactorDto>>(DesignFactors);
         }
 
         public async Task<DesignFactorDto> getDesignFactorFullAsync(int auditId, int designFactorId)

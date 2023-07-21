@@ -91,7 +91,7 @@
     private async Task CheckNavButtons()
     {
         var Audit = await auditProvider.getAsync(AuditId);
-        var DF = Audit.FocusArea.DesignFactors.OrderBy(x => x.ID).ToList();
+        var DF = await auditProvider.getDesignFactorsAsync(AuditId);
         var currentDF = DF.Find(x => x.ID == DFId);
         var currentDFIndex = DF.IndexOf(currentDF);
 
