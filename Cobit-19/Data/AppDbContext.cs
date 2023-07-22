@@ -123,9 +123,11 @@ namespace Cobit_19.Data
                 {
                     FirstName = "Daniel",
                     LastName = "Coetzee",
+                    Email = "test@gmail.com",
                     Id = "8e445865-a24d-4543-a6c6-9443d048cdb9", // primary key
-                    UserName = "myuser",
-                    NormalizedUserName = "MYUSER",
+                    UserName = "test@gmail.com",
+                    NormalizedUserName = "TEST@GMAIL.COM",
+                    EmailConfirmed = true,
                     PasswordHash = hasher.HashPassword(null, "Pa$$w0rd"),
                 }
             );;
