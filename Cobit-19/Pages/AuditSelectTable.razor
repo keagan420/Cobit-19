@@ -11,9 +11,35 @@
     protected IEnumerable<AuditDto> audits;
     protected int rowCounter = 1;
 
-    protected override void OnInitialized()
+    protected override void OnParametersSet()
+    {
+        LoadAudits();
+    }
+
+    private void LoadAudits()
     {
         audits = focusAreaProvider.GetAuditsForFocusAreaByUserID(userID, focusAreaID);
+        StateHasChanged();
+    }
+
+    private string FormatAuditStatus(AuditStatus status)
+    {
+        if (status == AuditStatus.NotStarted)
+        {
+            return "Not Started";
+        }
+        else if (status == AuditStatus.InProgress)
+        {
+            return "In Progress";
+        }
+        else if (status == AuditStatus.Completed)
+        {
+            return "Completed";
+        }
+        else
+        {
+            return null;
+        }
     }
 }
 
@@ -29,7 +55,7 @@
     {
         <tr>
             <td>@(rowCounter++)</td>
-            <td>@audit.Status</td>
+            <td>@FormatAuditStatus(audit.Status)</td>
             <td>@audit.Name</td>
             <td>@audit.DateCreated</td>
             <td><button>Select</button></td>

@@ -55,13 +55,28 @@ namespace Cobit_19.Business.FocusAreas
             return _mapper.Map<IEnumerable<AuditDto>>(query);
         }
 
-        public AuditStatus GetFocusAreaCompletionStatus(string userID, int focusAreaID)
+        public string GetFocusAreaCompletionStatus(string userID, int focusAreaID)
         {
             var audit = GetLastAuditForFocusAreaByUserID(userID, focusAreaID);
-            return audit.Status;
+            if (audit.Status == AuditStatus.NotStarted)
+            {
+                return "Not Started";
+            }
+            else if (audit.Status == AuditStatus.InProgress)
+            {
+                return "In Progress";
+            }
+            else if (audit.Status == AuditStatus.Completed)
+            {
+                return "Completed";
+            }
+            else
+            {
+                return null;
+            }
         }
 
-        public bool GetFocusAreaActivityStatus(string userID, int focusAreaID)
+        public string GetFocusAreaActivityStatus(string userID, int focusAreaID)
         {
             var audits = GetAuditsForFocusAreaByUserID(userID, focusAreaID);
             bool focusAreaActivityStatus = false;
@@ -74,7 +89,14 @@ namespace Cobit_19.Business.FocusAreas
                 }
             }
 
-            return focusAreaActivityStatus;
+            if (focusAreaActivityStatus)
+            {
+                return "Active";
+            }
+            else
+            {
+                return "Inactive";
+            }
         }
 
         public AuditDto GetLastAuditForFocusAreaByUserID(string userID, int focusAreaID)

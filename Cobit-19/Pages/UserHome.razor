@@ -23,11 +23,10 @@
                 StateHasChanged();
             }
         }
-        Console.WriteLine(userID);
     }
 }
 
 @if (!string.IsNullOrEmpty(userID))
 {
-    <FocusAreaSelector userID="@userID" />
+    <FocusAreaSelectTable userID="@userID" />
 }
