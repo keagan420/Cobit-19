@@ -1,4 +1,5 @@
 ﻿using Cobit_19.Shared.Dtos;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Cobit_19.Business.Audits
 {
@@ -19,7 +20,11 @@ namespace Cobit_19.Business.Audits
                 };
 
                 foreach (var question in designFactorDto.Questions)
-                {
+                { 
+                    if (question.Maps.IsNullOrEmpty())
+                    {
+                        return null;
+                    }
                     double weight = question.Maps.Where(m => m.ObjectiveID == objective.ID).First().Weight;
                     double answer = question.Answers.First().Answer;
                     double baseline = question.BaseAnswer;

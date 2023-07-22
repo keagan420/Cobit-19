@@ -1,0 +1,178 @@
+﻿@page "/Audit"
+
+@using Cobit_19.Business.Audits;
+@using Cobit_19.Shared.Dtos;
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.WebUtilities
+@inject AuditProvider auditProvider
+@inject NavigationManager navigationManager
+
+
+@code {
+    private AuditDto? _auditDto { get; set; }
+    private List<DesignFactorDto>? _designFactorDtos { get; set;}
+
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public int AuditId { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (_auditDto == null)
+        {
+            _auditDto = await auditProvider.getAsync(AuditId);
+            _designFactorDtos = await auditProvider.getDesignFactorsAsync(AuditId);
+        }
+    }
+
+
+    private List<int> expandedRows = new List<int>();
+
+    private void ToggleSubRows(int rowIndex)
+    {
+        if (expandedRows.Contains(rowIndex))
+        {
+            expandedRows.Remove(rowIndex);
+        }
+        else
+        {
+            expandedRows.Add(rowIndex);
+        }
+    }
+
+    private void DFButtonPress(DesignFactorDto designFactorDto)
+    {
+        var queryStrDict = new Dictionary<string, string>
+            {
+                ["AuditId"] = (AuditId).ToString(),
+                ["DFId"] = (designFactorDto.ID).ToString(),
+            };
+        navigationManager.NavigateTo(
+            QueryHelpers.AddQueryString("/DesignFactor", queryStrDict)
+        );
+    }
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            @if (_auditDto is null || _designFactorDtos is null)
+            {
+                <p><em>Loading...</em></p>
+            }
+            else
+            {
+                <table class="table table-hover">
+                    <tbody>
+                        <tr style="cursor:pointer" @onclick="() => ToggleSubRows(0)">
+                            <td>
+                                <span class="badge bg-success">Completed</span>
+                            </td>
+                            <td>
+                                <div>
+                                    <h5>Design Factors</h5>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="btn-sm btn-primary" @onclick="() => DFButtonPress(_designFactorDtos.First())">
+                                    <i class="fa fa-sliders"></i> 
+                                    Begin Assesment
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="@($"{(expandedRows.Contains(0) ? "show" : "collapse")} sub-rows")">
+                            <td colspan="3">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        @foreach (var item in _designFactorDtos.ToList())
+                                        {
+                                            <tr>
+                                                <td>@item.Name</td>
+                                                <td>@item.Description</td>
+                                                <td>
+                                                    <button class="btn-sm btn-primary" @onclick="() => DFButtonPress(item)">
+                                                        <i class="fa fa-sliders"></i>
+                                                        Open
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        }
+                                        <!-- Add more sub-rows as needed -->
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr style="cursor:pointer" @onclick="() => ToggleSubRows(1)">
+                            <td>
+                                <span class="badge bg-success">Completed</span>
+                            </td>
+                            <td>
+                                <div>
+                                    <h5>Canvas Report</h5>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="btn-sm btn-primary">
+                                    <i class="fa fa-sliders"></i>
+                                    Begin Assesment
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="@($"{(expandedRows.Contains(1) ? "show" : "collapse")} sub-rows")">
+                            <td colspan="3">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td>Sub-Row 1</td>
+                                            <td>Content for Sub-Row 1 of Title 0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sub-Row 2</td>
+                                            <td>Content for Sub-Row 2 of Title 0</td>
+                                        </tr>
+                                        <!-- Add more sub-rows as needed -->
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr style="cursor:pointer" @onclick="() => ToggleSubRows(2)">
+                            <td>
+                                <span class="badge bg-success">Completed</span>
+                            </td>
+                            <td>
+                                <div>
+                                    <h5>Scope Selection</h5>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="btn-sm btn-primary">
+                                    <i class="fa fa-sliders"></i>
+                                    Begin Assesment
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="@($"{(expandedRows.Contains(2) ? "show" : "collapse")} sub-rows")">
+                            <td colspan="3">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td>Sub-Row 1</td>
+                                            <td>Content for Sub-Row 1 of Title 0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sub-Row 2</td>
+                                            <td>Content for Sub-Row 2 of Title 0</td>
+                                        </tr>
+                                        <!-- Add more sub-rows as needed -->
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+
+            </table>
+                
+            }
+        </div>
+    </div>
+</div>
