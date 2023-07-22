@@ -1,0 +1,43 @@
+﻿@page "/AuditSelect"
+@using Cobit_19.Data.Models;
+@using Microsoft.AspNetCore.Identity;
+@using Microsoft.AspNetCore.WebUtilities;
+@inject NavigationManager navigationManager
+@inject AuthenticationStateProvider authStateProvider
+@inject UserManager<ApplicationUser> _userManager
+
+@code {
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public int focusAreaID { get; set; }
+    public string userID;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var uri = new Uri(navigationManager.Uri);
+            var authState = await authStateProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("focusAreaID", out var focusAreaIDValue))
+            {
+                if (int.TryParse(focusAreaIDValue, out var parsedFocusAreaID))
+                {
+                    focusAreaID = parsedFocusAreaID;
+                }
+
+            }
+
+            if (user.Identity.IsAuthenticated)
+            {
+                var currentUser = await _userManager.GetUserAsync(user);
+                userID = currentUser.Id;
+
+                StateHasChanged();
+            }
+        }
+    }
+}
+
+<AuditSelectTable userID="@userID" focusAreaID="@focusAreaID" />

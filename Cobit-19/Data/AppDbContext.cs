@@ -22,6 +22,7 @@ namespace Cobit_19.Data
         public DbSet<AnswerModel> Answers { get; set; }
         public DbSet<AuditScopeModel> AuditScopes { get; set; }
         public DbSet<MapModel> Maps { get; set; }
+        public DbSet<SubscriptionModel> Subscriptions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -122,9 +123,11 @@ namespace Cobit_19.Data
                 {
                     FirstName = "Daniel",
                     LastName = "Coetzee",
+                    Email = "test@gmail.com",
                     Id = "8e445865-a24d-4543-a6c6-9443d048cdb9", // primary key
-                    UserName = "myuser",
-                    NormalizedUserName = "MYUSER",
+                    UserName = "test@gmail.com",
+                    NormalizedUserName = "TEST@GMAIL.COM",
+                    EmailConfirmed = true,
                     PasswordHash = hasher.HashPassword(null, "Pa$$w0rd"),
                 }
             );;
@@ -138,6 +141,9 @@ namespace Cobit_19.Data
                     UserId = "8e445865-a24d-4543-a6c6-9443d048cdb9"
                 }
             );
+
+            builder.Entity<SubscriptionModel>().HasData(
+                new SubscriptionModel { ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9", FocusAreaID = 1 });
 
             builder.Entity<FocusAreaModel>().HasData(
                 new FocusAreaModel { ID = 1, Name = "Cobit Core Model", Description = "General Core Model", DateCreated = DateTime.Parse("Jan 1, 2009"), ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" });

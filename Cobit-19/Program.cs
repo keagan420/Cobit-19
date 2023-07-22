@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Cobit_19.Business.Audits;
 using Syncfusion.Blazor;
 using Cobit_19.Business.Admin;
+using Cobit_19.Business.FocusAreas;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +30,7 @@ builder.Services.AddSyncfusionBlazor();
 
 builder.Services.AddScoped<UserManagementProvider>();
 builder.Services.AddScoped<AuditProvider>();
+builder.Services.AddScoped<FocusAreaProvider>();
 
 var syncfusionKey = builder.Configuration["Syncfusion:ServiceApiKey"];
 

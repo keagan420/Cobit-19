@@ -1,0 +1,32 @@
+﻿@page "/userhome"
+@using Cobit_19.Data.Models;
+@using Microsoft.AspNetCore.Identity;
+@inject AuthenticationStateProvider authStateProvider
+@inject UserManager<ApplicationUser> _userManager
+
+@code {
+    private string userID;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var authState = await authStateProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (user.Identity.IsAuthenticated)
+            {
+                var currentUser = await _userManager.GetUserAsync(user);
+                userID = currentUser.Id;
+
+                // Trigger a state change to re-render the component after the userID is set.
+                StateHasChanged();
+            }
+        }
+    }
+}
+
+@if (!string.IsNullOrEmpty(userID))
+{
+    <FocusAreaSelectTable userID="@userID" />
+}

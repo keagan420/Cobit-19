@@ -4,6 +4,7 @@ using Cobit_19.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cobit_19.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230721124015_AddedBridgeTableForSubscriptions")]
+    partial class AddedBridgeTableForSubscriptions
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -717,18 +720,17 @@ namespace Cobit_19.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "2ef4e528-6c05-416b-8eef-a3bc1eebf946",
-                            Email = "test@gmail.com",
-                            EmailConfirmed = true,
+                            ConcurrencyStamp = "3be08902-fd96-4202-8865-88a4af33b1f1",
+                            EmailConfirmed = false,
                             FirstName = "Daniel",
                             LastName = "Coetzee",
                             LockoutEnabled = false,
-                            NormalizedUserName = "TEST@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEG7gQC1BP7M3qgvKPdP21hUs86sgPF3SXABB9qC88sarJpX78fhzUk1MR8Hlrs+8EA==",
+                            NormalizedUserName = "MYUSER",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGUII5nUNIhJ69J1gqB5IE4AiF9xxIRe+swh1kWqIVFCorIyUjBdWkDJ4OEEIBHdGg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "71e25299-3972-4e59-907b-7c19a3dd2735",
+                            SecurityStamp = "d87fbf63-d2a4-4dc4-83fd-3cd37acde55f",
                             TwoFactorEnabled = false,
-                            UserName = "test@gmail.com"
+                            UserName = "myuser"
                         });
                 });
 
@@ -16635,7 +16637,7 @@ namespace Cobit_19.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "de7eca78-19e6-452c-91ba-513621f92b86",
+                            ConcurrencyStamp = "143d2ecf-dd8b-4897-a979-92a673ab280e",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });

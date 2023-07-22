@@ -1,0 +1,42 @@
+﻿@using Cobit_19.Business.FocusAreas;
+@using Cobit_19.Shared.Dtos;
+@inject FocusAreaProvider focusAreaProvider
+@inject NavigationManager navigationManager
+
+@code {
+    [Parameter]
+    public string userID { get; set; }
+    IEnumerable<FocusAreaDto> focusAreaList;
+
+    protected override void OnInitialized()
+    {
+        focusAreaList = focusAreaProvider.GetFocusAreasByUserID(userID);
+    }
+
+
+    private void FocusAreaSelectionClick(int focusAreaID)
+    {
+        navigationManager.NavigateTo($"/AuditSelect?focusAreaID={focusAreaID}");
+    }
+}
+
+<table class="table border-3 table-bordered">
+
+    <tr>
+        <th>Activity</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Completion</th>
+    </tr>
+
+@foreach (var focusArea in focusAreaList)
+{
+    <tr>
+        <td>@focusAreaProvider.GetFocusAreaActivityStatus(userID, focusArea.ID)</td>
+        <td>@focusArea.Name</td>
+        <td>@focusArea.Description</td>
+        <td>@focusAreaProvider.GetFocusAreaCompletionStatus(userID, focusArea.ID)</td>
+        <td><button @onclick="(e) => FocusAreaSelectionClick(focusArea.ID)">Begin Assesment</button></td>
+    </tr>   
+}
+</table>
