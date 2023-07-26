@@ -11,6 +11,7 @@ namespace Cobit_19.Business.Audits
     {
         private readonly IMapper _mapper;
         private readonly AppDbContext _dbContext;
+        private static readonly object _lock = new object();
         public AuditProvider(IMapper mapper, AppDbContext dbContext)
         {
             _dbContext = dbContext;
@@ -118,16 +119,19 @@ namespace Cobit_19.Business.Audits
                 return null;
             }
 
-            var answers = _dbContext.Answers.Where(a => a.AuditID == audit.ID).ToList();
-            // Remove answers
-            foreach (var answer in answers)
+            lock (_lock)
             {
-                _dbContext.Answers.Remove(answer);
+                var answers = _dbContext.Answers.Where(a => a.AuditID == audit.ID).ToList();
+                // Remove answers
+                foreach (var answer in answers)
+                {
+                    _dbContext.Answers.Remove(answer);
+                }
+
+                _dbContext.Audits.Remove(audit);
+
+                _dbContext.SaveChangesAsync();
             }
-
-            _dbContext.Audits.Remove(audit);
-
-            await _dbContext.SaveChangesAsync();
 
             return _mapper.Map<AuditDto>(audit);
         }
@@ -142,7 +146,6 @@ namespace Cobit_19.Business.Audits
 
             _mapper.Map(auditEditorDto, audit);
 
-            // Update DateCompleted
             if (audit.Status == AuditStatus.InProgress)
             {
                 audit.DateCompleted = null;
@@ -151,9 +154,13 @@ namespace Cobit_19.Business.Audits
             {
                 audit.DateCompleted = DateTime.Now;
             }
-            _dbContext.Audits.Update(audit);
 
-            await _dbContext.SaveChangesAsync();
+            lock (_lock)
+            {
+                _dbContext.Audits.Update(audit);
+
+                _dbContext.SaveChangesAsync();
+            }
 
             return _mapper.Map<AuditDto>(audit);
         }
@@ -166,11 +173,14 @@ namespace Cobit_19.Business.Audits
                 return null;
             }
 
-            _mapper.Map(answerEditorDto, answer);
+            lock (_lock)
+            {
+                _mapper.Map(answerEditorDto, answer);
 
-            _dbContext.Answers.Update(answer);
+                _dbContext.Answers.Update(answer);
 
-            await _dbContext.SaveChangesAsync();
+                _dbContext.SaveChangesAsync();
+            }
 
             return _mapper.Map<AnswerDto>(answer);
         }
