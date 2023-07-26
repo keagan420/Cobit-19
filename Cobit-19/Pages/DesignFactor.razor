@@ -41,7 +41,7 @@
         }
     }
 // Update values 
-    private async void Update(int questionId, UpdateType updateType, ChangeEventArgs args)
+    private async Task Update(int questionId, UpdateType updateType, ChangeEventArgs args)
     {
         int value;
         if (int.TryParse(args.Value.ToString(), out value))
@@ -66,10 +66,14 @@
             }
 
             await auditProvider.updateAnswerAsync(answerEditorDto);
+        
+            // I feel this is sucha bad way to do this but i cant think of a better way
+            _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Answer = answerEditorDto.Answer;
+            _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Odds = answerEditorDto.Odds;
+
+            _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
         }
 
-        //_designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Answer = answ;
-        _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
 
     }
 
