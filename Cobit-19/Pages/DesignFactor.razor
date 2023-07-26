@@ -1,13 +1,14 @@
 ﻿@page "/DesignFactor"
 @using Cobit_19.Business.Audits
+@using Cobit_19.Business.FocusAreas;
 @using Cobit_19.Shared.Dtos
 @using Syncfusion.Blazor.Charts
 @using Microsoft.AspNetCore.WebUtilities
 @inject AuditProvider auditProvider
+@inject FocusAreaProvider focusAreaProvider
 @inject NavigationManager navigationManager
 
 @code {
-    protected SfChart sfChart;
     protected DesignFactorDto _designFactorDto;
     protected List<ObjectiveDto>? _objectiveDtos;
 
@@ -30,7 +31,7 @@
             _designFactorDto = await auditProvider.getDesignFactorFullAsync(AuditId, DFId);
             _objectiveDtos = await auditProvider.getObjectivesAsync();
             _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
-            await CheckNavButtons();
+            CheckNavButtons();
         }
 
     }
@@ -55,7 +56,6 @@
 
         _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Answer = answ;
         _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
-        await sfChart.RefreshAsync();
 
     }
 
@@ -79,7 +79,6 @@
 
         _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Odds = odds;
         _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
-        await sfChart.RefreshAsync();
     }
 
     // Used to check if the answer is selected
@@ -88,35 +87,40 @@
         return answer == option;
     }
 
-    private async Task CheckNavButtons()
+// Nav buttons logic
+    private void CheckNavButtons()
     {
-        var Audit = await auditProvider.getAsync(AuditId);
-        var DF = await auditProvider.getDesignFactorsAsync(AuditId);
-        var currentDF = DF.Find(x => x.ID == DFId);
-        var currentDFIndex = DF.IndexOf(currentDF);
+        // Check if there is a next design factor
+        var next = focusAreaProvider.GetNextDesignFactor(AuditId, DFId);
 
-        if (DF.IndexOf(currentDF) >= 1) _isPreviousButtonDFId = DF[DF.IndexOf(currentDF) - 1].ID;
-        if (DF.IndexOf(currentDF) < DF.Count - 1) _isNextButtonDFId = DF[DF.IndexOf(currentDF) + 1].ID;
+        if (next != null)
+        {
+            _isNextButtonDFId = next.ID;
+        }
+        else
+        {
+            _isNextButtonDFId = -1;
+        }
+
+        // Check if there is a previous design factor
+        var prev = focusAreaProvider.GetPrevDesignFactor(AuditId, DFId);
+
+        if (prev != null)
+        {
+            _isPreviousButtonDFId = prev.ID;
+        }
+        else
+        {
+            _isPreviousButtonDFId = -1;
+        }
     }
 
-    private void NextButtonPress()
+    private void NavButtonPress(int navDFId)
     {
         var queryStrDict = new Dictionary<string, string>
             {
                 ["AuditId"] = (AuditId).ToString(),
-                ["DFId"] = (DFId+1).ToString(),
-            };
-        navigationManager.NavigateTo(
-            QueryHelpers.AddQueryString("/DesignFactor", queryStrDict)
-        );
-    }
-
-    private void PreviousButtonPress()
-    {
-        var queryStrDict = new Dictionary<string, string>
-            {
-                ["AuditId"] = (AuditId).ToString(),
-                ["DFId"] = (DFId - 1).ToString(),
+                ["DFId"] = (navDFId).ToString(),
             };
         navigationManager.NavigateTo(
             QueryHelpers.AddQueryString("/DesignFactor", queryStrDict)
@@ -169,7 +173,7 @@
                                 else
                                 {
                                     <th scope="col">Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
-                                    <th scope="col">Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
+                                    <th scope="col">Likelihood(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
                                 }
                                 <th scope="col">Baseline</th>
                             </tr>
@@ -225,54 +229,20 @@
                             }
                         </tbody>
                     </table>
-                    @if (_mappedObjectives != null)
-                    {
-                        <div class="col-lg-12">
-                            <div class="panel panel-info">
-                                <div class="panel-heading">
-                                    <i class="fa fa-info-circle"></i> Info Panel - Technology adoption strategy
-                                </div>
-                                <div class="panel-body">
-                                    <p>
-                                        The output section of this tab contains the calculated relative importance of each of the 40 COBIT
-                                        2019 governance and management objectives. The results are represented as a bar chart and as a spider diagram.
-                                    </p>
-                                </div>
-                                <figure class="figure flex-lg-fill">
-                                    <div class="figure img-fluid rounded">
-                                        <SfChart @ref="sfChart">
-                                            <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-                                            </ChartPrimaryXAxis>
-
-                                            <ChartSeriesCollection>
-                                                <ChartSeries DataSource="@_mappedObjectives" XName="Objective" YName="RelativeInportance"
-                                                             Type="ChartSeriesType.Radar" DrawType="ChartDrawType.Line">
-                                                </ChartSeries>
-                                            </ChartSeriesCollection>
-                                        </SfChart>
-                                    </div>
-                                </figure>
-                            </div>
-                        </div>
-
-                        <div class="align-items-center justify-content-center">\
-                            <h3> Radial Chart</h3>
-                            
-                        </div>
-                    }
+                    <DesignFactorChart Values="@_mappedObjectives"></DesignFactorChart>
                 }
                 <div class="row">
                     <div class="col">
                         @if (_isPreviousButtonDFId != -1)
                         {
-                            <button type="button" onclick="@(() => PreviousButtonPress())" class="btn btn-primary">Back</button>
+                            <button type="button" onclick="@(() => NavButtonPress(_isPreviousButtonDFId))" class="btn btn-primary">Back</button>
                         }
                     </div>
                     <div class="col">
                         <div class="float-end">
                             @if (_isNextButtonDFId != -1)
                             {
-                                <button type="button" onclick="@(() => NextButtonPress())" class="btn btn-primary">Next</button>
+                                <button type="button" onclick="@(() => NavButtonPress(_isNextButtonDFId))" class="btn btn-primary">Next</button>
                             }
                         </div>
                     </div>
