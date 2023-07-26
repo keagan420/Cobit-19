@@ -9,7 +9,7 @@
 @inject NavigationManager navigationManager
 
 @code {
-    protected DesignFactorDto _designFactorDto;
+    protected DesignFactorDto? _designFactorDto;
     protected List<ObjectiveDto>? _objectiveDtos;
 
     [Parameter]
@@ -19,11 +19,17 @@
     [SupplyParameterFromQuery]
     public int DFId { get; set; }
 
-    public List<ObjectiveValueDto>? _mappedObjectives { get; set; }
-    public int _isNextButtonDFId { get; set; } = -1;
-    public int _isPreviousButtonDFId { get; set; } = -1;
+    protected List<ObjectiveValueDto>? _mappedObjectives { get; set; }
+    private int _isNextButtonDFId { get; set; } = -1;
+    private int _isPreviousButtonDFId { get; set; } = -1;
 
-    //Constructor
+    private enum UpdateType
+    {
+        answer,
+        odds
+    }
+
+//Constructor
     protected override async Task OnInitializedAsync()
     {
         if(_designFactorDto == null)
@@ -33,55 +39,41 @@
             _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
             CheckNavButtons();
         }
-
     }
-
-    private async void SubmitAnswer(int questionId, ChangeEventArgs args)
+// Update values 
+    private async void Update(int questionId, UpdateType updateType, ChangeEventArgs args)
     {
-        int answ = -1;
-        if (int.TryParse(args.Value.ToString(), out answ))
+        int value;
+        if (int.TryParse(args.Value.ToString(), out value))
         {
             var old = _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First();
 
             AnswerEditorDto answerEditorDto = new AnswerEditorDto()
                 {
                     AuditID = AuditId,
-                    QuestionID = questionId,
-                    Answer = answ,
-                    Odds = old.Odds
+                    QuestionID = questionId
                 };
+
+            if (updateType == UpdateType.answer)
+            {
+                answerEditorDto.Answer = value;
+                answerEditorDto.Odds = old.Odds;
+            }
+            else
+            {
+                answerEditorDto.Answer = old.Answer;
+                answerEditorDto.Odds = value;
+            }
 
             await auditProvider.updateAnswerAsync(answerEditorDto);
         }
 
-        _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Answer = answ;
+        //_designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Answer = answ;
         _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
 
     }
 
-    private async void SubmitOdds(int questionId, ChangeEventArgs args)
-    {
-        int odds = -1;
-        if (int.TryParse(args.Value.ToString(), out odds))
-        {
-            var old = _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First();
-
-            AnswerEditorDto answerEditorDto = new AnswerEditorDto()
-                {
-                    AuditID = AuditId,
-                    QuestionID = questionId,
-                    Answer = old.Answer,
-                    Odds = odds
-                };
-
-            await auditProvider.updateAnswerAsync(answerEditorDto);
-        }
-
-        _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Odds = odds;
-        _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
-    }
-
-    // Used to check if the answer is selected
+// Used to check if the answer is selected
     private bool IsAnswerSelected(int answer, int option)
     {
         return answer == option;
@@ -195,7 +187,7 @@
                                                 <td>
                                                     <input type="radio" name="@q.ID" id="@q.ID" value="@i"
                                                     class="form-check-input"
-                                                    @onchange="((e) => SubmitAnswer(q.ID, e))"
+                                                    @onchange="((e) => Update(q.ID, UpdateType.answer, e))"
                                                     checked="@IsAnswerSelected(q.Answers.First().Answer, i)" />
                                                 </td>
                                             }
@@ -205,7 +197,7 @@
                                             <td>
                                                 <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
                                                 class="form-control"
-                                                @onchange="((e) => SubmitAnswer(q.ID, e))" />
+                                                @onchange="((e) => Update(q.ID, UpdateType.answer, e))" />
                                             </td>
                                         }
                                     }
@@ -214,12 +206,12 @@
                                         <td>
                                             <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
                                             class="form-control"
-                                            @onchange="((e) => SubmitAnswer(q.ID, e))" />
-                                        </td>
+                                            @onchange="((e) => Update(q.ID, UpdateType.answer, e))" />
+                                        </td> 
                                         <td>
                                             <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Odds"
                                             class="form-control"
-                                            @onchange="((e) => SubmitOdds(q.ID, e))" />
+                                            @onchange="((e) => Update(q.ID, UpdateType.odds, e))" />
                                         </td>
                                     }
                                     <td>

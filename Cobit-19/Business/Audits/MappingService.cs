@@ -28,9 +28,9 @@ namespace Cobit_19.Business.Audits
                     double weight = question.Maps.Where(m => m.ObjectiveID == objective.ID).First().Weight;
                     double answer = question.Answers.First().Answer;
                     double baseline = question.BaseAnswer;
+                    double odds = question.Answers.First().Odds;
 
                     // If odds is not 0, multiply the value by the odds
-                    var odds = question.Answers.First().Odds;
                     if (odds == 0)
                     {
                         objectiveValue.Score += weight * answer;
