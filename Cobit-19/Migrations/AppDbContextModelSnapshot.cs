@@ -717,16 +717,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "7a47231e-f6de-4ac3-91ab-a77252cd98ad",
+                            ConcurrencyStamp = "6de401b4-976b-4528-80be-4c5ddd0b2994",
                             Email = "test@gmail.com",
                             EmailConfirmed = true,
                             FirstName = "Daniel",
                             LastName = "Coetzee",
                             LockoutEnabled = false,
                             NormalizedUserName = "TEST@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBbqINIpcIqH7CpSnIbq61vpX73z9aemFtcwk83wDHQ66q0yP+rtgFLkIHCMB4Fe4w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELtzvTHpvg66I5qvL/9QuKuiapcEeW5KQnP+993KzEEr0NWwr25MHniTNhb8APPdJQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3c5d5a29-206c-4a52-8b46-d26a23328c1a",
+                            SecurityStamp = "bc8fd761-2e07-4427-9282-40c4f782b6f8",
                             TwoFactorEnabled = false,
                             UserName = "test@gmail.com"
                         });
@@ -19748,9 +19748,30 @@ namespace Cobit_19.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "874cf5a9-a28b-4921-ae04-20d5a9e8e878",
+                            ConcurrencyStamp = "8d66988f-314d-483c-993b-c9dfbd0d4282",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
+                        },
+                        new
+                        {
+                            Id = "36c9f3b8-42e6-4ab1-a50d-e89986c5d1f7",
+                            ConcurrencyStamp = "480343cb-96ae-4d13-a2ce-ad6e6b9deef5",
+                            Name = "Head Auditor",
+                            NormalizedName = "HEAD AUDITOR"
+                        },
+                        new
+                        {
+                            Id = "5e70cf29-1b64-4f58-85dd-07b3c46015a3",
+                            ConcurrencyStamp = "9c067561-2582-44d9-82d6-ac3dae02b44b",
+                            Name = "Auditor",
+                            NormalizedName = "AUDITOR"
+                        },
+                        new
+                        {
+                            Id = "d3ae1c6e-1c8a-43e7-9a2a-971fc7fbb295",
+                            ConcurrencyStamp = "fdff0f5c-2327-4bd4-801f-92207e4b9463",
+                            Name = "Client",
+                            NormalizedName = "CLIENT"
                         });
                 });
 

@@ -8,7 +8,7 @@ using Cobit_19.Data.Models;
 
 namespace Cobit_19.Data
 {
-    public class AppDbContext : IdentityDbContext<ApplicationUser>  
+    public class AppDbContext : IdentityDbContext<ApplicationUser>
     {
         public AppDbContext(DbContextOptions options) : base(options)
         {
@@ -109,8 +109,11 @@ namespace Cobit_19.Data
 
             // Data seeding
 
-            //Seeding a  'Administrator' role to AspNetRoles table
+            //Seeding roles to AspNetRoles table
             builder.Entity<IdentityRole>().HasData(new IdentityRole { Id = "2c5e174e-3b0e-446f-86af-483d56fd7210", Name = "Administrator", NormalizedName = "ADMINISTRATOR".ToUpper() });
+            builder.Entity<IdentityRole>().HasData(new IdentityRole { Id = "36c9f3b8-42e6-4ab1-a50d-e89986c5d1f7", Name = "Head Auditor", NormalizedName = "HEAD AUDITOR".ToUpper() });
+            builder.Entity<IdentityRole>().HasData(new IdentityRole { Id = "5e70cf29-1b64-4f58-85dd-07b3c46015a3", Name = "Auditor", NormalizedName = "AUDITOR".ToUpper() });
+            builder.Entity<IdentityRole>().HasData(new IdentityRole { Id = "d3ae1c6e-1c8a-43e7-9a2a-971fc7fbb295", Name = "Client", NormalizedName = "CLIENT".ToUpper() });
 
 
             //a hasher to hash the password before seeding the user to the db
@@ -130,7 +133,7 @@ namespace Cobit_19.Data
                     EmailConfirmed = true,
                     PasswordHash = hasher.HashPassword(null, "Pa$$w0rd"),
                 }
-            );;
+            ); ;
 
 
             //Seeding the relation between our user and role to AspNetUserRoles table
@@ -275,7 +278,7 @@ namespace Cobit_19.Data
                 new AnswerModel { AuditID = 1, QuestionID = 17, Answer = 1, AnswerRange = 5 },
                 new AnswerModel { AuditID = 1, QuestionID = 18, Answer = 1, AnswerRange = 5, Odds = 5 },
                 new AnswerModel { AuditID = 1, QuestionID = 19, Answer = 1, AnswerRange = 5, Odds = 5 },
-                new AnswerModel { AuditID = 1, QuestionID = 20, Answer = 1, AnswerRange = 5, Odds = 5 }, 
+                new AnswerModel { AuditID = 1, QuestionID = 20, Answer = 1, AnswerRange = 5, Odds = 5 },
                 new AnswerModel { AuditID = 1, QuestionID = 21, Answer = 1, AnswerRange = 5, Odds = 5 },
                 new AnswerModel { AuditID = 1, QuestionID = 22, Answer = 1, AnswerRange = 5, Odds = 5 },
                 new AnswerModel { AuditID = 1, QuestionID = 23, Answer = 1, AnswerRange = 5, Odds = 5 },

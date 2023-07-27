@@ -124,75 +124,85 @@
     }
 }
 
-<div class="container-md bg-light mt-4">
-    <div class="row">
-        <div class="">
-            @if (_designFactorDto is null)
-            {
-                <p><em>Loading...</em></p>
-            }
-            else
-            {
-                <div>
-                    <h3> Design Factor : @_designFactorDto.Description</h3>
-                </div>
-                @if (_designFactorDto.Questions.Count == 0)
+<AuthorizeView>
+    <div class="container-md bg-light mt-4">
+        <div class="row">
+            <div class="">
+                @if (_designFactorDto is null)
                 {
-                    <tr>
-                        <td colspan="4">No questions found.</td>
-                    </tr>
+                    <p><em>Loading...</em></p>
                 }
                 else
                 {
-                    <table class="table border-3 table-bordered" >
-                        <thead class="table-primary">
-                            <tr>
-                                <th scope="col">Description</th>
-                                @if (_designFactorDto.Questions.First().Answers.First().Odds == 0)
-                                {
-                                    @if (_designFactorDto.Questions.First().Answers.First().AnswerRange <= 8)
+                    <div>
+                        <h3> Design Factor : @_designFactorDto.Description</h3>
+                    </div>
+                    @if (_designFactorDto.Questions.Count == 0)
+                    {
+                        <tr>
+                            <td colspan="4">No questions found.</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        <table class="table border-3 table-bordered" >
+                            <thead class="table-primary">
+                                <tr>
+                                    <th scope="col">Description</th>
+                                    @if (_designFactorDto.Questions.First().Answers.First().Odds == 0)
                                     {
-                                        @for (int i = 1; i <= _designFactorDto.Questions.First().Answers.First().AnswerRange; i++)
+                                        @if (_designFactorDto.Questions.First().Answers.First().AnswerRange <= 8)
                                         {
-                                            <th scope="col">@i</th>
+                                            @for (int i = 1; i <= _designFactorDto.Questions.First().Answers.First().AnswerRange; i++)
+                                            {
+                                                <th scope="col">@i</th>
+                                            }
                                         }
-                                    }
-                                    else if (_designFactorDto.Questions.First().Answers.First().AnswerRange == 100)
-                                    {
-                                        <th scope="col">Value(%)</th>
+                                        else if (_designFactorDto.Questions.First().Answers.First().AnswerRange == 100)
+                                        {
+                                            <th scope="col">Value(%)</th>
+                                        }
+                                        else
+                                        {
+                                            <th scope="col">Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
+                                        }
                                     }
                                     else
                                     {
                                         <th scope="col">Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
+                                        <th scope="col">Likelihood(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
                                     }
-                                }
-                                else
+                                    <th scope="col">Baseline</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var q in _designFactorDto.Questions)
                                 {
-                                    <th scope="col">Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
-                                    <th scope="col">Likelihood(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
-                                }
-                                <th scope="col">Baseline</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var q in _designFactorDto.Questions)
-                            {
-                                <tr>
-                                    <td>
-                                        @q.Question
-                                    </td>
-                                    @if (_designFactorDto.Questions.First().Answers.First().Odds == 0)
-                                    {
-
-                                        @if (q.Answers.First().AnswerRange <= 8)
+                                    <tr>
+                                        <td>
+                                            @q.Question
+                                        </td>
+                                        @if (_designFactorDto.Questions.First().Answers.First().Odds == 0)
                                         {
-                                            @for (int i = 1; i <= q.Answers.First().AnswerRange; i++)
+
+                                            @if (q.Answers.First().AnswerRange <= 8)
+                                            {
+                                                @for (int i = 1; i <= q.Answers.First().AnswerRange; i++)
+                                                {
+                                                    <td>
+                                                        <input type="radio" name="@q.ID" id="@q.ID" value="@i"
+                                                        class="form-check-input"
+                                                        @onchange="((e) => Update(q.ID, UpdateType.answer, e))"
+                                                        checked="@IsAnswerSelected(q.Answers.First().Answer, i)" />
+                                                    </td>
+                                                }
+                                            }
+                                            else
                                             {
                                                 <td>
-                                                    <input type="radio" name="@q.ID" id="@q.ID" value="@i"
-                                                    class="form-check-input"
-                                                    @onchange="((e) => Update(q.ID, UpdateType.answer, e))"
-                                                    checked="@IsAnswerSelected(q.Answers.First().Answer, i)" />
+                                                    <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
+                                                    class="form-control"
+                                                    @onchange="((e) => Update(q.ID, UpdateType.answer, e))" />
                                                 </td>
                                             }
                                         }
@@ -202,49 +212,41 @@
                                                 <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
                                                 class="form-control"
                                                 @onchange="((e) => Update(q.ID, UpdateType.answer, e))" />
+                                            </td> 
+                                            <td>
+                                                <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Odds"
+                                                class="form-control"
+                                                @onchange="((e) => Update(q.ID, UpdateType.odds, e))" />
                                             </td>
                                         }
-                                    }
-                                    else
-                                    {
                                         <td>
-                                            <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
-                                            class="form-control"
-                                            @onchange="((e) => Update(q.ID, UpdateType.answer, e))" />
-                                        </td> 
-                                        <td>
-                                            <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Odds"
-                                            class="form-control"
-                                            @onchange="((e) => Update(q.ID, UpdateType.odds, e))" />
+                                            @q.BaseAnswer
                                         </td>
-                                    }
-                                    <td>
-                                        @q.BaseAnswer
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-                    <DesignFactorChart Values="@_mappedObjectives"></DesignFactorChart>
-                }
-                <div class="row">
-                    <div class="col">
-                        @if (_isPreviousButtonDFId != -1)
-                        {
-                            <button type="button" onclick="@(() => NavButtonPress(_isPreviousButtonDFId))" class="btn btn-primary">Back</button>
-                        }
-                    </div>
-                    <div class="col">
-                        <div class="float-end">
-                            @if (_isNextButtonDFId != -1)
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <DesignFactorChart Values="@_mappedObjectives"></DesignFactorChart>
+                    }
+                    <div class="row">
+                        <div class="col">
+                            @if (_isPreviousButtonDFId != -1)
                             {
-                                <button type="button" onclick="@(() => NavButtonPress(_isNextButtonDFId))" class="btn btn-primary">Next</button>
+                                <button type="button" onclick="@(() => NavButtonPress(_isPreviousButtonDFId))" class="btn btn-primary">Back</button>
                             }
                         </div>
+                        <div class="col">
+                            <div class="float-end">
+                                @if (_isNextButtonDFId != -1)
+                                {
+                                    <button type="button" onclick="@(() => NavButtonPress(_isNextButtonDFId))" class="btn btn-primary">Next</button>
+                                }
+                            </div>
+                        </div>
                     </div>
-                </div>
-            }
+                }
+            </div>
         </div>
     </div>
-</div>
+</AuthorizeView>
 
