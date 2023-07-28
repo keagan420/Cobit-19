@@ -133,7 +133,7 @@ namespace Cobit_19.Data
                     EmailConfirmed = true,
                     PasswordHash = hasher.HashPassword(null, "Pa$$w0rd"),
                 }
-            ); ;
+            );
 
 
             //Seeding the relation between our user and role to AspNetUserRoles table
@@ -161,8 +161,8 @@ namespace Cobit_19.Data
                 new DesignFactorModel { ID = 7, FocusAreaID = 1, Name = "Cobit Core Model - Design Factor 7", Description = "Role of IT" },
                 new DesignFactorModel { ID = 8, FocusAreaID = 1, Name = "Cobit Core Model - Design Factor 8", Description = "Sourcing model for IT" },
                 new DesignFactorModel { ID = 9, FocusAreaID = 1, Name = "Cobit Core Model - Design Factor 9", Description = "IT implementation methods" },
-                new DesignFactorModel { ID = 10, FocusAreaID = 1, Name = "Cobit Core Model - Design Factor 10", Description = "Technology adoption strategy" },
-                new DesignFactorModel { ID = 11, FocusAreaID = 1, Name = "Cobit Core Model - Design Factor 11", Description = "Enterprise Size" }
+                new DesignFactorModel { ID = 10, FocusAreaID = 1, Name = "Cobit Core Model - Design Factor 10", Description = "Technology adoption strategy" }
+                //new DesignFactorModel { ID = 11, FocusAreaID = 1, Name = "Cobit Core Model - Design Factor 11", Description = "Enterprise Size" }
                 );
 
             builder.Entity<QuestionModel>().HasData(
@@ -472,6 +472,64 @@ namespace Cobit_19.Data
                 }
             }
 
+            /// Mapping 12 Questions and 40 Objectives with their weights for design factor 2
+            // Define the weights as a 2D array
+            float[,] weights2 = new float[,]
+            {
+                { 4.0f,  4.0f,  4.0f,  0.0f,  4.0f,  1.0f,  0.0f,  3.0f,  2.0f,  1.0f,  3.0f,  6.0f,  1.0f },
+                { 10.0f, 0.0f,  0.0f,  0.0f,  6.0f,  1.0f,  0.0f,  5.0f,  2.0f,  1.0f,  0.0f,  9.0f,  4.0f },
+                { 0.0f,  8.0f,  4.0f,  0.0f,  0.0f,  6.0f,  0.0f,  0.0f,  0.0f,  0.0f,  3.0f,  0.0f,  0.0f },
+                { 11.0f, 0.0f,  0.0f,  0.0f,  7.0f,  1.0f,  0.0f,  6.0f,  3.0f,  1.0f,  0.0f,  10.0f, 4.0f },
+                { 0.0f,  1.0f,  2.0f,  6.0f,  0.0f,  0.0f,  6.0f,  0.0f,  4.0f,  0.0f,  2.0f,  0.0f,  0.0f },
+                { 8.0f,  6.0f,  6.0f,  2.0f,  6.0f,  4.0f,  2.0f,  5.0f,  4.0f,  1.0f,  5.0f,  9.0f,  2.0f },
+                { 11.0f, 0.0f,  0.0f,  0.0f,  8.0f,  1.0f,  0.0f,  5.0f,  1.0f,  4.0f,  0.0f,  9.0f,  5.0f },
+                { 11.0f, 1.0f,  0.0f,  0.0f,  8.0f,  3.0f,  0.0f,  6.0f,  1.0f,  2.0f,  0.0f,  9.0f,  4.0f },
+                { 11.0f, 0.0f,  0.0f,  0.0f,  6.0f,  0.0f,  0.0f,  4.0f,  1.0f,  3.0f,  0.0f,  8.0f,  7.0f },
+                { 12.0f, 0.0f,  0.0f,  0.0f,  8.0f,  2.0f,  0.0f,  7.0f,  3.0f,  1.0f,  0.0f,  11.0f, 3.0f },
+                { 5.0f,  0.0f,  0.0f,  6.0f,  3.0f,  0.0f,  6.0f,  3.0f,  8.0f,  0.0f,  0.0f,  6.0f,  2.0f },
+                { 9.0f,  0.0f,  0.0f,  0.0f,  5.0f,  1.0f,  0.0f,  3.0f,  2.0f,  4.0f,  0.0f,  7.0f,  5.0f },
+                { 17.0f, 0.0f,  0.0f,  0.0f,  10.0f, 2.0f,  0.0f,  7.0f,  2.0f,  5.0f,  0.0f,  12.0f, 8.0f },
+                { 6.0f,  0.0f,  0.0f,  0.0f,  4.0f,  2.0f,  0.0f,  3.0f,  0.0f,  1.0f,  0.0f,  4.0f,  1.0f },
+                { 8.0f,  0.0f,  0.0f,  0.0f,  4.0f,  2.0f,  0.0f,  4.0f,  1.0f,  0.0f,  0.0f,  5.0f,  2.0f },
+                { 7.0f,  0.0f,  0.0f,  6.0f,  4.0f,  1.0f,  6.0f,  4.0f,  7.0f,  0.0f,  0.0f,  7.0f,  2.0f },
+                { 0.0f,  6.0f,  0.0f,  0.0f,  0.0f,  6.0f,  0.0f,  0.0f,  0.0f,  0.0f,  0.0f,  0.0f,  0.0f },
+                { 0.0f,  5.0f,  2.0f,  0.0f,  0.0f,  5.0f,  0.0f,  0.0f,  0.0f,  0.0f,  1.0f,  0.0f,  0.0f },
+                { 0.0f,  4.0f,  2.0f,  6.0f,  0.0f,  3.0f,  6.0f,  0.0f,  4.0f,  0.0f,  1.0f,  0.0f,  0.0f },
+                { 10.0f, 0.0f,  0.0f,  0.0f,  7.0f,  0.0f,  0.0f,  6.0f,  4.0f,  1.0f,  0.0f,  11.0f, 4.0f },
+                { 15.0f, 0.0f,  0.0f,  0.0f,  10.0f, 2.0f,  0.0f,  8.0f,  3.0f,  3.0f,  0.0f,  12.0f, 5.0f },
+                { 15.0f, 0.0f,  0.0f,  0.0f,  9.0f,  2.0f,  0.0f,  8.0f,  3.0f,  1.0f,  0.0f,  12.0f, 5.0f },
+                { 6.0f,  1.0f,  0.0f,  0.0f,  3.0f,  4.0f,  0.0f,  3.0f,  1.0f,  0.0f,  0.0f,  4.0f,  1.0f },
+                { 14.0f, 0.0f,  0.0f,  0.0f,  11.0f, 1.0f,  0.0f,  8.0f,  4.0f,  4.0f,  0.0f,  14.0f, 5.0f },
+                { 8.0f,  2.0f,  0.0f,  0.0f,  5.0f,  2.0f,  0.0f,  4.0f,  0.0f,  1.0f,  0.0f,  5.0f,  3.0f },
+                { 6.0f,  2.0f,  0.0f,  0.0f,  3.0f,  1.0f,  0.0f,  3.0f,  1.0f,  0.0f,  0.0f,  4.0f,  3.0f },
+                { 11.0f, 0.0f,  0.0f,  0.0f,  7.0f,  0.0f,  0.0f,  4.0f,  2.0f,  5.0f,  0.0f,  9.0f,  7.0f },
+                { 0.0f,  0.0f,  0.0f,  6.0f,  0.0f,  0.0f,  6.0f,  0.0f,  5.0f,  0.0f,  0.0f,  0.0f,  0.0f },
+                { 2.0f,  0.0f,  0.0f,  0.0f,  1.0f,  1.0f,  0.0f,  1.0f,  0.0f,  0.0f,  0.0f,  1.0f,  0.0f },
+                { 12.0f, 0.0f,  0.0f,  0.0f,  7.0f,  1.0f,  0.0f,  7.0f,  4.0f,  0.0f,  0.0f,  11.0f, 4.0f },
+                { 6.0f,  0.0f,  0.0f,  0.0f,  4.0f,  2.0f,  0.0f,  3.0f,  0.0f,  1.0f,  0.0f,  4.0f,  1.0f },
+                { 4.0f,  3.0f,  0.0f,  0.0f,  2.0f,  5.0f,  0.0f,  2.0f,  0.0f,  0.0f,  0.0f,  2.0f,  0.0f },
+                { 4.0f,  3.0f,  0.0f,  0.0f,  2.0f,  5.0f,  0.0f,  2.0f,  0.0f,  0.0f,  0.0f,  2.0f,  0.0f },
+                { 4.0f,  3.0f,  0.0f,  0.0f,  2.0f,  5.0f,  0.0f,  2.0f,  0.0f,  0.0f,  0.0f,  2.0f,  0.0f },
+                { 2.0f,  8.0f,  4.0f,  0.0f,  1.0f,  7.0f,  0.0f,  1.0f,  0.0f,  0.0f,  3.0f,  1.0f,  0.0f },
+                { 6.0f,  4.0f,  2.0f,  0.0f,  5.0f,  4.0f,  0.0f,  3.0f,  0.0f,  2.0f,  2.0f,  5.0f,  2.0f },
+                { 7.0f,  2.0f,  4.0f,  4.0f,  4.0f,  2.0f,  4.0f,  4.0f,  4.0f,  0.0f,  3.0f,  6.0f,  1.0f },
+                { 4.0f,  6.0f,  6.0f,  4.0f,  2.0f,  4.0f,  4.0f,  2.0f,  4.0f,  0.0f,  5.0f,  3.0f,  1.0f },
+                { 0.0f,  3.0f,  6.0f,  0.0f,  0.0f,  0.0f,  0.0f,  0.0f,  0.0f,  0.0f,  4.0f,  0.0f,  0.0f },
+                { 2.0f,  6.0f,  6.0f,  4.0f,  1.0f,  4.0f,  4.0f,  1.0f,  3.0f,  0.0f,  5.0f,  1.0f,  0.0f }
+            };
+
+            for (int i = 0; i < 40; i++)
+            {
+                for (int j = 0; j < 13; j++)
+                {
+                    {
+                        float dsweight2 = weights2[i, j];
+                        builder.Entity<MapModel>().HasData(
+                        new MapModel { QuestionID = j + 5, ObjectiveID = i + 1, Weight = dsweight2 }
+                        );
+                    };
+                }
+            }
 
             /// Mapping 19 Questions and 40 Objectives with their weights for design factor 3
             // Define the weights as a 2D array

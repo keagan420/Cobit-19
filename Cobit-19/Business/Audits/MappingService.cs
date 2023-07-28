@@ -28,15 +28,18 @@ namespace Cobit_19.Business.Audits
                     double weight = question.Maps.Where(m => m.ObjectiveID == objective.ID).First().Weight;
                     double answer = question.Answers.First().Answer;
                     double baseline = question.BaseAnswer;
-
-                    objectiveValue.Score += weight * answer;
-                    objectiveValue.BaselineScore += weight * baseline;
+                    double odds = question.Answers.First().Odds;
 
                     // If odds is not 0, multiply the value by the odds
-                    if(question.Answers.First().Odds != 0)
+                    if (odds == 0)
                     {
-                        objectiveValue.Score *= question.Answers.First().Odds;
-                        objectiveValue.BaselineScore *= question.Answers.First().Odds;
+                        objectiveValue.Score += weight * answer;
+                        objectiveValue.BaselineScore += weight * baseline;
+                    }
+                    else
+                    {
+                        objectiveValue.Score += weight * answer * odds;
+                        objectiveValue.BaselineScore += weight * baseline * odds;
                     }
                 }
 

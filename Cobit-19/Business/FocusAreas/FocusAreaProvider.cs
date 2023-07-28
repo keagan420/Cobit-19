@@ -109,6 +109,60 @@ namespace Cobit_19.Business.FocusAreas
             return _mapper.Map<AuditDto>(query);
         }
 
-            
+        public DesignFactorDto GetNextDesignFactor(int focusAreaID, int designFactorID)
+        {
+            var designFactors = _dbContext.FocusAreas
+                .Where(fa => fa.ID == focusAreaID)
+                .SelectMany(fa => fa.DesignFactors)
+                .OrderBy(df => df.ID)
+                .ToList();
+
+            var currentDesignFactor = designFactors.Find(df => df.ID == designFactorID);
+
+            if (currentDesignFactor == null)
+            {
+                return null;
+            }
+
+            int pos = designFactors.IndexOf(currentDesignFactor);
+
+            if (pos >= designFactors.Count - 1)
+            {
+                return null;
+            }
+
+            var value = designFactors.ElementAtOrDefault(pos + 1);
+
+            return _mapper.Map<DesignFactorDto>(value);
+        }
+
+        public DesignFactorDto GetPrevDesignFactor(int focusAreaID, int designFactorID)
+        {
+            var designFactors = _dbContext.FocusAreas
+                .Where(fa => fa.ID == focusAreaID)
+                .SelectMany(fa => fa.DesignFactors)
+                .OrderBy(df => df.ID)
+                .ToList();
+
+            var currentDesignFactor = designFactors.Find(df => df.ID == designFactorID);
+
+            if (currentDesignFactor == null)
+            {
+                return null;
+            }
+
+            int pos = designFactors.IndexOf(currentDesignFactor);
+
+            if (pos <= 0)
+            {
+                return null;
+            }
+
+            var value = designFactors.ElementAtOrDefault(pos - 1);
+
+            return _mapper.Map<DesignFactorDto>(value);
+        }
+
+
     }
 }
