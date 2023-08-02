@@ -29,18 +29,15 @@
         odds
     }
 
-//Constructor
+    //Constructor
     protected override async Task OnInitializedAsync()
     {
-        if(_designFactorDto == null)
-        {
-            _designFactorDto = await auditProvider.getDesignFactorFullAsync(AuditId, DFId);
-            _objectiveDtos = await auditProvider.getObjectivesAsync();
-            _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
-            CheckNavButtons();
-        }
+        _designFactorDto = await auditProvider.getDesignFactorFullAsync(AuditId, DFId);
+        _objectiveDtos = await auditProvider.getObjectivesAsync();
+        _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
+        CheckNavButtons();
     }
-// Update values 
+    // Update values 
     private async Task Update(int questionId, UpdateType updateType, ChangeEventArgs args)
     {
         int value;
@@ -49,10 +46,10 @@
             var old = _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First();
 
             AnswerEditorDto answerEditorDto = new AnswerEditorDto()
-                {
-                    AuditID = AuditId,
-                    QuestionID = questionId
-                };
+            {
+                AuditID = AuditId,
+                QuestionID = questionId
+            };
 
             if (updateType == UpdateType.answer)
             {
@@ -66,24 +63,22 @@
             }
 
             await auditProvider.updateAnswerAsync(answerEditorDto);
-        
+
             // I feel this is sucha bad way to do this but i cant think of a better way
             _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Answer = answerEditorDto.Answer;
             _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Odds = answerEditorDto.Odds;
 
             _mappedObjectives = MappingService.Calculate(_designFactorDto, _objectiveDtos);
         }
-
-
     }
 
-// Used to check if the answer is selected
+    // Used to check if the answer is selected
     private bool IsAnswerSelected(int answer, int option)
     {
         return answer == option;
     }
 
-// Nav buttons logic
+    // Nav buttons logic
     private void CheckNavButtons()
     {
         // Check if there is a next design factor
@@ -122,18 +117,23 @@
             QueryHelpers.AddQueryString("/DesignFactor", queryStrDict)
         );
     }
+
+    private AnswerDto getFirstAnswer()
+    {
+        return _designFactorDto.Questions.FirstOrDefault().Answers.FirstOrDefault();
+    }
 }
 
 <AuthorizeView>
-    <div class="container-md bg-light mt-4">
+    <div class="container-sm">
         <div class="row">
-            <div class="">
-                @if (_designFactorDto is null)
-                {
-                    <p><em>Loading...</em></p>
-                }
-                else
-                {
+            @if (_designFactorDto is null)
+            {
+                <p><em>Loading...</em></p>
+            }
+            else
+            {
+                <div class="border border-dark bg-light">
                     <div>
                         <h3> Design Factor : @_designFactorDto.Description</h3>
                     </div>
@@ -146,33 +146,33 @@
                     else
                     {
                         <table class="table border-3 table-bordered" >
-                            <thead class="table-primary">
-                                <tr>
-                        <th scope="col" style="color: white; background-color : purple; width :stretch ; padding: 10px 15px;  border-bottom: 1px solid transparent;  border-top-left-radius: 3px; border-top-right-radius: 3px; ">Description</th>
-                                    @if (_designFactorDto.Questions.First().Answers.First().Odds == 0)
+                            <thead>
+                                <tr style="background-color: purple; color: white;">
+                                    <th>Description</th>
+                                    @if (getFirstAnswer().Odds == 0)
                                     {
-                                        @if (_designFactorDto.Questions.First().Answers.First().AnswerRange <= 8)
+                                        @if (getFirstAnswer().AnswerRange <= 8)
                                         {
-                                            @for (int i = 1; i <= _designFactorDto.Questions.First().Answers.First().AnswerRange; i++)
+                                            @for (int i = 1; i <= getFirstAnswer().AnswerRange; i++)
                                             {
-                                    <th scope="col" style="color: white; background-color : purple; width :stretch ; padding: 10px 15px;  border-bottom: 1px solid transparent;  border-top-left-radius: 3px; border-top-right-radius: 3px; ">@i</th>
+                                                <th>@i</th>
                                             }
                                         }
-                                        else if (_designFactorDto.Questions.First().Answers.First().AnswerRange == 100)
+                                        else if (getFirstAnswer().AnswerRange == 100)
                                         {
-                                <th scope="col" style="color: white; background-color : purple; width :stretch ; padding: 10px 15px;  border-bottom: 1px solid transparent;  border-top-left-radius: 3px; border-top-right-radius: 3px; ">Value(%)</th>
+                                            <th>Value(%)</th>
                                         }
                                         else
                                         {
-                                <th scope="col" style="color: white; background-color : purple; width :stretch ; padding: 10px 15px;  border-bottom: 1px solid transparent;  border-top-left-radius: 3px; border-top-right-radius: 3px; ">Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
+                                            <th>Value(1 - @getFirstAnswer().AnswerRange)</th>
                                         }
                                     }
                                     else
                                     {
-                            <th scope="col" style="color: white; background-color : purple; width :stretch ; padding: 10px 15px;  border-bottom: 1px solid transparent;  border-top-left-radius: 3px; border-top-right-radius: 3px; ">Value(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
-                            <th scope="col" style="color: white; background-color : purple; width :stretch ; padding: 10px 15px;  border-bottom: 1px solid transparent;  border-top-left-radius: 3px; border-top-right-radius: 3px; ">Likelihood(1 - @_designFactorDto.Questions.First().Answers.First().AnswerRange)</th>
+                                        <th>Value(1 - @getFirstAnswer().AnswerRange)</th>
+                                        <th>Likelihood(1 - @getFirstAnswer().AnswerRange)</th>
                                     }
-                        <th scope="col" style="color: white; background-color : purple; width :stretch ; padding: 10px 15px;  border-bottom: 1px solid transparent;  border-top-left-radius: 3px; border-top-right-radius: 3px; ">Baseline</th>
+                                    <th>Baseline</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -182,7 +182,7 @@
                                         <td>
                                             @q.Question
                                         </td>
-                                        @if (_designFactorDto.Questions.First().Answers.First().Odds == 0)
+                                        @if (getFirstAnswer().Odds == 0)
                                         {
 
                                             @if (q.Answers.First().AnswerRange <= 8)
@@ -220,53 +220,57 @@
                                             </td>
                                         }
                                         <td>
-                                            @q.BaseAnswer
+                                            <b>
+                                                @q.BaseAnswer
+                                            </b>
                                         </td>
                                     </tr>
                                 }
                             </tbody>
                         </table>
+                    }
+                </div>
+            }
 
-                        <div class="align-items-center justify-content-center">
-                            <h3>Chart:</h3>
-                         </div>
-                                           
-                        <div class="col-lg-12">
-                            <div class="panel panel-primary">
+            @if (_designFactorDto is not null)
+            {
+                <div class="container-fluid border-dark border mt-4 mb-5 bg-light p-3">
+                    <div class="col">
+                        <div class="panel panel-primary">
 
-                                 <div class="panel-heading" style="color: white; background-color : purple; width :stretch ; padding: 10px 15px;  border-bottom: 1px solid transparent;  border-top-left-radius: 3px; border-top-right-radius: 3px; ">
-                                        <i class="fa fa-info-circle"></i> Info Panel - @_designFactorDto.Description
-                                 </div>   
-                                 
-                                <div class="panel-body">
-                                    <p>
-                                        The output section of this tab contains the calculated relative importance of each of the 40 COBIT
-                                        2019 governance and management objectives. The results are represented as a bar chart and as a spider diagram.
-                                    </p>
-                                </div>
+                            <div class="panel-heading p-2" style="color: white; background-color : purple">
+                                Info Panel - @_designFactorDto.Description
+                            </div>
+
+                            <div class="panel-body">
+                                <p>
+                                    The output section of this tab contains the calculated relative importance of each of the 40 COBIT
+                                    2019 governance and management objectives. The results are represented as a bar chart and as a spider diagram.
+                                </p>
                             </div>
                         </div>
+                    </div>
 
-                        <DesignFactorChart Values="@_mappedObjectives"></DesignFactorChart>
-                    }
-                    <div class="row">
-                        <div class="col" >
+                    <DesignFactorChart Values="@_mappedObjectives"></DesignFactorChart>
+
+                    <div class="row m-3">
+                        <div class="col">
                             @if (_isPreviousButtonDFId != -1)
                             {
-                    <button type="button" onclick="@(() => NavButtonPress(_isPreviousButtonDFId))" class="btn btn-primary" style="background-color : purple">Back</button>
+                        <button type="button" onclick="@(() => NavButtonPress(_isPreviousButtonDFId))" class="btn btn-primary btn-lg">Back</button>
                             }
                         </div>
                         <div class="col">
                             <div class="float-end">
                                 @if (_isNextButtonDFId != -1)
                                 {
-                        <button type="button" onclick="@(() => NavButtonPress(_isNextButtonDFId))" class="btn btn-primary" style="background-color : purple">Next</button>
+                                    <button type="button" onclick="@(() => NavButtonPress(_isNextButtonDFId))" class="btn btn-primary btn-lg">Next</button>
                                 }
                             </div>
                         </div>
                     </div>
-                }
-            </div>
+                </div>
+            }
         </div>
     </div>
 </AuthorizeView>

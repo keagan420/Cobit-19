@@ -24,7 +24,7 @@
 {
     <table class="table table-hover">
         <thead>
-            <tr>
+            <tr style="background-color: purple; color: white;">
                 <th>Activity</th>
                 <th>Name</th>
                 <th>Description</th>
@@ -39,7 +39,11 @@
                     <td>@focusAreaProvider.GetFocusAreaActivityStatus(userID, focusArea.ID)</td>
                     <td>@focusArea.Name</td>
                     <td>@focusArea.Description</td>
-                    <td>@focusAreaProvider.GetFocusAreaCompletionStatus(userID, focusArea.ID)</td>
+                    <td>
+                        <span class="badge bg-success">
+                            @focusAreaProvider.GetFocusAreaCompletionStatus(userID, focusArea.ID)
+                        </span>
+                    </td>
                     <td>
                         <button @onclick="(e) => FocusAreaSelectionClick(focusArea.ID)" type="button" class="btn btn-primary">
                             Show Audits

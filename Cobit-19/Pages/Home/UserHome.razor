@@ -8,21 +8,18 @@
     private string userID;
     private string selectedDiv = "tab1";
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    protected override async Task OnInitializedAsync()
     {
-        if (firstRender)
+        var authState = await authStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
         {
-            var authState = await authStateProvider.GetAuthenticationStateAsync();
-            var user = authState.User;
+            var currentUser = await _userManager.GetUserAsync(user);
+            userID = currentUser.Id;
 
-            if (user.Identity.IsAuthenticated)
-            {
-                var currentUser = await _userManager.GetUserAsync(user);
-                userID = currentUser.Id;
-
-                // Trigger a state change to re-render the component after the userID is set.
-                StateHasChanged();
-            }
+            // Trigger a state change to re-render the component after the userID is set.
+            StateHasChanged();
         }
     }
 
@@ -35,9 +32,9 @@
     <div class="container">
         <div class="row pb-4">
             <div class="col">
-                <ul class="nav nav-tabs">
+                <ul class="nav nav-tabs nav-fill">
                     <li class="nav-item">
-                        <a class="nav-link active link-dark" role='button' @onclick='() => ShowDiv("tab1")'>Introduction</a>
+                        <a class="nav-link link-dark" role='button' @onclick='() => ShowDiv("tab1")'>Introduction</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link link-dark" role='button' @onclick='() => ShowDiv("tab2")'>Design Workflow</a>
@@ -173,7 +170,7 @@
 
             </div>
         </div>
-        <div class="row border">
+        <div class="row">
             @if (!string.IsNullOrEmpty(userID))
             {
                 <FocusAreaSelectTable userID="@userID" />
