@@ -23,27 +23,6 @@
         StateHasChanged();
     }
 
-
-   /* private string FormatAuditStatus(AuditStatus status)
-    {
-        if (status == AuditStatus.NotStarted)
-        {
-            return "Not Started";
-        }
-        else if (status == AuditStatus.InProgress)
-        {
-            return "In Progress";
-        }
-        else if (status == AuditStatus.Completed)
-        {
-            return "Completed";
-        }
-        else
-        {
-            return null;
-        }
-    }*/
-
     private string FormatAuditStatus(AuditStatus status)
      {
          if (status == AuditStatus.NotStarted)
@@ -107,19 +86,10 @@
                 </td>
                 <td>@audit.Name</td>
                 <td>@audit.DateCreated</td>
-                <td><button type="button" class="btn btn-success btn-sm" @onclick='() => AuditSelectionClick(audit.ID)'>Select</button></td>
+                <td><button type="button" class="btn btn-primary btn-sm" @onclick='() => AuditSelectionClick(audit.ID)'>Select</button></td>
             </tr>
         }
     </tbody>
-    <tfoot>
-        <tr>
-            <td colspan="5" class="text-right">
-                <NavLink href="/userhome">
-                    <button class="btn btn-primary">Back</button>
-                </NavLink>
-            </td>
-        </tr>
-    </tfoot>
 </table>
 
 
