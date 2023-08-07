@@ -18,11 +18,17 @@
     {
         if (_objectiveValueDtos == null)
         {   var designFactors = new List<DesignFactorDto>();
-            designFactors.Add(await auditProvider.getDesignFactorFullAsync(AuditId, 1));
-            designFactors.Add(await auditProvider.getDesignFactorFullAsync(AuditId, 2));
-            designFactors.Add(await auditProvider.getDesignFactorFullAsync(AuditId, 3));
-            designFactors.Add(await auditProvider.getDesignFactorFullAsync(AuditId, 4));
+
+            // This is a temporary solution to get the design factors
+            var dfSummary = await auditProvider.getDesignFactorsAsync(AuditId);
+
+            foreach (var df in dfSummary)
+            {
+                designFactors.Add(await auditProvider.getDesignFactorFullAsync(AuditId, df.ID));
+            }
+
             var _objectiveDtos = await auditProvider.getObjectivesAsync();
+
             _objectiveValueDtos = MappingService.CalculateSummary(designFactors, _objectiveDtos);
             changeChartType(ChartSeriesType.Column);
         }
@@ -49,7 +55,6 @@
     {
         await sfChart.ExportAsync(ExportType.PNG, "Summary");
     }
-
 }
 
 <AuthorizeView>
@@ -64,7 +69,7 @@
                 {
                     <div class="card">
                         <div class="card-header text-white h3" style="background-color : purple;">
-                            Summary - View
+                            Summary - View of all Design Factors
                         </div>
                         <div class="card-body">
                             <div>
