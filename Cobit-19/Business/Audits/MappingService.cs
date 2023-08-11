@@ -1,6 +1,5 @@
 ﻿using Cobit_19.Shared.Dtos;
 using Microsoft.IdentityModel.Tokens;
-using Syncfusion.Blazor.Charts;
 
 namespace Cobit_19.Business.Audits
 {
