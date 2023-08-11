@@ -9,13 +9,17 @@ namespace Cobit_19.Data.Models
         {
         }
         [Key]
+        public int AuditScopeID { get; set; }
         [ForeignKey("Audit")]
         public int AuditID { get; set; }
-        [Key]
         [ForeignKey("Objective")]
         public int ObjectiveID { get; set; }
         [ForeignKey("ApplicationUser")]
         public string ApplicationUserID { get; set; }
+        public bool Selected { get; set; }
+        public int Status { get; set; }
+        public DateTime DateCreated { get; set; }
+        public DateTime DateCompleted { get; set; }
 
         public virtual AuditModel Audit { get; set; }
         public virtual ObjectiveModel Objective { get; set; }
