@@ -3,18 +3,21 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cobit_19.Data.Models
 {
-    public class AuditScopeMembers
+    public class ObjectiveAuditMembersModel
     {
-        public AuditScopeMembers()
+        public ObjectiveAuditMembersModel()
         {
         }
 
         [Key]
-        [ForeignKey("AuditScope")]
-        public int AuditScopeID { get; set; }
+        [ForeignKey("ObjectiveAudit")]
+        public int ObjectiveAuditID { get; set; }
         [Key]
         [ForeignKey("ApplicationUser")]
         public string ApplicationUserID { get; set; }
         public DateTime DateAdded { get; set; }
+
+        public virtual ObjectiveAuditModel ObjectiveAudit { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
     }
 }

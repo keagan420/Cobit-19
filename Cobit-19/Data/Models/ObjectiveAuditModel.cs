@@ -1,20 +1,27 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Cobit_19.Shared.Enums;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cobit_19.Data.Models
 {
-    public class ObjectiveAuditModel
+    public class ObjectiveAuditModel : AppModel<int>
     {
         public ObjectiveAuditModel()
         {
         }
-        [Key]
-        public int ObjectiveAuditID { get; set; }
-        [ForeignKey("AuditScope")]
-        public int AuditScopeID { get; set; }
-        [ForeignKey("FocusArea")]
-        public int FocusAreaID { get; set; }
-        [Column(TypeName = "varchar(MAX)")]
-        public string AuditObject { get; set; }
+        [ForeignKey("Audit")]
+        public int AuditID { get; set; }
+        [ForeignKey("Objective")]
+        public int ObjectiveID { get; set; }
+        [ForeignKey("ApplicationUser")]
+        public string ApplicationUserID { get; set; }
+        public bool Selected { get; set; }
+        public AuditStatus Status { get; set; }
+        public DateTime DateCreated { get; set; }
+        public DateTime? DateCompleted { get; set; }
+
+        public virtual AuditModel Audit { get; set; }
+        public virtual ObjectiveModel Objective { get; set; }
+        public virtual ICollection<ObjectiveAuditMembersModel> ObjectiveAuditMembers { get; set; }
     }
 }

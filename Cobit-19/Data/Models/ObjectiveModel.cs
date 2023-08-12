@@ -13,6 +13,7 @@ namespace Cobit_19.Data.Models
         public string? Description { get; set; }
 
         public virtual ICollection<MapModel> Maps { get; set; }
-        public virtual ICollection<AuditScopeModel> AuditScopes { get; set; }
+        public virtual ICollection<ObjectiveAuditModel> ObjectiveAudits { get; set; }
+        public virtual ICollection<ObjectiveAuditTemplateModel> ObjectiveAuditTemplates { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using Cobit_19.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cobit_19.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230812104248_objectiveAudit")]
+    partial class objectiveAudit
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -717,16 +720,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e5878011-d39d-4255-9472-863b9d1164cb",
+                            ConcurrencyStamp = "87244c04-3eac-4f91-98cd-798937fe2acb",
                             Email = "test@gmail.com",
                             EmailConfirmed = true,
                             FirstName = "Daniel",
                             LastName = "Coetzee",
                             LockoutEnabled = false,
                             NormalizedUserName = "TEST@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAENQreQVTSASHv88M21f/ziBcoGHfpstenGGQ40VO+w6NM6JvxtlXvtPqVboFQ/qW9w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEqPUtKnvQZInHxxAYhToDKrjmmPUp/sOP2MKoLbSlk63hYkIX6funBSmukE7TPMuA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a74b79ee-229a-4b74-b8c9-7b523226389a",
+                            SecurityStamp = "e9192e98-cdf9-424b-b820-4a67cd95c99d",
                             TwoFactorEnabled = false,
                             UserName = "test@gmail.com"
                         },
@@ -734,16 +737,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "fa567c12-5678-4321-bacd-87654321de1f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5a2b3d0f-dd9e-4ae5-8d52-4aac936128e2",
+                            ConcurrencyStamp = "7b859cfa-502c-4bd9-9b96-99c587b19a21",
                             Email = "john.smith@example.com",
                             EmailConfirmed = true,
                             FirstName = "John",
                             LastName = "Smith",
                             LockoutEnabled = false,
                             NormalizedUserName = "JOHN.SMITH@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDwqJxLd2slEzkBfMdlUuExsEKCC0nI9zzYM1lVeGi1V0PUK7txicxcG3TEyMOih7Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEIHmCxG37r4K8XQdVylh+8BDQt/SNHlSAYlApGzZCYrenfHrtADRiU/tXRv4VPQXhA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "f6f785b6-f3c9-4412-8e28-b49320199bf9",
+                            SecurityStamp = "d0f21eb4-2aef-4f81-9869-ef43a2a4792f",
                             TwoFactorEnabled = false,
                             UserName = "john.smith@example.com"
                         },
@@ -751,16 +754,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "9b1a0f34-8765-4321-dcba-ba09876543c2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "82569fe8-a128-421c-b5d3-0b37b3dbf10a",
+                            ConcurrencyStamp = "e5ef5f17-1521-4459-816e-f9185cf661d0",
                             Email = "alice.johnson@example.com",
                             EmailConfirmed = true,
                             FirstName = "Alice",
                             LastName = "Johnson",
                             LockoutEnabled = false,
                             NormalizedUserName = "ALICE.JOHNSON@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEFowLZ+9uECvgb3vSrCkn57i5HSiXPUyAPm210BUX6yb5YeKXdpRiBzHf/LSr4XwYw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEO7VFoP0l46Cqbsxsi4bg88/ok0HxxLsdoNREt8TQiJvnC9ABUUBsVwvY3VsDZGGDw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "9d7204d3-c7e3-4db8-896a-ff3fec47ebfd",
+                            SecurityStamp = "ab7447ee-95ab-42bf-9368-d08e7f0456b0",
                             TwoFactorEnabled = false,
                             UserName = "alice.johnson@example.com"
                         },
@@ -768,16 +771,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "b2c3d4e5-f6a7-1234-5678-0987654321dc",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "90531135-49ba-43f5-af57-d5f46401d8e7",
+                            ConcurrencyStamp = "e2a050fb-d163-472b-a1ca-81ba19b59824",
                             Email = "michael.brown@example.com",
                             EmailConfirmed = true,
                             FirstName = "Michael",
                             LastName = "Brown",
                             LockoutEnabled = false,
                             NormalizedUserName = "MICHAEL.BROWN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIzwlYYodfVnUBWZPGGbsmdxzMsir9QCN6dErgGCSV+CH0m4E8GeV6F8VeLpfaHI/Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAkOi2F2P+bW5eUfiZ0ZJVD8r1QlGSm9wkUMpqDQA5p3sE/qfM4Frt5XvpGFNyJc9w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "9b92082f-35ab-4571-aa4e-3ab21184106f",
+                            SecurityStamp = "743b1aa1-67a4-4838-920d-8c822bb4c69e",
                             TwoFactorEnabled = false,
                             UserName = "michael.brown@example.com"
                         });
@@ -795,7 +798,7 @@ namespace Cobit_19.Migrations
 
                     b.HasIndex("AuditID");
 
-                    b.ToTable("AuditMembers", (string)null);
+                    b.ToTable("AuditMembers");
 
                     b.HasData(
                         new
@@ -18840,24 +18843,6 @@ namespace Cobit_19.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Cobit_19.Data.Models.ObjectiveAuditMembersModel", b =>
-                {
-                    b.Property<string>("ApplicationUserID")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("ObjectiveAuditModelID")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("DateAdded")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("ApplicationUserID", "ObjectiveAuditModelID");
-
-                    b.HasIndex("ObjectiveAuditModelID");
-
-                    b.ToTable("ObjectiveAuditMembers", (string)null);
-                });
-
             modelBuilder.Entity("Cobit_19.Data.Models.ObjectiveAuditModel", b =>
                 {
                     b.Property<int>("ID")
@@ -18868,7 +18853,7 @@ namespace Cobit_19.Migrations
 
                     b.Property<string>("ApplicationUserID")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("AuditID")
                         .HasColumnType("int");
@@ -18890,11 +18875,13 @@ namespace Cobit_19.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("ApplicationUserID");
+
                     b.HasIndex("AuditID");
 
                     b.HasIndex("ObjectiveID");
 
-                    b.ToTable("ObjectiveAudits", (string)null);
+                    b.ToTable("ObjectiveAuditModels", (string)null);
 
                     b.HasData(
                         new
@@ -19080,7 +19067,7 @@ namespace Cobit_19.Migrations
 
                     b.HasIndex("FocusAreaID");
 
-                    b.ToTable("ObjectiveAuditTemplates", (string)null);
+                    b.ToTable("ObjectiveAuditTemplateModels", (string)null);
                 });
 
             modelBuilder.Entity("Cobit_19.Data.Models.ObjectiveModel", b =>
@@ -19946,7 +19933,7 @@ namespace Cobit_19.Migrations
 
                     b.HasIndex("FocusAreaID");
 
-                    b.ToTable("Subscriptions", (string)null);
+                    b.ToTable("Subscriptions");
 
                     b.HasData(
                         new
@@ -20001,28 +19988,28 @@ namespace Cobit_19.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "0af85f0c-1a3d-40ce-baf9-ce59fa4449a1",
+                            ConcurrencyStamp = "8e5408f4-78d3-4aab-b00a-0608df6999cf",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "36c9f3b8-42e6-4ab1-a50d-e89986c5d1f7",
-                            ConcurrencyStamp = "0602b715-0548-46f8-9976-1e8513b900af",
+                            ConcurrencyStamp = "3719b2da-175e-44bd-a9ec-3d2a4524a521",
                             Name = "Head Auditor",
                             NormalizedName = "HEAD AUDITOR"
                         },
                         new
                         {
                             Id = "5e70cf29-1b64-4f58-85dd-07b3c46015a3",
-                            ConcurrencyStamp = "5c4c87ee-b233-42af-aa16-075734ea9ace",
+                            ConcurrencyStamp = "015d9d19-bdc6-4e20-9674-44f946a16903",
                             Name = "Auditor",
                             NormalizedName = "AUDITOR"
                         },
                         new
                         {
                             Id = "d3ae1c6e-1c8a-43e7-9a2a-971fc7fbb295",
-                            ConcurrencyStamp = "7b20fee6-3978-45f1-8bdb-20fb35e57e4c",
+                            ConcurrencyStamp = "47c122bb-5b90-4bee-886f-37811f4deda3",
                             Name = "Client",
                             NormalizedName = "CLIENT"
                         });
@@ -20258,27 +20245,14 @@ namespace Cobit_19.Migrations
                     b.Navigation("Question");
                 });
 
-            modelBuilder.Entity("Cobit_19.Data.Models.ObjectiveAuditMembersModel", b =>
+            modelBuilder.Entity("Cobit_19.Data.Models.ObjectiveAuditModel", b =>
                 {
                     b.HasOne("Cobit_19.Data.Models.ApplicationUser", "ApplicationUser")
-                        .WithMany("ObjectiveAuditMembers")
+                        .WithMany("ObjectiveAudits")
                         .HasForeignKey("ApplicationUserID")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Cobit_19.Data.Models.ObjectiveAuditModel", "ObjectiveAudit")
-                        .WithMany("ObjectiveAuditMembers")
-                        .HasForeignKey("ObjectiveAuditModelID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ApplicationUser");
-
-                    b.Navigation("ObjectiveAudit");
-                });
-
-            modelBuilder.Entity("Cobit_19.Data.Models.ObjectiveAuditModel", b =>
-                {
                     b.HasOne("Cobit_19.Data.Models.AuditModel", "Audit")
                         .WithMany("ObjectiveAudits")
                         .HasForeignKey("AuditID")
@@ -20290,6 +20264,8 @@ namespace Cobit_19.Migrations
                         .HasForeignKey("ObjectiveID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("ApplicationUser");
 
                     b.Navigation("Audit");
 
@@ -20404,7 +20380,7 @@ namespace Cobit_19.Migrations
 
                     b.Navigation("FocusAreas");
 
-                    b.Navigation("ObjectiveAuditMembers");
+                    b.Navigation("ObjectiveAudits");
 
                     b.Navigation("Subscriptions");
                 });
@@ -20432,11 +20408,6 @@ namespace Cobit_19.Migrations
                     b.Navigation("ObjectiveAuditTemplates");
 
                     b.Navigation("Subscriptions");
-                });
-
-            modelBuilder.Entity("Cobit_19.Data.Models.ObjectiveAuditModel", b =>
-                {
-                    b.Navigation("ObjectiveAuditMembers");
                 });
 
             modelBuilder.Entity("Cobit_19.Data.Models.ObjectiveModel", b =>
