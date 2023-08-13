@@ -1,0 +1,67 @@
+﻿@page "/ObjectiveAuditScope"
+
+@using Cobit_19.Business.ObjectiveAudits;
+@using Cobit_19.Shared.Dtos;
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.WebUtilities
+@inject ObjectiveAuditProvider objectiveAuditProvider
+@inject NavigationManager navigationManager
+
+@code {
+    private IList<ObjectiveAuditDto>? _ObjectiveAuditDto { get; set; }
+
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public int AuditId { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (_ObjectiveAuditDto == null)
+        {
+            _ObjectiveAuditDto = await objectiveAuditProvider.getAllAsync(AuditId);
+        }
+    }
+}
+
+<table class="table table-hover table-striped">
+    <thead style="">
+        <tr>
+            <th colspan="5">
+                <div class="ibox-title">
+                    <h5>
+                        <strong>Scope Selection</strong>
+                    </h5>
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th style="background-color: purple; color: white;">#</th>
+            <th style="background-color: purple; color: white;">Objective</th>
+            <th style="background-color: purple; color: white;">Importance</th>
+            <th style="background-color: purple; color: white;">Date Created</th>
+            <th style="background-color: purple; color: white;"></th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var audit in audits)
+        {
+            <tr>
+                <td>@(rowCounter++)</td>
+                <td>
+                    @if (FormatAuditStatus(audit.Status) == "Active")
+                    {
+                        <span class="badge bg-success">@FormatAuditStatus(audit.Status)</span>
+                    }
+                    else if (FormatAuditStatus(audit.Status) == "Inactive")
+                    {
+                        <span class="badge bg-danger">@FormatAuditStatus(audit.Status)</span>
+                    }
+                </td>
+                <td>@audit.Name</td>
+                <td>@audit.DateCreated</td>
+                <td><button type="button" class="btn btn-primary btn-sm" @onclick='() => AuditSelectionClick(audit.ID)'>Select</button></td>
+            </tr>
+        }
+    </tbody>
+</table>

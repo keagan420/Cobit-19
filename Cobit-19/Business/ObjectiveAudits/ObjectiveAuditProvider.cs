@@ -19,12 +19,12 @@ namespace Cobit_19.Business.ObjectiveAudits
         }
 
         // Get objectiveAudits by audit id
-        public async Task<IEnumerable<ObjectiveAuditDto>> getAllAsync(int auditId)
+        public async Task<IList<ObjectiveAuditDto>> getAllAsync(int auditId)
         {
             var quary = await _dbContext.ObjectiveAudits
                 .Where(a => a.AuditID == auditId)
                 .ToListAsync();
-            return _mapper.Map<IEnumerable<ObjectiveAuditDto>>(quary);
+            return _mapper.Map<IList<ObjectiveAuditDto>>(quary);
         }
 
         // Set selected objectiveAudits
