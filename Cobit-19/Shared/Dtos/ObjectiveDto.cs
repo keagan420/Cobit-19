@@ -9,6 +9,6 @@ namespace Cobit_19.Shared.Dtos
         public string Code { get; set; } = default!;
         public string? Description { get; set; } 
         public IList<MapDto>? Maps { get; set; } 
-        public IList<AuditScopeDto>? AuditScopes { get; set; }
+        public IList<ObjectiveAuditDto>? AuditScopes { get; set; }
     }
 }
