@@ -88,7 +88,7 @@ namespace Cobit_19.Data
                 .HasKey(table => new
                 {
                     table.ApplicationUserID,
-                    table.ObjectiveAuditModelID
+                    table.ObjectiveAuditID
                 });
 
             //ObjectiveAudits

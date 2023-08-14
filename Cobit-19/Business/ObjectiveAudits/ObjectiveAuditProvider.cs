@@ -23,7 +23,16 @@ namespace Cobit_19.Business.ObjectiveAudits
         {
             var quary = await _dbContext.ObjectiveAudits
                 .Where(a => a.AuditID == auditId)
+                .Include(a => a.Objective)
                 .ToListAsync();
+
+            foreach (var objectiveAudit in quary)
+            {
+                objectiveAudit.ObjectiveAuditMembers = await _dbContext.ObjectiveAuditMembers
+                    .Where(oam => oam.ObjectiveAuditID == objectiveAudit.ID)
+                    .Include(oam => oam.ApplicationUser)
+                    .ToListAsync();
+            }
             return _mapper.Map<IList<ObjectiveAuditDto>>(quary);
         }
 
