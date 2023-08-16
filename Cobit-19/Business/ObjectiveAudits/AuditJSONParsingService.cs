@@ -10,5 +10,11 @@ namespace Cobit_19.Business.ObjectiveAudits
             FullObjectiveAuditDto objectiveAudit = JsonConvert.DeserializeObject<FullObjectiveAuditDto>(jsonTemplate);
             return objectiveAudit;
         }
+
+        public static string auditTemplateSerializer (FullObjectiveAuditDto objectiveAudit)
+        {
+            string objectiveAuditJSONString = JsonConvert.SerializeObject(objectiveAudit);
+            return objectiveAuditJSONString;
+        }
     }
 }

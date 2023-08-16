@@ -4,6 +4,6 @@
     {
         public string subComponentName { get; set; }
         public string subComponentDescription { get; set; }
-        public List<ComponentQuestionDto> questions { get; set; }
+        public List<subComponentQuestionDto> subComponentQuestions { get; set; }
     }
 }
