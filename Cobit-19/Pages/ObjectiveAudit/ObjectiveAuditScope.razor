@@ -1,5 +1,6 @@
 ﻿@page "/ObjectiveAuditScope"
 
+@using Cobit_19.Business.Admin;
 @using Cobit_19.Business.ObjectiveAudits;
 @using Cobit_19.Shared.Dtos;
 @using Cobit_19.Shared.Enums;
@@ -9,7 +10,8 @@
 @inject NavigationManager navigationManager
 
 @code {
-    private IList<ObjectiveAuditDto>? _ObjectiveAuditDto { get; set; }
+    private IList<ObjectiveAuditDto>? _objectiveAuditDto { get; set; }
+    private IList<UserDto>? _userDtos { get; set; }
 
     [Parameter]
     [SupplyParameterFromQuery]
@@ -19,16 +21,16 @@
 
     protected override async Task OnInitializedAsync()
     {
-        if (_ObjectiveAuditDto == null)
+        if (_objectiveAuditDto == null)
         {
-            _ObjectiveAuditDto = await objectiveAuditProvider.getAllAsync(AuditId);
+            _objectiveAuditDto = objectiveAuditProvider.getAll(AuditId);
         }
         rowCounter = 1;
     }
 
     private async Task Update(int id, ChangeEventArgs e)
     {
-        var objectiveAudit = _ObjectiveAuditDto.FirstOrDefault(q => q.ID == id);
+        var objectiveAudit = _objectiveAuditDto.FirstOrDefault(q => q.ID == id);
 
         if (objectiveAudit != null)
         {
@@ -42,15 +44,39 @@
                 Status = objectiveAudit.Status
             };
 
-            await objectiveAuditProvider.updateSelected(objectiveAuditEditorDto);
+            await objectiveAuditProvider.updateSelectedAuditAsync(objectiveAuditEditorDto);
         }
     }
+
+    private void AuditSelectionClick(int objectiveAuditID)
+    {
+        var queryStrDict = new Dictionary<string, string>
+            {
+                ["AuditId"] = (AuditId).ToString(),
+                ["ObjectiveAuditID"] = (objectiveAuditID).ToString(),
+            };
+        navigationManager.NavigateTo(
+            QueryHelpers.AddQueryString("/ObjectiveAuditMembers", queryStrDict)
+        );
+    }
+
+    private void NavButtonPress()
+    {
+        var queryStrDict = new Dictionary<string, string>
+            {
+                ["AuditId"] = (AuditId).ToString(),
+            };
+        navigationManager.NavigateTo(
+            QueryHelpers.AddQueryString("/Audit", queryStrDict)
+        );
+    }
 }
+
 
 <div class="container-sm">
     <div class="row">
         <div class="col-md-12">
-            @if (_ObjectiveAuditDto is null)
+            @if (_objectiveAuditDto is null)
             {
                 <p><em>Loading...</em></p>
             }
@@ -78,10 +104,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var objectiveAudit in _ObjectiveAuditDto)
+                        @foreach (var objectiveAudit in _objectiveAuditDto)
                         {
                             <tr>
-                                <td>@(rowCounter++)</td>
+                                <td>@(_objectiveAuditDto.IndexOf(objectiveAudit) + 1)</td>
                                 <td>
                                     @if (objectiveAudit.Status == AuditStatus.Completed)
                                     {
@@ -103,15 +129,22 @@
                                     @onchange="((e) => Update(objectiveAudit.ID, e))" />
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="exampleModal">
-                                        Launch demo modal
-                                    </button>
+                                    @if (objectiveAudit.Selected)
+                                    {
+                                        <button type="button" class="btn btn-primary btn-sm" @onclick='() => AuditSelectionClick(objectiveAudit.ID)'>Select</button>
+                                    }
                                 </td>
                             </tr>
                         }
                     </tbody>
                 </table>
             }
+
+            <div class="row">
+                <div class="col">
+                    <button type="button" onclick="@(() => NavButtonPress())" class="btn btn-primary">Done</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
