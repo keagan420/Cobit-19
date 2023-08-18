@@ -29,7 +29,7 @@ namespace Cobit_19.Business.ObjectiveAudits
             return _mapper.Map<IList<ObjectiveAuditDto>>(quary);
         }
 
-        // Get objectiveAudits by audit id
+        // Get objectiveAudits by objectiveAudit id
         public ObjectiveAuditDto getByID(int objectiveAuditID)
         {
             var quary = _dbContext.ObjectiveAudits
@@ -52,7 +52,8 @@ namespace Cobit_19.Business.ObjectiveAudits
         }
 
         // Set selected objectiveAudits
-        public async Task<ObjectiveAuditDto> updateSelectedAuditAsync(ObjectiveAuditEditorDto objectiveAuditEditor)
+        // TODO Implement status functionality
+        public async Task<ObjectiveAuditDto> updateAsync(ObjectiveAuditEditorDto objectiveAuditEditor)
         {
             var objectiveAudit = _dbContext.ObjectiveAudits.Find(objectiveAuditEditor.ID);
 
@@ -78,9 +79,12 @@ namespace Cobit_19.Business.ObjectiveAudits
             return _mapper.Map<ObjectiveAuditDto>(objectiveAudit);
         }
 
-        public bool isMember(ObjectiveAuditMemberEditorDto objectiveAuditMemberEditorDto)
+        // Determines of a user is a member of an objectiveAudit
+        public bool isMember(ObjectiveAuditMemberEditorDto objectiveAuditMemberDto)
         {
-            return _dbContext.ObjectiveAuditMembers.Any(a => a.ObjectiveAuditID == objectiveAuditMemberEditorDto.ObjectiveAuditID && a.ApplicationUserID == objectiveAuditMemberEditorDto.ApplicationUserID);
+            return _dbContext.ObjectiveAuditMembers.Any(a => 
+                a.ObjectiveAuditID == objectiveAuditMemberDto.ObjectiveAuditID 
+                && a.ApplicationUserID == objectiveAuditMemberDto.ApplicationUserID);
         }
 
         public async Task<ObjectiveAuditMemberDto> addMember(ObjectiveAuditMemberEditorDto memberEditorDto)
@@ -99,7 +103,7 @@ namespace Cobit_19.Business.ObjectiveAudits
 
         public async Task<ObjectiveAuditMemberDto> deleteMember(ObjectiveAuditMemberEditorDto objectiveAuditMemberDto)
         {
-            if (!_dbContext.ObjectiveAuditMembers.Any(a => a.ObjectiveAuditID == objectiveAuditMemberDto.ObjectiveAuditID && a.ApplicationUserID == objectiveAuditMemberDto.ApplicationUserID))
+            if (!isMember(objectiveAuditMemberDto))
             {
                 return null;
             }
