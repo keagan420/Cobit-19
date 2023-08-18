@@ -11,16 +11,17 @@
   "maturityLevel5PercFinal": 0,
   "components": [
     {
-      "componentName": "Processes",
-      "componentDescription": "Component description",
+      "componentName": "A",
+      "componentDescription": "Processes",
       "componentPercFinal": 0,
       "subComponents": [
         {
+          "subComponentCode": "EDM01.02",
           "subComponentName": "Sub process name",
           "subComponentDescription": "Description",
           "subComponentQuestions": [
             {
-              "questionType": "Maturity Level 0 .. 5 OR Related Guidance OR Information flow",
+              "questionType": "Maturity Level 0 .. 5 OR Related Guidance OR Input OR Output",
               "questionDescription": "string",
               "relatedGuidance": "string",
               "detailedReference": "string",
@@ -35,8 +36,8 @@
       ]
     },
     {
-      "componentName": "Organizational Structures",
-      "componentDescription": "Component description",
+      "componentName": "B",
+      "componentDescription": "Organizational Structures",
       "componentPercFinal": 0,
       "componentQuestions": [
         {
@@ -49,13 +50,15 @@
       ]
     },
     {
-      "componentName": "Peoples, Skills and Competencies",
-      "componentDescription": "Component description",
+      "componentName": "D",
+      "componentDescription": "Peoples, Skills and Competencies",
       "componentPercFinal": 0,
       "componentQuestions": [
         {
           "questionType": "Component question",
-          "questionDescription": "string",
+          "questionSkill": "string",
+          "relatedGuidance": "string",
+          "detailedReference": "string",
           "questionAnswer": 0,
           "questionScore": 0,
           "questionComment": "comment"
@@ -63,13 +66,16 @@
       ]
     },
     {
-      "componentName": "Principles Policies and Procedures",
-      "componentDescription": "Component description",
+      "componentName": "E",
+      "componentDescription": "Principles Policies and Procedures",
       "componentPercFinal": 0,
       "componentQuestions": [
         {
           "questionType": "Component question",
-          "questionDescription": "string",
+          "relevantPolicy": "string",
+          "policyDescription": "string",
+          "detailedGuidance": "string",
+          "detailedReference": "string",
           "questionAnswer": 0,
           "questionScore": 0,
           "questionComment": "comment"
@@ -77,13 +83,15 @@
       ]
     },
     {
-      "componentName": "Culture, Ethics and Behavior",
-      "componentDescription": "Component description",
+      "componentName": "F",
+      "componentDescription": "Culture, Ethics and Behavior",
       "componentPercFinal": 0,
       "componentQuestions": [
         {
           "questionType": "Component question",
-          "questionDescription": "string",
+          "keyCultureElement": "string",
+          "relatedGuidance": "string",
+          "detailedReference": "string",
           "questionAnswer": 0,
           "questionScore": 0,
           "questionComment": "comment"
@@ -91,8 +99,8 @@
       ]
     },
     {
-      "componentName": "Services, Infrastructure and Applications",
-      "componentDescription": "Component description",
+      "componentName": "G",
+      "componentDescription": "Services, Infrastructure and Applications",
       "componentPercFinal": 0,
       "componentQuestions": [
         {
