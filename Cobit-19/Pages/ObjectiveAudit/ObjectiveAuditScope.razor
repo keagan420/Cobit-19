@@ -1,12 +1,14 @@
 ﻿@page "/ObjectiveAuditScope"
 
 @using Cobit_19.Business.Admin;
+@using Cobit_19.Business.Audits;
 @using Cobit_19.Business.ObjectiveAudits;
 @using Cobit_19.Shared.Dtos;
 @using Cobit_19.Shared.Enums;
 @using Microsoft.AspNetCore.Components.Web
 @using Microsoft.AspNetCore.WebUtilities
 @inject ObjectiveAuditProvider objectiveAuditProvider
+@inject AuditProvider auditProvider
 @inject NavigationManager navigationManager
 
 @code {
@@ -17,15 +19,35 @@
     [SupplyParameterFromQuery]
     public int AuditId { get; set; }
 
-    private int rowCounter;
-
     protected override async Task OnInitializedAsync()
     {
-        if (_objectiveAuditDto == null)
+        _objectiveAuditDto = objectiveAuditProvider.getAll(AuditId);
+        await CalculateScores();
+
+    }
+
+    private async Task CalculateScores()
+    {
+        var designFactors = new List<DesignFactorDto>();
+
+        // This is a temporary solution to get the design factors
+        var dfSummary = await auditProvider.getDesignFactorsAsync(AuditId);
+
+        foreach (var df in dfSummary)
         {
-            _objectiveAuditDto = objectiveAuditProvider.getAll(AuditId);
+            designFactors.Add(await auditProvider.getDesignFactorFullAsync(AuditId, df.ID));
         }
-        rowCounter = 1;
+
+        var objectiveDtos = await auditProvider.getObjectivesAsync();
+
+        var objectiveValueDto = MappingService.CalculateSummary(designFactors, objectiveDtos);
+
+        foreach (var obj in _objectiveAuditDto)
+        {
+            obj.ObjectiveScore = (int)objectiveValueDto[_objectiveAuditDto.IndexOf(obj)].RelativeInportance;
+        }
+
+        _objectiveAuditDto = _objectiveAuditDto.OrderBy(x => x.ObjectiveScore).ToList();
     }
 
     private async Task Update(int id, ChangeEventArgs e)
@@ -123,7 +145,7 @@
                                     }
                                 </td>
                                 <td>@objectiveAudit.Objective.Name</td>
-                                <td>3</td>
+                                <td>@objectiveAudit.ObjectiveScore</td>
                                 <td>
                                     <input type="checkbox" id="@objectiveAudit.ID" checked="@objectiveAudit.Selected"
                                     @onchange="((e) => Update(objectiveAudit.ID, e))" />
