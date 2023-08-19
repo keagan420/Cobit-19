@@ -4,6 +4,7 @@ using Cobit_19.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cobit_19.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230812104248_objectiveAudit")]
+    partial class objectiveAudit
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -717,16 +720,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f4fd3774-9ad9-4499-a218-282229970bd0",
+                            ConcurrencyStamp = "87244c04-3eac-4f91-98cd-798937fe2acb",
                             Email = "test@gmail.com",
                             EmailConfirmed = true,
                             FirstName = "Daniel",
                             LastName = "Coetzee",
                             LockoutEnabled = false,
                             NormalizedUserName = "TEST@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMoNKKQGDNEbpgVj+KyXk3YYQW12k3oEwA2iqgiSGyKxQwcEbOigzIpYv9QnGYfxmQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEqPUtKnvQZInHxxAYhToDKrjmmPUp/sOP2MKoLbSlk63hYkIX6funBSmukE7TPMuA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "dc8bd217-eb94-4329-aa52-9690caa633ed",
+                            SecurityStamp = "e9192e98-cdf9-424b-b820-4a67cd95c99d",
                             TwoFactorEnabled = false,
                             UserName = "test@gmail.com"
                         },
@@ -734,16 +737,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "fa567c12-5678-4321-bacd-87654321de1f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "4d25c1f6-8e87-4fc7-a8c3-995e8ac23e49",
+                            ConcurrencyStamp = "7b859cfa-502c-4bd9-9b96-99c587b19a21",
                             Email = "john.smith@example.com",
                             EmailConfirmed = true,
                             FirstName = "John",
                             LastName = "Smith",
                             LockoutEnabled = false,
                             NormalizedUserName = "JOHN.SMITH@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEOqN84f0O1wkNMEyEdDQw5dNDcJCrIMqrBMr/I/EQBCr9sOzAUQ//nZCB/D+UMrMbA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEIHmCxG37r4K8XQdVylh+8BDQt/SNHlSAYlApGzZCYrenfHrtADRiU/tXRv4VPQXhA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a6e4cf38-edac-49c2-96e4-5ac5184b72e9",
+                            SecurityStamp = "d0f21eb4-2aef-4f81-9869-ef43a2a4792f",
                             TwoFactorEnabled = false,
                             UserName = "john.smith@example.com"
                         },
@@ -751,16 +754,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "9b1a0f34-8765-4321-dcba-ba09876543c2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "285e5fb9-f729-4930-a1ba-1c64ebde4b31",
+                            ConcurrencyStamp = "e5ef5f17-1521-4459-816e-f9185cf661d0",
                             Email = "alice.johnson@example.com",
                             EmailConfirmed = true,
                             FirstName = "Alice",
                             LastName = "Johnson",
                             LockoutEnabled = false,
                             NormalizedUserName = "ALICE.JOHNSON@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAELWbHQwjnB2E2LbNh4LxeNFFy+Xb6NvhBXRpG4k7SL644Oe7NsR2YL1d8OM2X6vovA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEO7VFoP0l46Cqbsxsi4bg88/ok0HxxLsdoNREt8TQiJvnC9ABUUBsVwvY3VsDZGGDw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1e438525-1cb7-4681-a25d-9d876860e569",
+                            SecurityStamp = "ab7447ee-95ab-42bf-9368-d08e7f0456b0",
                             TwoFactorEnabled = false,
                             UserName = "alice.johnson@example.com"
                         },
@@ -768,16 +771,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "b2c3d4e5-f6a7-1234-5678-0987654321dc",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c82f3e47-8bcb-4a19-a7fc-da5d43b4c32d",
+                            ConcurrencyStamp = "e2a050fb-d163-472b-a1ca-81ba19b59824",
                             Email = "michael.brown@example.com",
                             EmailConfirmed = true,
                             FirstName = "Michael",
                             LastName = "Brown",
                             LockoutEnabled = false,
                             NormalizedUserName = "MICHAEL.BROWN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEI84D4Jl2axyddG/nQ3gVjRr3HAh0ZEK60baAngBs1VIU/Hp+RSJRh1JBEG6gmCfRQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAkOi2F2P+bW5eUfiZ0ZJVD8r1QlGSm9wkUMpqDQA5p3sE/qfM4Frt5XvpGFNyJc9w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "ebea1299-51da-4697-819a-5878a947341a",
+                            SecurityStamp = "743b1aa1-67a4-4838-920d-8c822bb4c69e",
                             TwoFactorEnabled = false,
                             UserName = "michael.brown@example.com"
                         });
@@ -795,7 +798,7 @@ namespace Cobit_19.Migrations
 
                     b.HasIndex("AuditID");
 
-                    b.ToTable("AuditMembers", (string)null);
+                    b.ToTable("AuditMembers");
 
                     b.HasData(
                         new
@@ -18840,24 +18843,6 @@ namespace Cobit_19.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Cobit_19.Data.Models.ObjectiveAuditMembersModel", b =>
-                {
-                    b.Property<string>("ApplicationUserID")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("ObjectiveAuditID")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("DateAdded")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("ApplicationUserID", "ObjectiveAuditID");
-
-                    b.HasIndex("ObjectiveAuditID");
-
-                    b.ToTable("ObjectiveAuditMembers", (string)null);
-                });
-
             modelBuilder.Entity("Cobit_19.Data.Models.ObjectiveAuditModel", b =>
                 {
                     b.Property<int>("ID")
@@ -18868,12 +18853,12 @@ namespace Cobit_19.Migrations
 
                     b.Property<string>("ApplicationUserID")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("AuditID")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("DateCompleted")
+                    b.Property<DateTime>("DateCompleted")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DateCreated")
@@ -18890,11 +18875,13 @@ namespace Cobit_19.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("ApplicationUserID");
+
                     b.HasIndex("AuditID");
 
                     b.HasIndex("ObjectiveID");
 
-                    b.ToTable("ObjectiveAudits", (string)null);
+                    b.ToTable("ObjectiveAuditModels", (string)null);
 
                     b.HasData(
                         new
@@ -18902,6 +18889,7 @@ namespace Cobit_19.Migrations
                             ID = 1,
                             ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AuditID = 1,
+                            DateCompleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ObjectiveID = 1,
                             Selected = false,
@@ -18912,6 +18900,7 @@ namespace Cobit_19.Migrations
                             ID = 2,
                             ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AuditID = 1,
+                            DateCompleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ObjectiveID = 2,
                             Selected = false,
@@ -18922,6 +18911,7 @@ namespace Cobit_19.Migrations
                             ID = 3,
                             ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AuditID = 1,
+                            DateCompleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ObjectiveID = 3,
                             Selected = false,
@@ -18931,9 +18921,10 @@ namespace Cobit_19.Migrations
                         {
                             ID = 4,
                             ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
+                            AuditID = 2,
+                            DateCompleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 4,
+                            ObjectiveID = 1,
                             Selected = false,
                             Status = 0
                         },
@@ -18941,9 +18932,10 @@ namespace Cobit_19.Migrations
                         {
                             ID = 5,
                             ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
+                            AuditID = 2,
+                            DateCompleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 5,
+                            ObjectiveID = 2,
                             Selected = false,
                             Status = 0
                         },
@@ -18951,9 +18943,10 @@ namespace Cobit_19.Migrations
                         {
                             ID = 6,
                             ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
+                            AuditID = 2,
+                            DateCompleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 6,
+                            ObjectiveID = 3,
                             Selected = false,
                             Status = 0
                         },
@@ -18961,9 +18954,10 @@ namespace Cobit_19.Migrations
                         {
                             ID = 7,
                             ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
+                            AuditID = 3,
+                            DateCompleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 7,
+                            ObjectiveID = 1,
                             Selected = false,
                             Status = 0
                         },
@@ -18971,9 +18965,10 @@ namespace Cobit_19.Migrations
                         {
                             ID = 8,
                             ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
+                            AuditID = 3,
+                            DateCompleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 8,
+                            ObjectiveID = 2,
                             Selected = false,
                             Status = 0
                         },
@@ -18981,9 +18976,10 @@ namespace Cobit_19.Migrations
                         {
                             ID = 9,
                             ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
+                            AuditID = 3,
+                            DateCompleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 9,
+                            ObjectiveID = 3,
                             Selected = false,
                             Status = 0
                         },
@@ -18991,9 +18987,10 @@ namespace Cobit_19.Migrations
                         {
                             ID = 10,
                             ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
+                            AuditID = 4,
+                            DateCompleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 10,
+                            ObjectiveID = 1,
                             Selected = false,
                             Status = 0
                         },
@@ -19001,9 +18998,10 @@ namespace Cobit_19.Migrations
                         {
                             ID = 11,
                             ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
+                            AuditID = 4,
+                            DateCompleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 11,
+                            ObjectiveID = 2,
                             Selected = false,
                             Status = 0
                         },
@@ -19011,9 +19009,10 @@ namespace Cobit_19.Migrations
                         {
                             ID = 12,
                             ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
+                            AuditID = 4,
+                            DateCompleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 12,
+                            ObjectiveID = 3,
                             Selected = false,
                             Status = 0
                         },
@@ -19021,9 +19020,10 @@ namespace Cobit_19.Migrations
                         {
                             ID = 13,
                             ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
+                            AuditID = 5,
+                            DateCompleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 13,
+                            ObjectiveID = 1,
                             Selected = false,
                             Status = 0
                         },
@@ -19031,9 +19031,10 @@ namespace Cobit_19.Migrations
                         {
                             ID = 14,
                             ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
+                            AuditID = 5,
+                            DateCompleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 14,
+                            ObjectiveID = 2,
                             Selected = false,
                             Status = 0
                         },
@@ -19041,377 +19042,8 @@ namespace Cobit_19.Migrations
                         {
                             ID = 15,
                             ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 15,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 16,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 16,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 17,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 17,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 18,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 18,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 19,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 19,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 20,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 20,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 21,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 21,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 22,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 22,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 23,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 23,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 24,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 24,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 25,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 25,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 26,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 26,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 27,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 27,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 28,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 28,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 29,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 29,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 30,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 30,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 31,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 31,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 32,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 32,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 33,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 33,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 34,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 34,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 35,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 35,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 36,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 36,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 37,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 37,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 38,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 38,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 39,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 39,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 40,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 1,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 40,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 41,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 2,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 1,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 42,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 2,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 2,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 43,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 2,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 3,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 44,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 3,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 1,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 45,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 3,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 2,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 46,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 3,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 3,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 47,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 4,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 1,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 48,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 4,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 2,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 49,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 4,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 3,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 50,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AuditID = 5,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 1,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 51,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 5,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ObjectiveID = 2,
-                            Selected = false,
-                            Status = 0
-                        },
-                        new
-                        {
-                            ID = 52,
-                            ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9",
-                            AuditID = 5,
+                            DateCompleted = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ObjectiveID = 3,
                             Selected = false,
@@ -19435,7 +19067,7 @@ namespace Cobit_19.Migrations
 
                     b.HasIndex("FocusAreaID");
 
-                    b.ToTable("ObjectiveAuditTemplates", (string)null);
+                    b.ToTable("ObjectiveAuditTemplateModels", (string)null);
                 });
 
             modelBuilder.Entity("Cobit_19.Data.Models.ObjectiveModel", b =>
@@ -20301,7 +19933,7 @@ namespace Cobit_19.Migrations
 
                     b.HasIndex("FocusAreaID");
 
-                    b.ToTable("Subscriptions", (string)null);
+                    b.ToTable("Subscriptions");
 
                     b.HasData(
                         new
@@ -20356,28 +19988,28 @@ namespace Cobit_19.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "217b9a7c-13b2-4287-ae3b-10bbc684614c",
+                            ConcurrencyStamp = "8e5408f4-78d3-4aab-b00a-0608df6999cf",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "36c9f3b8-42e6-4ab1-a50d-e89986c5d1f7",
-                            ConcurrencyStamp = "c815a3a4-1d44-476e-9cfd-3403422d086c",
+                            ConcurrencyStamp = "3719b2da-175e-44bd-a9ec-3d2a4524a521",
                             Name = "Head Auditor",
                             NormalizedName = "HEAD AUDITOR"
                         },
                         new
                         {
                             Id = "5e70cf29-1b64-4f58-85dd-07b3c46015a3",
-                            ConcurrencyStamp = "245eda66-68ff-456c-b67c-fc06045ebd06",
+                            ConcurrencyStamp = "015d9d19-bdc6-4e20-9674-44f946a16903",
                             Name = "Auditor",
                             NormalizedName = "AUDITOR"
                         },
                         new
                         {
                             Id = "d3ae1c6e-1c8a-43e7-9a2a-971fc7fbb295",
-                            ConcurrencyStamp = "1feb5893-bb12-4b90-bf3d-b717ec220dad",
+                            ConcurrencyStamp = "47c122bb-5b90-4bee-886f-37811f4deda3",
                             Name = "Client",
                             NormalizedName = "CLIENT"
                         });
@@ -20613,27 +20245,14 @@ namespace Cobit_19.Migrations
                     b.Navigation("Question");
                 });
 
-            modelBuilder.Entity("Cobit_19.Data.Models.ObjectiveAuditMembersModel", b =>
+            modelBuilder.Entity("Cobit_19.Data.Models.ObjectiveAuditModel", b =>
                 {
                     b.HasOne("Cobit_19.Data.Models.ApplicationUser", "ApplicationUser")
-                        .WithMany("ObjectiveAuditMembers")
+                        .WithMany("ObjectiveAudits")
                         .HasForeignKey("ApplicationUserID")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Cobit_19.Data.Models.ObjectiveAuditModel", "ObjectiveAudit")
-                        .WithMany("ObjectiveAuditMembers")
-                        .HasForeignKey("ObjectiveAuditID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ApplicationUser");
-
-                    b.Navigation("ObjectiveAudit");
-                });
-
-            modelBuilder.Entity("Cobit_19.Data.Models.ObjectiveAuditModel", b =>
-                {
                     b.HasOne("Cobit_19.Data.Models.AuditModel", "Audit")
                         .WithMany("ObjectiveAudits")
                         .HasForeignKey("AuditID")
@@ -20645,6 +20264,8 @@ namespace Cobit_19.Migrations
                         .HasForeignKey("ObjectiveID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("ApplicationUser");
 
                     b.Navigation("Audit");
 
@@ -20759,7 +20380,7 @@ namespace Cobit_19.Migrations
 
                     b.Navigation("FocusAreas");
 
-                    b.Navigation("ObjectiveAuditMembers");
+                    b.Navigation("ObjectiveAudits");
 
                     b.Navigation("Subscriptions");
                 });
@@ -20787,11 +20408,6 @@ namespace Cobit_19.Migrations
                     b.Navigation("ObjectiveAuditTemplates");
 
                     b.Navigation("Subscriptions");
-                });
-
-            modelBuilder.Entity("Cobit_19.Data.Models.ObjectiveAuditModel", b =>
-                {
-                    b.Navigation("ObjectiveAuditMembers");
                 });
 
             modelBuilder.Entity("Cobit_19.Data.Models.ObjectiveModel", b =>

@@ -23,7 +23,7 @@ namespace Cobit_19.Data.Models
 
         public virtual FocusAreaModel FocusArea { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
-        public virtual ICollection<AuditScopeModel> AuditScopes { get; set; }
+        public virtual ICollection<ObjectiveAuditModel> ObjectiveAudits { get; set; }
         public virtual ICollection<AnswerModel> Answers { get; set; }
         public virtual ICollection<AuditMemberModel> AuditMembers { get; set; }
 

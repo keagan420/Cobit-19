@@ -20,10 +20,12 @@ namespace Cobit_19.Data
         public DbSet<QuestionModel> Questions { get; set; }
         public DbSet<ObjectiveModel> Objectives { get; set; }
         public DbSet<AnswerModel> Answers { get; set; }
-        public DbSet<AuditScopeModel> AuditScopes { get; set; }
+        public DbSet<ObjectiveAuditModel> ObjectiveAudits { get; set; }
+        public DbSet<ObjectiveAuditTemplateModel> ObjectiveAuditTemplates { get; set; }
         public DbSet<MapModel> Maps { get; set; }
         public DbSet<SubscriptionModel> Subscriptions { get; set; }
         public DbSet<AuditMemberModel> AuditMembers { get; set; }
+        public DbSet<ObjectiveAuditMembersModel> ObjectiveAuditMembers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -37,11 +39,16 @@ namespace Cobit_19.Data
             builder.Entity<QuestionModel>().ToTable("Questions");
             builder.Entity<ObjectiveModel>().ToTable("Objectives");
             builder.Entity<AnswerModel>().ToTable("Answers");
-            builder.Entity<AuditScopeModel>().ToTable("AuditScopes");
+            builder.Entity<ObjectiveAuditModel>().ToTable("ObjectiveAudits");
+            builder.Entity<ObjectiveAuditTemplateModel>().ToTable("ObjectiveAuditTemplates");
             builder.Entity<MapModel>().ToTable("Maps");
+            builder.Entity<SubscriptionModel>().ToTable("Subscriptions");
+            builder.Entity<AuditMemberModel>().ToTable("AuditMembers");
+            builder.Entity<ObjectiveAuditMembersModel>().ToTable("ObjectiveAuditMembers");
 
             // Relationships
 
+            //Answers
             builder.Entity<AnswerModel>()
                 .HasKey(table => new
                 {
@@ -59,23 +66,70 @@ namespace Cobit_19.Data
                .WithMany(d => d.Answers)
                .OnDelete(DeleteBehavior.Restrict);
 
-            builder.Entity<AuditScopeModel>()
+            //ObjectiveAuditTempaltes
+            builder.Entity<ObjectiveAuditTemplateModel>()
                 .HasKey(table => new
                 {
-                    table.AuditID,
-                    table.ObjectiveID
+                    table.ObjectiveID,
+                    table.FocusAreaID
+                });
+            builder.Entity<ObjectiveAuditTemplateModel>()
+               .HasOne(d => d.Objective)
+               .WithMany(d => d.ObjectiveAuditTemplates)
+               .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Entity<ObjectiveAuditTemplateModel>()
+               .HasOne(d => d.FocusArea)
+               .WithMany(d => d.ObjectiveAuditTemplates)
+               .OnDelete(DeleteBehavior.Cascade);
+
+            //ObjectiveAuditMembers
+            builder.Entity<ObjectiveAuditMembersModel>()
+                .HasKey(table => new
+                {
+                    table.ApplicationUserID,
+                    table.ObjectiveAuditID
                 });
 
+            //ObjectiveAudits
+            builder.Entity<ObjectiveAuditModel>()
+               .HasOne(d => d.Objective)
+               .WithMany(d => d.ObjectiveAudits)
+               .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Entity<ObjectiveAuditModel>()
+               .HasOne(d => d.Audit)
+               .WithMany(d => d.ObjectiveAudits)
+               .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Entity<ObjectiveAuditModel>()
+               .HasMany(d => d.ObjectiveAuditMembers)
+               .WithOne(d => d.ObjectiveAudit)
+               .OnDelete(DeleteBehavior.Cascade);
+
+            //Audits
             builder.Entity<AuditModel>()
-                .HasMany(d => d.AuditScopes)
+                .HasMany(d => d.ObjectiveAudits)
                 .WithOne(d => d.Audit)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            //Objectives
             builder.Entity<ObjectiveModel>()
-                .HasMany(d => d.AuditScopes)
+                .HasMany(d => d.ObjectiveAudits)
                 .WithOne(d => d.Objective)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            builder.Entity<ObjectiveModel>()
+                .HasMany(d => d.ObjectiveAuditTemplates)
+                .WithOne(d => d.Objective)
+                .OnDelete(DeleteBehavior.Cascade);
+            
+            builder.Entity<ObjectiveModel>()
+                .HasMany(d => d.Maps)
+                .WithOne(d => d.Objective)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            //Maps
             builder.Entity<MapModel>()
                 .HasKey(table => new
                 {
@@ -83,16 +137,13 @@ namespace Cobit_19.Data
                     table.QuestionID
                 });
 
-            builder.Entity<ObjectiveModel>()
-                .HasMany(d => d.Maps)
-                .WithOne(d => d.Objective)
-                .OnDelete(DeleteBehavior.Cascade);
-
+            //Questions
             builder.Entity<QuestionModel>()
                 .HasMany(d => d.Maps)
                 .WithOne(d => d.Question)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            //ApplicationUsers
             builder.Entity<ApplicationUser>()
                 .HasMany(d => d.Audits)
                 .WithOne(d => d.ApplicationUser)
@@ -104,7 +155,7 @@ namespace Cobit_19.Data
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<ApplicationUser>()
-                .HasMany(d => d.AuditScopes)
+                .HasMany(d => d.ObjectiveAuditMembers)
                 .WithOne(d => d.ApplicationUser)
                 .OnDelete(DeleteBehavior.Restrict);
 
@@ -448,31 +499,70 @@ namespace Cobit_19.Data
                 new ObjectiveModel { ID = 40, Name = "MEA04", Code = "MEA04", Description = "Manage Assurance" }
                 );
 
-            builder.Entity<AuditScopeModel>().HasData(
+            builder.Entity<ObjectiveAuditModel>().HasData(
                 //Audit ID 1
-                new AuditScopeModel { AuditID = 1, ObjectiveID = 1, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 1, ObjectiveID = 2, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 1, ObjectiveID = 3, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 1, AuditID = 1, ObjectiveID = 1, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 2, AuditID = 1, ObjectiveID = 2, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 3, AuditID = 1, ObjectiveID = 3, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 4, AuditID = 1, ObjectiveID = 4, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 5, AuditID = 1, ObjectiveID = 5, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 6, AuditID = 1, ObjectiveID = 6, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 7, AuditID = 1, ObjectiveID = 7, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 8, AuditID = 1, ObjectiveID = 8, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 9, AuditID = 1, ObjectiveID = 9, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 10, AuditID = 1, ObjectiveID = 10, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 11, AuditID = 1, ObjectiveID = 11, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 12, AuditID = 1, ObjectiveID = 12, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 13, AuditID = 1, ObjectiveID = 13, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 14, AuditID = 1, ObjectiveID = 14, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 15, AuditID = 1, ObjectiveID = 15, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 16, AuditID = 1, ObjectiveID = 16, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 17, AuditID = 1, ObjectiveID = 17, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 18, AuditID = 1, ObjectiveID = 18, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 19, AuditID = 1, ObjectiveID = 19, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 20, AuditID = 1, ObjectiveID = 20, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 21, AuditID = 1, ObjectiveID = 21, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 22, AuditID = 1, ObjectiveID = 22, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 23, AuditID = 1, ObjectiveID = 23, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 24, AuditID = 1, ObjectiveID = 24, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 25, AuditID = 1, ObjectiveID = 25, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 26, AuditID = 1, ObjectiveID = 26, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 27, AuditID = 1, ObjectiveID = 27, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 28, AuditID = 1, ObjectiveID = 28, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 29, AuditID = 1, ObjectiveID = 29, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 30, AuditID = 1, ObjectiveID = 30, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 31, AuditID = 1, ObjectiveID = 31, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 32, AuditID = 1, ObjectiveID = 32, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 33, AuditID = 1, ObjectiveID = 33, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 34, AuditID = 1, ObjectiveID = 34, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 35, AuditID = 1, ObjectiveID = 35, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 36, AuditID = 1, ObjectiveID = 36, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 37, AuditID = 1, ObjectiveID = 37, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 38, AuditID = 1, ObjectiveID = 38, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 39, AuditID = 1, ObjectiveID = 39, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 40, AuditID = 1, ObjectiveID = 40, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
 
-                //Audit ID 2
-                new AuditScopeModel { AuditID = 2, ObjectiveID = 1, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 2, ObjectiveID = 2, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 2, ObjectiveID = 3, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
 
-                //Audit ID 3
-                new AuditScopeModel { AuditID = 3, ObjectiveID = 1, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 3, ObjectiveID = 2, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 3, ObjectiveID = 3, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
 
-                //Audit ID 4
-                new AuditScopeModel { AuditID = 4, ObjectiveID = 1, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 4, ObjectiveID = 2, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 4, ObjectiveID = 3, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-
-                //audit ID 5
-                new AuditScopeModel { AuditID = 5, ObjectiveID = 1, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 5, ObjectiveID = 2, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
-                new AuditScopeModel { AuditID = 5, ObjectiveID = 3, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" }
+                //Audit ID 2                      
+                new ObjectiveAuditModel { ID = 41, AuditID = 2, ObjectiveID = 1, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 42, AuditID = 2, ObjectiveID = 2, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 43, AuditID = 2, ObjectiveID = 3, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                                                  
+                //AuObjectiveAuditModel           
+                new ObjectiveAuditModel { ID = 44, AuditID = 3, ObjectiveID = 1, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 45, AuditID = 3, ObjectiveID = 2, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 46, AuditID = 3, ObjectiveID = 3, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                                       
+                //AuObjectiveAuditModel
+                new ObjectiveAuditModel { ID = 47, AuditID = 4, ObjectiveID = 1, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 48, AuditID = 4, ObjectiveID = 2, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 49, AuditID = 4, ObjectiveID = 3, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                                                   
+                //auObjectiveAuditModel            
+                new ObjectiveAuditModel { ID = 50, AuditID = 5, ObjectiveID = 1, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 51, AuditID = 5, ObjectiveID = 2, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" },
+                new ObjectiveAuditModel { ID = 52, AuditID = 5, ObjectiveID = 3, ApplicationUserID = "8e445865-a24d-4543-a6c6-9443d048cdb9" }
                 );
 
             /// Mapping 4 Questions and 40 Objectives with their weights for design factor 1

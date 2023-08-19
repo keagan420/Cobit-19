@@ -16,10 +16,10 @@ namespace Cobit_19.Business.Admin
             _userManager = userManager;
         }
 
-        public IEnumerable<UserDto> GetAllUsers()
+        public IList<UserDto> GetAllUsers()
         {
             var users = _userManager.Users.ToList();
-            var userDtos = _mapper.Map<IEnumerable<UserDto>>(users);
+            var userDtos = _mapper.Map<IList<UserDto>>(users);
 
             return userDtos;
         }

@@ -106,6 +106,22 @@ namespace Cobit_19.Business.Audits
                 }
             }
 
+            //Create ObjectiveAudits
+            var objectives = await getObjectivesAsync();
+            foreach (var obj in objectives)
+            {
+                var objAudit = new ObjectiveAuditModel
+                {
+                    AuditID = audit.ID,
+                    ObjectiveID = obj.ID,
+                    ApplicationUserID = audit.ApplicationUserID,
+                    DateCreated = DateTime.Now,
+                    Selected = false,
+                    Status = AuditStatus.NotStarted
+                };
+                _dbContext.ObjectiveAudits.Add(objAudit);
+            }
+
             await _dbContext.SaveChangesAsync();
 
             return _mapper.Map<AuditDto>(audit);
@@ -121,15 +137,22 @@ namespace Cobit_19.Business.Audits
 
             lock (_lock)
             {
-                var answers = _dbContext.Answers.Where(a => a.AuditID == audit.ID).ToList();
                 // Remove answers
+                var answers = _dbContext.Answers.Where(a => a.AuditID == audit.ID).ToList();
                 foreach (var answer in answers)
                 {
                     _dbContext.Answers.Remove(answer);
                 }
 
-                _dbContext.Audits.Remove(audit);
+                //Remove ObjectiveAudits
+                var objectiveAudits = _dbContext.ObjectiveAudits.Where(oa => oa.AuditID == audit.ID).ToList();
+                foreach (var objectiveAudit in objectiveAudits)
+                {
+                    _dbContext.ObjectiveAudits.Remove(objectiveAudit);
+                }
 
+                // Remove Audit
+                _dbContext.Audits.Remove(audit);
                 _dbContext.SaveChangesAsync();
             }
 
