@@ -19,6 +19,10 @@
     [SupplyParameterFromQuery]
     public int AuditId { get; set; }
 
+    private bool tabHighOpened = false;
+    private bool tabSignificantOpened = false;
+    private bool tabLowOpened = false;
+
     protected override async Task OnInitializedAsync()
     {
         _objectiveAuditDto = objectiveAuditProvider.getAll(AuditId);
@@ -47,7 +51,7 @@
             obj.ObjectiveScore = (int)objectiveValueDto[_objectiveAuditDto.IndexOf(obj)].RelativeInportance;
         }
 
-        _objectiveAuditDto = _objectiveAuditDto.OrderBy(x => x.ObjectiveScore).ToList();
+        _objectiveAuditDto = _objectiveAuditDto.OrderByDescending(x => x.ObjectiveScore).ToList();
     }
 
     private async Task Update(int id, ChangeEventArgs e)
@@ -104,60 +108,141 @@
             }
             else
             {
-                <table class="table table-hover table-striped">
-                    <thead style="">
-                        <tr>
-                            <th colspan="6">
-                                <div class="ibox-title">
-                                    <h5>
-                                        <strong>Scope Selection</strong>
-                                    </h5>
-                                </div>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th style="background-color: purple; color: white;">#</th>
-                            <th style="background-color: purple; color: white;">Status</th>
-                            <th style="background-color: purple; color: white;">Objective</th>
-                            <th style="background-color: purple; color: white;">Importance</th>
-                            <th style="background-color: purple; color: white;">Selected</th>
-                            <th style="background-color: purple; color: white;">Memebers</th>
-                            <th style="background-color: purple; color: white;"></th>
+                <table class="table">
+                    <thead>
+                        <tr style="background-color: purple; color: white;">
+                            <th>Description</th>
+                            <th></th>
+                            <th>Importance</th>
+                            <th>Score</th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var objectiveAudit in _objectiveAuditDto)
+                        <tr class="bg-light" style="cursor:pointer" @onclick="() => tabHighOpened = !tabHighOpened">
+                            <td>
+                                <h3>                                   
+                                    High Importance
+                                </h3>
+                            </td>
+                            <th> <div class="indicate_large"></div></th>
+                            <th>High</th>
+                            <th>Score more than 75</th>
+                            <th>Selected</th>
+                            <th>Memebers</th>
+                        </tr>
+
+                        @if (tabHighOpened)
                         {
-                            <tr>
-                                <td>@(_objectiveAuditDto.IndexOf(objectiveAudit) + 1)</td>
-                                <td>
-                                    @if (objectiveAudit.Status == AuditStatus.Completed)
-                                    {
-                                        <span class="badge bg-success">Completed</span>
-                                    }
-                                    else if (objectiveAudit.Status == AuditStatus.InProgress)
-                                    {
-                                        <span class="badge bg-primary">In Progress</span>
-                                    }
-                                    else
-                                    {
-                                        <span class="badge bg-danger">Not Started</span>
-                                    }
-                                </td>
-                                <td>@objectiveAudit.Objective.Name</td>
-                                <td>@objectiveAudit.ObjectiveScore</td>
-                                <td>
-                                    <input type="checkbox" id="@objectiveAudit.ID" checked="@objectiveAudit.Selected"
-                                    @onchange="((e) => Update(objectiveAudit.ID, e))" />
-                                </td>
-                                <td>
-                                    @if (objectiveAudit.Selected)
-                                    {
-                                        <button type="button" class="btn btn-primary btn-sm" @onclick='() => AuditSelectionClick(objectiveAudit.ID)'>Select</button>
-                                    }
-                                </td>
-                            </tr>
+                            @foreach (var objectiveAudit in _objectiveAuditDto)
+                            {
+                                @if (objectiveAudit.ObjectiveScore > 75)
+                                {
+                                    <tr>
+                                        <td>@objectiveAudit.Objective.Name</td>
+                                        <th> <div class="indicate_large"></div></th>
+                                        <th>High</th>
+                                        <td>
+                                            @objectiveAudit.ObjectiveScore
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="@objectiveAudit.ID" checked="@objectiveAudit.Selected"
+                                            @onchange="((e) => Update(objectiveAudit.ID, e))" />
+                                        </td>
+                                        <td>
+                                            @if (objectiveAudit.Selected)
+                                            {
+                                                <button type="button" class="btn btn-primary btn-sm" @onclick='() => AuditSelectionClick(objectiveAudit.ID)'>Members</button>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            }
                         }
+
+
+                        <tr class="bg-light" style="cursor:pointer" @onclick="() => tabSignificantOpened = !tabSignificantOpened">
+                            <td>
+                                <h3 >
+                                    High Importance
+                                </h3>
+                            </td>
+                            <th> <div class="indicate_large"></div></th>
+                            <th>High</th>
+                            <th>Score between 50 and 90</th>
+                            <th>Selected</th>
+                            <th>Memebers</th>
+                        </tr>
+
+                        @if (tabSignificantOpened)
+                        {
+                            @foreach (var objectiveAudit in _objectiveAuditDto)
+                            {
+                                @if (objectiveAudit.ObjectiveScore > 50 && objectiveAudit.ObjectiveScore <= 75)
+                                {
+                                    <tr>
+                                        <td>@objectiveAudit.Objective.Name</td>
+                                        <th> <div class="indicate_large"></div></th>
+                                        <th>High</th>
+                                        <td>
+                                            @objectiveAudit.ObjectiveScore
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="@objectiveAudit.ID" checked="@objectiveAudit.Selected"
+                                            @onchange="((e) => Update(objectiveAudit.ID, e))" />
+                                        </td>
+                                        <td>
+                                            @if (objectiveAudit.Selected)
+                                            {
+                                                <button type="button" class="btn btn-primary btn-sm" @onclick='() => AuditSelectionClick(objectiveAudit.ID)'>Members</button>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        }
+                        <tr class="bg-light" style="cursor:pointer" @onclick="() => tabLowOpened = !tabLowOpened">
+                            <td>
+                                <h3> 
+                                    High Importance
+                                </h3>
+                            </td>
+                            <th> <div class="indicate_large"></div></th>
+                            <th>High</th>
+                            <th>Score below 50</th>
+                            <th>Selected</th>
+                            <th>Memebers</th>
+                        </tr>
+
+                        @if (tabLowOpened)
+                        {
+                            @foreach (var objectiveAudit in _objectiveAuditDto)
+                            {
+                                @if (objectiveAudit.ObjectiveScore <= 50)
+                                {
+                                    <tr>
+                                        <td>@objectiveAudit.Objective.Name</td>
+                                        <th> <div class="indicate_large"></div></th>
+                                        <th>High</th>
+                                        <td>
+                                            @objectiveAudit.ObjectiveScore
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="@objectiveAudit.ID" checked="@objectiveAudit.Selected"
+                                            @onchange="((e) => Update(objectiveAudit.ID, e))" />
+                                        </td>
+                                        <td>
+                                            @if (objectiveAudit.Selected)
+                                            {
+                                                <button type="button" class="btn btn-primary btn-sm" @onclick='() => AuditSelectionClick(objectiveAudit.ID)'>Members</button>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        }
+
                     </tbody>
                 </table>
             }
@@ -170,3 +255,4 @@
         </div>
     </div>
 </div>
+
