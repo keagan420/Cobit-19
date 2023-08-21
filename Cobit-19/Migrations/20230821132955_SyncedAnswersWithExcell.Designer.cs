@@ -4,6 +4,7 @@ using Cobit_19.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cobit_19.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230821132955_SyncedAnswersWithExcell")]
+    partial class SyncedAnswersWithExcell
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -116,7 +119,7 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             QuestionID = 9,
-                            Answer = 3,
+                            Answer = 2,
                             AnswerRange = 5,
                             Odds = 0
                         },
@@ -180,7 +183,7 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             QuestionID = 17,
-                            Answer = 2,
+                            Answer = 5,
                             AnswerRange = 5,
                             Odds = 0
                         },
@@ -190,7 +193,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 18,
                             Answer = 4,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -198,7 +201,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 19,
                             Answer = 3,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -206,7 +209,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 20,
                             Answer = 2,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -214,7 +217,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 21,
                             Answer = 4,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -222,7 +225,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 22,
                             Answer = 3,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -230,7 +233,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 23,
                             Answer = 5,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -238,7 +241,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 24,
                             Answer = 3,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -246,7 +249,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 25,
                             Answer = 3,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -254,7 +257,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 26,
                             Answer = 1,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -262,7 +265,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 27,
                             Answer = 4,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -270,7 +273,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 28,
                             Answer = 4,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -278,7 +281,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 29,
                             Answer = 3,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -286,7 +289,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 30,
                             Answer = 3,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -294,7 +297,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 31,
                             Answer = 1,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -302,7 +305,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 32,
                             Answer = 4,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -310,7 +313,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 33,
                             Answer = 5,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -318,7 +321,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 34,
                             Answer = 5,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -326,7 +329,7 @@ namespace Cobit_19.Migrations
                             QuestionID = 35,
                             Answer = 3,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
@@ -334,13 +337,13 @@ namespace Cobit_19.Migrations
                             QuestionID = 36,
                             Answer = 4,
                             AnswerRange = 5,
-                            Odds = 2
+                            Odds = 3
                         },
                         new
                         {
                             AuditID = 1,
                             QuestionID = 37,
-                            Answer = 1,
+                            Answer = 2,
                             AnswerRange = 3,
                             Odds = 0
                         },
@@ -356,7 +359,7 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             QuestionID = 39,
-                            Answer = 1,
+                            Answer = 2,
                             AnswerRange = 3,
                             Odds = 0
                         },
@@ -372,7 +375,7 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             QuestionID = 41,
-                            Answer = 1,
+                            Answer = 2,
                             AnswerRange = 3,
                             Odds = 0
                         },
@@ -388,7 +391,7 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             QuestionID = 43,
-                            Answer = 1,
+                            Answer = 2,
                             AnswerRange = 3,
                             Odds = 0
                         },
@@ -404,7 +407,7 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             QuestionID = 45,
-                            Answer = 1,
+                            Answer = 2,
                             AnswerRange = 3,
                             Odds = 0
                         },
@@ -420,7 +423,7 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             QuestionID = 47,
-                            Answer = 1,
+                            Answer = 2,
                             AnswerRange = 3,
                             Odds = 0
                         },
@@ -452,7 +455,7 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             QuestionID = 51,
-                            Answer = 1,
+                            Answer = 2,
                             AnswerRange = 3,
                             Odds = 0
                         },
@@ -460,7 +463,7 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             QuestionID = 52,
-                            Answer = 1,
+                            Answer = 2,
                             AnswerRange = 3,
                             Odds = 0
                         },
@@ -476,7 +479,7 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             QuestionID = 54,
-                            Answer = 1,
+                            Answer = 2,
                             AnswerRange = 3,
                             Odds = 0
                         },
@@ -500,7 +503,7 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             QuestionID = 57,
-                            Answer = 36,
+                            Answer = 93,
                             AnswerRange = 100,
                             Odds = 0
                         },
@@ -508,7 +511,7 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             QuestionID = 58,
-                            Answer = 64,
+                            Answer = 7,
                             AnswerRange = 100,
                             Odds = 0
                         },
@@ -516,7 +519,7 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             QuestionID = 59,
-                            Answer = 5,
+                            Answer = 81,
                             AnswerRange = 100,
                             Odds = 0
                         },
@@ -524,7 +527,7 @@ namespace Cobit_19.Migrations
                         {
                             AuditID = 1,
                             QuestionID = 60,
-                            Answer = 95,
+                            Answer = 19,
                             AnswerRange = 100,
                             Odds = 0
                         },
@@ -717,16 +720,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "152c19d4-4f34-43fb-bd39-b0e3fbcb499e",
+                            ConcurrencyStamp = "f6e99cc8-328e-4879-8515-11eadb4973e8",
                             Email = "test@gmail.com",
                             EmailConfirmed = true,
                             FirstName = "Daniel",
                             LastName = "Coetzee",
                             LockoutEnabled = false,
                             NormalizedUserName = "TEST@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEE31PZQdodNsiV58LYqI59irpNHOAcQr5l2qqs2xuJCgzAfhsbLoCiU6gjRZzmAitA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAo1C7/UQDGUUG9Q9t3qbPBEKf63V2QMdQAriZNqs78NDmvoOkMIel61riaUZxcXVg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1428db4e-3f8b-4a38-b0ae-8459e26fac33",
+                            SecurityStamp = "dac235a0-3edb-4e30-8ed0-7cc5fc7aa48d",
                             TwoFactorEnabled = false,
                             UserName = "test@gmail.com"
                         },
@@ -734,16 +737,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "fa567c12-5678-4321-bacd-87654321de1f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e26dba8a-c07a-4afa-bad0-2f69ada50606",
+                            ConcurrencyStamp = "55b5c953-e83d-462e-8cbc-ac914bf363c7",
                             Email = "john.smith@example.com",
                             EmailConfirmed = true,
                             FirstName = "John",
                             LastName = "Smith",
                             LockoutEnabled = false,
                             NormalizedUserName = "JOHN.SMITH@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMLSMGAHKSxjUZIa0Q092BcQe6bwmpPq0V8+r8YeGNhHcFZViiBt3uZ3ilwQR5gH7A==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENAkxZ7w33oWGO8YDYh3JyYjKjBbuRSGUnNtDzgU+1woQ49o+xjlGEBEubkC5v1GqQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "639dd0c9-78c9-4cf9-84e4-b0ff378122c2",
+                            SecurityStamp = "77508296-e169-471a-a62b-3b153d5cd8bf",
                             TwoFactorEnabled = false,
                             UserName = "john.smith@example.com"
                         },
@@ -751,16 +754,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "9b1a0f34-8765-4321-dcba-ba09876543c2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "05e0023d-4657-4f86-bc95-6430bddeb44f",
+                            ConcurrencyStamp = "b1259de3-c4b0-4acb-989e-605064c73872",
                             Email = "alice.johnson@example.com",
                             EmailConfirmed = true,
                             FirstName = "Alice",
                             LastName = "Johnson",
                             LockoutEnabled = false,
                             NormalizedUserName = "ALICE.JOHNSON@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDqmQGRjdpVZbv3Q8OX5ij9bQHvKtGdLS8dIBAH69k/yqe0c/bOADUTvx7pEmMzi3A==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMi6GtaX6uSHexPll0XK/Ucm2HcebNHo9LkC7GUMXpdvng/aP4vshq7iWS1terOKSA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "bff3dc0b-e2d9-43f3-bc90-b909b7caa321",
+                            SecurityStamp = "474bd097-abb6-4459-b0df-ac3568b21c37",
                             TwoFactorEnabled = false,
                             UserName = "alice.johnson@example.com"
                         },
@@ -768,16 +771,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "b2c3d4e5-f6a7-1234-5678-0987654321dc",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "6c2eea36-0017-47f9-b0e5-43fc9bed1f35",
+                            ConcurrencyStamp = "0c3039d4-96f5-4840-9305-f1fe819e04c1",
                             Email = "michael.brown@example.com",
                             EmailConfirmed = true,
                             FirstName = "Michael",
                             LastName = "Brown",
                             LockoutEnabled = false,
                             NormalizedUserName = "MICHAEL.BROWN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEH0zrhKMN85jzkowYp4Nsw6wOSliYqcCRaEaz/5zPQ5mzdj/1d/jJmxbPcDMT4yxaA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEC/cDoxiU9MyQpRDtSdaUZEkbYncIJFnpDzG1d+Hp2CJZaicQPZ3zT/svnEnRAe8RA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6925c539-297a-4736-87d4-7ca1a3ea13b3",
+                            SecurityStamp = "4775024a-f4fa-4737-8f49-bd3db5db694d",
                             TwoFactorEnabled = false,
                             UserName = "michael.brown@example.com"
                         });
@@ -20356,28 +20359,28 @@ namespace Cobit_19.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "7a8c6b5a-4756-4a43-9532-e58fe559a528",
+                            ConcurrencyStamp = "4defee31-e1aa-439a-9978-68cf0c563207",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "36c9f3b8-42e6-4ab1-a50d-e89986c5d1f7",
-                            ConcurrencyStamp = "5b0c4440-33b5-4d03-82d8-af11338185e3",
+                            ConcurrencyStamp = "94995d7d-af68-4972-a9f3-f7fe0349ecc1",
                             Name = "Head Auditor",
                             NormalizedName = "HEAD AUDITOR"
                         },
                         new
                         {
                             Id = "5e70cf29-1b64-4f58-85dd-07b3c46015a3",
-                            ConcurrencyStamp = "9d0eb949-27d4-48b2-b2ba-95ccd5fbdc38",
+                            ConcurrencyStamp = "cc38e00c-a138-4098-9ff8-55777d0e7567",
                             Name = "Auditor",
                             NormalizedName = "AUDITOR"
                         },
                         new
                         {
                             Id = "d3ae1c6e-1c8a-43e7-9a2a-971fc7fbb295",
-                            ConcurrencyStamp = "295d52c0-335e-4845-bc62-030fa9e9a1bb",
+                            ConcurrencyStamp = "f9f70990-210b-430d-a474-f368800ac818",
                             Name = "Client",
                             NormalizedName = "CLIENT"
                         });
