@@ -16,6 +16,7 @@
       "componentPercFinal": 0,
       "subComponents": [
         {
+          "subComponentCode": "APO06.01",
           "subComponentName": "Manage finance and accounting.",
           "subComponentDescription": "Establish and maintain a method to manage and account for all I&T-related costs, investments and depreciation as an integral part of enterprise financial systems and accounts. Report using the enterprise’s financial measurement systems",
           "subComponentQuestions": [
@@ -132,6 +133,7 @@
           ]
         },
         {
+          "subComponentCode": "APO06.02",
           "subComponentName": "Prioritize resource allocation",
           "subComponentDescription": "Implement a decision-making process to prioritize the allocation of resources and establish rules for discretionary investments by individual business units. Include the potential use of external service providers and consider the buy, develop and rent options. ",
           "subComponentQuestions": [
@@ -270,6 +272,7 @@
           ]
         },
         {
+          "subComponentCode": "APO06.03",
           "subComponentName": " Create and maintain budgets.",
           "subComponentDescription": "Prepare a budget reflecting investment priorities based on the portfolio of I&T-enabled programs and I&T services.",
           "subComponentQuestions": [
@@ -408,6 +411,7 @@
           ]
         },
         {
+          "subComponentCode": "APO06.04",
           "subComponentName": "Model and allocate costs",
           "subComponentDescription": "Establish and use an I&T costing model based, for example, on the service definition. This approach ensures that allocation of costs for services is identifiable, measurable and predictable, and encourages the responsible use of resources, including those provided by service providers. Regularly review and benchmark the cost/chargeback model to maintain its relevance and appropriateness for evolving business and IT activities.",
           "subComponentQuestions": [
@@ -524,6 +528,7 @@
           ]
         },
         {
+          "subComponentCode": "APO06.05",
           "subComponentName": "Manage costs.",
           "subComponentDescription": "Implement a cost management process that compares actual costs against budget. Costs should be monitored and reported. Deviations from budget should be identified in a timely manner and their impact on enterprise processes and services assessed.",
           "subComponentQuestions": [
@@ -703,9 +708,13 @@
               "questionScore": 0,
               "questionComment": "comment"
             }
-        }
 
+          ]
+        }
       ]
+        
+
+      
     },
     {
       "componentName": "B",

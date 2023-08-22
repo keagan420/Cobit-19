@@ -16,6 +16,7 @@
       "componentPercFinal": 0,
       "subComponents": [
         {
+          "subComponentCode": "APO02.01",
           "subComponentName": "Understand enterprise context and direction.",
           "subComponentDescription": "Understand the enterprise context (industry drivers, relevant regulations,basis for competition), its current way of working and its ambition level in terms of digitization.",
           "subComponentQuestions": [
@@ -121,6 +122,7 @@
           ]
         },
         {
+          "subComponentCode": "APO02.02",
           "subComponentName": "Assess current capabilities, performance and digital maturity of the enterprise.",
           "subComponentDescription": "Assess the performance of current I&T services and develop an understanding of current business and I&T capabilities (both internal and external). Assess current digital maturity of the enterprise and its appetite for change.",
           "subComponentQuestions": [
@@ -336,6 +338,7 @@
           ]
         },
         {
+          "subComponentCode": "APO02.03",
           "subComponentName": "Define target digital capabilities",
           "subComponentDescription": "Based on the understanding of enterprise context and direction, define the target I&T products and services and required capabilities. Consider reference standards, best practices and validated emerging technologies.",
           "subComponentQuestions": [
@@ -430,6 +433,7 @@
           ]
         },
         {
+          "subComponentCode": "APO02.04",
           "subComponentName": "Conduct a gap analysis",
           "subComponentDescription": "Identify gaps between current and target environments and describe the high-level changes in the enterprise architecture.",
           "subComponentQuestions": [
@@ -579,6 +583,7 @@
           ]
         },
         {
+          "subComponentCode": "APO02.05",
           "subComponentName": "Define the strategic plan and road map.",
           "subComponentDescription": "Develop a holistic digital strategy, in cooperation with relevant stakeholders, and detail a road map that defines the incremental steps required to achieve the goals and objectives. Ensure focus on the transformation journey through the appointment of a person who helps spearhead the digital transformation and drives alignment between business and I&T.",
           "subComponentQuestions": [
@@ -871,6 +876,7 @@
           ]
         },
         {
+          "subComponentCode": "APO02.06",
           "subComponentName": "Communicate the I&T strategy and direction.",
           "subComponentDescription": "Create awareness and understanding of the business and I&T objectives and direction, as captured in the I&T strategy, through communication to appropriate stakeholders and users throughout the enterprise.",
           "subComponentQuestions": [

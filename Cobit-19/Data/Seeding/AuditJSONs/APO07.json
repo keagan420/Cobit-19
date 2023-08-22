@@ -16,6 +16,7 @@
       "componentPercFinal": 0,
       "subComponents": [
         {
+          "subComponentCode": "APO07.01",
           "subComponentName": "Acquire and maintain adequate and appropriate staffing.",
           "subComponentDescription": "Establish and maintain a method to manage and account for all I&Trelated costs, investments and depreciation as an integral part of the enterprise financial systems and accounts. Report using the enterprise’s financial measurement systems.",
           "subComponentQuestions": [
@@ -176,6 +177,7 @@
           ]
         },
         {
+          "subComponentCode": "APO07.02",
           "subComponentName": "Identify key IT personnel",
           "subComponentDescription": "Identify key IT personnel. Use knowledge capture (documentation), knowledge sharing, succession planning and staff backup to minimize reliance on a single individual performing a critical job function.",
           "subComponentQuestions": [
@@ -281,6 +283,7 @@
           ]
         },
         {
+          "subComponentCode": "APO07.03",
           "subComponentName": " Maintain the skills and competencies of personnel.",
           "subComponentDescription": "Define and manage the skills and competencies required of personnel. Regularly verify that personnel have the competencies to fulfill their roles on the basis of their education, training and/or experience. Verify that these competencies are being maintained, using qualification and certification programs where appropriate. Provide employees with ongoing learning and opportunities to maintain their knowledge, skills and competencies at a level required to achieve enterprise goals.",
           "subComponentQuestions": [
@@ -529,6 +532,7 @@
           ]
         },
         {
+          "subComponentCode": "APO07.04",
           "subComponentName": "Assess and recognize/reward employee job performance.",
           "subComponentDescription": "Conduct timely, regular performance evaluations against individual objectives derived from enterprise goals, established standards, specific job responsibilities, and the skills and competency framework. Implement a remuneration/recognition process that rewards successful ttainment of performance goals.",
           "subComponentQuestions": [
@@ -733,6 +737,7 @@
           ]
         },
         {
+          "subComponentCode": "APO07.05",
           "subComponentName": "Plan and track the usage of IT and business human resources.",
           "subComponentDescription": "Understand and track the current and future demand for business and IT human resources with responsibilities for enterprise I&T. Identify shortfalls and provide input into sourcing plans, enterprise and IT recruitment processes, and business and IT recruitment processes.",
           "subComponentQuestions": [
@@ -893,6 +898,7 @@
           ]
         },
         {
+          "subComponentCode": "APO07.06",
           "subComponentName": "Manage contract staff.",
           "subComponentDescription": "Ensure that consultants and contract personnel who support the enterprise with I&T skills know and comply with the organization’s policies and meet agreed contractual requirements.",
           "subComponentQuestions": [

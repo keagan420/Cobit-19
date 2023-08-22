@@ -16,6 +16,7 @@
       "componentPercFinal": 0,
       "subComponents": [
         {
+          "subComponentCode": "APO08.01",
           "subComponentName": "Understand business expectations.",
           "subComponentDescription": "Understand current business issues, objectives and expectations for I&T. Ensure that requirements are understood, managed and communicated, and their status agreed and approved.",
           "subComponentQuestions": [
@@ -121,6 +122,7 @@
           ]
         },
         {
+          "subComponentCode": "APO08.02",
           "subComponentName": "Align I&T strategy with business expectations and identify opportunities for IT to enhance the business",
           "subComponentDescription": "Align I&T strategies with current business objectives and expectations to enable IT to be a value-add partner for the business and a governance component for enhanced enterprise performance",
           "subComponentQuestions": [
@@ -204,6 +206,7 @@
           ]
         },
         {
+          "subComponentCode": "APO08.03",
           "subComponentName": "Manage the business relationship.",
           "subComponentDescription": "Manage the relationship between the IT service organization and its business partners. Ensure that relationship roles and responsibilities are defined and assigned, and communication is facilitated.",
           "subComponentQuestions": [
@@ -342,6 +345,7 @@
           ]
         },
         {
+          "subComponentCode": "APO08.03",
           "subComponentName": "Coordinate and communicate",
           "subComponentDescription": "Work with all relevant stakeholders and coordinate the end-to-end delivery of I&T services and solutions provided to the business.",
           "subComponentQuestions": [
@@ -491,6 +495,7 @@
           ]
         },
         {
+          "subComponentCode": "APO08.05",
           "subComponentName": " Provide input to the continual improvement of services",
           "subComponentDescription": "Continually improve and evolve I&T-enabled services and service delivery to the enterprise to align with changing enterprise objectives and technology ",
           "subComponentQuestions": [

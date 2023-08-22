@@ -16,6 +16,7 @@
       "componentPercFinal": 0,
       "subComponents": [
         {
+          "subComponentCode": "APO04.01",
           "subComponentName": "Create an environment conducive to innovation",
           "subComponentDescription": "Create an environment that is conducive to innovation, considering methods such as culture, reward, collaboration, technology forums, and mechanisms to promote and capture employee ideas.",
           "subComponentQuestions": [
@@ -99,6 +100,7 @@
           ]
         },
         {
+          "subComponentCode": "APO04.02",
           "subComponentName": "Maintain an understanding of the enterprise environment.",
           "subComponentDescription": "Work with relevant stakeholders to understand their challenges. Maintain an adequate understanding of enterprise strategy, competitive environment and other constraints, so that opportunities enabled by new technologies can be identified.",
           "subComponentQuestions": [
@@ -160,6 +162,7 @@
           ]
         },
         {
+          "subComponentCode": "APO04.03",
           "subComponentName": "Monitor and scan the technology environment",
           "subComponentDescription": "Set up a technology watch process to perform systematic monitoring and scanning of the enterprise’s external environment to identify emerging technologies that have the potential to create value (e.g., by realizing the enterprise strategy, optimizing costs, avoiding obsolescence, and better enabling enterprise and I&T processes). Monitor the marketplace, competitive landscape, industry sectors, and legal and regulatory trends to be able to analyze",
           "subComponentQuestions": [
@@ -232,6 +235,7 @@
           ]
         },
         {
+          "subComponentCode": "APO04.04",
           "subComponentName": "Assess the potential of emerging technologies and innovative ideas.",
           "subComponentDescription": "Analyze identified emerging technologies and/or other I&T innovative suggestions to understand their business potential. Work with takeholders to validate assumptions on the potential of new technologies and innovation.",
           "subComponentQuestions": [
@@ -326,6 +330,7 @@
           ]
         },
         {
+          "subComponentCode": "APO04.05",
           "subComponentName": "Recommend appropriate further initiatives",
           "subComponentDescription": "Evaluate and monitor the results of proof-of-concept initiatives and, if favorable, generate recommendations for further initiatives. Gain stakeholder support. ",
           "subComponentQuestions": [
@@ -398,6 +403,7 @@
           ]
         },
         {
+          "subComponentCode": "APO04.06",
           "subComponentName": "Monitor the implementation and use of innovation",
           "subComponentDescription": "Monitor the implementation and use of emerging technologies and innovations during adoption, integration and for the full economic life cycle to ensure that the promised benefits are realized and to identify lessons learned.",
           "subComponentQuestions": [

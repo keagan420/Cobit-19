@@ -16,6 +16,7 @@
       "componentPercFinal": 0,
       "subComponents": [
         {
+          "subComponentCode": "APO03.01",
           "subComponentName": "Develop the enterprise architecture vision",
           "subComponentDescription": "The architecture vision provides a first-cut, high-level description of the baseline and target architectures, covering the business, information, data, application and technology domains. The architecture vision provides the sponsor with a key tool to sell the benefits of the proposed capabilities to stakeholders within the enterprise. The architecture vision describes how the new capabilities (in line with I&T strategy and objectives) will meet enterprise goals and  strategic objectives and address stakeholder concerns when implemented.",
           "subComponentQuestions": [
@@ -242,6 +243,7 @@
           ]
         },
         {
+          "subComponentCode": "APO03.02",
           "subComponentName": "Define reference architecture.",
           "subComponentDescription": "The reference architecture describes the current and target architectures for the business, information, data, application and technology domains.",
           "subComponentQuestions": [
@@ -501,6 +503,7 @@
           ]
         },
         {
+          "subComponentCode": "APO03.03",
           "subComponentName": "Select opportunities and solutions",
           "subComponentDescription": "Rationalize the gaps between baseline and target architectures, accounting for both business and technical perspectives, and logically group them into project work packages. Integrate the project with any related I&T-enabled investment programs to ensure that the architectural initiatives are aligned with and enable these initiatives as part of overall enterprise change. Make this a collaborative effort with key enterprise stakeholders from business and IT to assess the enterprise’s transformation readiness, and identify opportunities, solutions and all implementation constraints",
           "subComponentQuestions": [
@@ -672,6 +675,7 @@
           ]
         },
         {
+          "subComponentCode": "APO03.04",
           "subComponentName": "Define architecture implementation. ",
           "subComponentDescription": "Create a viable implementation and migration plan in alignment with the program and project portfolios. Ensure the plan is closely coordinated to deliver value and that the required resources are available to complete the necessary work.",
           "subComponentQuestions": [
@@ -777,6 +781,7 @@
           ]
         },
         {
+          "subComponentCode": "APO03.05",
           "subComponentName": "Provide enterprise architecture services.",
           "subComponentDescription": "Provide enterprise architecture services within the enterprise that include guidance to and monitoring of implementation projects, formalizing ways of working through architecture contracts, and measuring and communicating architecture’s value and compliance monitoring.",
           "subComponentQuestions": [

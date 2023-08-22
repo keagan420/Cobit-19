@@ -16,6 +16,7 @@
       "componentPercFinal": 0,
       "subComponents": [
         {
+          "subComponentCode": "EDM05.01",
           "subComponentName": "Evaluate stakeholder engagement and reporting requirements.",
           "subComponentDescription": "Continually examine and evaluate current and future requirements for stakeholder engagement and reporting (including reporting mandated by regulatory requirements), and communication to other stakeholders. Establish principles for engaging and communicating with stakeholders.",
           "subComponentQuestions": [
@@ -133,6 +134,7 @@
           ]
         },
         {
+          "subComponentCode": "EDM05.02",
           "subComponentName": "Direct stakeholder engagement, communication and reporting.",
           "subComponentDescription": "Ensure the establishment of effective stakeholder involvement,communication and reporting, including mechanisms for ensuring the quality and completeness of information, overseeing mandatory reporting, and creating a communication strategy for stakeholders.",
           "subComponentQuestions": [
@@ -260,6 +262,7 @@
           ]
         },
         {
+          "subComponentCode": "EDM05.03",
           "subComponentName": "Monitor stakeholder engagement",
           "subComponentDescription": "Monitor stakeholder engagement levels and the effectiveness of stakeholder communication. Assess mechanisms for ensuring accuracy, reliability and effectiveness, and ascertain whether the requirements of different stakeholders in terms of reporting and communication are met.",
           "subComponentQuestions": [

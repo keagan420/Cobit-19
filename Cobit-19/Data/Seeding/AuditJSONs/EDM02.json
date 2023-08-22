@@ -16,6 +16,7 @@
       "componentPercFinal": 0,
       "subComponents": [
         {
+          "subComponentCode": "EDM02.01",
           "subComponentName": "Establish the target investment mix",
           "subComponentDescription": "Review and ensure clarity of the enterprise and I&T strategies and current services. Define an appropriate investment mix based on cost, alignment with strategy, type of benefit for the programs in the portfolio, degree of risk, and financial measures such as cost and expected return on investment (ROI) over the full economic life cycle. Adjust the enterprise and I&T strategies where necessary.",
           "subComponentQuestions": [
@@ -176,6 +177,7 @@
           ]
         },
         {
+          "subComponentCode": "EDM02.02",
           "subComponentName": "Evaluate value optimization",
           "subComponentDescription": "Continually evaluate the portfolio of I&T-enabled investments, services and assets to determine the likelihood of achieving enterprise objectives and delivering value. Identify and evaluate any changes in direction to management that will optimize value creation.",
           "subComponentQuestions": [
@@ -391,6 +393,7 @@
           ]
         },
         {
+          "subComponentCode": "EDM02.03",
           "subComponentName": "Direct value optimization.",
           "subComponentDescription": "Direct value management principles and practices to enable optimal value realization from I&T-enabled investments throughout their full economic life cycle.",
           "subComponentQuestions": [
@@ -529,6 +532,7 @@
           ]
         },
         {
+          "subComponentCode": "EDM02.04",
           "subComponentName": "Monitor value optimization",
           "subComponentDescription": "Monitor key goals and metrics to determine whether the enterprise receives expected value and benefit from I&T-enabled investments and services. Identify significant issues and consider corrective actions.",
           "subComponentQuestions": [

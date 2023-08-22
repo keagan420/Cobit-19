@@ -16,6 +16,7 @@
       "componentPercFinal": 0,
       "subComponents": [
         {
+          "subComponentCode": "EDM04.01",
           "subComponentName": " Evaluate resource management",
           "subComponentDescription": "Continually examine and evaluate the current and future need for business and I&T resources (financial and human), options for resourcing (including sourcing strategies), and allocation and management principles to meet the needs of the enterprise in the optimal manner.",
           "subComponentQuestions": [
@@ -166,6 +167,7 @@
           ]
         },
         {
+          "subComponentCode": "EDM04.02",
           "subComponentName": "Direct resource management",
           "subComponentDescription": "Description",
           "subComponentQuestions": [
@@ -305,6 +307,7 @@
 
         },
         {
+          "subComponentCode": "EDM04.03",
           "subComponentName": "Monitor resource management",
           "subComponentDescription": "Monitor the key goals and metrics of the resource management processes. Determine how deviations or problems will be identified, tracked and reported for remediation.",
           "subComponentQuestions": [

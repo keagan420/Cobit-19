@@ -16,6 +16,7 @@
       "componentPercFinal": 0,
       "subComponents": [
         {
+          "subComponentCode": "APO05.01",
           "subComponentName": "Determine the availability and sources of funds.",
           "subComponentDescription": "Determine potential sources of funds, different funding options and the implications of the funding source on the investment return expectations.",
           "subComponentQuestions": [
@@ -77,6 +78,7 @@
           ]
         },
         {
+          "subComponentCode": "APO05.02",
           "subComponentName": "Evaluate and select programs to fund.",
           "subComponentDescription": "Based on requirements for the overall investment portfolio mix and the I&T strategic plan and road map, evaluate and prioritize program business cases and decide on investment proposals. Allocate funds and initiate programs",
           "subComponentQuestions": [
@@ -303,6 +305,7 @@
           ]
         },
         {
+          "subComponentCode": "APO05.03",
           "subComponentName": "Monitor, optimize and report on investment portfolio performance",
           "subComponentDescription": "On a regular basis, monitor and optimize the performance of the investment portfolio and individual programs throughout the entire investment life cycle. Ensure continuous follow-up on the alignment of the portfolio with I&T strategy",
           "subComponentQuestions": [
@@ -452,6 +455,7 @@
           ]
         },
         {
+          "subComponentCode": "APO05.04",
           "subComponentName": "Maintain portfolios",
           "subComponentDescription": "Maintain portfolios of investment programs and projects, I&T products and services, and I&T assets.",
           "subComponentQuestions": [
@@ -535,6 +539,7 @@
           ]
         },
         {
+          "subComponentCode": "APO05.05",
           "subComponentName": "Manage benefits achievement",
           "subComponentDescription": "Monitor the benefits of providing and maintaining appropriate I&T products, services and capabilities, based on the agreed and current business case.",
           "subComponentQuestions": [

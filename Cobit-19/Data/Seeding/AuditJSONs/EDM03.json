@@ -16,6 +16,7 @@
       "componentPercFinal": 0,
       "subComponents": [
         {
+          "subComponentCode": "EDM03.01",
           "subComponentName": "Evaluate risk management.",
           "subComponentDescription": "Continually examine and evaluate the effect of risk on the current and future use of I&T in the enterprise. Consider whether the enterprise’s risk appetite is appropriate and ensure that risk to enterprise value related to the use of I&T is identified and managed.",
           "subComponentQuestions": [
@@ -165,6 +166,7 @@
           ]
         },
         {
+          "subComponentCode": "EDM03.02",
           "subComponentName": " Direct risk management.",
           "subComponentDescription": "Direct the establishment of risk management practices to provide reasonable assurance that I&T risk management practices are appropriate and that actual I&T risk does not exceed the board’s risk appetite.",
           "subComponentQuestions": [
@@ -325,6 +327,7 @@
           ]
         },
         {
+          "subComponentCode": "EDM03.03",
           "subComponentName": "Monitor risk management",
           "subComponentDescription": "Monitor the key goals and metrics of the risk management processes. Determine how deviations or problems will be identified, tracked and reported for remediation.",
           "subComponentQuestions": [
