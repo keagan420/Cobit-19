@@ -7,5 +7,12 @@
         public int questionAnswer { get; set; }
         public float questionScore { get; set; }
         public string? questionComment { get; set; }
+        public string? questionSkill { get; set; }
+        public string? relatedGuidance { get; set; }
+        public string? detailedReference { get; set; }
+        public string? relevantPolicy { get; set; }
+        public string? policyDescription { get; set; }
+        public string? keyCultureElement { get; set; }
+
     }
 }

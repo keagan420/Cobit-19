@@ -4,6 +4,7 @@ using Cobit_19.Data.Models;
 using Cobit_19.Shared.Dtos;
 using Cobit_19.Shared.Enums;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace Cobit_19.Business.ObjectiveAudits
 {
@@ -114,6 +115,87 @@ namespace Cobit_19.Business.ObjectiveAudits
             await _dbContext.SaveChangesAsync();
 
             return _mapper.Map<ObjectiveAuditMemberDto>(objectiveAuditMemberModel); ;
+        }
+
+        public SubComponentDto GetProcessesSubComponents(FullObjectiveAuditDto objectiveAudit, int subComponentNum)
+        {
+            var subComp = objectiveAudit.components[0].subComponents[subComponentNum];
+
+            return subComp;
+        }
+
+        public List<subComponentQuestionDto> GetSubComponentMLevelQuestions(SubComponentDto subComp)
+        {
+            var subCompQuestions = subComp.subComponentQuestions;
+
+            var query = subCompQuestions.Where(question => question.questionType.Contains("Maturity Level"));
+            var MLevelQuestios = query.ToList();
+
+            if (MLevelQuestios.Count > 0)
+            {
+                return MLevelQuestios;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public List<subComponentQuestionDto> GetSubComponentInputQuestions(SubComponentDto subComp)
+        {
+            var SubCompQuestions = subComp.subComponentQuestions;
+
+            var query = SubCompQuestions.Where(question => 
+                question.questionType.Equals("Input"));
+
+            var inputQuestions = query.ToList();
+
+            if (inputQuestions.Count > 0)
+            {
+                return inputQuestions;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public List<subComponentQuestionDto> GetSubComponentOutputQuestions(SubComponentDto subComp)
+        {
+            var SubCompQuestions = subComp.subComponentQuestions;
+
+            var query = SubCompQuestions.Where(question =>
+                question.questionType.Equals("Output"));
+
+            var outputQuestions = query.ToList();
+
+            if (outputQuestions.Count > 0)
+            {
+                return outputQuestions;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public List<subComponentQuestionDto> GetSubComponentRelatedGuidanceQuestions(SubComponentDto subComp)
+        {
+            var SubCompQuestions = subComp.subComponentQuestions;
+
+            var query = SubCompQuestions.Where(question =>
+                question.questionType.Equals("Related Guidance"));
+
+            var relatedGuidanceQuestions = query.ToList();
+
+            if (relatedGuidanceQuestions.Count > 0)
+            {
+                return relatedGuidanceQuestions; 
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
