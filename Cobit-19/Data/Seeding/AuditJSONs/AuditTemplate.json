@@ -11,7 +11,7 @@
   "maturityLevel5PercFinal": 0,
   "components": [
     {
-      "componentName": "A",
+      "componentCode": "A",
       "componentDescription": "Processes",
       "componentPercFinal": 0,
       "subComponents": [
@@ -26,7 +26,7 @@
               "relatedGuidance": "string",
               "detailedReference": "string",
               "inputFrom": "string",
-              "outputTo": "string,",
+              "outputTo": "string",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -36,7 +36,7 @@
       ]
     },
     {
-      "componentName": "B",
+      "componentCode": "B",
       "componentDescription": "Organizational Structures",
       "componentPercFinal": 0,
       "componentQuestions": [
@@ -50,7 +50,30 @@
       ]
     },
     {
-      "componentName": "D",
+      "componentCode": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "subCompCode",
+          "subComponentName": "Sub process name",
+          "subComponentDescription": "Description",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input or output",
+              "questionDescription": "string",
+              "inputFrom": "string",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "componentCode": "D",
       "componentDescription": "Peoples, Skills and Competencies",
       "componentPercFinal": 0,
       "componentQuestions": [
@@ -66,7 +89,7 @@
       ]
     },
     {
-      "componentName": "E",
+      "componentCode": "E",
       "componentDescription": "Principles Policies and Procedures",
       "componentPercFinal": 0,
       "componentQuestions": [
@@ -83,7 +106,7 @@
       ]
     },
     {
-      "componentName": "F",
+      "componentCode": "F",
       "componentDescription": "Culture, Ethics and Behavior",
       "componentPercFinal": 0,
       "componentQuestions": [
@@ -99,7 +122,7 @@
       ]
     },
     {
-      "componentName": "G",
+      "componentCode": "G",
       "componentDescription": "Services, Infrastructure and Applications",
       "componentPercFinal": 0,
       "componentQuestions": [
