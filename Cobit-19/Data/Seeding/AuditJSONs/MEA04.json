@@ -63,17 +63,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Results of assurance provider evaluations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "Internal",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -133,61 +122,6 @@
               "detailedReference": "Part 5.4: Governance functional areas—Principle 15",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Program audit plans",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI01.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Independent assurance plans",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS01.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Assurance plans",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All APO; All BAI; All DSS; All MEA; EDM01.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Assessment criteria",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "High-level assessments",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -253,28 +187,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Assurance plans",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA04.02",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Assurance objectives and expected benefits",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -334,83 +246,6 @@
               "detailedReference": "TP.LA Apply Logging and Audit Processes",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Root causes of failure to deliver quality",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO11.03",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Risk-related root causes",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO12.06",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Root cause analyses and recommendations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS06.01",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Reports of noncompliance issues and root causes",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA03.04",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Assurance review practices",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Engagement plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Assurance review scope",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -484,39 +319,6 @@
               "detailedReference": "string",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Risk analysis and risk profile reports for stakeholders",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO12.04",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Refined scope",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Detailed assurance work program",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA04.06",
-              "outputTo": "string",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -615,50 +417,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Risk-related root causes",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO12.06",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Root cause analyses and recommendations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS06.01",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Detailed assurance work program",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA04.05",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Documented design of internal controls",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "MEA04.07",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -732,94 +490,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Incident and service request log",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS02.02",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Incident resolutions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS02.05",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Problem resolution monitoring reports",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS03.05",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Results of penetration tests",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS05.02",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Access logs",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS05.05",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Root cause analyses and recommendations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS06.01",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Documented design of internal controls",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA04.06",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Control effectiveness testing",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "MEA04.08; MEA04.09",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -871,50 +541,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Identified compliance gaps",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA03.03",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Control effectiveness testing",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA04.07",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Assurance review report",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All APO; All BAI; All DSS;  All MEA; EDM05.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Assurance review results",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All APO; All BAI; All DSS;  All MEA; EDM05.03; MEA04.09",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -941,39 +567,6 @@
               "detailedReference": "string",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Control effectiveness testing",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA04.07",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Assurance review results",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA04.08",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Remedial actions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All APO; All BAI; All DSS;  All MEA",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -1049,6 +642,410 @@
           "questionAnswer": 0,
           "questionScore": 0,
           "questionComment": "comment"
+        }
+      ]
+    },
+    {
+      "componentCode": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "MEA04.01",
+          "subComponentName": "Ensure that assurance providers are independent and qualified.",
+          "subComponentDescription": "Ensure that the entities performing assurance are independent from the function, groups or organizations in scope. The entities performing assurance should demonstrate an appropriate attitude and appearance, competence in the skills and knowledge necessary to perform assurance, and adherence to codes of ethics and professional standards.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Results of assurance provider evaluations",
+              "inputFrom": "Internal",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "MEA04.02",
+          "subComponentName": "Develop risk-based planning of assurance initiatives.",
+          "subComponentDescription": "Determine assurance objectives based on assessments of the internal and external environment and context, the risk of not achieving enterprise goals, and the opportunities associated achievement of the same goals.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Program audit plans",
+              "inputFrom": "BAI01.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Independent assurance plans",
+              "inputFrom": "DSS01.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Assurance plans",
+              "inputFrom": "string",
+              "outputTo": "All APO; All BAI; All DSS; All MEA; EDM01.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Assessment criteria",
+              "inputFrom": "string",
+              "outputTo": "internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "High-level assessments",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "MEA04.03",
+          "subComponentName": "Determine the objectives of the assurance initiative.",
+          "subComponentDescription": "Define and agree with all stakeholders on the objectives of the assurance initiative.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Assurance plans",
+              "inputFrom": "MEA04.02",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Assurance objectives and expected benefits",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "MEA04.04",
+          "subComponentName": "Define the scope of the assurance initiative.",
+          "subComponentDescription": "Define and agree with all stakeholders on the scope of the assurance initiative, based on the assurance objectives.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Root causes of failure to deliver quality",
+              "inputFrom": "APO11.03",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Risk-related root causes",
+              "inputFrom": "APO12.06",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Root cause analyses and recommendations",
+              "inputFrom": "DSS06.01",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Reports of noncompliance issues and root causes",
+              "inputFrom": "MEA03.04",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Assurance review practices",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Engagement plan",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Assurance review scope",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "MEA04.05",
+          "subComponentName": "Define the work program for the assurance initiative.",
+          "subComponentDescription": "Define a detailed work program for the assurance initiative, structured according to the management objectives and governance components in scope.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Risk analysis and risk profile reports for stakeholders",
+              "inputFrom": "APO12.04",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Refined scope",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Detailed assurance work program",
+
+              "inputFrom": "MEA04.06",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "MEA04.06",
+          "subComponentName": "Execute the assurance initiative, focusing on design effectiveness.",
+          "subComponentDescription": "Execute the planned assurance initiative. Validate and confirm the design of the internal controls in place. Additionally, and specifically in internal audit assignments, consider the cost-effectiveness of the governance component design.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Risk-related root causes",
+              "inputFrom": "APO12.06",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Root cause analyses and recommendations",
+              "inputFrom": "DSS06.01",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Detailed assurance work program",
+              "inputFrom": "MEA04.05",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Documented design of internal controls",
+              "inputFrom": "string",
+              "outputTo": "MEA04.07",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "MEA04.07",
+          "subComponentName": "Execute the assurance initiative, focusing on operating effectiveness.",
+          "subComponentDescription": "Execute the planned assurance initiative. Test whether the internal controls in place are appropriate and sufficient. Test the outcome of the key management objectives in scope of the assurance initiative.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Incident and service request log",
+              "inputFrom": "DSS02.02",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Incident resolutions",
+              "inputFrom": "DSS02.05",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Problem resolution monitoring reports",
+              "inputFrom": "DSS03.05",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of penetration tests",
+              "inputFrom": "DSS05.02",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Access logs",
+              "inputFrom": "DSS05.05",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Root cause analyses and recommendations",
+              "inputFrom": "DSS06.01",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Documented design of internal controls",
+              "inputFrom": "MEA04.06",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Control effectiveness testing",
+              "inputFrom": "string",
+              "outputTo": "MEA04.08; MEA04.09",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "MEA04.08",
+          "subComponentName": "Report and follow up on the assurance initiative.",
+          "subComponentDescription": "Provide positive assurance opinions, where appropriate, and recommendations for improvement relating to identified operational performance, external compliance and internal control weaknesses.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Identified compliance gaps",
+              "inputFrom": "MEA03.03",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Control effectiveness testing",
+              "inputFrom": "MEA04.07",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Assurance review report",
+              "inputFrom": "string",
+              "outputTo": "All APO; All BAI; All DSS;  All MEA; EDM05.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Assurance review results",
+              "inputFrom": "string",
+              "outputTo": "All APO; All BAI; All DSS;  All MEA; EDM05.03; MEA04.09",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "MEA04.09",
+          "subComponentName": "Follow up on recommendations and actions.",
+          "subComponentDescription": "Agree on, follow up and implement the identified recommendations for improvement.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Control effectiveness testing",
+              "inputFrom": "MEA04.07",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Assurance review results",
+              "inputFrom": "MEA04.08",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Remedial actions",
+              "inputFrom": "string",
+              "outputTo": "All APO; All BAI; All DSS;  All MEA",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
         }
       ]
     },
