@@ -96,28 +96,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Identified gaps in I&T services to the business",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO01.10 ,APO02.02, APO05.02, APO08.02",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Definitions of standard services",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "EDM02.01",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -165,39 +143,6 @@
               "relatedGuidance": "ITIL V3, 2011",
               "detailedReference": "Service Design, 4.2 Service Catalogue Management",
               "inputFrom": "string",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Updated portfolios of programs, services and assets",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO05.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Approved resources plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM04.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Communication of resourcing strategies",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM04.02",
               "outputTo": "string,",
               "questionAnswer": 0,
               "questionScore": 0,
@@ -308,50 +253,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Customer requirements for quality management",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO11.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Data quality requirements",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO14.07",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Service level agreements (SLAs)",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO05.02, APO08.04, DSS01.02, DSS02.01, DSS02.02, DSS04.01, DSS05.02, DSS05.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Operational level agreements (OLAs)",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "DSS01.02, DSS02.07, DSS04.03, DSS05.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -436,116 +337,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Investment portfolio performance reports",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO05.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Benefit results and related communications • Corrective actions to improve benefit realization",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO05.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Satisfaction analyses",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO08.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Results of quality monitoring for solution and service delivery • Root causes of quality delivery failures",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO11.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Results of quality reviews and audits",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO11.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Classified and prioritized incidents and service requests",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS02.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Closed service requests and incidents",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS02.06",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Incident status and trends report • Status of request fulfilment and trends report",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS02.07",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Remedial actions to address resource management deviations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM04.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Service level performance reports",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO08.02, MEA01.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -572,61 +363,6 @@
               "detailedReference": "string",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Results of quality of service, including customer feedback",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO11.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Results of quality reviews and audits",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO11.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Evaluations against SLAs",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI04.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Feedback on allocation and effectiveness of resources and capabilities",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM04.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Updated SLAs",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -678,6 +414,318 @@
         }
       ]
 
+    },
+    {
+      "componentName": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "APO09.01",
+          "subComponentName": " Identify I&T services.",
+          "subComponentDescription": "Analyze business requirements and the degree to which I&T-enabled services and service levels support business processes. Discuss and agree with the business on potential services and service levels. Compare potential service levels against the current service portfolio; identify new or changed services or service level options.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Output",
+              "questionDescription": "Identified gaps in I&T services to the business",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO01.10 ,APO02.02, APO05.02, APO08.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Definitions of standard services",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "EDM02.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO09.02",
+          "subComponentName": "Catalog I&T-enabled services",
+          "subComponentDescription": "Define and maintain one or more service catalogues for relevant target groups. Publish and maintain live I&T-enabled services in the service catalogs.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Updated portfolios of programs, services and assets",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO05.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Approved resources plan",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM04.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Communication of resourcing strategies",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM04.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO09.03",
+          "subComponentName": "Define and prepare service agreements",
+          "subComponentDescription": "Define and prepare service agreements based on options in the service catalogues. Include internal operational agreements.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Customer requirements for quality management",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO11.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Data quality requirements",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO14.07",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Service level agreements (SLAs)",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO05.02, APO08.04, DSS01.02, DSS02.01, DSS02.02, DSS04.01, DSS05.02, DSS05.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Operational level agreements (OLAs)",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "DSS01.02, DSS02.07, DSS04.03, DSS05.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO09.04",
+          "subComponentName": "Monitor and report service levels.",
+          "subComponentDescription": "Monitor service levels, report on achievements and identify trends. Provide the appropriate management information to aid performance management.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Investment portfolio performance reports",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO05.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Benefit results and related communications • Corrective actions to improve benefit realization",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO05.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Satisfaction analyses",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO08.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of quality monitoring for solution and service delivery • Root causes of quality delivery failures",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO11.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of quality reviews and audits",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO11.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Classified and prioritized incidents and service requests",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "DSS02.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Closed service requests and incidents",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "DSS02.06",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Incident status and trends report • Status of request fulfilment and trends report",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "DSS02.07",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Remedial actions to address resource management deviations",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM04.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Service level performance reports",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO08.02, MEA01.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO09.05",
+          "subComponentName": "Review service agreements and contracts.",
+          "subComponentDescription": "Conduct periodic reviews of the service agreements and revise when needed.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of quality of service, including customer feedback",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO11.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of quality reviews and audits",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO11.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Evaluations against SLAs",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI04.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Feedback on allocation and effectiveness of resources and capabilities",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM04.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Updated SLAs",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        }
+
+      ]
     },
     {
       "componentName": "D",

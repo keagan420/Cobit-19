@@ -74,50 +74,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Innovation opportunities linked to business drivers",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO04.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Guiding principles for allocating resources and capabilities",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM04.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Enterprise strategy and strengths, weaknesses, opportunities, threats (SWOT) analysis",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "Outside COBIT",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Sources and priorities for change",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -155,182 +111,6 @@
               "detailedReference": "7. Strategy and Objective-Setting—Principle 6; 9. Review and Revision—Principle 15",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Cost optimization opportunities",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO06.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Definition of potential improvement projects",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO08.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Identified gaps in IT services to the business",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO09.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Improvement action plans and remediations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO09.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Emerging risk issues and factors",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO12.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Risk analysis results",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO12.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Aggregated risk profile, including status of risk management actions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO12.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Project proposals for reducing risk",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO12.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Feedback on allocation and effectiveness of resources and capabilities",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM04.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Prioritized improvements • Performance and capacity plans",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI04.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Corrective actions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI04.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Results of fit-for-purpose reviews",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI09.01 ",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Results of cost optimization reviews • Opportunities to reduce asset costs or increase value",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI09.04 ",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Gaps and risk related to current capabilities",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO12.01",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Capability SWOT analysis",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Baseline of current capabilities",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -382,50 +162,6 @@
               "detailedReference": "string",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Results and recommendations from proof-of-concept initiatives • Analysis of rejected initiatives",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO04.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Proposed enterprise architecture changes",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO03.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Required business and IT capabilities",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "High-level I&T-related goals",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -488,94 +224,6 @@
               "detailedReference": "string",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Assessments of using innovative approaches",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO04.06",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Investment return expectations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO05.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Results of program goal achievement monitoring",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI01.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Stage-gate review results",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI01.06",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Post-implementation review results",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI11.09",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Evaluation of strategic alignment",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM02.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Gaps and changes required to realize target capability",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO01.03, APO13.02, BAI03.11, EDM04.01",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Value benefit statement for target environment",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI03.11",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -707,171 +355,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Defined scope of architecture • Architecture concept business case and value proposition",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO03.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Information architecture model",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO03.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Transition architectures",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO03.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Funding options",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO05.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Budget allocations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO06.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "I&T budget",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO06.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Action plan to adjust license numbers and allocations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI09.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Approved strategic options",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS04.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Feedback on strategy and goals",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM02.01 ",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Approved resources plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM04.01 ",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Remedial actions to address resource management deviations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM04.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "I&T strategy and objectives",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All APO, All BAI, All DSS, All MEA",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Strategic road map",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO01.01, APO03.01, APO08.01, EDM02.01, EDM02.02",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Definition of strategic initiatives",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "EDM02.01",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Risk assessment initiatives",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "EDM02.01, APO12.01",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -920,39 +403,6 @@
               "detailedReference": "string",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Communication of resourcing strategies",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM04.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Communication package",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All APO, All BAI, All DSS, All MEA",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Communication plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -1009,6 +459,612 @@
           "questionScore": 0,
           "questionComment": "comment"
         }
+      ]
+    },
+    {
+      "componentName": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "APO02.01",
+          "subComponentName": "Understand enterprise context and direction.",
+          "subComponentDescription": "Understand the enterprise context (industry drivers, relevant regulations,basis for competition), its current way of working and its ambition level in terms of digitization.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Innovation opportunities linked to business drivers",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO04.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Guiding principles for allocating resources and capabilities",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM04.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Enterprise strategy and strengths, weaknesses, opportunities, threats (SWOT) analysis",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "Outside COBIT",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Sources and priorities for change",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO02.02",
+          "subComponentName": "Assess current capabilities, performance and digital maturity of the enterprise.",
+          "subComponentDescription": "Assess the performance of current I&T services and develop an understanding of current business and I&T capabilities (both internal and external). Assess current digital maturity of the enterprise and its appetite for change.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Cost optimization opportunities",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO06.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Definition of potential improvement projects",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO08.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Identified gaps in IT services to the business",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO09.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Improvement action plans and remediations",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO09.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Emerging risk issues and factors",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO12.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Risk analysis results",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO12.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Aggregated risk profile, including status of risk management actions",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO12.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Project proposals for reducing risk",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO12.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Feedback on allocation and effectiveness of resources and capabilities",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM04.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Prioritized improvements • Performance and capacity plans",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI04.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Corrective actions",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI04.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of fit-for-purpose reviews",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI09.01 ",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of cost optimization reviews • Opportunities to reduce asset costs or increase value",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI09.04 ",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Gaps and risk related to current capabilities",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO12.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Capability SWOT analysis",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Baseline of current capabilities",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO02.03",
+          "subComponentName": "Define target digital capabilities",
+          "subComponentDescription": "Based on the understanding of enterprise context and direction, define the target I&T products and services and required capabilities. Consider reference standards, best practices and validated emerging technologies.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Results and recommendations from proof-of-concept initiatives • Analysis of rejected initiatives",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO04.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Proposed enterprise architecture changes",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO03.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Required business and IT capabilities",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "High-level I&T-related goals",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO02.04",
+          "subComponentName": "Conduct a gap analysis",
+          "subComponentDescription": "Identify gaps between current and target environments and describe the high-level changes in the enterprise architecture.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Assessments of using innovative approaches",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO04.06",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Investment return expectations",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO05.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of program goal achievement monitoring",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI01.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Stage-gate review results",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI01.06",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Post-implementation review results",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI11.09",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Evaluation of strategic alignment",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM02.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Gaps and changes required to realize target capability",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO01.03, APO13.02, BAI03.11, EDM04.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Value benefit statement for target environment",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "BAI03.11",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO02.05",
+          "subComponentName": "Define the strategic plan and road map.",
+          "subComponentDescription": "Develop a holistic digital strategy, in cooperation with relevant stakeholders, and detail a road map that defines the incremental steps required to achieve the goals and objectives. Ensure focus on the transformation journey through the appointment of a person who helps spearhead the digital transformation and drives alignment between business and I&T.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Defined scope of architecture • Architecture concept business case and value proposition",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO03.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Information architecture model",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO03.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Transition architectures",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO03.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Funding options",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO05.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Budget allocations",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO06.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "I&T budget",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO06.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Action plan to adjust license numbers and allocations",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI09.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Approved strategic options",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "DSS04.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Feedback on strategy and goals",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM02.01 ",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Approved resources plan",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM04.01 ",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Remedial actions to address resource management deviations",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM04.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "I&T strategy and objectives",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "All APO, All BAI, All DSS, All MEA",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Strategic road map",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO01.01, APO03.01, APO08.01, EDM02.01, EDM02.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Definition of strategic initiatives",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "EDM02.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Risk assessment initiatives",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "EDM02.01, APO12.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO02.06",
+          "subComponentName": "Communicate the I&T strategy and direction.",
+          "subComponentDescription": "Create awareness and understanding of the business and I&T objectives and direction, as captured in the I&T strategy, through communication to appropriate stakeholders and users throughout the enterprise.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Communication of resourcing strategies",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM04.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Communication package",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "All APO, All BAI, All DSS, All MEA",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Communication plan",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        }
+
       ]
     },
     {
@@ -1072,7 +1128,7 @@
         },
         {
           "questionType": "Component question",
-          "relevantPolicy": "I&T strategy policy and principles", 
+          "relevantPolicy": "I&T strategy policy and principles",
           "policyDescription": "Provides holistic view of current business and I&T environment, strategic direction and initiatives required to transition to the desired future environment. Ensures that business and I&T strategy reflect target level of digitization.",
           "detailedGuidance": "",
           "detailedReference": "",
