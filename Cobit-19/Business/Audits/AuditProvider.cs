@@ -207,5 +207,15 @@ namespace Cobit_19.Business.Audits
 
             return _mapper.Map<AnswerDto>(answer);
         }
+
+        public async Task<bool> IsUserInAuditAsync(int AuditID, string ApplicationUserID)
+        {
+            var checkQuery = _dbContext.AuditMembers
+                .Where(auditMember => auditMember.AuditID == AuditID && auditMember.ApplicationUserID == ApplicationUserID);
+
+            var isUserInAudit = await checkQuery.AnyAsync();
+
+            return isUserInAudit;
+        }
     }
 }

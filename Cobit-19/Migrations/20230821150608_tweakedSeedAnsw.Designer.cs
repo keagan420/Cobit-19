@@ -4,6 +4,7 @@ using Cobit_19.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cobit_19.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230821150608_tweakedSeedAnsw")]
+    partial class tweakedSeedAnsw
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -724,9 +727,9 @@ namespace Cobit_19.Migrations
                             LastName = "Coetzee",
                             LockoutEnabled = false,
                             NormalizedUserName = "TEST@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMoNKKQGDNEbpgVj+KyXk3YYQW12k3oEwA2iqgiSGyKxQwcEbOigzIpYv9QnGYfxmQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEE31PZQdodNsiV58LYqI59irpNHOAcQr5l2qqs2xuJCgzAfhsbLoCiU6gjRZzmAitA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "dc8bd217-eb94-4329-aa52-9690caa633ed",
+                            SecurityStamp = "1428db4e-3f8b-4a38-b0ae-8459e26fac33",
                             TwoFactorEnabled = false,
                             UserName = "test@gmail.com"
                         },
@@ -734,16 +737,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "fa567c12-5678-4321-bacd-87654321de1f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "4d25c1f6-8e87-4fc7-a8c3-995e8ac23e49",
+                            ConcurrencyStamp = "e26dba8a-c07a-4afa-bad0-2f69ada50606",
                             Email = "john.smith@example.com",
                             EmailConfirmed = true,
                             FirstName = "John",
                             LastName = "Smith",
                             LockoutEnabled = false,
                             NormalizedUserName = "JOHN.SMITH@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEOqN84f0O1wkNMEyEdDQw5dNDcJCrIMqrBMr/I/EQBCr9sOzAUQ//nZCB/D+UMrMbA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMLSMGAHKSxjUZIa0Q092BcQe6bwmpPq0V8+r8YeGNhHcFZViiBt3uZ3ilwQR5gH7A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a6e4cf38-edac-49c2-96e4-5ac5184b72e9",
+                            SecurityStamp = "639dd0c9-78c9-4cf9-84e4-b0ff378122c2",
                             TwoFactorEnabled = false,
                             UserName = "john.smith@example.com"
                         },
@@ -751,16 +754,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "9b1a0f34-8765-4321-dcba-ba09876543c2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "285e5fb9-f729-4930-a1ba-1c64ebde4b31",
+                            ConcurrencyStamp = "05e0023d-4657-4f86-bc95-6430bddeb44f",
                             Email = "alice.johnson@example.com",
                             EmailConfirmed = true,
                             FirstName = "Alice",
                             LastName = "Johnson",
                             LockoutEnabled = false,
                             NormalizedUserName = "ALICE.JOHNSON@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAELWbHQwjnB2E2LbNh4LxeNFFy+Xb6NvhBXRpG4k7SL644Oe7NsR2YL1d8OM2X6vovA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDqmQGRjdpVZbv3Q8OX5ij9bQHvKtGdLS8dIBAH69k/yqe0c/bOADUTvx7pEmMzi3A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1e438525-1cb7-4681-a25d-9d876860e569",
+                            SecurityStamp = "bff3dc0b-e2d9-43f3-bc90-b909b7caa321",
                             TwoFactorEnabled = false,
                             UserName = "alice.johnson@example.com"
                         },
@@ -768,16 +771,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "b2c3d4e5-f6a7-1234-5678-0987654321dc",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c82f3e47-8bcb-4a19-a7fc-da5d43b4c32d",
+                            ConcurrencyStamp = "6c2eea36-0017-47f9-b0e5-43fc9bed1f35",
                             Email = "michael.brown@example.com",
                             EmailConfirmed = true,
                             FirstName = "Michael",
                             LastName = "Brown",
                             LockoutEnabled = false,
                             NormalizedUserName = "MICHAEL.BROWN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEI84D4Jl2axyddG/nQ3gVjRr3HAh0ZEK60baAngBs1VIU/Hp+RSJRh1JBEG6gmCfRQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEH0zrhKMN85jzkowYp4Nsw6wOSliYqcCRaEaz/5zPQ5mzdj/1d/jJmxbPcDMT4yxaA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "ebea1299-51da-4697-819a-5878a947341a",
+                            SecurityStamp = "6925c539-297a-4736-87d4-7ca1a3ea13b3",
                             TwoFactorEnabled = false,
                             UserName = "michael.brown@example.com"
                         });
@@ -18888,9 +18891,6 @@ namespace Cobit_19.Migrations
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserAuditObject")
-                        .HasColumnType("varchar(MAX)");
-
                     b.HasKey("ID");
 
                     b.HasIndex("AuditID");
@@ -20359,28 +20359,28 @@ namespace Cobit_19.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "217b9a7c-13b2-4287-ae3b-10bbc684614c",
+                            ConcurrencyStamp = "7a8c6b5a-4756-4a43-9532-e58fe559a528",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "36c9f3b8-42e6-4ab1-a50d-e89986c5d1f7",
-                            ConcurrencyStamp = "c815a3a4-1d44-476e-9cfd-3403422d086c",
+                            ConcurrencyStamp = "5b0c4440-33b5-4d03-82d8-af11338185e3",
                             Name = "Head Auditor",
                             NormalizedName = "HEAD AUDITOR"
                         },
                         new
                         {
                             Id = "5e70cf29-1b64-4f58-85dd-07b3c46015a3",
-                            ConcurrencyStamp = "245eda66-68ff-456c-b67c-fc06045ebd06",
+                            ConcurrencyStamp = "9d0eb949-27d4-48b2-b2ba-95ccd5fbdc38",
                             Name = "Auditor",
                             NormalizedName = "AUDITOR"
                         },
                         new
                         {
                             Id = "d3ae1c6e-1c8a-43e7-9a2a-971fc7fbb295",
-                            ConcurrencyStamp = "1feb5893-bb12-4b90-bf3d-b717ec220dad",
+                            ConcurrencyStamp = "295d52c0-335e-4845-bc62-030fa9e9a1bb",
                             Name = "Client",
                             NormalizedName = "CLIENT"
                         });

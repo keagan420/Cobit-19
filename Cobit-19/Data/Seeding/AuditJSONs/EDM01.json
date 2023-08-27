@@ -151,61 +151,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Communications of changed compliance requirements",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA03.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Constitution/bylaws/ statutes of organization  Governance/decision- making model  Laws/regulations  Business environment trends",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "Outside COBIT",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Enterprise governance guiding principles",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All EDM; APO01.01; APO01.03 APO01.04",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Decision-making model",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All EDM; APO01.01; APO01.04",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Authority levels",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All EDM; APO01.05",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -356,33 +301,11 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Enterprise governance communication",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All EDM; APO01.02",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Maturity Level 0 .. 5 OR Related Guidance OR Information flow",
-              "questionDescription": "Reward system approach",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO07.03; APO07.04",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
         {
-          "subComponentCode" :  "EDM01.03",
+          "subComponentCode": "EDM01.03",
           "subComponentName": "Monitor the governance system.",
           "subComponentDescription": "Monitor the effectiveness and performance of the enterprises governance of I&T. Assess whether the governance system and implemented mechanisms (including structures, principles and processes) are operating effectively and provide appropriate oversight of I&T to enable value creation.",
           "subComponentQuestions": [
@@ -473,105 +396,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Performance reports",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA01.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Status and results of actions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA01.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Results of internal control monitoring and reviews  Results of benchmarking and other evaluations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA02.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Results of reviews of self-assessments",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA02.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Compliance confirmations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA03.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Compliance assurance reports  Reports of noncompliance issues and root causes",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA03.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Assurance plans",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "MEA04.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Audit reports  Obligations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "Outside COBIT",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Feedback on governance effectiveness and performance",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All EDM; APO01.11",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         }
@@ -602,6 +426,179 @@
           "questionAnswer": 0,
           "questionScore": 0,
           "questionComment": "comment"
+        }
+      ]
+    },
+    {
+      "componentCode": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "EDM01.01",
+          "subComponentName": "Evaluate the governance system.",
+          "subComponentDescription": "Continually identify and engage with the enterprises stakeholders, document an understanding of the requirements, and evaluate the current and future design of governance of enterprise I&T.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Communications of changed compliance requirements",
+              "inputFrom": "MEA03.02",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Constitution/bylaws/ statutes of organization  Governance/decision- making model  Laws/regulations  Business environment trends",
+              "inputFrom": "Outside COBIT",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Enterprise governance guiding principles",
+              "inputFrom": "string",
+              "outputTo": "All EDM; APO01.01; APO01.03 APO01.04",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Decision-making model",
+              "inputFrom": "string",
+              "outputTo": "All EDM; APO01.01; APO01.04",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Authority levels",
+              "inputFrom": "string",
+              "outputTo": "All EDM; APO01.05",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "EDM01.02",
+          "subComponentName": "Direct the governance system.",
+          "subComponentDescription": "Inform leaders on I&T governance principles and obtain their support, buy-in and commitment. Guide the structures, processes and practices for the governance of I&T in line with the agreed governance principles, decision-making models and authority levels. Define the information required for informed decision making.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Enterprise governance communication",
+              "inputFrom": "string",
+              "outputTo": "All EDM; APO01.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Reward system approach",
+              "inputFrom": "string",
+              "outputTo": "APO07.03; APO07.04",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "EDM01.03",
+          "subComponentName": "Monitor the governance system.",
+          "subComponentDescription": "Monitor the effectiveness and performance of the enterprises governance of I&T. Assess whether the governance system and implemented mechanisms (including structures, principles and processes) are operating effectively and provide appropriate oversight of I&T to enable value creation.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Performance reports",
+              "inputFrom": "MEA01.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Status and results of actions",
+              "inputFrom": "MEA01.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of internal control monitoring and reviews  Results of benchmarking and other evaluations",
+
+              "inputFrom": "MEA02.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of reviews of self-assessments",
+              "inputFrom": "MEA02.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Compliance confirmations",
+              "inputFrom": "MEA03.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Compliance assurance reports  Reports of noncompliance issues and root causes",
+              "inputFrom": "MEA03.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Assurance plans",
+              "inputFrom": "MEA04.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Audit reports  Obligations",
+              "inputFrom": "Outside COBIT",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Feedback on governance effectiveness and performance",
+              "inputFrom": "string",
+              "outputTo": "All EDM; APO01.11",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
         }
       ]
     },
