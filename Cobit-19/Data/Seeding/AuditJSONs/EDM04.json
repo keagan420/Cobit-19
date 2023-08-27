@@ -423,7 +423,134 @@
       ]
 
     },
+    {
+      "componentCode": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "EDM04.01",
+          "subComponentName": " Evaluate resource management",
+          "subComponentDescription": "Continually examine and evaluate the current and future need for business and I&T resources (financial and human), options for resourcing (including sourcing strategies), and allocation and management principles to meet the needs of the enterprise in the optimal manner.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Gaps and changes required to realize target capability",
+              "inputFrom": "APO02.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Skill development plans",
+              "inputFrom": "APO07.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Decision results of vendor evaluations",
+              "inputFrom": "APO10.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Guiding principles for allocation of resources and capabilities",
+              "inputFrom": "string",
+              "outputTo": "APO02.01, APO07.01, BAI03.11",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Approved resources plan",
+              "inputFrom": "string",
+              "outputTo": "APO02.05, APO07.01, APO09.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Guiding principles for enterprise architecture",
+              "inputFrom": "string",
+              "outputTo": "APO03.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "EDM04.02",
+          "subComponentName": "Direct resource management",
+          "subComponentDescription": "Description",
 
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Principles for safeguarding resources",
+              "inputFrom": "string",
+              "outputTo": "APO01.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Assigned responsibilities for resource management",
+              "inputFrom": "string",
+              "outputTo": "APO01.05, DSS06.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Communication of resourcing strategies",
+              "inputFrom": "string",
+              "outputTo": "APO02.06, APO07.05, APO09.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "EDM04.03",
+          "subComponentName": "Monitor resource management",
+          "subComponentDescription": "Monitor the key goals and metrics of the resource management processes. Determine how deviations or problems will be identified, tracked and reported for remediation.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Feedback on allocationand effectiveness of resources andc capabilities",
+              "inputFrom": "string",
+              "outputTo": "EDM05.01, APO02.02, APO07.05, APO09.05",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Remedial actions to address resource management deviation",
+              "inputFrom": "string",
+              "outputTo": "APO02.05, APO07.01, APO07.03, APO09.04",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        }
+      ]
+    },
     {
       "componentName": "D",
       "componentDescription": "Peoples, Skills and Competencies",
