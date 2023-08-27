@@ -85,94 +85,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Definition of supervisory practices",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO01.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "IT budget • Budget communications",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO06.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Guiding principles for allocating resources and capabilities • Approved resources plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM04.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Remedial actions to address resource management deviations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM04.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Enterprise HR policies and procedures • Enterprise goals and objectives",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "Outside COBIT",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Job descriptions and personnel sourcing plans",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Staffing requirement evaluations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Competency and career development plans",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal, APO07.02",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -243,39 +155,6 @@
               "detailedReference": "SFIA and skills management—Acquire",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Competency and career development plans",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO07.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Job termination action plans",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Minimal amount of vacation guidance",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -418,116 +297,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Target skills and competencies matrix",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO01.08",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Published knowledge repositories",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI08.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Knowledge awareness and training schemes ",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI08.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Training requirements • Monitoring results of skills and competencies",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS04.06",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Reward system approach",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM01.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Remedial actions to address resource management deviations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM04.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Enterprise goals and objectives",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "Outside COBIT ",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Skills and competencies matrix",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO01.05, APO14.01, BAI01.02, BAI01.04, BAI03.12",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Skill development plans",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO01.05, EDM04.01",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Review reports",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -634,105 +403,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Recognition and reward program",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO04.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Aligned HR performance objectives",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI05.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "HR performance review results",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI05.06",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Allocated access rights",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS06.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Reward system approach",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM01.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Enterprise goals and objectives",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "Outside COBIT",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Improvement plans",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Performance evaluations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Personnel goals",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -792,105 +462,6 @@
               "detailedReference": "SFIA and skills management—Assess; Reward",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Budget allocations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO06.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Resource requirements and roles",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI01.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Project resource requirements ",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI11.08",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "EDM04.02",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "Communication of resourcing strategies",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Feedback on allocation and effectiveness capabilities",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM04.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Enterprise organization structure",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "Outside COBIT",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Inventory of business and IT human resources",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI01.04",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Resource utilization records",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI01.06",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Resourcing shortfall analyses",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI01.06",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -1000,72 +571,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Resource requirements and roles",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI01.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Communication of program retirement and ongoing accountabilities",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI01.09",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Project resource requirements",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI11.08",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Contract agreement reviews",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Contract agreements ",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Contract staff policies",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         }
@@ -1119,6 +624,557 @@
           "questionScore": 0,
           "questionComment": "comment"
         }
+      ]
+    },
+    {
+      "componentName": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "APO07.01",
+          "subComponentName": "Acquire and maintain adequate and appropriate staffing.",
+          "subComponentDescription": "Establish and maintain a method to manage and account for all I&Trelated costs, investments and depreciation as an integral part of the enterprise financial systems and accounts. Report using the enterprise’s financial measurement systems.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Definition of supervisory practices",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO01.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "IT budget • Budget communications",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO06.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Guiding principles for allocating resources and capabilities • Approved resources plan",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM04.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Remedial actions to address resource management deviations",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM04.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Enterprise HR policies and procedures • Enterprise goals and objectives",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "Outside COBIT",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Job descriptions and personnel sourcing plans",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Staffing requirement evaluations",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Competency and career development plans",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal, APO07.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO07.02",
+          "subComponentName": "Identify key IT personnel",
+          "subComponentDescription": "Identify key IT personnel. Use knowledge capture (documentation), knowledge sharing, succession planning and staff backup to minimize reliance on a single individual performing a critical job function.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Competency and career development plans",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO07.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Job termination action plans",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Minimal amount of vacation guidance",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO07.03",
+          "subComponentName": " Maintain the skills and competencies of personnel.",
+          "subComponentDescription": "Define and manage the skills and competencies required of personnel. Regularly verify that personnel have the competencies to fulfill their roles on the basis of their education, training and/or experience. Verify that these competencies are being maintained, using qualification and certification programs where appropriate. Provide employees with ongoing learning and opportunities to maintain their knowledge, skills and competencies at a level required to achieve enterprise goals.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Target skills and competencies matrix",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO01.08",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Published knowledge repositories",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI08.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Knowledge awareness and training schemes ",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI08.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Training requirements • Monitoring results of skills and competencies",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "DSS04.06",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Reward system approach",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM01.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Remedial actions to address resource management deviations",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM04.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Enterprise goals and objectives",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "Outside COBIT ",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Skills and competencies matrix",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO01.05, APO14.01, BAI01.02, BAI01.04, BAI03.12",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Skill development plans",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO01.05, EDM04.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Review reports",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO07.04",
+          "subComponentName": "Assess and recognize/reward employee job performance.",
+          "subComponentDescription": "Conduct timely, regular performance evaluations against individual objectives derived from enterprise goals, established standards, specific job responsibilities, and the skills and competency framework. Implement a remuneration/recognition process that rewards successful ttainment of performance goals.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Recognition and reward program",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO04.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Aligned HR performance objectives",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI05.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "HR performance review results",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI05.06",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Allocated access rights",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "DSS06.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Reward system approach",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM01.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Enterprise goals and objectives",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "Outside COBIT",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Improvement plans",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Performance evaluations",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Personnel goals",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO07.05",
+          "subComponentName": "Plan and track the usage of IT and business human resources.",
+          "subComponentDescription": "Understand and track the current and future demand for business and IT human resources with responsibilities for enterprise I&T. Identify shortfalls and provide input into sourcing plans, enterprise and IT recruitment processes, and business and IT recruitment processes.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Budget allocations",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO06.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Resource requirements and roles",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI01.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Project resource requirements ",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI11.08",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "EDM04.02",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "Communication of resourcing strategies",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Feedback on allocation and effectiveness capabilities",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM04.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Enterprise organization structure",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "Outside COBIT",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Inventory of business and IT human resources",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "BAI01.04",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Resource utilization records",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "BAI01.06",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Resourcing shortfall analyses",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "BAI01.06",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO07.06",
+          "subComponentName": "Manage contract staff.",
+          "subComponentDescription": "Ensure that consultants and contract personnel who support the enterprise with I&T skills know and comply with the organization’s policies and meet agreed contractual requirements.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Resource requirements and roles",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI01.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Communication of program retirement and ongoing accountabilities",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI01.09",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Project resource requirements",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI11.08",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Contract agreement reviews",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Contract agreements ",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Contract staff policies",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        }
+
       ]
     },
     {

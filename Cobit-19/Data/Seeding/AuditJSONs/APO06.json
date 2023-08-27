@@ -85,50 +85,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Asset register",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI09.01 ",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Financial planning practices",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "I&T costs classification scheme",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Accounting processes",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -188,83 +144,6 @@
               "detailedReference": "string",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Proof-of-concept scope and outline business case",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO04.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Investment return expectations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO05.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Program business case • Business case assessments",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO05.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Evaluation of investment and services portfolios ",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM02.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Actions to improve value delivery",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM02.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Budget allocations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO02.05, APO05.02, APO07.05, BAI03.11",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Prioritization and ranking of I&T initiatives",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO05.02",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -385,28 +264,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "I&T budge",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO02.05, APO05.02, APO07.01, BAI03.11",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Budget communications",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO05.02, APO07.01, BAI03.11",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -477,50 +334,6 @@
               "detailedReference": "string",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Operational procedures ",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Cost allocation communications",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Cost allocation mode",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Categorized I&T costs",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -619,84 +432,7 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Program benefit realization plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI01.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Program budget and benefits register",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI01.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Results of benefit realization monitoring",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI01.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Feedback on portfolio and program performance",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM02.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Cost optimization opportunities",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO02.02",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Cost consolidation method",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Cost data collection method",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
+            }
             {
               "questionType": "Related Guidance",
               "questionDescription": "",
@@ -712,9 +448,9 @@
           ]
         }
       ]
-        
 
-      
+
+
     },
     {
       "componentName": "B",
@@ -757,6 +493,322 @@
           "questionComment": "comment"
         }
       ]
+
+    },
+    {
+      "componentName": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "APO06.01",
+          "subComponentName": "Manage finance and accounting.",
+          "subComponentDescription": "Establish and maintain a method to manage and account for all I&T-related costs, investments and depreciation as an integral part of enterprise financial systems and accounts. Report using the enterprise’s financial measurement systems",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Asset register",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI09.01 ",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Financial planning practices",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "I&T costs classification scheme",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Accounting processes",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO06.02",
+          "subComponentName": "Prioritize resource allocation",
+          "subComponentDescription": "Implement a decision-making process to prioritize the allocation of resources and establish rules for discretionary investments by individual business units. Include the potential use of external service providers and consider the buy, develop and rent options. ",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Proof-of-concept scope and outline business case",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO04.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Investment return expectations",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO05.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Program business case • Business case assessments",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO05.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Evaluation of investment and services portfolios ",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM02.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Actions to improve value delivery",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM02.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Budget allocations",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO02.05, APO05.02, APO07.05, BAI03.11",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Prioritization and ranking of I&T initiatives",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO05.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO06.03",
+          "subComponentName": " Create and maintain budgets.",
+          "subComponentDescription": "Prepare a budget reflecting investment priorities based on the portfolio of I&T-enabled programs and I&T services.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Output",
+              "questionDescription": "I&T budge",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO02.05, APO05.02, APO07.01, BAI03.11",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Budget communications",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO05.02, APO07.01, BAI03.11",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO06.04",
+          "subComponentName": "Model and allocate costs",
+          "subComponentDescription": "Establish and use an I&T costing model based, for example, on the service definition. This approach ensures that allocation of costs for services is identifiable, measurable and predictable, and encourages the responsible use of resources, including those provided by service providers. Regularly review and benchmark the cost/chargeback model to maintain its relevance and appropriateness for evolving business and IT activities.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Output",
+              "questionDescription": "Operational procedures ",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Cost allocation communications",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Cost allocation mode",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Categorized I&T costs",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO06.05",
+          "subComponentName": "Manage costs.",
+          "subComponentDescription": "Implement a cost management process that compares actual costs against budget. Costs should be monitored and reported. Deviations from budget should be identified in a timely manner and their impact on enterprise processes and services assessed.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Program benefit realization plan",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI01.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Program budget and benefits register",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI01.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of benefit realization monitoring",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI01.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Feedback on portfolio and program performance",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM02.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Cost optimization opportunities",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO02.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Cost consolidation method",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Cost data collection method",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+
+
+          ]
+        }
+      ]
+
+
 
     },
     {

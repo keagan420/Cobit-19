@@ -52,28 +52,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Investment return expectations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO02.04, APO06.02 ,BAI01.06, EDM02.02",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Funding options",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO02.05",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -155,149 +133,6 @@
               "detailedReference": "Part 1: 1.2.3 Relationship of project, program, portfolio and operations management",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Architecture concept business case and value proposition",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO03.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Proof-of-concept scope and outline business case",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO04.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Budget allocations • Prioritization and ranking of I&T initiatives",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO06.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "IT budget • Budget communications",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO06.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Identified gaps in IT services to the business",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO09.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Service level agreements (SLAs)",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO09.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Information security business cases",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO13.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Program benefit realization plan • Program concept business case • Program mandate and brief",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI01.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Evaluation of strategic alignment • Evaluation of investment and services portfolios",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM02.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Investment types and criteria",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM02.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Program business case",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO06.02, BAI01.02",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Business case assessments",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO06.02, BAI01.06",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Selected programs with ROI milestones",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI01.04, EDM02.02",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -396,61 +231,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Evaluation of innovation benefits",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO04.06",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Stage-gate review results",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI01.06",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Evaluation of investment and services portfolios",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM02.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Feedback on portfolio and program performance • Actions to improve delivery of value",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM02.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Investment portfolio performance reports",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO09.04, BAI01.06, EDM02.03, EDM02.04, MEA01.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -502,39 +282,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Communication of program retirement and ongoing accountabilities",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI01.09",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Updated service portfolio",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI03.11",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Updated portfolios of programs, services and assets",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO09.02 ,BAI01.01",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -572,50 +319,6 @@
               "detailedReference": "string",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Program budget and benefits register",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI01.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Results of benefit realization monitoring",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI01.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Corrective actions to improve benefit realization",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO09.04, BAI01.06",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Benefit results and related communications",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO09.04, BAI01.06, EDM02.02",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -667,6 +370,351 @@
         }
       ]
 
+    },
+    {
+      "componentName": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "APO05.01",
+          "subComponentName": "Determine the availability and sources of funds.",
+          "subComponentDescription": "Determine potential sources of funds, different funding options and the implications of the funding source on the investment return expectations.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Output",
+              "questionDescription": "Investment return expectations",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO02.04, APO06.02 ,BAI01.06, EDM02.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Funding options",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO02.05",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO05.02",
+          "subComponentName": "Evaluate and select programs to fund.",
+          "subComponentDescription": "Based on requirements for the overall investment portfolio mix and the I&T strategic plan and road map, evaluate and prioritize program business cases and decide on investment proposals. Allocate funds and initiate programs",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Architecture concept business case and value proposition",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO03.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Proof-of-concept scope and outline business case",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO04.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Budget allocations • Prioritization and ranking of I&T initiatives",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO06.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "IT budget • Budget communications",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO06.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Identified gaps in IT services to the business",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO09.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Service level agreements (SLAs)",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO09.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Information security business cases",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO13.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Program benefit realization plan • Program concept business case • Program mandate and brief",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI01.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Evaluation of strategic alignment • Evaluation of investment and services portfolios",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM02.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Investment types and criteria",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM02.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Program business case",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO06.02, BAI01.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Business case assessments",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO06.02, BAI01.06",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Selected programs with ROI milestones",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "BAI01.04, EDM02.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO05.03",
+          "subComponentName": "Monitor, optimize and report on investment portfolio performance",
+          "subComponentDescription": "On a regular basis, monitor and optimize the performance of the investment portfolio and individual programs throughout the entire investment life cycle. Ensure continuous follow-up on the alignment of the portfolio with I&T strategy",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Evaluation of innovation benefits",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO04.06",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Stage-gate review results",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI01.06",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Evaluation of investment and services portfolios",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM02.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Feedback on portfolio and program performance • Actions to improve delivery of value",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM02.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Investment portfolio performance reports",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO09.04, BAI01.06, EDM02.03, EDM02.04, MEA01.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO05.04",
+          "subComponentName": "Maintain portfolios",
+          "subComponentDescription": "Maintain portfolios of investment programs and projects, I&T products and services, and I&T assets.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Communication of program retirement and ongoing accountabilities",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI01.09",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Updated service portfolio",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI03.11",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Updated portfolios of programs, services and assets",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO09.02 ,BAI01.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO05.05",
+          "subComponentName": "Manage benefits achievement",
+          "subComponentDescription": "Monitor the benefits of providing and maintaining appropriate I&T products, services and capabilities, based on the agreed and current business case.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Program budget and benefits register",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI01.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of benefit realization monitoring",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI01.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Corrective actions to improve benefit realization",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO09.04, BAI01.06",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Benefit results and related communications",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO09.04, BAI01.06, EDM02.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        }
+
+      ]
     },
     {
       "componentName": "D",

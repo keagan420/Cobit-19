@@ -11,8 +11,8 @@
   "maturityLevel5PercFinal": 0,
   "components": [
     {
-      "componentName": "Processes",
-      "componentDescription": "Component description",
+      "componentName": "A",
+      "componentDescription": "Processes",
       "componentPercFinal": 0,
       "subComponents": [
         {
@@ -170,72 +170,6 @@
               "detailedReference": "6. Phase A: Architecture Vision",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Strategic road map",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO02.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Guiding principles for enterprise architecture",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "EDM04.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Enterprise strategy",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "Outside COBIT ",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Defined scope of architecture",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO02.05",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Architecture concept business case and value proposition",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO02.05, APO05.02",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Architecture principles",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI02.0, BAI03.01, BAI03.02",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -400,105 +334,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Definition of organizational structure and functions • Enterprise operational guidelines",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO01.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Evaluation of options for IT organization • Defined operational placement of IT function",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO01.06",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Data classification guidelines",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO01.07",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Data management strategy",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO14.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Metadata documentation ",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO14.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Enterprise strategy",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "Outside COBIT",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Process architecture model",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO01.04",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Information architecture model",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO02.05, APO14.03, BAI02.01, BAI03.02, DSS05.03, DSS05.04, DSS05.06",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Baseline domain descriptions and architecture definition",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO13.02, BAI02.01, BAI03.01, BAI03.02 BAI03.12",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -638,39 +473,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Proposed enterprise architecture changes",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO02.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Enterprise drivers • Enterprise strategies",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "Outside COBIT",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Transition architectures",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO02.05",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -741,39 +543,6 @@
               "detailedReference": "13. Phase F: Migration Planning",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Implementation phase descriptions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI01.01, BAI01.02, BAI11.01",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Architecture governance requirements",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI01.01, BAI11.01",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Resource requirements",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI01.02",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -872,18 +641,8 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Solution development guidance",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI02.01, BAI02.02, BAI03.02, BAI03.12",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
+          
           ]
         }
 
@@ -931,7 +690,296 @@
         }
       ]
     },
+    {
+      "componentName": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "APO03.02",
+          "subComponentName": "Define reference architecture.",
+          "subComponentDescription": "The reference architecture describes the current and target architectures for the business, information, data, application and technology domains.",
+          "subComponentQuestions": [
 
+            {
+              "questionType": "Input",
+              "questionDescription": "Strategic road map",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO02.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Guiding principles for enterprise architecture",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "EDM04.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Enterprise strategy",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "Outside COBIT ",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Defined scope of architecture",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO02.05",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Architecture concept business case and value proposition",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO02.05, APO05.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Architecture principles",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "BAI02.0, BAI03.01, BAI03.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO03.02",
+          "subComponentName": "Define reference architecture.",
+          "subComponentDescription": "The reference architecture describes the current and target architectures for the business, information, data, application and technology domains.",
+          "subComponentQuestions": [
+         
+            {
+              "questionType": "Input",
+              "questionDescription": "Definition of organizational structure and functions • Enterprise operational guidelines",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO01.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Evaluation of options for IT organization • Defined operational placement of IT function",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO01.06",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Data classification guidelines",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO01.07",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Data management strategy",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO14.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Metadata documentation ",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO14.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Enterprise strategy",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "Outside COBIT",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Process architecture model",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO01.04",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Information architecture model",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO02.05, APO14.03, BAI02.01, BAI03.02, DSS05.03, DSS05.04, DSS05.06",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Baseline domain descriptions and architecture definition",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO13.02, BAI02.01, BAI03.01, BAI03.02 BAI03.12",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO03.03",
+          "subComponentName": "Select opportunities and solutions",
+          "subComponentDescription": "Rationalize the gaps between baseline and target architectures, accounting for both business and technical perspectives, and logically group them into project work packages. Integrate the project with any related I&T-enabled investment programs to ensure that the architectural initiatives are aligned with and enable these initiatives as part of overall enterprise change. Make this a collaborative effort with key enterprise stakeholders from business and IT to assess the enterprise’s transformation readiness, and identify opportunities, solutions and all implementation constraints",
+          "subComponentQuestions": [
+         
+            {
+              "questionType": "Input",
+              "questionDescription": "Proposed enterprise architecture changes",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO02.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Enterprise drivers • Enterprise strategies",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "Outside COBIT",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Transition architectures",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO02.05",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO03.04",
+          "subComponentName": "Define architecture implementation. ",
+          "subComponentDescription": "Create a viable implementation and migration plan in alignment with the program and project portfolios. Ensure the plan is closely coordinated to deliver value and that the required resources are available to complete the necessary work.",
+          "subComponentQuestions": [
+           
+            {
+              "questionType": "Output",
+              "questionDescription": "Implementation phase descriptions",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "BAI01.01, BAI01.02, BAI11.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Architecture governance requirements",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "BAI01.01, BAI11.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Resource requirements",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "BAI01.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO03.05",
+          "subComponentName": "Provide enterprise architecture services.",
+          "subComponentDescription": "Provide enterprise architecture services within the enterprise that include guidance to and monitoring of implementation projects, formalizing ways of working through architecture contracts, and measuring and communicating architecture’s value and compliance monitoring.",
+          "subComponentQuestions": [
+       
+            {
+              "questionType": "Output",
+              "questionDescription": "Solution development guidance",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "BAI02.01, BAI02.02, BAI03.02, BAI03.12",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        }
+
+      ]
+    },
     {
       "componentName": "D",
       "componentDescription": "Peoples, Skills and Competencies",

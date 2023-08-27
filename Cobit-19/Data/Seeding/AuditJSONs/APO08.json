@@ -96,28 +96,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Strategic road map",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO02.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Clarified and agreed business expectations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -155,50 +133,6 @@
               "detailedReference": "Service Strategy, 4.4 Demand management",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Identified gaps in IT services to the business",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO09.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Service level performance reports • Improvement action plans and remediations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO09.04 ",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Root causes of failure to deliver quality",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO11.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Agreed next steps and action plans",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -286,61 +220,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Classified and prioritized incidents and service requests",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS02.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": " Closed service requests and incidents • User confirmation of satisfactory fulfilment or resolution ",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS02.06",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Incident status and trends report • Request fulfilment status and trends report",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS02.07",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Complaint and escalation status",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Agreed key decisions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -392,105 +271,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Service level agreements (SLAs) ",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO09.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Risk impact communication",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO12.06",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Operation and use plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI05.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Supplemental support plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI07.07",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Communications of planned maintenance downtime",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI09.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Communication of knowledge learned",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS03.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Customer responses ",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Communication packages",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Communication plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -528,105 +308,6 @@
               "detailedReference": "string",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Service catalogs",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO09.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Customer requirements for quality management • Results of quality of service, including customer feedback",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO11.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Results of quality monitoring for solution and service delivery",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO11.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Results of quality reviews and audits",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO11.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Maintenance plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI03.10",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Success measures and results",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI05.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow in",
-              "questionDescription": "Supplemental support plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI07.07",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Definition of potential improvement projects",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO02.02, BAI03.11",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Information flow out",
-              "questionDescription": "Satisfaction analyses",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO09.04",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -679,6 +360,374 @@
         }
       ]
 
+    },
+    {
+      "componentName": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "APO08.01",
+          "subComponentName": "Understand business expectations.",
+          "subComponentDescription": "Understand current business issues, objectives and expectations for I&T. Ensure that requirements are understood, managed and communicated, and their status agreed and approved.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Strategic road map",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO02.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Clarified and agreed business expectations",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO08.02",
+          "subComponentName": "Align I&T strategy with business expectations and identify opportunities for IT to enhance the business",
+          "subComponentDescription": "Align I&T strategies with current business objectives and expectations to enable IT to be a value-add partner for the business and a governance component for enhanced enterprise performance",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Identified gaps in IT services to the business",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO09.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Service level performance reports • Improvement action plans and remediations",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO09.04 ",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Root causes of failure to deliver quality",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO11.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Agreed next steps and action plans",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO08.03",
+          "subComponentName": "Manage the business relationship.",
+          "subComponentDescription": "Manage the relationship between the IT service organization and its business partners. Ensure that relationship roles and responsibilities are defined and assigned, and communication is facilitated.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Classified and prioritized incidents and service requests",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "DSS02.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": " Closed service requests and incidents • User confirmation of satisfactory fulfilment or resolution ",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "DSS02.06",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Incident status and trends report • Request fulfilment status and trends report",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "DSS02.07",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Complaint and escalation status",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Agreed key decisions",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO08.03",
+          "subComponentName": "Coordinate and communicate",
+          "subComponentDescription": "Work with all relevant stakeholders and coordinate the end-to-end delivery of I&T services and solutions provided to the business.",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Service level agreements (SLAs) ",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO09.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Risk impact communication",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO12.06",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Operation and use plan",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI05.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Supplemental support plan",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI07.07",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Communications of planned maintenance downtime",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI09.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Communication of knowledge learned",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "DSS03.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Customer responses ",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Communication packages",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Communication plan",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO08.05",
+          "subComponentName": " Provide input to the continual improvement of services",
+          "subComponentDescription": "Continually improve and evolve I&T-enabled services and service delivery to the enterprise to align with changing enterprise objectives and technology ",
+          "subComponentQuestions": [
+
+            {
+              "questionType": "Input",
+              "questionDescription": "Service catalogs",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO09.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Customer requirements for quality management • Results of quality of service, including customer feedback",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO11.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of quality monitoring for solution and service delivery",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO11.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of quality reviews and audits",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO11.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Maintenance plan",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI03.10",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Success measures and results",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI05.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Supplemental support plan",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "BAI07.07",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Definition of potential improvement projects",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO02.02, BAI03.11",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Satisfaction analyses",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO09.04",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+
+          ]
+        }
+
+      ]
     },
     {
       "componentName": "D",
