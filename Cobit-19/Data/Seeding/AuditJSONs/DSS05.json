@@ -129,28 +129,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Malicious software prevention policy",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO01.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Evaluations of potential threats",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO12.02; APO12.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -323,50 +301,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Data classification guidelines",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO01.07",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "SLAs",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO09.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Connectivity security policy",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO01.02",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Results of penetration tests",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "MEA04.07",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -492,61 +426,6 @@
               "detailedReference": "11. Physical and environmental security",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Information architecture model",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO03.02",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "SLAs, OLAs",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO09.03",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Results of physical inventory checks",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI09.01",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Reports of violations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS06.06",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Security policies for endpoint devices",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO01.02",
-              "outputTo": "string",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -711,50 +590,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Definition of I&T-related roles and responsibilities",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO01.05",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Information architecture model",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO03.02",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Results of reviews of user accounts and privileges",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Approved user access rights",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -883,28 +718,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Access logs",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "DSS06.03, MEA04.07",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Approved access requests",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -1022,39 +835,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Information architecture model",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO03.02",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Access privileges",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Inventory of sensitive documents and devices",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -1150,39 +930,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Security incident tickets",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "DSS02.02",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Security incident characteristics",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Security event logs",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         }
@@ -1241,6 +988,269 @@
           "questionAnswer": 0,
           "questionScore": 0,
           "questionComment": "comment"
+        }
+      ]
+    },
+    {
+      "componentCode": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "DSS05.01",
+          "subComponentName": "Protect against malicious software.",
+          "subComponentDescription": "Implement and maintain preventive, detective and corrective measures (especially up-to-date security patches and virus control) across the enterprise to protect information systems and technology from malicious software (e.g., ransomware, malware, viruses, worms, spyware, spam).",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Malicious software prevention policy",
+              "inputFrom": "APO01.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Evaluations of potential threats",
+              "inputFrom": "APO12.02; APO12.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "DSS05.02",
+          "subComponentName": "Manage network and connectivity security.",
+          "subComponentDescription": "Use security measures and related management procedures to protect information over all methods of connectivity.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Data classification guidelines",
+              "inputFrom": "APO01.07",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "SLAs",
+              "inputFrom": "APO09.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Connectivity security policy",
+              "inputFrom": "string",
+              "outputTo": "APO01.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Results of penetration tests",
+              "inputFrom": "string",
+              "outputTo": "MEA04.07",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "DSS05.03",
+          "subComponentName": "Manage endpoint security.",
+          "subComponentDescription": "Ensure that endpoints (e.g., laptop, desktop, server, and other mobile and network devices or software) are secured at a level that is equal to or greater than the defined security requirements for the information processed, stored or transmitted.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Information architecture model",
+              "inputFrom": "APO03.02",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "SLAs, OLAs",
+              "inputFrom": "APO09.03",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of physical inventory checks",
+              "inputFrom": "BAI09.01",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Reports of violations",
+              "inputFrom": "DSS06.06",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Security policies for endpoint devices",
+              "inputFrom": "APO01.02",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "DSS05.04",
+          "subComponentName": "Manage user identity and logical access.",
+          "subComponentDescription": "Ensure that all users have information access rights in accordance with business requirements. Coordinate with business units that manage their own access rights within business processes.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Definition of I&T-related roles and responsibilities",
+              "inputFrom": "APO01.05",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Information architecture model",
+              "inputFrom": "APO03.02",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Results of reviews of user accounts and privileges",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Approved user access rights",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "DSS05.05",
+          "subComponentName": "Manage physical access to I&T assets.",
+          "subComponentDescription": "Define and implement procedures (including emergency procedures) to grant, limit and revoke access to premises, buildings and areas, according to business need. Access to premises, buildings and areas should be justified, authorized, logged and monitored. This requirement applies to all persons entering the premises, including staff, temporary staff, clients, vendors, visitors or any other third party.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Access logs",
+              "inputFrom": "string",
+              "outputTo": "DSS06.03, MEA04.07",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Approved access requests",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "DSS05.06",
+          "subComponentName": "Manage sensitive documents and output devices.",
+          "subComponentDescription": "Establish appropriate physical safeguards, accounting practices and inventory management regarding sensitive I&T assets, such as special forms, negotiable instruments, special-purpose printers or security tokens.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Information architecture model",
+              "inputFrom": "APO03.02",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Access privileges",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Inventory of sensitive documents and devices",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "DSS05.07",
+          "subComponentName": "Manage vulnerabilities and monitor the infrastructure for security-related events.",
+          "subComponentDescription": "Using a portfolio of tools and technologies (e.g., intrusion detection tools), manage vulnerabilities and monitor the infrastructure for unauthorized access. Ensure that security tools, technologies and detection are integrated with general event monitoring and incident management.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Security incident tickets",
+              "inputFrom": "string",
+              "outputTo": "DSS02.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Security incident characteristics",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Security event logs",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
         }
       ]
     },

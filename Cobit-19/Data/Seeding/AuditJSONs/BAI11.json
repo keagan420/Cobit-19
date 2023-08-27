@@ -117,39 +117,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Release plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI07.06",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Logical configuration model",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Scope of configuration management model",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -245,28 +212,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Project definitions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Project scope statements",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -315,28 +260,6 @@
               "detailedReference": "Part 1: 13. Project stakeholder management. Part 1: 10. Project communications management",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Results of stakeholder engagement effectiveness assessments",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Stakeholder engagement plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -424,50 +347,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "BAI07.03",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI07.03",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Project reports and communications",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Project baseline",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Project plans",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -527,50 +406,6 @@
               "detailedReference": "Part 1: 8. Project quality management",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Quality management plans",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO11.01",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Customer requirements for quality management",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO11.02",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Project quality management plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI02.04;BAI03.06;BAI07.01",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Requirements for independent verification of project deliverables",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI07.03",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -666,72 +501,6 @@
               "detailedReference": "Part 1: 11. Project risk management",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Risk analysis results",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO12.02",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "• Requirements risk register and Risk mitigation actions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI02.03",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Enterprise risk management (ERM) framework",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "Outside COBIT",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Project risk register",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Project risk assessment results",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Project risk management plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -863,39 +632,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Agreed changes to project",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Project progress reports",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO11.02",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Project performance criteria",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -991,39 +727,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Project resource requirements",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO07.05;APO07.06",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Gaps in project planning",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Project roles and responsibilitieas",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -1094,50 +797,6 @@
               "detailedReference": "Part 1: 4.7 Close project or phase",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Post-implementation review report and Remedial action plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI07.08",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Post-implementation review results",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO02.04",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Stakeholder project acceptance confirmations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Project lessons learned",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -1213,6 +872,355 @@
           "questionAnswer": 0,
           "questionScore": 0,
           "questionComment": "comment"
+        }
+      ]
+    },
+    {
+      "componentCode": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "BAI11.01",
+          "subComponentName": "Maintain a standard approach for project management.",
+          "subComponentDescription": "Maintain a standard approach for project management that enables governance and management review, decision-making and delivery management activities. These activities should focus consistently on business value and goals (i.e., requirements, risk, costs, schedule and quality targets).",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Release plan",
+              "inputFrom": "BAI07.06",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Logical configuration model",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Scope of configuration management model",
+              "inputFrom": "",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "BAI11.02",
+          "subComponentName": "Start up and initiate a project.",
+          "subComponentDescription": "Define and document the nature and scope of the project to confirm and develop a common understanding of project scope among stakeholders. The definition should be formally approved by the project sponsors.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Project definitions",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Project scope statements",
+              "inputFrom": "",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "BAI11.03",
+          "subComponentName": "Manage stakeholder engagement.",
+          "subComponentDescription": "Manage stakeholder engagement to ensure an active exchange of accurate, consistent and timely information that reaches all relevant stakeholders. This includes planning, identifying and engaging stakeholders and managing their expectations.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Results of stakeholder engagement effectiveness assessments",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Stakeholder engagement plan",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "BAI11.04",
+          "subComponentName": "Develop and maintain the project plan.",
+          "subComponentDescription": "Establish and maintain a formal, approved, integrated project plan (covering business and IT resources) to guide project execution and control throughout the life of the project. The scope of projects should be clearly defined and tied to building or enhancing business capability.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "BAI07.03",
+              "inputFrom": "BAI07.03",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Project reports and communications",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Project baseline",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Project plans",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "BAI11.05",
+          "subComponentName": "Manage project quality.",
+          "subComponentDescription": "Prepare and execute a quality management plan, processes and practices that align with quality management standards (QMS). Describe the approach to project quality and implementation. The plan should be formally reviewed and agreed on by all parties concerned and incorporated into the integrated project plans.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Quality management plans",
+              "inputFrom": "APO11.01",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Customer requirements for quality management",
+              "inputFrom": "APO11.02",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Project quality management plan",
+              "inputFrom": "string",
+              "outputTo": "BAI02.04;BAI03.06;BAI07.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Requirements for independent verification of project deliverables",
+              "inputFrom": "string",
+              "outputTo": "BAI07.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "BAI11.06",
+          "subComponentName": "Manage project risk.",
+          "subComponentDescription": "Eliminate or minimize specific risk associated with projects through a systematic process of planning, identifying, analyzing, responding to, monitoring and controlling the areas or events with potential to cause unwanted change. Define and record any risk faced by project management.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Risk analysis results",
+              "inputFrom": "APO12.02",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "• Requirements risk register and Risk mitigation actions",
+              "inputFrom": "BAI02.03",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Enterprise risk management (ERM) framework",
+              "inputFrom": "Outside COBIT",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Project risk register",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Project risk assessment results",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Project risk management plan",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "BAI11.07",
+          "subComponentName": "Monitor and control projects.",
+          "subComponentDescription": "Measure project performance against key project performance criteria such as schedule, quality, cost and risk. Identify any deviations from expected targets. Assess the impact of deviations on the project and overall program and report results to key stakeholders.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Agreed changes to project",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Project progress reports",
+              "inputFrom": "APO11.02",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Project performance criteria",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "BAI11.08",
+          "subComponentName": "Manage project resources and work packages.",
+          "subComponentDescription": "Manage project work packages by placing formal requirements on authorizing and accepting work packages and assigning and coordinating appropriate business and IT resources.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Project resource requirements",
+              "inputFrom": "string",
+              "outputTo": "APO07.05;APO07.06",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Gaps in project planning",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Project roles and responsibilitieas",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "BAI11.09",
+          "subComponentName": "Close a project or iteration.",
+          "subComponentDescription": "At the end of each project, release or iteration, require the project stakeholders to ascertain whether the project, release or iteration delivered the required results in terms of capabilities and contributed as expected to program benefits. Identify and communicate any outstanding activities required to achieve planned results of the project and/or benefits of the program. Identify and document lessons learned for future projects, releases, iterations and programs.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Post-implementation review report and Remedial action plan",
+              "inputFrom": "BAI07.08",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Post-implementation review results",
+              "inputFrom": "string",
+              "outputTo": "APO02.04",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Stakeholder project acceptance confirmations",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Project lessons learned",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
         }
       ]
     },

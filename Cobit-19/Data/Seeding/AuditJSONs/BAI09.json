@@ -140,61 +140,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Updates to asset inventory",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI03.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Configuration repository",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI10.02",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Results of fit-for-purpose reviews",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO02.02",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Asset register",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "",
-              "outputTo": "APO06.01;BAI10.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Results of physical inventory checks",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "",
-              "outputTo": "BAI10.03;BAI10.04;DSS05.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -320,28 +265,6 @@
               "detailedReference": "3.13 Physical and environmental protection (PE-20)",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Communications of planned maintenance downtime",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO08.04",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Maintenance agreements",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "",
-              "outputTo": "Internal",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -495,39 +418,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Authorized asset retirements",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI10.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Updated asset register,",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI10.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Approved asset procurement requests",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -598,28 +488,6 @@
               "detailedReference": "string",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Opportunities to reduce asset costs or increase value",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO02.02",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Results of cost-optimization reviews",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO02.02",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -696,39 +564,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Action plan to adjust license numbers and allocations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO02.05",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Register of software licenses",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI10.02",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Results of installed license audits",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "MEA03.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         }
@@ -773,6 +608,183 @@
           "questionAnswer": 0,
           "questionScore": 0,
           "questionComment": "comment"
+        }
+      ]
+    },
+    {
+      "componentCode": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "BAI09.01",
+          "subComponentName": "Identify and record current assets.",
+          "subComponentDescription": "Maintain an up-to-date, accurate record of all I&T assets that are required to deliver services and that are owned or controlled by the organization with an expectation of future benefit (including resources with economic value, such as hardware or software). Ensure alignment with configuration management and financial management.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Updates to asset inventory",
+              "inputFrom": "BAI03.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Configuration repository",
+              "inputFrom": "BAI10.02",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Results of fit-for-purpose reviews",
+              "inputFrom": "string",
+              "outputTo": "APO02.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Asset register",
+              "inputFrom": "",
+              "outputTo": "APO06.01;BAI10.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Results of physical inventory checks",
+              "inputFrom": "",
+              "outputTo": "BAI10.03;BAI10.04;DSS05.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "BAI09.02",
+          "subComponentName": "Manage critical assets.",
+          "subComponentDescription": "Identify assets that are critical in providing service capability. Maximize their reliability and availability to support business needs.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Communications of planned maintenance downtime",
+              "inputFrom": "string",
+              "outputTo": "APO08.04",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Maintenance agreements",
+              "inputFrom": "",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "BAI09.03",
+          "subComponentName": "Manage the asset life cycle.",
+          "subComponentDescription": "Manage assets from procurement to disposal. Ensure that assets are utilized as effectively and efficiently as possible and are accounted for and physically protected until appropriately retired.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Authorized asset retirements",
+              "inputFrom": "string",
+              "outputTo": "BAI10.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Updated asset register,",
+              "inputFrom": "string",
+              "outputTo": "BAI10.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Approved asset procurement requests",
+              "inputFrom": "",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "BAI09.04",
+          "subComponentName": "Optimize asset value.",
+          "subComponentDescription": "Regularly review the overall asset base to identify ways to optimize value in alignment with business needs",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Opportunities to reduce asset costs or increase value",
+              "inputFrom": "string",
+              "outputTo": "APO02.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Results of cost-optimization reviews",
+              "inputFrom": "string",
+              "outputTo": "APO02.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "BAI09.05",
+          "subComponentName": "Manage licenses.",
+          "subComponentDescription": "Manage software licenses to maintain the optimal number of licenses and support business requirements. Ensure that the number of licenses owned is sufficient to cover the installed software in use.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Action plan to adjust license numbers and allocations",
+              "inputFrom": "string",
+              "outputTo": "APO02.05",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Register of software licenses",
+              "inputFrom": "string",
+              "outputTo": "BAI10.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Results of installed license audits",
+              "inputFrom": "string",
+              "outputTo": "MEA03.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
         }
       ]
     },

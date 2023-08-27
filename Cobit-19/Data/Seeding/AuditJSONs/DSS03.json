@@ -96,116 +96,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "SLAs",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO09.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Configuration repository",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI10.02",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Updated repository with configuration items",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI10.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Configuration status reports",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI10.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Asset monitoring rules and event conditions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS01.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Problem classification scheme",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS03.01",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Incident response actions and communications",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS04.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Criteria for problem registration",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "DSS03.01",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Rules for incident escalation",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Incident and service request classification schemes and models",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -246,39 +136,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Risk-related root causes",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO12.06",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Problem resolution reports",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "DSS02.07",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Root causes of problems",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal; DSS03.05",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -305,50 +162,6 @@
               "detailedReference": "string",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Risk-related root causes",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO12.06",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Incident resolutions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS02.05",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Proposed solutions to known errors",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI06.01",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Known error records",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "DSS02.05",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -422,50 +235,6 @@
               "detailedReference": "string",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Incident resolutions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "DSS02.05",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Closed service requests and incidents",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "DSS02.06",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Communication of knowledge learned",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO08.04; DSS02.05",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Closed problem records",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "DSS02.06",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -564,61 +333,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Risk-related root causes",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO12.06",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "• Classified and prioritized incidents and service requests, Incident resolutions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS02.02",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Root causes of problems",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS03.04",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Identified sustainable solutions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "BAI06.01",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Problem resolution monitoring reports",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "DSS02.07, MEA04.07",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         }
@@ -663,6 +377,282 @@
           "questionAnswer": 0,
           "questionScore": 0,
           "questionComment": "comment"
+        }
+      ]
+    },
+    {
+      "componentCode": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "DSS03.01",
+          "subComponentName": "Identify and classify problems.",
+          "subComponentDescription": "Define and implement criteria and procedures to identify and report problems. Include problem classification, categorization and prioritization.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "SLAs",
+              "inputFrom": "APO09.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Configuration repository",
+              "inputFrom": "BAI10.02",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Updated repository with configuration items",
+              "inputFrom": "BAI10.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Configuration status reports",
+              "inputFrom": "BAI10.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Asset monitoring rules and event conditions",
+              "inputFrom": "DSS01.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Problem classification scheme",
+              "inputFrom": "DSS03.01",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Incident response actions and communications",
+              "inputFrom": "DSS04.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Criteria for problem registration",
+              "inputFrom": "string",
+              "outputTo": "DSS03.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Rules for incident escalation",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Incident and service request classification schemes and models",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "DSS03.02",
+          "subComponentName": "Investigate and diagnose problems.",
+          "subComponentDescription": "Investigate and diagnose problems using relevant subject matter experts to assess and analyze root causes.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Risk-related root causes",
+              "inputFrom": "APO12.06",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Problem resolution reports",
+              "inputFrom": "string",
+              "outputTo": "DSS02.07",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Root causes of problems",
+              "inputFrom": "string",
+              "outputTo": "Internal; DSS03.05",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "DSS03.03",
+          "subComponentName": "Raise known errors.",
+          "subComponentDescription": "As soon as root causes of problems are identified, create known-error records, document appropriate workarounds and identify potential solutions.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Risk-related root causes",
+              "inputFrom": "APO12.06",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Incident resolutions",
+              "inputFrom": "DSS02.05",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Proposed solutions to known errors",
+              "inputFrom": "string",
+              "outputTo": "BAI06.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Known error records",
+              "inputFrom": "string",
+              "outputTo": "DSS02.05",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "DSS03.04",
+          "subComponentName": "Resolve and close problems.",
+          "subComponentDescription": "Identify and initiate sustainable solutions addressing the root cause. Raise change requests via the established change management process, if required, to resolve errors. Ensure that the personnel affected are aware of the actions taken and the plans developed to prevent future incidents from occurring.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Incident resolutions",
+              "inputFrom": "string",
+              "outputTo": "DSS02.05",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Closed service requests and incidents",
+              "inputFrom": "string",
+              "outputTo": "DSS02.06",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Communication of knowledge learned",
+              "inputFrom": "string",
+              "outputTo": "APO08.04; DSS02.05",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Closed problem records",
+              "inputFrom": "string",
+              "outputTo": "DSS02.06",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "DSS03.05",
+          "subComponentName": "Perform proactive problem management.",
+          "subComponentDescription": "Collect and analyze operational data (especially incident and change records) to identify emerging trends that may indicate problems. Log problem records to enable assessment.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Risk-related root causes",
+              "inputFrom": "APO12.06",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "• Classified and prioritized incidents and service requests, Incident resolutions",
+              "inputFrom": "DSS02.02",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Root causes of problems",
+              "inputFrom": "DSS03.04",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Identified sustainable solutions",
+              "inputFrom": "string",
+              "outputTo": "BAI06.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Problem resolution monitoring reports",
+              "inputFrom": "string",
+              "outputTo": "DSS02.07, MEA04.07",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
         }
       ]
     },

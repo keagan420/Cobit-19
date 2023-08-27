@@ -129,39 +129,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Legal and regulatory compliance requirements",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "Outside COBIT",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Log of required compliance actions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Compliance requirements register",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -199,28 +166,6 @@
               "detailedReference": "Part 5.4: Governance functional areas - Principle 13",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Communications of changed compliance requirements",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All APO; All BAI; All DSS; All MEA; EDM01.01",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Updated policies, principles, procedures and standards",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO01.09; APO01.11",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -283,72 +228,6 @@
               "detailedReference": "string",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Compliance audit results",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI05.06",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Results of installed license audits",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI09.05",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "License deviations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI10.05",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Insurance policy reports",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "DSS01.04",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Compliance confirmations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "EDM01.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Identified compliance gaps",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "MEA04.08",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -447,50 +326,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Rules for validating and approving mandatory reports",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "EDM05.02",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Assessment of reporting effectiveness",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "EDM05.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Compliance assurance reports",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "EDM01.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Reports of noncompliance issues and root causes",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "EDM01.03;MEA04.04",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         }
@@ -528,6 +363,177 @@
           "questionAnswer": 0,
           "questionScore": 0,
           "questionComment": "comment"
+        }
+      ]
+    },
+    {
+      "componentCode": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "MEA03.01",
+          "subComponentName": "Identify external compliance requirements.",
+          "subComponentDescription": "On a continuous basis, monitor changes in local and international laws, regulations and other external requirements and identify mandates for compliance from an I&T perspective.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Legal and regulatory compliance requirements",
+              "inputFrom": "Outside COBIT",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Log of required compliance actions",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Compliance requirements register",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "MEA03.02",
+          "subComponentName": "Optimize response to external requirements.",
+          "subComponentDescription": "Description",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Communications of changed compliance requirements",
+              "inputFrom": "string",
+              "outputTo": "All APO; All BAI; All DSS; All MEA; EDM01.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Updated policies, principles, procedures and standards",
+              "inputFrom": "string",
+              "outputTo": "APO01.09; APO01.11",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "MEA03.03",
+          "subComponentName": "Confirm external compliance.",
+          "subComponentDescription": "Confirm compliance of policies, principles, standards, procedures and methodologies with legal, regulatory and contractual requirements.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Compliance audit results",
+              "inputFrom": "BAI05.06",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of installed license audits",
+              "inputFrom": "BAI09.05",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "License deviations",
+              "inputFrom": "BAI10.05",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Insurance policy reports",
+              "inputFrom": "DSS01.04",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Compliance confirmations",
+              "inputFrom": "string",
+              "outputTo": "EDM01.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Identified compliance gaps",
+
+              "inputFrom": "string",
+              "outputTo": "MEA04.08",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "MEA03.04",
+          "subComponentName": "Obtain assurance of external compliance.",
+          "subComponentDescription": "Obtain and report assurance of compliance and adherence with policies, principles, standards, procedures and methodologies. Confirm that corrective actions to address compliance gaps are closed in a timely manner.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Rules for validating and approving mandatory reports",
+              "inputFrom": "string",
+              "outputTo": "EDM05.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Assessment of reporting effectiveness",
+              "inputFrom": "string",
+              "outputTo": "EDM05.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Compliance assurance reports",
+              "inputFrom": "string",
+              "outputTo": "EDM01.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Reports of noncompliance issues and root causes",
+              "inputFrom": "string",
+              "outputTo": "EDM01.03;MEA04.04",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
         }
       ]
     },

@@ -117,39 +117,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Operation and use plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI05.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Backup log",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Operational schedule",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -220,39 +187,6 @@
               "detailedReference": "4.2 Governance of processes operated by other parties",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "SLAs, OLAs",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO09.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Operation and use plan",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI05.05",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Independent assurance plans",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "MEA04.02",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -337,50 +271,6 @@
               "detailedReference": "3.10 Maintenance (MA-2, MA-3)",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Service definitions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI03.11",
-              "outputTo": "string",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Asset monitoring rules and event conditions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "DSS02.01;DSS02.02",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Incident tickets",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "DSS02.02",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Event logs",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -476,28 +366,6 @@
               "detailedReference": "2.1 System and system elements; 3.2 Categorization (Task 5, 6)",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Environmental policies",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO01.09",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Insurance policy reports",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "MEA03.03",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -629,28 +497,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Health and safety awareness",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Facilities assessment reports",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "MEA01.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         }
@@ -695,6 +541,174 @@
           "questionAnswer": 0,
           "questionScore": 0,
           "questionComment": "comment"
+        }
+      ]
+    },
+    {
+      "componentCode": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "DSS01.01",
+          "subComponentName": "Perform operational procedures.",
+          "subComponentDescription": "Maintain and perform operational procedures and operational tasks reliably and consistently.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Operation and use plan",
+              "inputFrom": "BAI05.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Backup log",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Operational schedule",
+              "inputFrom": "",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "DSS01.02",
+          "subComponentName": "Manage outsourced I&T services.",
+          "subComponentDescription": "Manage the operation of outsourced I&T services to maintain the protection of enterprise information and reliability of service delivery.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "SLAs, OLAs",
+              "inputFrom": "APO09.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Operation and use plan",
+              "inputFrom": "BAI05.05",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Independent assurance plans",
+              "inputFrom": "string",
+              "outputTo": "MEA04.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "DSS01.03",
+          "subComponentName": "Monitor I&T infrastructure.",
+          "subComponentDescription": "Monitor the I&T infrastructure and related events. Store sufficient chronological information in operations logs to reconstruct and review time sequences of operations and other activities surrounding or supporting operations.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Service definitions",
+              "inputFrom": "BAI03.11",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Asset monitoring rules and event conditions",
+              "inputFrom": "string",
+              "outputTo": "DSS02.01;DSS02.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Incident tickets",
+              "inputFrom": "string",
+              "outputTo": "DSS02.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Event logs",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "DSS01.04",
+          "subComponentName": "Manage the environment.",
+          "subComponentDescription": "Maintain measures for protection against environmental factors. Install specialized equipment and devices to monitor and control the environment.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Environmental policies",
+              "inputFrom": "string",
+              "outputTo": "APO01.09",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Insurance policy reports",
+              "inputFrom": "string",
+              "outputTo": "MEA03.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "DSS01.05",
+          "subComponentName": "Manage facilities.",
+          "subComponentDescription": "Manage facilities, including power and communications equipment, in line with laws and regulations, technical and business requirements, vendor specifications, and health and safety guidelines.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Health and safety awareness",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Facilities assessment reports",
+              "inputFrom": "string",
+              "outputTo": "MEA01.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
         }
       ]
     },

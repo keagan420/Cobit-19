@@ -129,61 +129,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Results of third-party risk assessments",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO12.04",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Information security management system (ISMS) audit reports",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "APO13.03",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Industry standards and good practices",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "Outside COBIT",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Results of benchmarking and other evaluations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All APO; All BAI; All DSS; All MEA; EDM01.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Results of internal control monitoring and reviews",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All APO; All BAI; All DSS; All MEA; EDM01.03,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -243,39 +188,6 @@
               "detailedReference": "string",
               "inputFrom": "string",
               "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Compliance audit results",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI05.06",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Reviews of operational use",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "BAI05.07",
-              "outputTo": "string,",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Evidence of control effectiveness",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
@@ -374,39 +286,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Self-assessment plans and criteria",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All APO; All BAI;All DSS; All MEA",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Results of reviews of self-assessments",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All APO; All BAI;All DSS; All MEA; EDM01.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Results of self-assessments",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "Internal",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         },
@@ -480,72 +359,6 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Root causes of failure to deliver quality",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO11.03",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Risk-related root causes",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "APO12.06",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Results of processing effectiveness reviews, Root cause analyses and recommendations",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "DSS06.01",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Input",
-              "questionDescription": "Evidence of error correction and remediation",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "DSS06.04",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Remedial actions",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All APO; All BAI; All DSS; All MEA",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
-            },
-            {
-              "questionType": "Output",
-              "questionDescription": "Control deficiencies",
-              "relatedGuidance": "string",
-              "detailedReference": "string",
-              "inputFrom": "string",
-              "outputTo": "All APO; All BAI; All DSS; All MEA",
-              "questionAnswer": 0,
-              "questionScore": 0,
-              "questionComment": "comment"
             }
           ]
         }
@@ -583,6 +396,196 @@
           "questionAnswer": 0,
           "questionScore": 0,
           "questionComment": "comment"
+        }
+      ]
+    },
+    {
+      "componentCode": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "MEA02.01",
+          "subComponentName": "Monitor internal controls.",
+          "subComponentDescription": "Continuously monitor, benchmark and improve the I&T control environment and control framework to meet organizational objectives.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of third-party risk assessments",
+              "inputFrom": "APO12.04",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Information security management system (ISMS) audit reports",
+              "inputFrom": "APO13.03",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Industry standards and good practices",
+              "inputFrom": "Outside COBIT",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Results of benchmarking and other evaluations",
+              "inputFrom": "string",
+              "outputTo": "All APO; All BAI; All DSS; All MEA; EDM01.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Results of internal control monitoring and reviews",
+              "inputFrom": "string",
+              "outputTo": "All APO; All BAI; All DSS; All MEA; EDM01.03,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "MEA02.02",
+          "subComponentName": "Review effectiveness of business process controls.",
+          "subComponentDescription": "Review the operation of controls, including monitoring and test evidence, to ensure that controls within business processes operate effectively. Include activities to maintain evidence of the effective operation of controls through mechanisms such as periodic testing, continuous monitoring, independent assessments, command and control centers, and network operation centers. This evidence assures the enterprise that controls meet requirements related to business, regulatory and social responsibilities.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Compliance audit results",
+              "inputFrom": "BAI05.06",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Reviews of operational use",
+              "inputFrom": "BAI05.07",
+              "outputTo": "string,",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Evidence of control effectiveness",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "MEA02.03",
+          "subComponentName": "Perform control self-assessments.",
+          "subComponentDescription": "Encourage management and process owners to improve controls proactively through a continuing program of self-assessment that evaluates the completeness and effectiveness of management’s control over processes, policies and contracts.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Output",
+              "questionDescription": "Self-assessment plans and criteria",
+              "inputFrom": "string",
+              "outputTo": "All APO; All BAI;All DSS; All MEA",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Results of reviews of self-assessments",
+              "inputFrom": "string",
+              "outputTo": "All APO; All BAI;All DSS; All MEA; EDM01.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Results of self-assessments",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "MEA02.04",
+          "subComponentName": "Identify and report control deficiencies.",
+          "subComponentDescription": "Identify control deficiencies and analyze and identify their underlying root causes. Escalate control deficiencies and report to stakeholders.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Root causes of failure to deliver quality",
+              "inputFrom": "string",
+              "outputTo": "APO11.03",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Risk-related root causes",
+              "inputFrom": "string",
+              "outputTo": "APO12.06",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Results of processing effectiveness reviews, Root cause analyses and recommendations",
+              "inputFrom": "string",
+              "outputTo": "DSS06.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Evidence of error correction and remediation",
+              "inputFrom": "string",
+              "outputTo": "DSS06.04",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Remedial actions",
+              "inputFrom": "string",
+              "outputTo": "All APO; All BAI; All DSS; All MEA",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Control deficiencies",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "All APO; All BAI; All DSS; All MEA",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
         }
       ]
     },
