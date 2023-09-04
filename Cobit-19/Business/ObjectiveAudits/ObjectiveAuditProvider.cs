@@ -126,6 +126,18 @@ namespace Cobit_19.Business.ObjectiveAudits
             return objectiveAuditJSON;
         }
 
+        public void updateAuditJSON(int objectiveAuditID, string auditJSON)
+        {
+            var objectiveAudit = _dbContext.ObjectiveAudits.FirstOrDefault(objAudit => objAudit.ID == objectiveAuditID);
+
+            if (objectiveAudit != null)
+            {
+                objectiveAudit.UserAuditObject = auditJSON;
+
+                _dbContext.SaveChanges();
+            }
+        }
+
         public List<SubComponentDto> getSubComponents(ComponentDto component)
         {
             if (component.subComponents == null)

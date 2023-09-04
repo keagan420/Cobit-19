@@ -10,6 +10,9 @@
     [Parameter]
     public int compId { get; set; }
 
+    [Parameter]
+    public int objectiveAuditId { get; set; }
+
     public string selectedDiv;
 
     protected override void OnInitialized()
@@ -26,16 +29,18 @@
 <ul class="nav nav-tabs nav-fill pb-3">
     @for (int i = 0; i < subComps.Count; i++)
     {
+        SubComponentDto subComp = subComps[i];
         <li class="nav-item">
-            <a class="nav-link link-dark" @onclick='() => ShowDiv(subComps[i].subComponentCode)'>@subComps[i].subComponentCode</a>
+            <a class="nav-link link-dark" role='button' @onclick='() => ShowDiv(subComp.subComponentCode)'>@subComp.subComponentCode</a>
         </li>
     }
+</ul>
 
     @for (int i = 0; i < subComps.Count; i++)
     {
-        <div id=@subComps[i].subComponentCode style="@(selectedDiv == subComps[i].subComponentCode ? "display: block;" : "display: none;")" class="container border">
-            <QuestionTable auditJSON="@auditJSON" componentID="@compId" subComponentID="i" />
+        SubComponentDto subComp = subComps[i];
+        <div id=@subComp.subComponentCode style="@(selectedDiv == subComp.subComponentCode ? "display: block;" : "display: none;")" class="container border">
+            <QuestionTable auditJSON="@auditJSON" componentID="@compId" subComponentID="@i" objectiveAuditId="@objectiveAuditId"/>
         </div>
     }
 
-</ul>

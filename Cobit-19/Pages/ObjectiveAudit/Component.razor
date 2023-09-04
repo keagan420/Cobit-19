@@ -19,6 +19,7 @@
     public FullObjectiveAuditDto auditJSON;
     public List<SubComponentDto>? subComps;
     public ComponentDto component;
+    public int subCompDefault = -1;
 
     protected override void OnInitialized()
     {
@@ -32,17 +33,16 @@
 <div class="container">
     <div>
         <ComponentSelectBar objectiveAuditId="@objectiveAuditId"/>
-
-        @if (subComps != null)
-        {
-            <SubComponentTable subComps="@subComps" compId="@compId" auditJSON="@auditJSON" />
-        }
     </div>
 
     <div>
         @if (subComps == null)
         {
-            <QuestionTable auditJSON="@auditJSON" componentID="@compId"/>
+            <QuestionTable auditJSON="@auditJSON" componentID="@compId" subComponentID="@subCompDefault" objectiveAuditId="@objectiveAuditId"/>
+        }
+        else
+        {
+            <SubComponentTable subComps="@subComps" compId="@compId" auditJSON="@auditJSON" objectiveAuditId="@objectiveAuditId"/>
         }
     </div>
 </div>

@@ -11,7 +11,10 @@
     public int componentID { get; set; }
 
     [Parameter]
-    public int subComponentID { get; set; } = -1;
+    public int subComponentID { get; set; }
+
+    [Parameter]
+    public int objectiveAuditId { get; set; }
 
     public List<ComponentQuestionDto>? compQuestions;
     public List<subComponentQuestionDto>? subCompQuestions;
@@ -19,6 +22,8 @@
     public ComponentDto component;
     public List<subComponentQuestionDto> MLevelQuestions;
     public List<subComponentQuestionDto> relatedGuidanceQuestions;
+    public string auditJsonString;
+
 
     protected override void OnInitialized()
     {
@@ -35,25 +40,31 @@
             compQuestions = component.componentQuestions;
         }
     }
+
+    private void updateFullAudit()
+    {
+        auditJsonString = AuditJSONParsingService.auditTemplateSerializer(auditJSON);
+
+        objectiveAuditProvider.updateAuditJSON(objectiveAuditId, auditJsonString);
+    }
 }
 
 <div class="container">
     @if (componentID == 0)
     {
-        <div>
+        <div class="row border p-2 mt-4">
             @if (subComponentID != -1)
             {
-                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+                <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div>Achievement</div>
-            <div>Total: 0</div>
+            <div class="col-sm text-center">Total: 0</div>
         </div>
 
-        <table class="table">
+        <table class="table table-bordered mt-4">
             <thead>
                 <tr>
                     <th>Enterprise Goal</th>
-                    <th>Importance/Relevance</th>
+                    <th>Importance</th>
                     <th>N (Not achieved)</th>
                     <th>P (Partially achieved)</th>
                     <th>L (Largely achieved)</th>
@@ -69,7 +80,7 @@
                     <tr>
                         <th>@subCompQuestion.questionDescription</th>
                         <th>
-                            <select name="answer">
+                            <select name="answer" @bind="subCompQuestion.questionAnswer" @oninput="updateFullAudit">
                                 @for (int i = 0; i <= 10; i++)
                                 {
                                     <option value="@i">@i</option>
@@ -91,20 +102,19 @@
     }
     else if (componentID == 1)
     {
-        <div>
+        <div class="row border p-2 mt-4">
             @if (subComponentID != -1)
             {
-                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+                <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div>Achievement</div>
-            <div>Total: 0</div>
+            <div class="col-sm text-center">Total: 0</div>
         </div>
 
-        <table class="table">
+        <table class="table table-bordered mt-4">
             <thead>
                 <tr>
                     <th>Alignment Goal</th>
-                    <th>Importance/Relevance</th>
+                    <th>Importance</th>
                     <th>N (Not achieved)</th>
                     <th>P (Partially achieved)</th>
                     <th>L (Largely achieved)</th>
@@ -120,7 +130,7 @@
                     <tr>
                         <th>@subCompQuestion.questionDescription</th>
                         <th>
-                            <select name="answer">
+                            <select name="answer" @bind="subCompQuestion.questionAnswer" @oninput="updateFullAudit">
                                 @for (int i = 0; i <= 10; i++)
                                 {
                                     <option value="@i">@i</option>
@@ -142,21 +152,20 @@
     }
     else if (componentID == 2)
     {
-        <div>
+        <div class="row border p-2 mt-4">
             @if (subComponentID != -1)
             {
-                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+                <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div>Achievement</div>
-            <div>Total: 0</div>
+            <div class="col-sm text-center">Total: 0</div>
         </div>
 
-        <table class="table">
+        <table class="table table-bordered mt-4">
             <thead>
                 <tr>
                     <th>Level</th>
                     <th>Management Practices (MP) and Metrics to measure the achievement of the Management Practices (MP): </th>
-                    <th>Importance/Relevance</th>
+                    <th>Importance</th>
                     <th>N (Not achieved)</th>
                     <th>P (Partially achieved)</th>
                     <th>L (Largely achieved)</th>
@@ -173,7 +182,7 @@
                         <th>@MLevelQuestion.questionType</th>
                         <th>@MLevelQuestion.questionDescription</th>
                         <th>
-                            <select name="answer">
+                            <select name="answer" @bind="MLevelQuestion.questionAnswer" @oninput="updateFullAudit">
                                 @for (int i = 0; i <= 10; i++)
                                 {
                                     <option value="@i">@i</option>
@@ -193,12 +202,12 @@
             </tbody>
         </table>
 
-        <table class="table">
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Related Guidance</th>
                     <th>Detailed Reference</th>
-                    <th>Importance/Relevance</th>
+                    <th>Importance</th>
                     <th>N (Not achieved)</th>
                     <th>P (Partially achieved)</th>
                     <th>L (Largely achieved)</th>
@@ -215,7 +224,7 @@
                         <th>@relatedGuidanceQuestion.relatedGuidance</th>
                         <th>@relatedGuidanceQuestion.detailedReference</th>
                         <th>
-                            <select name="answer">
+                            <select name="answer" @bind="relatedGuidanceQuestion.questionAnswer" @oninput="updateFullAudit">
                                 @for (int i = 0; i <= 10; i++)
                                 {
                                     <option value="@i">@i</option>
@@ -237,21 +246,20 @@
     }
     else if (componentID == 3)
     {
-        <div>
+        <div class="row border p-2 mt-4">
             @if (subComponentID != -1)
             {
-                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+                <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div>Achievement</div>
-            <div>Total: 0</div>
+            <div class="col-sm text-center">Total: 0</div>
         </div>
 
-        <table class="table">
+        <table class="table table-bordered mt-4">
             <thead>
                 <tr>
                     <th>Sub-Component</th>
-                    <th>Regarding the Organisational Structures above. For each management practice, look at the roles and responsibilities diagram according to your organisational context, and select a level of importance/relevance:</th>
-                    <th>Importance/Relevance</th>
+                    <th class="col-12">Regarding the Organisational Structures above. For each management practice, look at the roles and responsibilities diagram according to your organisational context, and select a level of importance/relevance:</th>
+                    <th>Importance</th>
                     <th>N (Not achieved)</th>
                     <th>P (Partially achieved)</th>
                     <th>L (Largely achieved)</th>
@@ -268,7 +276,7 @@
                         <th>@compQuestion.questionType</th>
                         <th>@compQuestion.questionDescription</th>
                         <th>
-                            <select name="answer">
+                            <select name="answer" @bind="compQuestion.questionAnswer" @oninput="updateFullAudit">
                                 @for (int i = 0; i <= 10; i++)
                                 {
                                     <option value="@i">@i</option>
@@ -290,21 +298,20 @@
     }
     else if (componentID == 4)
     {
-        <div>
+        <div class="row border p-2 p-2 mt-4">
             @if (subComponentID != -1)
             {
-                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+                <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div>Achievement</div>
-            <div>Total: 0</div>
+            <div class="col-sm text-center">Total: 0</div>
         </div>
 
-        <table class="table">
+        <table class="table table-bordered mt-4">
             <thead>
                 <tr>
                     <th>Description</th>
                     <th>From</th>
-                    <th>Importance/Relevance</th>
+                    <th>Importance</th>
                     <th>N (Not achieved)</th>
                     <th>P (Partially achieved)</th>
                     <th>L (Largely achieved)</th>
@@ -319,8 +326,9 @@
                 {
                     <tr>
                         <th>@subCompQuestion.questionDescription</th>
+                        <th>@subCompQuestion.inputFrom</th>
                         <th>
-                            <select name="answer">
+                            <select name="answer" @bind="subCompQuestion.questionAnswer" @oninput="updateFullAudit">
                                 @for (int i = 0; i <= 10; i++)
                                 {
                                     <option value="@i">@i</option>
@@ -340,12 +348,12 @@
             </tbody>
         </table>
 
-        <table class="table">
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Description</th>
                     <th>To</th>
-                    <th>Importance/Relevance</th>
+                    <th>Importance</th>
                     <th>N (Not achieved)</th>
                     <th>P (Partially achieved)</th>
                     <th>L (Largely achieved)</th>
@@ -360,8 +368,9 @@
                 {
                     <tr>
                         <th>@subCompQuestion.questionDescription</th>
+                        <th>@subCompQuestion.outputTo</th>
                         <th>
-                            <select name="answer">
+                            <select name="answer" @bind="subCompQuestion.questionAnswer" @oninput="updateFullAudit">
                                 @for (int i = 0; i <= 10; i++)
                                 {
                                     <option value="@i">@i</option>
@@ -383,21 +392,20 @@
     }
     else if (componentID == 5)
     {
-        <div>
+        <div class="row border p-2 mt-4">
             @if (subComponentID != -1)
             {
-                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+                <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div>Achievement</div>
-            <div>Total: 0</div>
+            <div class="col-sm text-center">Total: 0</div>
         </div>
 
-        <table class="table">
+        <table class="table table-bordered mt-4">
             <thead>
                 <tr>
                     <th>Skills</th>
                     <th>Related Guidance (Standards, frameworks, Compliance Requirements)</th>
-                    <th>Importance/Relevance</th>
+                    <th>Importance</th>
                     <th>N (Not achieved)</th>
                     <th>P (Partially achieved)</th>
                     <th>L (Largely achieved)</th>
@@ -414,7 +422,7 @@
                         <th>@compQuestion.questionSkill</th>
                         <th>@compQuestion.relatedGuidance</th>
                         <th>
-                            <select name="answer">
+                            <select name="answer" @bind="compQuestion.questionAnswer" @oninput="updateFullAudit">
                                 @for (int i = 0; i <= 10; i++)
                                 {
                                     <option value="@i">@i</option>
@@ -436,22 +444,21 @@
     }
     else if (componentID == 6)
     {
-        <div>
+        <div class="row border p-2 mt-4">
             @if (subComponentID != -1)
             {
-                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+                <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div>Achievement</div>
-            <div>Total: 0</div>
+            <div class="col-sm text-center">Total: 0</div>
         </div>
 
-        <table class="table">
+        <table class="table table-bordered mt-4">
             <thead>
                 <tr>
                     <th>Relevant policy</th>
-                    <th>Policy Description</th>
+                    <th class="col-12">Policy Description</th>
                     <th>Related Reference</th>
-                    <th>Importance/Relevance</th>
+                    <th>Importance</th>
                     <th>N (Not achieved)</th>
                     <th>P (Partially achieved)</th>
                     <th>L (Largely achieved)</th>
@@ -465,25 +472,25 @@
                 @foreach (ComponentQuestionDto compQuestion in compQuestions)
                 {
                     <tr>
-                        <th>@compQuestion.relevantPolicy</th>
-                        <th>@compQuestion.policyDescription</th>
-                        <th>@compQuestion.detailedReference</th>
-                        <th>
-                            <select name="answer">
+                        <td><h6>@compQuestion.relevantPolicy</h6></td>
+                        <td><h6>@compQuestion.policyDescription </h6></td>
+                        <td><h6>@compQuestion.detailedReference</h6></td>
+                        <td>
+                            <select name="answer" @bind="compQuestion.questionAnswer" @oninput="updateFullAudit">
                                 @for (int i = 0; i <= 10; i++)
                                 {
                                     <option value="@i">@i</option>
                                 }
                             </select>
-                        </th>
-                        <th>X</th>
-                        <th>X</th>
-                        <th>X</th>
-                        <th>X</th>
-                        <th>@compQuestion.questionScore</th>
-                        <th>
+                        </td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>@compQuestion.questionScore</td>
+                        <td>
                             <input type="text" />
-                        </th>
+                        </td>
                     </tr>
                 }
             </tbody>
@@ -491,21 +498,20 @@
     }
     else if (componentID == 7)
     {
-        <div>
+        <div class="row border p-2 mt-4">
             @if (subComponentID != -1)
             {
-                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+                <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div>Achievement</div>
-            <div>Total: 0</div>
+            <div class="col-sm text-center">Total: 0</div>
         </div>
 
-        <table class="table">
+        <table class="table table-bordered mt-4">
             <thead>
                 <tr>
                     <th>Key Culture Element</th>
                     <th>Detailed & Related Reference</th>
-                    <th>Importance/Relevance</th>
+                    <th>Importance</th>
                     <th>N (Not achieved)</th>
                     <th>P (Partially achieved)</th>
                     <th>L (Largely achieved)</th>
@@ -522,7 +528,7 @@
                         <th>@compQuestion.keyCultureElement</th>
                         <th>@compQuestion.detailedReference, @compQuestion.detailedReference</th>
                         <th>
-                            <select name="answer">
+                            <select name="answer" @bind="compQuestion.questionAnswer" @oninput="updateFullAudit">
                                 @for (int i = 0; i <= 10; i++)
                                 {
                                     <option value="@i">@i</option>
@@ -544,20 +550,19 @@
     }
     else if (componentID == 8)
     {
-        <div>
+        <div class="row border p-2 mt-4">
             @if (subComponentID != -1)
             {
-                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+                <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div>Achievement</div>
-            <div>Total: 0</div>
+            <div class="col-sm text-center">Total: 0</div>
         </div>
 
-        <table class="table">
+        <table class="table table-bordered mt-4">
             <thead>
                 <tr>
                     <th>Description</th>
-                    <th>Importance/Relevance</th>
+                    <th>Importance</th>
                     <th>N (Not achieved)</th>
                     <th>P (Partially achieved)</th>
                     <th>L (Largely achieved)</th>
@@ -573,7 +578,7 @@
                     <tr>
                         <th>@compQuestion.questionDescription</th>
                         <th>
-                            <select name="answer">
+                            <select name="answer" @bind="compQuestion.questionAnswer" @oninput="updateFullAudit">
                                 @for (int i = 0; i <= 10; i++)
                                 {
                                     <option value="@i">@i</option>
