@@ -134,28 +134,6 @@ namespace Cobit_19.Migrations
                 columns: new[] { "ConcurrencyStamp", "PasswordHash", "SecurityStamp" },
                 values: new object[] { "7b859cfa-502c-4bd9-9b96-99c587b19a21", "AQAAAAEAACcQAAAAEIHmCxG37r4K8XQdVylh+8BDQt/SNHlSAYlApGzZCYrenfHrtADRiU/tXRv4VPQXhA==", "d0f21eb4-2aef-4f81-9869-ef43a2a4792f" });
 
-            migrationBuilder.InsertData(
-                table: "ObjectiveAuditModels",
-                columns: new[] { "ID", "ApplicationUserID", "AuditID", "DateCompleted", "DateCreated", "ObjectiveID", "Selected", "Status" },
-                values: new object[,]
-                {
-                    { 1, "8e445865-a24d-4543-a6c6-9443d048cdb9", 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, false, 0 },
-                    { 2, "8e445865-a24d-4543-a6c6-9443d048cdb9", 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, false, 0 },
-                    { 3, "8e445865-a24d-4543-a6c6-9443d048cdb9", 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 3, false, 0 },
-                    { 4, "8e445865-a24d-4543-a6c6-9443d048cdb9", 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, false, 0 },
-                    { 5, "8e445865-a24d-4543-a6c6-9443d048cdb9", 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, false, 0 },
-                    { 6, "8e445865-a24d-4543-a6c6-9443d048cdb9", 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 3, false, 0 },
-                    { 7, "8e445865-a24d-4543-a6c6-9443d048cdb9", 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, false, 0 },
-                    { 8, "8e445865-a24d-4543-a6c6-9443d048cdb9", 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, false, 0 },
-                    { 9, "8e445865-a24d-4543-a6c6-9443d048cdb9", 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 3, false, 0 },
-                    { 10, "8e445865-a24d-4543-a6c6-9443d048cdb9", 4, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, false, 0 },
-                    { 11, "8e445865-a24d-4543-a6c6-9443d048cdb9", 4, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, false, 0 },
-                    { 12, "8e445865-a24d-4543-a6c6-9443d048cdb9", 4, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 3, false, 0 },
-                    { 13, "8e445865-a24d-4543-a6c6-9443d048cdb9", 5, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, false, 0 },
-                    { 14, "8e445865-a24d-4543-a6c6-9443d048cdb9", 5, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, false, 0 },
-                    { 15, "8e445865-a24d-4543-a6c6-9443d048cdb9", 5, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 3, false, 0 }
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_ObjectiveAuditModels_ApplicationUserID",
                 table: "ObjectiveAuditModels",

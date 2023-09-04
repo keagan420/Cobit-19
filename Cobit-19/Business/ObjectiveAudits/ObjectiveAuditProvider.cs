@@ -117,11 +117,38 @@ namespace Cobit_19.Business.ObjectiveAudits
             return _mapper.Map<ObjectiveAuditMemberDto>(objectiveAuditMemberModel); ;
         }
 
-        public SubComponentDto GetProcessesSubComponents(FullObjectiveAuditDto objectiveAudit, int subComponentNum)
+        public string getAuditJSON(int objectiveAuditID)
         {
-            var subComp = objectiveAudit.components[0].subComponents[subComponentNum];
+            var objectiveAudit = _dbContext.ObjectiveAudits.Where(objAudit => objAudit.ID == objectiveAuditID).FirstOrDefault();
 
-            return subComp;
+            var objectiveAuditJSON = objectiveAudit.UserAuditObject;
+
+            return objectiveAuditJSON;
+        }
+
+        public List<SubComponentDto> getSubComponents(ComponentDto component)
+        {
+            if (component.subComponents == null)
+            {
+                return null;
+            }
+            else
+            {
+                return component.subComponents;
+            }
+
+        }
+
+        public ComponentDto getComponent(FullObjectiveAuditDto objectiveAudit,int componentID)
+        {
+            if (objectiveAudit.components[componentID] == null)
+            {
+                return null;
+            }
+            else
+            {
+                return objectiveAudit.components[componentID];
+            }
         }
 
         public List<subComponentQuestionDto> GetSubComponentMLevelQuestions(SubComponentDto subComp)

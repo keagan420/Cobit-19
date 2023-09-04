@@ -1,0 +1,41 @@
+﻿@using Cobit_19.Shared.Dtos
+
+@code {
+    [Parameter]
+    public FullObjectiveAuditDto auditJSON { get; set; }
+
+    [Parameter]
+    public List<SubComponentDto> subComps { get; set; }
+
+    [Parameter]
+    public int compId { get; set; }
+
+    public string selectedDiv;
+
+    protected override void OnInitialized()
+    {
+        selectedDiv = subComps[0].subComponentCode;
+    }
+
+    private void ShowDiv(string divID)
+    {
+        selectedDiv = divID;
+    }
+}
+
+<ul class="nav nav-tabs nav-fill pb-3">
+    @for (int i = 0; i < subComps.Count; i++)
+    {
+        <li class="nav-item">
+            <a class="nav-link link-dark" @onclick='() => ShowDiv(subComps[i].subComponentCode)'>@subComps[i].subComponentCode</a>
+        </li>
+    }
+
+    @for (int i = 0; i < subComps.Count; i++)
+    {
+        <div id=@subComps[i].subComponentCode style="@(selectedDiv == subComps[i].subComponentCode ? "display: block;" : "display: none;")" class="container border">
+            <QuestionTable auditJSON="@auditJSON" componentID="@compId" subComponentID="i" />
+        </div>
+    }
+
+</ul>

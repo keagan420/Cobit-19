@@ -1,0 +1,596 @@
+﻿
+@using Cobit_19.Shared.Dtos
+@using Cobit_19.Business.ObjectiveAudits
+@inject ObjectiveAuditProvider objectiveAuditProvider
+
+@code {
+    [Parameter]
+    public FullObjectiveAuditDto auditJSON { get; set; }
+
+    [Parameter]
+    public int componentID { get; set; }
+
+    [Parameter]
+    public int subComponentID { get; set; } = -1;
+
+    public List<ComponentQuestionDto>? compQuestions;
+    public List<subComponentQuestionDto>? subCompQuestions;
+    public SubComponentDto subComponent;
+    public ComponentDto component;
+    public List<subComponentQuestionDto> MLevelQuestions;
+    public List<subComponentQuestionDto> relatedGuidanceQuestions;
+
+    protected override void OnInitialized()
+    {
+        if (subComponentID != -1)
+        {
+            subComponent = auditJSON.components[componentID].subComponents[subComponentID];
+            subCompQuestions = subComponent.subComponentQuestions;
+            MLevelQuestions = objectiveAuditProvider.GetSubComponentMLevelQuestions(subComponent);
+            relatedGuidanceQuestions = objectiveAuditProvider.GetSubComponentRelatedGuidanceQuestions(subComponent);
+        }
+        else
+        {
+            component = auditJSON.components[componentID];
+            compQuestions = component.componentQuestions;
+        }
+    }
+}
+
+<div class="container">
+    @if (componentID == 0)
+    {
+        <div>
+            @if (subComponentID != -1)
+            {
+                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+            }
+            <div>Achievement</div>
+            <div>Total: 0</div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Enterprise Goal</th>
+                    <th>Importance/Relevance</th>
+                    <th>N (Not achieved)</th>
+                    <th>P (Partially achieved)</th>
+                    <th>L (Largely achieved)</th>
+                    <th>F (Fully achieved)</th>
+                    <th>Score</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (subComponentQuestionDto subCompQuestion in subCompQuestions)
+                {
+                    <tr>
+                        <th>@subCompQuestion.questionDescription</th>
+                        <th>
+                            <select name="answer">
+                                @for (int i = 0; i <= 10; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>@subCompQuestion.questionScore</th>
+                        <th>
+                            <input type="text" />
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else if (componentID == 1)
+    {
+        <div>
+            @if (subComponentID != -1)
+            {
+                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+            }
+            <div>Achievement</div>
+            <div>Total: 0</div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Alignment Goal</th>
+                    <th>Importance/Relevance</th>
+                    <th>N (Not achieved)</th>
+                    <th>P (Partially achieved)</th>
+                    <th>L (Largely achieved)</th>
+                    <th>F (Fully achieved)</th>
+                    <th>Score</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (subComponentQuestionDto subCompQuestion in subCompQuestions)
+                {
+                    <tr>
+                        <th>@subCompQuestion.questionDescription</th>
+                        <th>
+                            <select name="answer">
+                                @for (int i = 0; i <= 10; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>@subCompQuestion.questionScore</th>
+                        <th>
+                            <input type="text" />
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else if (componentID == 2)
+    {
+        <div>
+            @if (subComponentID != -1)
+            {
+                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+            }
+            <div>Achievement</div>
+            <div>Total: 0</div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Level</th>
+                    <th>Management Practices (MP) and Metrics to measure the achievement of the Management Practices (MP): </th>
+                    <th>Importance/Relevance</th>
+                    <th>N (Not achieved)</th>
+                    <th>P (Partially achieved)</th>
+                    <th>L (Largely achieved)</th>
+                    <th>F (Fully achieved)</th>
+                    <th>Score</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (subComponentQuestionDto MLevelQuestion in MLevelQuestions)
+                {
+                    <tr>
+                        <th>@MLevelQuestion.questionType</th>
+                        <th>@MLevelQuestion.questionDescription</th>
+                        <th>
+                            <select name="answer">
+                                @for (int i = 0; i <= 10; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>@MLevelQuestion.questionScore</th>
+                        <th>
+                            <input type="text" />
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Related Guidance</th>
+                    <th>Detailed Reference</th>
+                    <th>Importance/Relevance</th>
+                    <th>N (Not achieved)</th>
+                    <th>P (Partially achieved)</th>
+                    <th>L (Largely achieved)</th>
+                    <th>F (Fully achieved)</th>
+                    <th>Score</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (subComponentQuestionDto relatedGuidanceQuestion in relatedGuidanceQuestions)
+                {
+                    <tr>
+                        <th>@relatedGuidanceQuestion.relatedGuidance</th>
+                        <th>@relatedGuidanceQuestion.detailedReference</th>
+                        <th>
+                            <select name="answer">
+                                @for (int i = 0; i <= 10; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>@relatedGuidanceQuestion.questionScore</th>
+                        <th>
+                            <input type="text" />
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else if (componentID == 3)
+    {
+        <div>
+            @if (subComponentID != -1)
+            {
+                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+            }
+            <div>Achievement</div>
+            <div>Total: 0</div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Sub-Component</th>
+                    <th>Regarding the Organisational Structures above. For each management practice, look at the roles and responsibilities diagram according to your organisational context, and select a level of importance/relevance:</th>
+                    <th>Importance/Relevance</th>
+                    <th>N (Not achieved)</th>
+                    <th>P (Partially achieved)</th>
+                    <th>L (Largely achieved)</th>
+                    <th>F (Fully achieved)</th>
+                    <th>Score</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (ComponentQuestionDto compQuestion in compQuestions)
+                {
+                    <tr>
+                        <th>@compQuestion.questionType</th>
+                        <th>@compQuestion.questionDescription</th>
+                        <th>
+                            <select name="answer">
+                                @for (int i = 0; i <= 10; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>@compQuestion.questionScore</th>
+                        <th>
+                            <input type="text" />
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else if (componentID == 4)
+    {
+        <div>
+            @if (subComponentID != -1)
+            {
+                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+            }
+            <div>Achievement</div>
+            <div>Total: 0</div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>From</th>
+                    <th>Importance/Relevance</th>
+                    <th>N (Not achieved)</th>
+                    <th>P (Partially achieved)</th>
+                    <th>L (Largely achieved)</th>
+                    <th>F (Fully achieved)</th>
+                    <th>Score</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (subComponentQuestionDto subCompQuestion in subCompQuestions)
+                {
+                    <tr>
+                        <th>@subCompQuestion.questionDescription</th>
+                        <th>
+                            <select name="answer">
+                                @for (int i = 0; i <= 10; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>@subCompQuestion.questionScore</th>
+                        <th>
+                            <input type="text" />
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>To</th>
+                    <th>Importance/Relevance</th>
+                    <th>N (Not achieved)</th>
+                    <th>P (Partially achieved)</th>
+                    <th>L (Largely achieved)</th>
+                    <th>F (Fully achieved)</th>
+                    <th>Score</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (subComponentQuestionDto subCompQuestion in subCompQuestions)
+                {
+                    <tr>
+                        <th>@subCompQuestion.questionDescription</th>
+                        <th>
+                            <select name="answer">
+                                @for (int i = 0; i <= 10; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>@subCompQuestion.questionScore</th>
+                        <th>
+                            <input type="text" />
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else if (componentID == 5)
+    {
+        <div>
+            @if (subComponentID != -1)
+            {
+                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+            }
+            <div>Achievement</div>
+            <div>Total: 0</div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Skills</th>
+                    <th>Related Guidance (Standards, frameworks, Compliance Requirements)</th>
+                    <th>Importance/Relevance</th>
+                    <th>N (Not achieved)</th>
+                    <th>P (Partially achieved)</th>
+                    <th>L (Largely achieved)</th>
+                    <th>F (Fully achieved)</th>
+                    <th>Score</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (ComponentQuestionDto compQuestion in compQuestions)
+                {
+                    <tr>
+                        <th>@compQuestion.questionSkill</th>
+                        <th>@compQuestion.relatedGuidance</th>
+                        <th>
+                            <select name="answer">
+                                @for (int i = 0; i <= 10; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>@compQuestion.questionScore</th>
+                        <th>
+                            <input type="text" />
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else if (componentID == 6)
+    {
+        <div>
+            @if (subComponentID != -1)
+            {
+                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+            }
+            <div>Achievement</div>
+            <div>Total: 0</div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Relevant policy</th>
+                    <th>Policy Description</th>
+                    <th>Related Reference</th>
+                    <th>Importance/Relevance</th>
+                    <th>N (Not achieved)</th>
+                    <th>P (Partially achieved)</th>
+                    <th>L (Largely achieved)</th>
+                    <th>F (Fully achieved)</th>
+                    <th>Score</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (ComponentQuestionDto compQuestion in compQuestions)
+                {
+                    <tr>
+                        <th>@compQuestion.relevantPolicy</th>
+                        <th>@compQuestion.policyDescription</th>
+                        <th>@compQuestion.detailedReference</th>
+                        <th>
+                            <select name="answer">
+                                @for (int i = 0; i <= 10; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>@compQuestion.questionScore</th>
+                        <th>
+                            <input type="text" />
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else if (componentID == 7)
+    {
+        <div>
+            @if (subComponentID != -1)
+            {
+                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+            }
+            <div>Achievement</div>
+            <div>Total: 0</div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Key Culture Element</th>
+                    <th>Detailed & Related Reference</th>
+                    <th>Importance/Relevance</th>
+                    <th>N (Not achieved)</th>
+                    <th>P (Partially achieved)</th>
+                    <th>L (Largely achieved)</th>
+                    <th>F (Fully achieved)</th>
+                    <th>Score</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (ComponentQuestionDto compQuestion in compQuestions)
+                {
+                    <tr>
+                        <th>@compQuestion.keyCultureElement</th>
+                        <th>@compQuestion.detailedReference, @compQuestion.detailedReference</th>
+                        <th>
+                            <select name="answer">
+                                @for (int i = 0; i <= 10; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>@compQuestion.questionScore</th>
+                        <th>
+                            <input type="text" />
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else if (componentID == 8)
+    {
+        <div>
+            @if (subComponentID != -1)
+            {
+                <div>@subComponent.subComponentCode - @subComponent.subComponentName</div>
+            }
+            <div>Achievement</div>
+            <div>Total: 0</div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Importance/Relevance</th>
+                    <th>N (Not achieved)</th>
+                    <th>P (Partially achieved)</th>
+                    <th>L (Largely achieved)</th>
+                    <th>F (Fully achieved)</th>
+                    <th>Score</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (ComponentQuestionDto compQuestion in compQuestions)
+                {
+                    <tr>
+                        <th>@compQuestion.questionDescription</th>
+                        <th>
+                            <select name="answer">
+                                @for (int i = 0; i <= 10; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>X</th>
+                        <th>@compQuestion.questionScore</th>
+                        <th>
+                            <input type="text" />
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

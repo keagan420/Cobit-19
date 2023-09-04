@@ -1,25 +1,61 @@
-﻿
-@code {
+﻿@inject NavigationManager navigationManager
+@using Cobit_19.Business.ObjectiveAudits
+@using Cobit_19.Shared.Dtos
+@inject ObjectiveAuditProvider objectiveAuditProvider
+
+@code{
+    [Parameter]
+    public int objectiveAuditId { get; set; }
+    public string jsonAuditString;
+    public FullObjectiveAuditDto auditJSON;
+
+    protected override void OnInitialized()
+    {
+        jsonAuditString = objectiveAuditProvider.getAuditJSON(objectiveAuditId);
+        auditJSON = AuditJSONParsingService.parseAuditTemplate(jsonAuditString);
+    }
+
+    private void dashBoardClick (int objectiveID)
+    {
+        navigationManager.NavigateTo("/auditDashboard?objectiveAuditId=" + objectiveAuditId);
+    }
+
+    private void componentClick (int objectiveID, int componentID)
+    {
+        navigationManager.NavigateTo($"/component?objectiveAuditId={objectiveID}&compId={componentID}");
+    }
 
 }
 
 <ul class="nav nav-tabs nav-fill pb-3">
     <li class="nav-item">
-        <a class="nav-link link-dark">Processes</a>
+        <a class="nav-link link-dark" @onclick="() => dashBoardClick(objectiveAuditId)">Dashboard</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link link-dark">Structures</a>
+        <a class="nav-link link-dark" @onclick="() => componentClick(objectiveAuditId, 0)">Enterprise Goals</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link link-dark">People</a>
+        <a class="nav-link link-dark" @onclick="() => componentClick(objectiveAuditId, 1)">Alignment Goals</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link link-dark">Policies</a>
+        <a class="nav-link link-dark" @onclick="() => componentClick(objectiveAuditId, 2)">Processes</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link link-dark">Culture</a>
+        <a class="nav-link link-dark" @onclick="() => componentClick(objectiveAuditId, 3)">Structures</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link link-dark" @onclick="() => componentClick(objectiveAuditId, 4)">Information Flow</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link link-dark" @onclick="() => componentClick(objectiveAuditId, 5)">People</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link link-dark" @onclick="() => componentClick(objectiveAuditId, 6)">Policies</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link link-dark" @onclick="() => componentClick(objectiveAuditId, 7)">Culture</a>
     </li >
     <li class="nav-item">
-        <a class="nav-link link-dark">Technology</a>
+        <a class="nav-link link-dark" @onclick="() => componentClick(objectiveAuditId, 8)">Technology</a>
     </li>
 </ul>
