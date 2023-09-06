@@ -236,5 +236,25 @@ namespace Cobit_19.Business.ObjectiveAudits
                 return null;
             }
         }
+
+        public int GetAnswerAchievement(int answerValue)
+        {
+            if (answerValue <= 2)
+            {
+                return 0;
+            }
+            else if (answerValue > 2 && answerValue <= 5)
+            {
+                return 1;
+            }
+            else if (answerValue > 5 && answerValue <= 8)
+            {
+                return 2;
+            }
+            else
+            {
+                return 3;
+            }
+        }
     }
 }
