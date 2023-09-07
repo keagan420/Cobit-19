@@ -163,7 +163,7 @@ namespace Cobit_19.Business.ObjectiveAudits
             }
         }
 
-        public List<subComponentQuestionDto> GetSubComponentMLevelQuestions(SubComponentDto subComp)
+        public List<SubComponentQuestionDto> GetSubComponentMLevelQuestions(SubComponentDto subComp)
         {
             var subCompQuestions = subComp.subComponentQuestions;
 
@@ -180,7 +180,7 @@ namespace Cobit_19.Business.ObjectiveAudits
             }
         }
 
-        public List<subComponentQuestionDto> GetSubComponentInputQuestions(SubComponentDto subComp)
+        public List<SubComponentQuestionDto> GetSubComponentInputQuestions(SubComponentDto subComp)
         {
             var SubCompQuestions = subComp.subComponentQuestions;
 
@@ -199,7 +199,7 @@ namespace Cobit_19.Business.ObjectiveAudits
             }
         }
 
-        public List<subComponentQuestionDto> GetSubComponentOutputQuestions(SubComponentDto subComp)
+        public List<SubComponentQuestionDto> GetSubComponentOutputQuestions(SubComponentDto subComp)
         {
             var SubCompQuestions = subComp.subComponentQuestions;
 
@@ -218,7 +218,7 @@ namespace Cobit_19.Business.ObjectiveAudits
             }
         }
 
-        public List<subComponentQuestionDto> GetSubComponentRelatedGuidanceQuestions(SubComponentDto subComp)
+        public List<SubComponentQuestionDto> GetSubComponentRelatedGuidanceQuestions(SubComponentDto subComp)
         {
             var SubCompQuestions = subComp.subComponentQuestions;
 
@@ -255,6 +255,60 @@ namespace Cobit_19.Business.ObjectiveAudits
             {
                 return 3;
             }
+        }
+
+        public double calculateAnswerScore(int answerValue)
+        {
+            if (answerValue <= 2)
+            {
+                return Math.Round(answerValue * 0.075, 2);
+            }
+            else if (answerValue > 2 && answerValue <= 5)
+            {
+                return Math.Round(answerValue * 0.33, 2);
+            }
+            else if (answerValue > 5 && answerValue <= 8)
+            {
+                return Math.Round(answerValue * 0.68, 2);
+            }
+            else
+            {
+                return Math.Round(answerValue * 0.93, 2);
+            }
+        }
+
+        public double calculateComponentScore(List<ComponentQuestionDto> compQuestions)
+        {
+            double finalPercentage;
+            int answerValueSum = 0;
+            double weightedValueSum = 0;
+
+            foreach (ComponentQuestionDto compQuestion in compQuestions)
+            {
+                answerValueSum += compQuestion.questionAnswer;
+                weightedValueSum += compQuestion.questionScore;
+            }
+
+            finalPercentage = (weightedValueSum / answerValueSum) * 100;
+
+            return Math.Round(finalPercentage, 2);
+        }
+
+        public double calculateSubComponentScore(List<SubComponentQuestionDto> subCompQuestions)
+        {
+            double finalPercentage;
+            int answerValueSum = 0;
+            double weightedValueSum = 0;
+
+            foreach (SubComponentQuestionDto subCompQuestion in subCompQuestions)
+            {
+                answerValueSum += subCompQuestion.questionAnswer;
+                weightedValueSum += subCompQuestion.questionScore;
+            }
+
+            finalPercentage = (weightedValueSum / answerValueSum) * 100;
+
+            return Math.Round(finalPercentage, 2);
         }
     }
 }
