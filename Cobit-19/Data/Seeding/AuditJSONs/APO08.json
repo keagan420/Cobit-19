@@ -282,7 +282,7 @@
                   {
                     "subComponentCode": "AG06",
                     "subComponentName": "Agility to turn business requirements into operational solutions",
-                    "subComponentQuestions": [
+                    "subComponentQuestions": [ 
                       {
                         "questionType": "Alignment goal",
                         "questionDescription": "Level of satisfaction of business executives with I&T responsiveness to new requirements",

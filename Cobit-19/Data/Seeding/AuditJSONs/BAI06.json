@@ -1,4 +1,4 @@
-{
+{ 
   "objectiveName": "BAI06",
   "objectiveDescription": "Manage all changes in a controlled manner, including standard changes and emergency maintenance relating to business processes, applications and infrastructure. This includes change standards and procedures, impact assessment, prioritization and authorization, emergency changes, tracking, reporting, closure, and documentation.",
   "objectivePurpose": "Enable fast and reliable delivery of change to the business. Mitigate the risk of negatively impacting the stability or integrity of the changed environment.",
