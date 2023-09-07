@@ -11,6 +11,147 @@
   "maturityLevel5PercFinal": 0,
   "components": [
     {
+      "componentCode": "EG",
+      "componentDescription": "Enterprise Goals",
+      "componentPercFinal": 0,
+      "subComponents": [
+      
+        {
+          "subComponentCode": "EG02",
+          "subComponentName": "Managed business risk",
+          "subComponentQuestions": [
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Percent of critical business objectives and services covered by risk assessment",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Ratio of significant incidents that were not identified in risk assessments vs. total incidents",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Frequency of updating risk profile",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+
+            [
+
+              {
+                "subComponentCode": "EG06",
+                "subComponentName": "Business service continuity and availability",
+                "subComponentQuestions": [
+                  {
+                    "questionType": "Enterprise goal",
+                    "questionDescription": "Number of customer service or business process interruptions causing significant incidents",
+                    "questionAnswer": 0,
+                    "questionScore": 0,
+                    "questionComment": "comment"
+                  },
+                  {
+                    "questionType": "Enterprise goal",
+                    "questionDescription": "Business cost of incidents",
+                    "questionAnswer": 0,
+                    "questionScore": 0,
+                    "questionComment": "comment"
+                  },
+                  {
+                    "questionType": "Enterprise goal",
+                    "questionDescription": "Number of business processing hours lost due to unplanned service interruptions",
+                    "questionAnswer": 0,
+                    "questionScore": 0,
+                    "questionComment": "comment"
+                  },
+                  {
+                    "questionType": "Enterprise goal",
+                    "questionDescription": "Percent of complaints as a function of committed service availability targets",
+                    "questionAnswer": 0,
+                    "questionScore": 0,
+                    "questionComment": "comment"
+                  }
+
+                ]
+              }
+             
+            ]
+          ]
+        }
+      ]
+    },
+
+    {
+      "componentCode": "AG",
+      "componentDescription": "Alignment Goals",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "AG02",
+          "subComponentName": "Managed I&T-related risk",
+          "subComponentQuestions": [
+            {
+              "questionType": "Alignment goal",
+              "questionDescription": "Frequency of updating risk profile",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Alignment goal",
+              "questionDescription": "Percent of enterprise risk assessments including I&T-related risks",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Alignment goal",
+              "questionDescription": "Number of significant I&T-related incidents that were not identified in a risk assessment",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+
+
+          ]
+        },
+        [
+          {
+            "subComponentCode": "AG07",
+            "subComponentName": "Security of information, processing infrastructure and applications, and privacy",
+            "subComponentQuestions": [
+              {
+                "questionType": "Alignment goal",
+                "questionDescription": "Number of confidentiality incidents causing financial loss, business disruption or public embarrassment",
+                "questionAnswer": 0,
+                "questionScore": 0,
+                "questionComment": "comment"
+              },
+              {
+                "questionType": "Alignment goal",
+                "questionDescription": "Number of availability incidents causing financial loss, business disruption or public embarrassment",
+                "questionAnswer": 0,
+                "questionScore": 0,
+                "questionComment": "comment"
+              },
+              {
+                "questionType": "Alignment goal",
+                "questionDescription": "Number of integrity incidents causing financial loss, business disruption or public embarrassment",
+                "questionAnswer": 0,
+                "questionScore": 0,
+                "questionComment": "comment"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    {
       "componentName": "A",
       "componentDescription": "Processes",
       "componentPercFinal": 0,

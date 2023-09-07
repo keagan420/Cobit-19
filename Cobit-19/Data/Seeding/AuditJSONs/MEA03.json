@@ -11,6 +11,85 @@
   "maturityLevel5PercFinal": 0,
   "components": [
     {
+      "componentCode": "EG",
+      "componentDescription": "Enterprise Goals",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "EG03",
+          "subComponentName": "Compliance with external laws and regulations",
+          "subComponentQuestions": [
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Cost of regulatory noncompliance, including settlements and fines",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Number of regulatory noncompliance issues causing public comment or negative publicity",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Number of noncompliance matters noted by regulators",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Number of regulatory noncompliance issues relating to contractual agreements with business partners",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+           
+          ]
+        }
+      ]
+    },
+
+    {
+      "componentCode": "AG",
+      "componentDescription": "Alignment Goals",
+      "componentPercFinal": 0,
+      "subComponents": [
+
+        {
+          "subComponentCode": "AG01",
+          "subComponentName": "I&T compliance and support for business compliance with external laws and regulations",
+          "subComponentQuestions": [
+            {
+              "questionType": "Alignment goal",
+              "questionDescription": "Cost of IT noncompliance, including settlements and fines, and the impact of reputational loss",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Alignment goal",
+              "questionDescription": "Number of IT-related noncompliance issues reported to the board, or causing public comment or embarrassment",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Alignment goal",
+              "questionDescription": "Number of noncompliance issues relating to contractual agreements with IT service providers",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        }
+
+      ]
+    },
+    {
       "componentName": "A",
       "componentDescription": "Processes",
       "componentPercFinal": 0,
