@@ -8,7 +8,7 @@
   "maturityLevel2PercFinal": 0,
   "maturityLevel3PercFinal": 0,
   "maturityLevel4PercFinal": 0,
-  "maturityLevel5PercFinal": 0,
+  "maturityLevel5PercFinal": 0, 
   "components": [ 
     {
       "componentCode": "EG",

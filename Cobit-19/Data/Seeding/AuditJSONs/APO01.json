@@ -14,7 +14,7 @@
       "componentCode": "EG",
       "componentDescription": "Enterprise Goals",
       "componentPercFinal": 0,
-      "subComponents": [ 
+      "subComponents": [  
         {
           "subComponentCode": "EG03",
           "subComponentName": "Compliance with external laws and regulations",

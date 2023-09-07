@@ -1,4 +1,4 @@
-{ 
+{  
   "objectiveName": "BAI10",
   "objectiveDescription": "Define and maintain descriptions and relationships among key resources and capabilities required to deliver I&T-enabled services. Include collecting configuration information, establishing baselines, verifying and auditing configuration information, and updating the configuration repository.",
   "objectivePurpose": "Provide sufficient information about service assets to enable the service to be effectively managed. Assess the impact of changes and deal with service incidents.",
