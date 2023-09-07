@@ -56,7 +56,7 @@
         if (e.Value is not null)
         {
             subCompQuestion.questionAnswer = int.Parse(e.Value.ToString());
-            objectiveAuditProvider.calculateAnswerScore(subCompQuestion.questionAnswer);
+            subCompQuestion.questionScore = objectiveAuditProvider.calculateAnswerScore(subCompQuestion.questionAnswer);
         }
 
         auditJsonString = AuditJSONParsingService.auditTemplateSerializer(auditJSON);
@@ -71,7 +71,7 @@
         if (e.Value is not null)
         {
             compQuestion.questionAnswer = int.Parse(e.Value.ToString());
-            objectiveAuditProvider.calculateAnswerScore(compQuestion.questionAnswer);
+            compQuestion.questionScore = objectiveAuditProvider.calculateAnswerScore(compQuestion.questionAnswer);
         }
 
         auditJsonString = AuditJSONParsingService.auditTemplateSerializer(auditJSON);
@@ -126,12 +126,9 @@
                         <td><div class="bg-warning rounded-3 text-center" style="width: 100px; height: 50px;">@(objectiveAuditProvider.GetAnswerAchievement(subCompQuestion.questionAnswer) == 1 ? "X" : " ")</div></td>
                         <td><div class="bg-success rounded-3 text-center" style="width: 100px; height: 50px;">@(objectiveAuditProvider.GetAnswerAchievement(subCompQuestion.questionAnswer) == 2 ? "X" : " ")</div></td>
                         <td><div class="bg-primary rounded-3 text-center" style="width: 100px; height: 50px;">@(objectiveAuditProvider.GetAnswerAchievement(subCompQuestion.questionAnswer) == 3 ? "X" : " ")</div></td>
-                        <td>@objectiveAuditProvider.calculateAnswerScore(subCompQuestion.questionAnswer)</td>
+                        <td>@subCompQuestion.questionScore</td>
                         <td>
                             <input type="text" />
-                        </td>
-                        <td>
-                            @subCompQuestion.questionAnswer
                         </td>
                     </tr>
                 }

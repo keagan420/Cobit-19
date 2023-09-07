@@ -306,9 +306,15 @@ namespace Cobit_19.Business.ObjectiveAudits
                 weightedValueSum += subCompQuestion.questionScore;
             }
 
-            finalPercentage = (weightedValueSum / answerValueSum) * 100;
-
-            return Math.Round(finalPercentage, 2);
+            if (weightedValueSum == 0 || answerValueSum == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                finalPercentage = (weightedValueSum / answerValueSum) * 100;
+                return Math.Round(finalPercentage, 2);
+            }
         }
     }
 }
