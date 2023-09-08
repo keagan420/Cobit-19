@@ -4,6 +4,7 @@ using Cobit_19.Data.Models;
 using Cobit_19.Shared.Dtos;
 using Cobit_19.Shared.Enums;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace Cobit_19.Business.ObjectiveAudits
 {
@@ -114,6 +115,206 @@ namespace Cobit_19.Business.ObjectiveAudits
             await _dbContext.SaveChangesAsync();
 
             return _mapper.Map<ObjectiveAuditMemberDto>(objectiveAuditMemberModel); ;
+        }
+
+        public string getAuditJSON(int objectiveAuditID)
+        {
+            var objectiveAudit = _dbContext.ObjectiveAudits.Where(objAudit => objAudit.ID == objectiveAuditID).FirstOrDefault();
+
+            var objectiveAuditJSON = objectiveAudit.UserAuditObject;
+
+            return objectiveAuditJSON;
+        }
+
+        public void updateAuditJSON(int objectiveAuditID, string auditJSON)
+        {
+            var objectiveAudit = _dbContext.ObjectiveAudits.FirstOrDefault(objAudit => objAudit.ID == objectiveAuditID);
+
+            if (objectiveAudit != null)
+            {
+                objectiveAudit.UserAuditObject = auditJSON;
+
+                _dbContext.SaveChanges();
+            }
+        }
+
+        public List<SubComponentDto> getSubComponents(ComponentDto component)
+        {
+            if (component.subComponents == null)
+            {
+                return null;
+            }
+            else
+            {
+                return component.subComponents;
+            }
+
+        }
+
+        public ComponentDto getComponent(FullObjectiveAuditDto objectiveAudit,int componentID)
+        {
+            if (objectiveAudit.components[componentID] == null)
+            {
+                return null;
+            }
+            else
+            {
+                return objectiveAudit.components[componentID];
+            }
+        }
+
+        public List<SubComponentQuestionDto> GetSubComponentMLevelQuestions(SubComponentDto subComp)
+        {
+            var subCompQuestions = subComp.subComponentQuestions;
+
+            var query = subCompQuestions.Where(question => question.questionType.Contains("Maturity Level"));
+            var MLevelQuestios = query.ToList();
+
+            if (MLevelQuestios.Count > 0)
+            {
+                return MLevelQuestios;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public List<SubComponentQuestionDto> GetSubComponentInputQuestions(SubComponentDto subComp)
+        {
+            var SubCompQuestions = subComp.subComponentQuestions;
+
+            var query = SubCompQuestions.Where(question => 
+                question.questionType.Equals("Input"));
+
+            var inputQuestions = query.ToList();
+
+            if (inputQuestions.Count > 0)
+            {
+                return inputQuestions;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public List<SubComponentQuestionDto> GetSubComponentOutputQuestions(SubComponentDto subComp)
+        {
+            var SubCompQuestions = subComp.subComponentQuestions;
+
+            var query = SubCompQuestions.Where(question =>
+                question.questionType.Equals("Output"));
+
+            var outputQuestions = query.ToList();
+
+            if (outputQuestions.Count > 0)
+            {
+                return outputQuestions;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public List<SubComponentQuestionDto> GetSubComponentRelatedGuidanceQuestions(SubComponentDto subComp)
+        {
+            var SubCompQuestions = subComp.subComponentQuestions;
+
+            var query = SubCompQuestions.Where(question =>
+                question.questionType.Equals("Related Guidance"));
+
+            var relatedGuidanceQuestions = query.ToList();
+
+            if (relatedGuidanceQuestions.Count > 0)
+            {
+                return relatedGuidanceQuestions; 
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public int GetAnswerAchievement(int answerValue)
+        {
+            if (answerValue <= 2)
+            {
+                return 0;
+            }
+            else if (answerValue > 2 && answerValue <= 5)
+            {
+                return 1;
+            }
+            else if (answerValue > 5 && answerValue <= 8)
+            {
+                return 2;
+            }
+            else
+            {
+                return 3;
+            }
+        }
+
+        public double calculateAnswerScore(int answerValue)
+        {
+            if (answerValue <= 2)
+            {
+                return Math.Round(answerValue * 0.075, 2);
+            }
+            else if (answerValue > 2 && answerValue <= 5)
+            {
+                return Math.Round(answerValue * 0.33, 2);
+            }
+            else if (answerValue > 5 && answerValue <= 8)
+            {
+                return Math.Round(answerValue * 0.68, 2);
+            }
+            else
+            {
+                return Math.Round(answerValue * 0.93, 2);
+            }
+        }
+
+        public double calculateComponentScore(List<ComponentQuestionDto> compQuestions)
+        {
+            double finalPercentage;
+            int answerValueSum = 0;
+            double weightedValueSum = 0;
+
+            foreach (ComponentQuestionDto compQuestion in compQuestions)
+            {
+                answerValueSum += compQuestion.questionAnswer;
+                weightedValueSum += compQuestion.questionScore;
+            }
+
+            finalPercentage = (weightedValueSum / answerValueSum) * 100;
+
+            return Math.Round(finalPercentage, 2);
+        }
+
+        public double calculateSubComponentScore(List<SubComponentQuestionDto> subCompQuestions)
+        {
+            double finalPercentage;
+            int answerValueSum = 0;
+            double weightedValueSum = 0;
+
+            foreach (SubComponentQuestionDto subCompQuestion in subCompQuestions)
+            {
+                answerValueSum += subCompQuestion.questionAnswer;
+                weightedValueSum += subCompQuestion.questionScore;
+            }
+
+            if (weightedValueSum == 0 || answerValueSum == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                finalPercentage = (weightedValueSum / answerValueSum) * 100;
+                return Math.Round(finalPercentage, 2);
+            }
         }
     }
 }
