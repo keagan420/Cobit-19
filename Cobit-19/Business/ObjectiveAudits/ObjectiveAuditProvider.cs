@@ -235,6 +235,11 @@ namespace Cobit_19.Business.ObjectiveAudits
 
             var selectedSubComp = subComps.Where(subComp => subComp.subComponentCode.Equals(subCode)).FirstOrDefault();
 
+            if (selectedSubComp == null)
+            {
+                return null;
+            }
+
             var subCompQuestions = selectedSubComp.subComponentQuestions;
 
             var query = subCompQuestions.Where(question =>
@@ -258,6 +263,10 @@ namespace Cobit_19.Business.ObjectiveAudits
 
             var selectedSubComp = subComps.Where(subComp => subComp.subComponentCode.Equals(subCode)).FirstOrDefault();
 
+            if (selectedSubComp == null)
+            {
+                return null;
+            }
             var subCompQuestions = selectedSubComp.subComponentQuestions;
 
             var query = subCompQuestions.Where(question =>
