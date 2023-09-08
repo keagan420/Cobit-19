@@ -99,9 +99,9 @@
 }
 
 
-<div class="container-sm">
+<div class="container-md">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-8">
             @if (_objectiveAuditDto is null)
             {
                 <p><em>Loading...</em></p>
@@ -130,7 +130,7 @@
                             <th>High</th>
                             <th>Score more than 75</th>
                             <th>Selected</th>
-                            <th>Memebers</th>
+                            <th>Members</th>
                         </tr>
 
                         @if (tabHighOpened)
@@ -165,14 +165,14 @@
                         <tr class="bg-light" style="cursor:pointer" @onclick="() => tabSignificantOpened = !tabSignificantOpened">
                             <td>
                                 <h3 >
-                                    High Importance
+                                    Medium Importance
                                 </h3>
                             </td>
                             <th> <div class="indicate_large"></div></th>
-                            <th>High</th>
-                            <th>Score between 50 and 90</th>
+                            <th>Medium</th>
+                            <th>Score between 50 and 75</th>
                             <th>Selected</th>
-                            <th>Memebers</th>
+                            <th>Members</th>
                         </tr>
 
                         @if (tabSignificantOpened)
@@ -205,14 +205,14 @@
                         <tr class="bg-light" style="cursor:pointer" @onclick="() => tabLowOpened = !tabLowOpened">
                             <td>
                                 <h3> 
-                                    High Importance
+                                    Low Importance
                                 </h3>
                             </td>
                             <th> <div class="indicate_large"></div></th>
-                            <th>High</th>
+                            <th>Low</th>
                             <th>Score below 50</th>
                             <th>Selected</th>
-                            <th>Memebers</th>
+                            <th>Members</th>
                         </tr>
 
                         @if (tabLowOpened)
@@ -252,6 +252,44 @@
                     <button type="button" onclick="@(() => NavButtonPress())" class="btn btn-primary">Done</button>
                 </div>
             </div>
+        </div>
+        <div class="col">
+            <InfoPannel Header="Info Panel - Interpretation">
+                <Body>
+                    <div>
+                        <p>Governance and management objectives deemed relevant by enterprises for assessment can be chosen in the scope selection phase. These are classified into three categories as outlined below: </p>
+                        <table class="table table-stripped small m-t-md">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-circle fa-2xs"></i>
+                                    </td>
+                                    <td>
+                                        <strong>High Importance</strong> - Applies to governance and management objectives with a score greater than 75%.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-circle fa-2xs"></i>
+                                    </td>
+                                    <td>
+                                        <strong>Significant Importance</strong> - Applies to governance and management objectives with a score between 50% and 75%.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-circle fa-2xs"></i>
+                                    </td>
+                                    <td>
+                                        <strong>Low Importance</strong> - Applies to governance and management objectives with a score less than 50%.
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </Body>
+            </InfoPannel>
         </div>
     </div>
 </div>

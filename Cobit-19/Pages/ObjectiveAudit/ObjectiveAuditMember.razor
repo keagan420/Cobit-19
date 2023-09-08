@@ -87,9 +87,9 @@
     }
 }
 
-<div class="container-sm">
+<div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-8">
             @if (_objectiveAuditDto is null || _userDtos is null)
             {
                 <p><em>Loading...</em></p>
@@ -110,8 +110,7 @@
                         <tr>
                             <th style="background-color: purple; color: white;">#</th>
                             <th style="background-color: purple; color: white;">User</th>
-                            <th style="background-color: purple; color: white;">Selected</th>  
-                            <th style="background-color: purple; color: white;"></th>
+                            <th style="background-color: purple; color: white;">Selected</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -133,6 +132,36 @@
                     <button type="button" onclick="@(() => NavButtonPress())" class="btn btn-primary">Done</button>
                 </div>
             </div>
+        </div>
+        <div class="col">
+            <InfoPannel Header="Audit Members">
+                <Body>
+                    <div>
+                        <p>In this phase, prioritized governance and management objectives can be assigned to an auditor, to complete a maturity assessment by following these steps:</p>
+                        <table class="table table-stripped small m-t-md">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-circle fa-2xs"></i>
+                                    </td>
+                                    <td>
+                                        <strong>Select</strong> an auditor who would be responsible for administering an audit on an objective 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-circle fa-2xs"></i>
+                                    </td>
+                                    <td>
+                                        The persons selected here are only responsible for the audit of the objectives selected in the previous step.
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </Body>
+            </InfoPannel>
         </div>
     </div>
 </div>

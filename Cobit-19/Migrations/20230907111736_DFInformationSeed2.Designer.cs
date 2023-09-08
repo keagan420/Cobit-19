@@ -4,6 +4,7 @@ using Cobit_19.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cobit_19.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230907111736_DFInformationSeed2")]
+    partial class DFInformationSeed2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -717,16 +720,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5b4881e9-0b1e-4a63-82a7-0ac3b67d0338",
+                            ConcurrencyStamp = "8d9d3824-e581-4e5c-a570-0f2a0d6cf171",
                             Email = "test@gmail.com",
                             EmailConfirmed = true,
                             FirstName = "Daniel",
                             LastName = "Coetzee",
                             LockoutEnabled = false,
                             NormalizedUserName = "TEST@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEFltu8FzFJRUphwHGD97YVbcrhRnPQM5fBEaz6QXP6vfnFqyNTG1wlIJkkuGdNRGRQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMoA2xEwQgIV6h44xl3Pa5yTcGYsLV+GcD+tluOdYsY3rIWQHR1zob1gD0IH1HF/8g==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "aa2bc7f6-2593-4b01-ba6f-45d632bb2b36",
+                            SecurityStamp = "38e2c9e3-37ff-4bc8-aede-2aadbb24a0de",
                             TwoFactorEnabled = false,
                             UserName = "test@gmail.com"
                         },
@@ -734,16 +737,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "fa567c12-5678-4321-bacd-87654321de1f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "80f873cb-3229-48cd-9113-b941e8d2db94",
+                            ConcurrencyStamp = "862d1d57-b21d-49ae-9870-b84cfc24d296",
                             Email = "john.smith@example.com",
                             EmailConfirmed = true,
                             FirstName = "John",
                             LastName = "Smith",
                             LockoutEnabled = false,
                             NormalizedUserName = "JOHN.SMITH@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGvMWYD8h4HsJpZUMEvTtwLa/fgUDK8b1SwA05wHwQd6vJPJad95q7IvuqDnWyPQTg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEIkAlqlff+bt2V/5g7rIGaGM3xTmzB30+B9nC37uB2QcPb6Q86YugTMoVx7W+D6/Fw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "57fd0589-05e4-4772-b681-48b72855f09e",
+                            SecurityStamp = "3828e1ac-8bc8-4bc6-beb6-88bf11e7d972",
                             TwoFactorEnabled = false,
                             UserName = "john.smith@example.com"
                         },
@@ -751,16 +754,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "9b1a0f34-8765-4321-dcba-ba09876543c2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a6844365-d50a-4cf9-9b58-0224a3aa3572",
+                            ConcurrencyStamp = "11b176fb-ff7f-4a35-a5e1-b7238a863b00",
                             Email = "alice.johnson@example.com",
                             EmailConfirmed = true,
                             FirstName = "Alice",
                             LastName = "Johnson",
                             LockoutEnabled = false,
                             NormalizedUserName = "ALICE.JOHNSON@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAECs6X345EWPAjSHgkEzs6tpyJIIqq5+6oOl6hT1TuRIWTT3P0UI979uiqlfTm5NuWA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENcsT9EyEb45SgW/pok5csCuIhrAjE8Mjaj+pFmvSShCVC/azvL/lCWD7RABmbnOdw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e7dc2fd6-da52-4805-9415-837d84c67054",
+                            SecurityStamp = "2bc83da5-394a-479e-abfa-6bd558b198a2",
                             TwoFactorEnabled = false,
                             UserName = "alice.johnson@example.com"
                         },
@@ -768,16 +771,16 @@ namespace Cobit_19.Migrations
                         {
                             Id = "b2c3d4e5-f6a7-1234-5678-0987654321dc",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8b92f2a9-69f5-4211-b171-4fdc21294335",
+                            ConcurrencyStamp = "28d2be10-8e1f-4846-ac2c-6d7693ad2ee7",
                             Email = "michael.brown@example.com",
                             EmailConfirmed = true,
                             FirstName = "Michael",
                             LastName = "Brown",
                             LockoutEnabled = false,
                             NormalizedUserName = "MICHAEL.BROWN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKTM8uDncCQp8Q9bSBHkgr5YA+YFp6Uknk/2xxCyFgl80eM3SXXfKh/ba/eyWXz5Yg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPCHNj9HKXkjQvZ/1Q04BqAIKF+KMImd7kyU7J011XKh3wg+f2WzL94e546j2Sq5ow==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "9cf9c7a1-9d90-47d9-bcc0-64682a469dc4",
+                            SecurityStamp = "6832957b-4517-454e-a703-7374b58c3b26",
                             TwoFactorEnabled = false,
                             UserName = "michael.brown@example.com"
                         });
@@ -997,7 +1000,6 @@ namespace Cobit_19.Migrations
                             ID = 6,
                             Description = "Compliance Requirements",
                             FocusAreaID = 1,
-                            Information = "The compliance requirements to which the enterprise is subject to, can be classified according to these categories. Low compliance requirements - The enterprise is subject to a minimal set of regular compliance requirements that are lower than average. Normal compliance requirements - The enterprise is subject to a set of regular compliance requirements that are common across different industries. High compliance requirements - The enterprise is subject to higher than average compliance requirements, most often related to the industry sector or geopolitical conditions",
                             Name = "Cobit Core Model - Design Factor 6"
                         },
                         new
@@ -1005,7 +1007,6 @@ namespace Cobit_19.Migrations
                             ID = 7,
                             Description = "Role of IT",
                             FocusAreaID = 1,
-                            Information = "The role of IT for the enterprise can be classified according to the categories: Support - IT is not crucial for the running and continuity of the business process and services, nor for their innovation. Factory - When IT fails, it immediately impacts the running and continuity of the business processes and services. However, IT is not seen as a driver for innovating business processes and services. Turnaround - IT is seen as a driver for innovating business processes and services. At this moment, however, IT is not a critical dependency for the current running and continuity of the business processes and services.",
                             Name = "Cobit Core Model - Design Factor 7"
                         },
                         new
@@ -1013,7 +1014,6 @@ namespace Cobit_19.Migrations
                             ID = 8,
                             Description = "Sourcing model for IT",
                             FocusAreaID = 1,
-                            Information = "The sourcing model the enterprise adopts can be classified according to the categories: Outsourcing - The enterprise calls upon the services of a third party to provide IT services. Cloud - The enterprise maximizes the use of the cloud for providing IT services to its users. Insourced - The enterprise provides for their own IT staff and services.",
                             Name = "Cobit Core Model - Design Factor 8"
                         },
                         new
@@ -1021,13 +1021,12 @@ namespace Cobit_19.Migrations
                             ID = 9,
                             Description = "IT implementation methods",
                             FocusAreaID = 1,
-                            Information = "The methods the enterprise adopts can be classified according to the categories: Agile - The enterprise uses Agile development working methods for its software development. DevOps - The enterprise uses DevOps working methods for software building, deployment and operations. Traditional - The enterprise uses a more classic approach towards software development (waterfall)                                  separates software development and operations.",
                             Name = "Cobit Core Model - Design Factor 9"
                         },
                         new
                         {
                             ID = 10,
-                            Description = "The technology adoption strategy can be classified according to the categories: First mover - The enterprise generally adopts new technologies as early as possible and tries to gain a first-mover advantage. Follower - The enterprise typically waits for new technology to become mainstream and proven before adopting them. Slow adopter - The enterprise is very late in adopting new technologies.",
+                            Description = "Technology adoption strategy",
                             FocusAreaID = 1,
                             Name = "Cobit Core Model - Design Factor 10"
                         });
@@ -20368,28 +20367,28 @@ namespace Cobit_19.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "f0db69dc-dee4-4bc3-9bbb-41de38bf9b85",
+                            ConcurrencyStamp = "bfc94498-61db-4930-a0b5-6f0f99712f4d",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "36c9f3b8-42e6-4ab1-a50d-e89986c5d1f7",
-                            ConcurrencyStamp = "fb9d3a8c-f066-4079-b604-e06c4030df34",
+                            ConcurrencyStamp = "d36d15a4-7c51-4d56-a6b7-4f8286c36533",
                             Name = "Head Auditor",
                             NormalizedName = "HEAD AUDITOR"
                         },
                         new
                         {
                             Id = "5e70cf29-1b64-4f58-85dd-07b3c46015a3",
-                            ConcurrencyStamp = "837d9971-0ce2-462b-b6bf-4276dc5aac9d",
+                            ConcurrencyStamp = "6151d7b7-6005-4cb6-a5a3-ed019648785a",
                             Name = "Auditor",
                             NormalizedName = "AUDITOR"
                         },
                         new
                         {
                             Id = "d3ae1c6e-1c8a-43e7-9a2a-971fc7fbb295",
-                            ConcurrencyStamp = "e2783206-a8f5-45a3-b30b-db11d81f0962",
+                            ConcurrencyStamp = "a0a5b4c4-611c-4219-ad85-e3fdb023d601",
                             Name = "Client",
                             NormalizedName = "CLIENT"
                         });

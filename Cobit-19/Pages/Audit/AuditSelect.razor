@@ -41,9 +41,44 @@
 }
 
 <AuthorizeView>
-    <div class="container border">
-        <div>
-        <AuditSelectTable userID="@userID" focusAreaID="@focusAreaID" />
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <div class="container border">
+                    <div>
+                        <AuditSelectTable userID="@userID" focusAreaID="@focusAreaID" />
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <InfoPannel Header="Info - Audit Selection">
+                    <Body>
+                        <div>
+                            <p>All the audits that form part of the selected Focus Area Assigned to you is displayed here:</p>
+                            <table class="table table-stripped small m-t-md">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <i class="fa fa-circle fa-2xs"></i>
+                                        </td>
+                                        <td>
+                                            <strong>Select</strong> the audits that you would like to complete.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="fa fa-circle fa-2xs"></i>
+                                        </td>
+                                        <td>
+                                            The persons selected here are only responsible for the audit of the objectives selected in the previous step.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </Body>
+                </InfoPannel>
+            </div>
         </div>
     </div>
 </AuthorizeView>
