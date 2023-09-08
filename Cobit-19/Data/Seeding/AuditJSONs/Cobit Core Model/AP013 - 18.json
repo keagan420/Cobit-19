@@ -1,10 +1,10 @@
-{ 
+{
   "objectiveName": "APO13",
   "objectiveDescription": "Define, operate and monitor an information security management system.",
   "objectivePurpose": "Keep the impact and occurrence of information security incidents within the enterprise’s risk appetite levels.",
   "maturityLevel": 0,
   "maturityLevel0PercFinal": 0,
-  "maturityLevel1PercFinal": 0, 
+  "maturityLevel1PercFinal": 0,
   "maturityLevel2PercFinal": 0,
   "maturityLevel3PercFinal": 0,
   "maturityLevel4PercFinal": 0,
@@ -39,87 +39,80 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "EG06",
+          "subComponentName": "Business service continuity and availability",
+          "subComponentQuestions": [
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Number of customer service or business process interruptions causing significant incidents",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
             },
-
-            [
-
-              {
-                "subComponentCode": "EG06",
-                "subComponentName": "Business service continuity and availability",
-                "subComponentQuestions": [
-                  {
-                    "questionType": "Enterprise goal",
-                    "questionDescription": "Number of customer service or business process interruptions causing significant incidents",
-                    "questionAnswer": 0,
-                    "questionScore": 0,
-                    "questionComment": "comment"
-                  },
-                  {
-                    "questionType": "Enterprise goal",
-                    "questionDescription": "Business cost of incidents",
-                    "questionAnswer": 0,
-                    "questionScore": 0,
-                    "questionComment": "comment"
-                  },
-                  {
-                    "questionType": "Enterprise goal",
-                    "questionDescription": "Number of business processing hours lost due to unplanned service interruptions",
-                    "questionAnswer": 0,
-                    "questionScore": 0,
-                    "questionComment": "comment"
-                  },
-                  {
-                    "questionType": "Enterprise goal",
-                    "questionDescription": "Percent of complaints as a function of committed service availability targets",
-                    "questionAnswer": 0,
-                    "questionScore": 0,
-                    "questionComment": "comment"
-                  }
-
-                ]
-              }
-            ]
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Business cost of incidents",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Number of business processing hours lost due to unplanned service interruptions",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Percent of complaints as a function of committed service availability targets",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
           ]
         }
       ]
     },
-
     {
       "componentCode": "AG",
       "componentDescription": "Alignment Goals",
       "componentPercFinal": 0,
       "subComponents": [
-        
-              {
-                "subComponentCode": "AG07",
-                "subComponentName": "Security of information, processing infrastructure and applications, and privacy",
-                "subComponentQuestions": [
-                  {
-                    "questionType": "Alignment goal",
-                    "questionDescription": "Number of confidentiality incidents causing financial loss, business disruption or public embarrassment",
-                    "questionAnswer": 0,
-                    "questionScore": 0,
-                    "questionComment": "comment"
-                  },
-                  {
-                    "questionType": "Alignment goal",
-                    "questionDescription": "Number of availability incidents causing financial loss, business disruption or public embarrassment",
-                    "questionAnswer": 0,
-                    "questionScore": 0,
-                    "questionComment": "comment"
-                  },
-                  {
-                    "questionType": "Alignment goal",
-                    "questionDescription": "Number of integrity incidents causing financial loss, business disruption or public embarrassment",
-                    "questionAnswer": 0,
-                    "questionScore": 0,
-                    "questionComment": "comment"
-                  }
-                ]
-              }
-            
+        {
+          "subComponentCode": "AG07",
+          "subComponentName": "Security of information, processing infrastructure and applications, and privacy",
+          "subComponentQuestions": [
+            {
+              "questionType": "Alignment goal",
+              "questionDescription": "Number of confidentiality incidents causing financial loss, business disruption or public embarrassment",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Alignment goal",
+              "questionDescription": "Number of availability incidents causing financial loss, business disruption or public embarrassment",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Alignment goal",
+              "questionDescription": "Number of integrity incidents causing financial loss, business disruption or public embarrassment",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
           ]
-        },
+        }
+      ]
+    },
+
         {
           "componentName": "A",
           "componentDescription": "Processes",
@@ -209,7 +202,6 @@
                   "questionComment": "comment"
                 },
 
-
                 {
                   "questionType": "Related Guidance",
                   "questionDescription": "string",
@@ -262,38 +254,6 @@
                   "detailedReference": "3.17 Risk assessment (RA-2))",
                   "inputFrom": "string",
                   "outputTo": "string,",
-                  "questionAnswer": 0,
-                  "questionScore": 0,
-                  "questionComment": "comment"
-                },
-
-                {
-                  "questionType": "Input",
-                  "questionDescription": "Enterprise security approach",
-                  "relatedGuidance": "string",
-                  "detailedReference": "string",
-                  "inputFrom": "Outside COBIT",
-                  "outputTo": "string",
-                  "questionAnswer": 0,
-                  "questionScore": 0,
-                  "questionComment": "comment"
-                },
-                {
-                  "questionType": "Output",
-                  "questionDescription": "ISMS scope statement",
-                  "relatedGuidance": "string",
-                  "detailedReference": "string",
-                  "outputTo": "APO01.05;DSS06.031",
-                  "questionAnswer": 0,
-                  "questionScore": 0,
-                  "questionComment": "comment"
-                },
-                {
-                  "questionType": "Output",
-                  "questionDescription": "OISMS policy",
-                  "relatedGuidance": "string",
-                  "detailedReference": "string",
-                  "outputTo": "Internal",
                   "questionAnswer": 0,
                   "questionScore": 0,
                   "questionComment": "comment"
@@ -381,284 +341,79 @@
                   "questionAnswer": 0,
                   "questionScore": 0,
                   "questionComment": "comment"
-                },
+                }
+
+              ]
+
+            },
+            {
+              "subComponentCode": "APO13.03 ",
+              "subComponentName": " Monitor and review the information security management system (ISMS).",
+              "subComponentDescription": "Maintain and regularly communicate the need for, and benefits of continuous improvement in information security. Collect and analyze data about the information security management system (ISMS) and improve its effectiveness. Correct nonconformities to prevent recurrence.",
+              "subComponentQuestions": [
                 {
-                  "questionType": "Input",
-                  "questionDescription": "Gaps and changes required to realize target capability",
-                  "relatedGuidance": "string",
-                  "detailedReference": "string",
-                  "inputFrom": "APO02.04",
-                  "outputTo": "string",
-                  "questionAnswer": 0,
-                  "questionScore": 0,
-                  "questionComment": "comment"
-                },
-                {
-                  "questionType": "Input",
-                  "questionDescription": "Baseline domain descriptions and architecture definition",
-                  "relatedGuidance": "string",
-                  "detailedReference": "string",
-                  "inputFrom": "APO03.02",
-                  "outputTo": "string",
-                  "questionAnswer": 0,
-                  "questionScore": 0,
-                  "questionComment": "comment"
-                },
-                {
-                  "questionType": "Input",
-                  "questionDescription": "Project proposals for reducing risk",
-                  "relatedGuidance": "string",
-                  "detailedReference": "string",
-                  "inputFrom": "APO12.05",
-                  "outputTo": "string",
-                  "questionAnswer": 0,
-                  "questionScore": 0,
-                  "questionComment": "comment"
-                },
-                {
-                  "questionType": "Output",
-                  "questionDescription": "Information security risk treatment plan",
+                  "questionType": "Maturity Level 4",
+                  "questionDescription": "Undertake regular reviews of the effectiveness of the ISMS. Include meeting ISMS policy and objectives and reviewing security and privacy practices",
                   "relatedGuidance": "string",
                   "detailedReference": "string",
                   "inputFrom": "string",
-                  "outputTo": "All APO;All BAI;All DSS; All MEA;ALL EDM",
+                  "outputTo": "string,",
                   "questionAnswer": 0,
                   "questionScore": 0,
                   "questionComment": "comment"
                 },
                 {
-                  "questionType": "Output",
-                  "questionDescription": "Information security business cases",
+                  "questionType": "Maturity Level 4",
+                  "questionDescription": "Conduct ISMS audits at planned intervals.",
                   "relatedGuidance": "string",
                   "detailedReference": "string",
                   "inputFrom": "string",
-                  "outputTo": "APO05.02",
+                  "outputTo": "string, ",
                   "questionAnswer": 0,
                   "questionScore": 0,
                   "questionComment": "comment"
                 },
                 {
-                  "subComponentCode": "APO13.03 ",
-                  "subComponentName": " Monitor and review the information security management system (ISMS).",
-                  "subComponentDescription": "Maintain and regularly communicate the need for, and benefits of continuous improvement in information security. Collect and analyze data about the information security management system (ISMS) and improve its effectiveness. Correct nonconformities to prevent recurrence.",
-                  "subComponentQuestions": [
-                    {
-                      "questionType": "Maturity Level 4",
-                      "questionDescription": "Undertake regular reviews of the effectiveness of the ISMS. Include meeting ISMS policy and objectives and reviewing security and privacy practices",
-                      "relatedGuidance": "string",
-                      "detailedReference": "string",
-                      "inputFrom": "string",
-                      "outputTo": "string,",
-                      "questionAnswer": 0,
-                      "questionScore": 0,
-                      "questionComment": "comment"
-                    },
-                    {
-                      "questionType": "Maturity Level 4",
-                      "questionDescription": "Conduct ISMS audits at planned intervals.",
-                      "relatedGuidance": "string",
-                      "detailedReference": "string",
-                      "inputFrom": "string",
-                      "outputTo": "string, ",
-                      "questionAnswer": 0,
-                      "questionScore": 0,
-                      "questionComment": "comment"
-                    },
-                    {
-                      "questionType": "Maturity Level 4",
-                      "questionDescription": "Undertake a management review of the ISMS on a regular basis to ensure that the scope remains adequate and improvements in the ISMS process are identified.",
-                      "relatedGuidance": "string",
-                      "detailedReference": "string",
-                      "inputFrom": "string",
-                      "outputTo": "string, ",
-                      "questionAnswer": 0,
-                      "questionScore": 0,
-                      "questionComment": "comment"
-                    },
-                    {
-                      "questionType": "Maturity Level 4",
-                      "questionDescription": "Record actions and events that could have an impact on the effectiveness or performance of the ISMS.",
-                      "relatedGuidance": "string",
-                      "detailedReference": "string",
-                      "inputFrom": "string",
-                      "outputTo": "string, ",
-                      "questionAnswer": 0,
-                      "questionScore": 0,
-                      "questionComment": "comment"
-                    },
-                    {
-                      "questionType": "Maturity Level 5",
-                      "questionDescription": "Provide input to the maintenance of the security plans to take into account the findings of monitoring and reviewing activities.",
-                      "relatedGuidance": "string",
-                      "detailedReference": "string",
-                      "inputFrom": "string",
-                      "outputTo": "string, ",
-                      "questionAnswer": 0,
-                      "questionScore": 0,
-                      "questionComment": "comment"
-                    },
-
-                    {
-                      "questionType": "Related Guidance",
-                      "questionDescription": "string",
-                      "relatedGuidance": "National Institute of Standards and Technology Special Publication 800-37, Revision 2 (Draft), May 2018",
-                      "detailedReference": "3.3 Selection (Task 3)",
-                      "inputFrom": "string",
-                      "outputTo": "string,",
-                      "questionAnswer": 0,
-                      "questionScore": 0,
-                      "questionComment": "comment"
-                    },
-                    {
-                      "questionType": "Input",
-                      "questionDescription": "Classified and prioritized incidents and service requests",
-                      "relatedGuidance": "string",
-                      "detailedReference": "string",
-                      "inputFrom": "DSS02.02",
-                      "outputTo": "string",
-                      "questionAnswer": 0,
-                      "questionScore": 0,
-                      "questionComment": "comment"
-                    },
-
-                    {
-                      "questionType": "Output",
-                      "questionDescription": "Recommendations for improving the information security management system (ISMS)",
-                      "relatedGuidance": "string",
-                      "detailedReference": "string",
-                      "inputFrom": "string",
-                      "outputTo": "Internal",
-                      "questionAnswer": 0,
-                      "questionScore": 0,
-                      "questionComment": "comment"
-                    },
-                    {
-                      "questionType": "Output",
-                      "questionDescription": "Information security management system (ISMS) audit reports",
-                      "relatedGuidance": "string",
-                      "detailedReference": "string",
-                      "inputFrom": "string",
-                      "outputTo": "MEA02.01",
-                      "questionAnswer": 0,
-                      "questionScore": 0,
-                      "questionComment": "comment"
-                    }
-
-                  ]
-                }
-              ]
-            },
-            {
-              "componentName": "B",
-              "componentDescription": "Organizational Structures",
-              "componentPercFinal": 0,
-              "componentQuestions": [
-                {
-                  "questionType": "APO13.01",
-                  "questionDescription": "Roles, responsibilities and authorities are defined, assigned and accepted by appropriate Business Management, IT Management and the Board.",
+                  "questionType": "Maturity Level 4",
+                  "questionDescription": "Undertake a management review of the ISMS on a regular basis to ensure that the scope remains adequate and improvements in the ISMS process are identified.",
+                  "relatedGuidance": "string",
+                  "detailedReference": "string",
+                  "inputFrom": "string",
+                  "outputTo": "string, ",
                   "questionAnswer": 0,
                   "questionScore": 0,
                   "questionComment": "comment"
                 },
                 {
-                  "questionType": "APO13.02",
-                  "questionDescription": "Roles, responsibilities and authorities are defined, assigned and accepted by appropriate Business Management, IT Management and the Board.",
+                  "questionType": "Maturity Level 4",
+                  "questionDescription": "Record actions and events that could have an impact on the effectiveness or performance of the ISMS.",
+                  "relatedGuidance": "string",
+                  "detailedReference": "string",
+                  "inputFrom": "string",
+                  "outputTo": "string, ",
                   "questionAnswer": 0,
                   "questionScore": 0,
                   "questionComment": "comment"
                 },
                 {
-                  "questionType": "APO13.03",
-                  "questionDescription": "Roles, responsibilities and authorities are defined, assigned and accepted by appropriate Business Management, IT Management and the Board.",
+                  "questionType": "Maturity Level 5",
+                  "questionDescription": "Provide input to the maintenance of the security plans to take into account the findings of monitoring and reviewing activities.",
+                  "relatedGuidance": "string",
+                  "detailedReference": "string",
+                  "inputFrom": "string",
+                  "outputTo": "string, ",
                   "questionAnswer": 0,
                   "questionScore": 0,
                   "questionComment": "comment"
-                }
-              ]
-            },
-            {
-              "componentName": "D",
-              "componentDescription": "Peoples, Skills and Competencies",
-              "componentPercFinal": 0,
-              "componentQuestions": [
+                },
 
                 {
-                  "questionType": "Component question",
-                  "questionSkill": "Information security",
-                  "relatedGuidance": "Skills Framework for the Information Age V6, 2015 ",
-                  "detailedReference": "SCTY",
-                  "questionAnswer": 0,
-                  "questionScore": 0,
-                  "questionComment": "comment"
-                },
-                {
-                  "questionType": "Component question",
-                  "questionSkill": "Information security strategy development",
-                  "relatedGuidance": "e-Competence Framework (e-CF)—A common European Framework for ICT, Professionals in all industry sectors-Part 1: Framework 2016 ",
-                  "detailedReference": "D. Enable—D.1. Information Security Strategy Development",
-                  "questionAnswer": 0,
-                  "questionScore": 0,
-                  "questionComment": "comment"
-                }
-              ]
-            },
-            {
-              "componentName": "E",
-              "componentDescription": "Principles Policies and Procedures",
-              "componentPercFinal": 0,
-              "componentQuestions": [
-                {
-                  "questionType": "Component question",
-                  "relevantPolicy": "Information security and privacy policy",
-                  "policyDescription": "Sets behavioral guidelines to protect corporate information systems and infrastructure. Given that business requirements regarding security and storage are more dynamic than I&T risk management and privacy their governance should be handled separately from that of I&T risk and privacy. For operational efficiency synchronize information security policy with I&T risk and privacy policy.",
-                  "detailedGuidance": "1) ISO/IEC 27001:2013/,Cor.2: 2015(E);(2)ISO/IEC 27002: 2013/Cor.2:2015(E);(3) National Institute of Standards and Technology Special Publication 800-53 Revision 5 (Draft) August 2017;(4) HITRUST CSF version 9 September 2017; (5) ISF The Standard of Good Practice for Information Security 2016 ",
-                  "detailedReference": "(1) 5.2 Policy; (2) 5. Information security policies;(3) 3.2 Awareness and training (AT-1);(4) 04.01 Information Security Policy;(5) SM1.1 Information Security Policy",
-                  "questionAnswer": 0,
-                  "questionScore": 0,
-                  "questionComment": "comment"
-                }
-
-              ]
-            },
-            {
-              "componentName": "F",
-              "componentDescription": "Culture, Ethics and Behavior",
-              "componentPercFinal": 0,
-              "componentQuestions": [
-                {
-                  "questionType": "Component question",
-                  "keyCultureElement": "Establish a culture of security and privacy awareness that positively influences desirable behavior and actual implementation of security and privacy policy in daily practice. Provide sufficient security and privacy guidance indicate security and privacy champions (including C-level executives leaders in HR and security and/or privacy professionals) and proactively support and communicate security and privacy programs innovations and challenges.",
-                  "relatedGuidance": "(1) ISO/IEC 27001:2013/Cor.2: 2015(E); (2)Creating a Culture of Security ISACA 2011 ",
-                  "detailedReference": "(1) 7.3 Awareness; (2) Framework to achieve an intentional security aware culture(all chapters)",
-                  "questionAnswer": 0,
-                  "questionScore": 0,
-                  "questionComment": "comment"
-                }
-
-              ]
-            },
-            {
-              "componentName": "G",
-              "componentDescription": "Services, Infrastructure and Applications",
-              "componentPercFinal": 0,
-              "componentQuestions": [
-                {
-                  "questionType": "Component question",
-                  "questionDescription": "Configuration management tools",
-                  "questionAnswer": 0,
-                  "questionScore": 0,
-                  "questionComment": "comment"
-                },
-                {
-                  "questionType": "Component question",
-                  "questionDescription": "Security and privacy awareness services",
-                  "questionAnswer": 0,
-                  "questionScore": 0,
-                  "questionComment": "comment"
-                },
-                {
-                  "questionType": "Component question",
-                  "questionDescription": "Third-party security assessment services",
+                  "questionType": "Related Guidance",
+                  "questionDescription": "string",
+                  "relatedGuidance": "National Institute of Standards and Technology Special Publication 800-37, Revision 2 (Draft), May 2018",
+                  "detailedReference": "3.3 Selection (Task 3)",
+                  "inputFrom": "string",
+                  "outputTo": "string,",
                   "questionAnswer": 0,
                   "questionScore": 0,
                   "questionComment": "comment"
@@ -666,6 +421,276 @@
               ]
             }
           ]
+        },
+        {
+          "componentName": "B",
+          "componentDescription": "Organizational Structures",
+          "componentPercFinal": 0,
+          "componentQuestions": [
+            {
+              "questionType": "APO13.01",
+              "questionDescription": "Roles, responsibilities and authorities are defined, assigned and accepted by appropriate Business Management, IT Management and the Board.",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "APO13.02",
+              "questionDescription": "Roles, responsibilities and authorities are defined, assigned and accepted by appropriate Business Management, IT Management and the Board.",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "APO13.03",
+              "questionDescription": "Roles, responsibilities and authorities are defined, assigned and accepted by appropriate Business Management, IT Management and the Board.",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+      ]
+    },
+    {
+      "componentCode": "C",
+      "componentDescription": "Information Flows and Items",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "APO13.01",
+          "subComponentName": " Establish and maintain an information security management system (ISMS).",
+          "subComponentDescription": "Establish and maintain an information security management system (ISMS) that provides a standard formal and continuous approach to information security management enabling secure technology and business processes that are aligned with business requirements.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Enterprise security approach",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "Outside COBIT",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "ISMS scope statement",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "outputTo": "APO01.05;DSS06.031",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "OISMS policy",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO13.02 ",
+          "subComponentName": " Define and manage an information security and privacy risk treatment plan.",
+          "subComponentDescription": "Maintain an information security plan that describes how information security risk is to be managed and aligned with enterprise strategy and enterprise architecture.Ensure that recommendations for implementing security improvements are approved business cases, implemented as an integral part of services and solutions development and operated as an integral part of business operation.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Gaps and changes required to realize target capability",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO02.04",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Baseline domain descriptions and architecture definition",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO03.02",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Input",
+              "questionDescription": "Project proposals for reducing risk",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "APO12.05",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Information security risk treatment plan",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "All APO;All BAI;All DSS; All MEA;ALL EDM",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Information security business cases",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "APO05.02",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        },
+        {
+          "subComponentCode": "APO13.03 ",
+          "subComponentName": " Monitor and review the information security management system (ISMS).",
+          "subComponentDescription": "Maintain and regularly communicate the need for, and benefits of continuous improvement in information security. Collect and analyze data about the information security management system (ISMS) and improve its effectiveness. Correct nonconformities to prevent recurrence.",
+          "subComponentQuestions": [
+            {
+              "questionType": "Input",
+              "questionDescription": "Classified and prioritized incidents and service requests",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "DSS02.02",
+              "outputTo": "string",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+
+            {
+              "questionType": "Output",
+              "questionDescription": "Recommendations for improving the information security management system (ISMS)",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "Internal",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Output",
+              "questionDescription": "Information security management system (ISMS) audit reports",
+              "relatedGuidance": "string",
+              "detailedReference": "string",
+              "inputFrom": "string",
+              "outputTo": "MEA02.01",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "componentName": "D",
+      "componentDescription": "Peoples, Skills and Competencies",
+      "componentPercFinal": 0,
+      "componentQuestions": [
+
+        {
+          "questionType": "Component question",
+          "questionSkill": "Information security",
+          "relatedGuidance": "Skills Framework for the Information Age V6, 2015 ",
+          "detailedReference": "SCTY",
+          "questionAnswer": 0,
+          "questionScore": 0,
+          "questionComment": "comment"
+        },
+        {
+          "questionType": "Component question",
+          "questionSkill": "Information security strategy development",
+          "relatedGuidance": "e-Competence Framework (e-CF)—A common European Framework for ICT, Professionals in all industry sectors-Part 1: Framework 2016 ",
+          "detailedReference": "D. Enable—D.1. Information Security Strategy Development",
+          "questionAnswer": 0,
+          "questionScore": 0,
+          "questionComment": "comment"
+        }
+      ]
+    },
+    {
+      "componentName": "E",
+      "componentDescription": "Principles Policies and Procedures",
+      "componentPercFinal": 0,
+      "componentQuestions": [
+        {
+          "questionType": "Component question",
+          "relevantPolicy": "Information security and privacy policy",
+          "policyDescription": "Sets behavioral guidelines to protect corporate information systems and infrastructure. Given that business requirements regarding security and storage are more dynamic than I&T risk management and privacy their governance should be handled separately from that of I&T risk and privacy. For operational efficiency synchronize information security policy with I&T risk and privacy policy.",
+          "detailedGuidance": "1) ISO/IEC 27001:2013/,Cor.2: 2015(E);(2)ISO/IEC 27002: 2013/Cor.2:2015(E);(3) National Institute of Standards and Technology Special Publication 800-53 Revision 5 (Draft) August 2017;(4) HITRUST CSF version 9 September 2017; (5) ISF The Standard of Good Practice for Information Security 2016 ",
+          "detailedReference": "(1) 5.2 Policy; (2) 5. Information security policies;(3) 3.2 Awareness and training (AT-1);(4) 04.01 Information Security Policy;(5) SM1.1 Information Security Policy",
+          "questionAnswer": 0,
+          "questionScore": 0,
+          "questionComment": "comment"
+        }
+
+      ]
+    },
+    {
+      "componentName": "F",
+      "componentDescription": "Culture, Ethics and Behavior",
+      "componentPercFinal": 0,
+      "componentQuestions": [
+        {
+          "questionType": "Component question",
+          "keyCultureElement": "Establish a culture of security and privacy awareness that positively influences desirable behavior and actual implementation of security and privacy policy in daily practice. Provide sufficient security and privacy guidance indicate security and privacy champions (including C-level executives leaders in HR and security and/or privacy professionals) and proactively support and communicate security and privacy programs innovations and challenges.",
+          "relatedGuidance": "(1) ISO/IEC 27001:2013/Cor.2: 2015(E); (2)Creating a Culture of Security ISACA 2011 ",
+          "detailedReference": "(1) 7.3 Awareness; (2) Framework to achieve an intentional security aware culture(all chapters)",
+          "questionAnswer": 0,
+          "questionScore": 0,
+          "questionComment": "comment"
+        }
+
+      ]
+    },
+    {
+      "componentName": "G",
+      "componentDescription": "Services, Infrastructure and Applications",
+      "componentPercFinal": 0,
+      "componentQuestions": [
+        {
+          "questionType": "Component question",
+          "questionDescription": "Configuration management tools",
+          "questionAnswer": 0,
+          "questionScore": 0,
+          "questionComment": "comment"
+        },
+        {
+          "questionType": "Component question",
+          "questionDescription": "Security and privacy awareness services",
+          "questionAnswer": 0,
+          "questionScore": 0,
+          "questionComment": "comment"
+        },
+        {
+          "questionType": "Component question",
+          "questionDescription": "Third-party security assessment services",
+          "questionAnswer": 0,
+          "questionScore": 0,
+          "questionComment": "comment"
         }
       ]
     }
+  ]
+  }
+      
+    
+  
+      

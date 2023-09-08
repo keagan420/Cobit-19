@@ -46,11 +46,9 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
             },
-
-
-            [
-
               {
                 "subComponentCode": "EG08",
                 "subComponentName": "Optimization of internal business process functionality",
@@ -78,9 +76,8 @@
                   }
 
                 ]
-              }
-            ],
-            [
+              },
+            
 
               {
                 "subComponentCode": "EG10",
@@ -116,11 +113,7 @@
                   }
 
                 ]
-              }
-            ],
-
-            [
-
+              },
               {
                 "subComponentCode": "EG12",
                 "subComponentName": "Managed digital transformation programs",
@@ -155,9 +148,7 @@
                   }
 
                 ]
-              }
-            ],
-            [
+              },
 
               {
                 "subComponentCode": "EG13",
@@ -189,9 +180,6 @@
               }
             ]
 
-          ]
-        }
-      ]
     },
 
     {
@@ -223,6 +211,8 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
             },
             {
               "subComponentCode": "AG12",
@@ -248,8 +238,10 @@
                   "questionAnswer": 0,
                   "questionScore": 0,
                   "questionComment": "comment"
+                }
+              ]
                 },
-                [
+                
                   {
                     "subComponentCode": "AG13",
                     "subComponentName": "Knowledge, expertise and initiatives for business innovation",
@@ -276,9 +268,8 @@
                         "questionComment": "comment"
                       }
                     ]
-                  }
-                ],
-                [ 
+                  },
+                
                   {
                     "subComponentCode": "AG06",
                     "subComponentName": "Agility to turn business requirements into operational solutions",
@@ -314,8 +305,6 @@
                     ]
                   }
                 ]
-
-              ]
             },
             {
               "componentName": "A",
@@ -1117,8 +1106,4 @@
             }
           ]
         }
-      ]
-
-    }
-  ]
-}
+     

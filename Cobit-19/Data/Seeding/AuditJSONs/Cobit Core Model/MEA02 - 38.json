@@ -46,11 +46,9 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
             },
-          
-
-            [
-
               {
                 "subComponentCode": "EG11",
                 "subComponentName": "Compliance with internal policies",
@@ -79,10 +77,8 @@
 
                 ]
               }
-            ]
-          ]
-        }
-      ]
+            ] 
+        
     },
 
     {
@@ -774,4 +770,4 @@
       ]
     }
   ]
-}
+} 

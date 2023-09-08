@@ -9,74 +9,74 @@
   "maturityLevel3PercFinal": 0,
   "maturityLevel4PercFinal": 0,
   "maturityLevel5PercFinal": 0,
-  "components": [  
+  "components": [
     {
-      "subComponentCode": "EG01",
-      "subComponentName": "Portfolio of competitive products and services",
-      "subComponentQuestions": [
+      "componentCode": "EG",
+      "componentDescription": "Enterprise Goals",
+      "componentPercFinal": 0,
+      "subComponents": [
         {
-          "questionType": "Enterprise goal",
-          "questionDescription": "Percent of products and services that meet or exceed targets in revenues and/or market share",
-          "questionAnswer": 0,
-          "questionScore": 0,
-          "questionComment": "comment"
+          "subComponentCode": "EG01",
+          "subComponentName": "Portfolio of competitive products and services",
+          "subComponentQuestions": [
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Percent of products and services that meet or exceed targets in revenues and/or market share",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Percent of products and services that meet or exceed customer satisfaction targets",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Percent of products and services that provide competitive advantage",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Time to market for new products and services",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
         },
         {
-          "questionType": "Enterprise goal",
-          "questionDescription": "Percent of products and services that meet or exceed customer satisfaction targets",
-          "questionAnswer": 0,
-          "questionScore": 0,
-          "questionComment": "comment"
-        },
-        {
-          "questionType": "Enterprise goal",
-          "questionDescription": "Percent of products and services that provide competitive advantage",
-          "questionAnswer": 0,
-          "questionScore": 0,
-          "questionComment": "comment"
-        },
-        {
-          "questionType": "Enterprise goal",
-          "questionDescription": "Time to market for new products and services",
-          "questionAnswer": 0,
-          "questionScore": 0,
-          "questionComment": "comment"
-        },
-
-
-        [
-
-          {
-            "subComponentCode": "EG08",
-            "subComponentName": "Optimization of internal business process functionality",
-            "subComponentQuestions": [
-              {
-                "questionType": "Enterprise goal",
-                "questionDescription": "Satisfaction levels of board and executive management with business process capabilities",
-                "questionAnswer": 0,
-                "questionScore": 0,
-                "questionComment": "comment"
-              },
-              {
-                "questionType": "Enterprise goal",
-                "questionDescription": "Satisfaction levels of customers with service delivery capabilities",
-                "questionAnswer": 0,
-                "questionScore": 0,
-                "questionComment": "comment"
-              },
-              {
-                "questionType": "Enterprise goal",
-                "questionDescription": "Satisfaction levels of suppliers with supply chain capabilities",
-                "questionAnswer": 0,
-                "questionScore": 0,
-                "questionComment": "comment"
-              }
-
-            ]
-          }
-        ]
+          "subComponentCode": "EG08",
+          "subComponentName": "Optimization of internal business process functionality",
+          "subComponentQuestions": [
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Satisfaction levels of board and executive management with business process capabilities",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Satisfaction levels of customers with service delivery capabilities",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Satisfaction levels of suppliers with supply chain capabilities",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        }
       ]
-
     },
     {
       "componentCode": "AG",
@@ -108,9 +108,11 @@
               "questionScore": 0,
               "questionComment": "comment"
             }
-
           ]
-        },
+        }
+      ]
+    },
+
         {
           "componentName": "A",
           "componentDescription": "Processes",
@@ -669,7 +671,10 @@
                   "questionAnswer": 0,
                   "questionScore": 0,
                   "questionComment": "comment"
+                }
+              ]
                 },
+
                 {
                   "subComponentCode": "APO10.02 ",
                   "subComponentName": "Select vendors.",
@@ -810,9 +815,6 @@
                     }
 
                   ]
-
-
-
                 },
                 {
                   "subComponentCode": "APO10.05 ",
@@ -844,9 +846,7 @@
                     }
                   ]
                 }
-              ]
-            }
-          ]
+              ] 
         },
 
         {
@@ -968,5 +968,4 @@
         }
       ]
     }
-  ]
-}
+  

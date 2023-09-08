@@ -225,158 +225,168 @@
                           "questionAnswer": 0,
                           "questionScore": 0,
                           "questionComment": "comment"
-                        },
+                        }
+                      ]
+                    },
 
+                    {
+
+                      "subComponentCode": "BAI06.02",
+                      "subComponentName": "Manage emergency changes.",
+                      "subComponentDescription": "Carefully manage emergency changes to minimize further incidents. Ensure the emergency change is controlled and takes place securely. Verify that emergency changes are appropriately assessed and authorized after the change.",
+                      "subComponentQuestions": [
                         {
+                          "questionType": "Maturity Level 2",
+                          "questionDescription": " Define what constitutes an emergency change.",
+                          "relatedGuidance": "string",
+                          "detailedReference": "string",
+                          "inputFrom": "string",
+                          "outputTo": "string, ",
+                          "questionAnswer": 0,
+                          "questionScore": 0,
+                          "questionComment": "comment"
+                        },
+                        {
+                          "questionType": "Maturity Level 2",
+                          "questionDescription": "Ensure that a documented procedure exists to declare, assess, approve preliminarily, authorize after the change and record an emergency change.",
+                          "relatedGuidance": "string",
+                          "detailedReference": "string",
+                          "inputFrom": "string",
+                          "outputTo": "string, ",
+                          "questionAnswer": 0,
+                          "questionScore": 0,
+                          "questionComment": "comment"
+                        },
+                        {
+                          "questionType": "Maturity Level 3",
+                          "questionDescription": " Verify that all emergency access arrangements for changes are appropriately authorized, documented and revoked after the change has been applied.",
+                          "relatedGuidance": "string",
+                          "detailedReference": "string",
+                          "inputFrom": "string",
+                          "outputTo": "string, ",
+                          "questionAnswer": 0,
+                          "questionScore": 0,
+                          "questionComment": "comment"
+                        },
+                        {
+                          "questionType": "Maturity Level 4",
+                          "questionDescription": "Monitor all emergency changes and conduct post-implementation reviews involving all concerned parties. The review should consider and initiate corrective actions based on root causes such as problems with business process, application system development and maintenance, development and test environments, documentation and manuals, and data integrity.",
+                          "relatedGuidance": "string",
+                          "detailedReference": "string",
+                          "inputFrom": "string",
+                          "outputTo": "string, ",
+                          "questionAnswer": 0,
+                          "questionScore": 0,
+                          "questionComment": "comment"
+                        }
+                      ]
+                    },
 
-                          "subComponentCode": "BAI06.02",
-                          "subComponentName": "Manage emergency changes.",
-                          "subComponentDescription": "Carefully manage emergency changes to minimize further incidents. Ensure the emergency change is controlled and takes place securely. Verify that emergency changes are appropriately assessed and authorized after the change.",
-                          "subComponentQuestions": [
-                            {
-                              "questionType": "Maturity Level 2",
-                              "questionDescription": " Define what constitutes an emergency change.",
-                              "relatedGuidance": "string",
-                              "detailedReference": "string",
-                              "inputFrom": "string",
-                              "outputTo": "string, ",
-                              "questionAnswer": 0,
-                              "questionScore": 0,
-                              "questionComment": "comment"
-                            },
-                            {
-                              "questionType": "Maturity Level 2",
-                              "questionDescription": "Ensure that a documented procedure exists to declare, assess, approve preliminarily, authorize after the change and record an emergency change.",
-                              "relatedGuidance": "string",
-                              "detailedReference": "string",
-                              "inputFrom": "string",
-                              "outputTo": "string, ",
-                              "questionAnswer": 0,
-                              "questionScore": 0,
-                              "questionComment": "comment"
-                            },
-                            {
-                              "questionType": "Maturity Level 3",
-                              "questionDescription": " Verify that all emergency access arrangements for changes are appropriately authorized, documented and revoked after the change has been applied.",
-                              "relatedGuidance": "string",
-                              "detailedReference": "string",
-                              "inputFrom": "string",
-                              "outputTo": "string, ",
-                              "questionAnswer": 0,
-                              "questionScore": 0,
-                              "questionComment": "comment"
-                            },
-                            {
-                              "questionType": "Maturity Level 4",
-                              "questionDescription": "Monitor all emergency changes and conduct post-implementation reviews involving all concerned parties. The review should consider and initiate corrective actions based on root causes such as problems with business process, application system development and maintenance, development and test environments, documentation and manuals, and data integrity.",
-                              "relatedGuidance": "string",
-                              "detailedReference": "string",
-                              "inputFrom": "string",
-                              "outputTo": "string, ",
-                              "questionAnswer": 0,
-                              "questionScore": 0,
-                              "questionComment": "comment"
-                            },
-
-                            {
-                              "subComponentCode": "BAI06.03",
-                              "subComponentName": "Track and report change status.",
-                              "subComponentDescription": "Maintain a tracking and reporting system to document rejected changes and communicate the status of approved, in-process and complete changes. Make certain that approved changes are implemented as planned.",
-                              "subComponentQuestions": [
-                                {
-                                  "questionType": "Maturity Level 4",
-                                  "questionDescription": "Categorize change requests in the tracking process (e.g., rejected, approved but not yet initiated, approved and in process, and closed).",
-                                  "relatedGuidance": "string",
-                                  "detailedReference": "string",
-                                  "inputFrom": "string",
-                                  "outputTo": "string, ",
-                                  "questionAnswer": 0,
-                                  "questionScore": 0,
-                                  "questionComment": "comment"
-                                },
-                                {
-                                  "questionType": "Maturity Level 4",
-                                  "questionDescription": "Implement change status reports with performance metrics to enable management review and monitoring of both the detailed status of changes and the overall state (e.g., aged analysis of change requests). Ensure that status reports form an audit trail so changes can subsequently be tracked from inception to eventual disposition.",
-                                  "relatedGuidance": "string",
-                                  "detailedReference": "string",
-                                  "inputFrom": "string",
-                                  "outputTo": "string, ",
-                                  "questionAnswer": 0,
-                                  "questionScore": 0,
-                                  "questionComment": "comment"
-                                },
-                                {
-                                  "questionType": "Maturity Level 4",
-                                  "questionDescription": "Monitor open changes to ensure that all approved changes are closed in a timely fashion, depending on priority.",
-                                  "relatedGuidance": "string",
-                                  "detailedReference": "string",
-                                  "inputFrom": "string",
-                                  "outputTo": "string, ",
-                                  "questionAnswer": 0,
-                                  "questionScore": 0,
-                                  "questionComment": "comment"
-                                },
-                                {
-                                  "questionType": "Maturity Level 4",
-                                  "questionDescription": "Maintain a tracking and reporting system for all change requests.",
-                                  "relatedGuidance": "string",
-                                  "detailedReference": "string",
-                                  "inputFrom": "string",
-                                  "outputTo": "string, ",
-                                  "questionAnswer": 0,
-                                  "questionScore": 0,
-                                  "questionComment": "comment"
-                                },
-                                {
-                                  "questionType": "Related Guidance",
-                                  "questionDescription": "string",
-                                  "relatedGuidance": "CMMI Cybermaturity Platform, 2018",
-                                  "detailedReference": "IP.CC Apply Change Control",
-                                  "inputFrom": "string",
-                                  "outputTo": "string,",
-                                  "questionAnswer": 0,
-                                  "questionScore": 0,
-                                  "questionComment": "comment"
-                                },
+                    {
+                      "subComponentCode": "BAI06.03",
+                      "subComponentName": "Track and report change status.",
+                      "subComponentDescription": "Maintain a tracking and reporting system to document rejected changes and communicate the status of approved, in-process and complete changes. Make certain that approved changes are implemented as planned.",
+                      "subComponentQuestions": [
+                        {
+                          "questionType": "Maturity Level 4",
+                          "questionDescription": "Categorize change requests in the tracking process (e.g., rejected, approved but not yet initiated, approved and in process, and closed).",
+                          "relatedGuidance": "string",
+                          "detailedReference": "string",
+                          "inputFrom": "string",
+                          "outputTo": "string, ",
+                          "questionAnswer": 0,
+                          "questionScore": 0,
+                          "questionComment": "comment"
+                        },
+                        {
+                          "questionType": "Maturity Level 4",
+                          "questionDescription": "Implement change status reports with performance metrics to enable management review and monitoring of both the detailed status of changes and the overall state (e.g., aged analysis of change requests). Ensure that status reports form an audit trail so changes can subsequently be tracked from inception to eventual disposition.",
+                          "relatedGuidance": "string",
+                          "detailedReference": "string",
+                          "inputFrom": "string",
+                          "outputTo": "string, ",
+                          "questionAnswer": 0,
+                          "questionScore": 0,
+                          "questionComment": "comment"
+                        },
+                        {
+                          "questionType": "Maturity Level 4",
+                          "questionDescription": "Monitor open changes to ensure that all approved changes are closed in a timely fashion, depending on priority.",
+                          "relatedGuidance": "string",
+                          "detailedReference": "string",
+                          "inputFrom": "string",
+                          "outputTo": "string, ",
+                          "questionAnswer": 0,
+                          "questionScore": 0,
+                          "questionComment": "comment"
+                        },
+                        {
+                          "questionType": "Maturity Level 4",
+                          "questionDescription": "Maintain a tracking and reporting system for all change requests.",
+                          "relatedGuidance": "string",
+                          "detailedReference": "string",
+                          "inputFrom": "string",
+                          "outputTo": "string, ",
+                          "questionAnswer": 0,
+                          "questionScore": 0,
+                          "questionComment": "comment"
+                        },
+                        {
+                          "questionType": "Related Guidance",
+                          "questionDescription": "string",
+                          "relatedGuidance": "CMMI Cybermaturity Platform, 2018",
+                          "detailedReference": "IP.CC Apply Change Control",
+                          "inputFrom": "string",
+                          "outputTo": "string,",
+                          "questionAnswer": 0,
+                          "questionScore": 0,
+                          "questionComment": "comment"
+                        }
+                      ]
+                    },
 
 
-                                {
-                                  "subComponentCode": "BAI06.04",
-                                  "subComponentDescription": "Whenever changes are implemented, update the solution, user documentation and procedures affected by the change.",
-                                  "subComponentName": "Close and document the changes.",
-                                  "subComponentQuestions": [
-                                    {
-                                      "questionType": "Maturity Level 2",
-                                      "questionDescription": "Include changes in the documentation within the management procedure. Examples of documentation include business and IT operational procedures, business continuity and disaster recovery documentation, configuration information, application documentation, help screens, and training materials.",
-                                      "relatedGuidance": "string",
-                                      "detailedReference": "string",
-                                      "inputFrom": "string",
-                                      "outputTo": "string, ",
-                                      "questionAnswer": 0,
-                                      "questionScore": 0,
-                                      "questionComment": "comment"
-                                    },
-                                    {
-                                      "questionType": "Maturity Level 3",
-                                      "questionDescription": "Define an appropriate retention period for change documentation and pre- and post-change system and user documentation.",
-                                      "relatedGuidance": "string",
-                                      "detailedReference": "string",
-                                      "inputFrom": "string",
-                                      "outputTo": "string, ",
-                                      "questionAnswer": 0,
-                                      "questionScore": 0,
-                                      "questionComment": "comment"
-                                    },
-                                    {
-                                      "questionType": "Maturity Level 3",
-                                      "questionDescription": "Subject documentation to the same level of review as the actual change.",
-                                      "relatedGuidance": "string",
-                                      "detailedReference": "string",
-                                      "inputFrom": "string",
-                                      "outputTo": "string,",
-                                      "questionAnswer": 0,
-                                      "questionScore": 0,
-                                      "questionComment": "comment"
+                    {
+                      "subComponentCode": "BAI06.04",
+                      "subComponentDescription": "Whenever changes are implemented, update the solution, user documentation and procedures affected by the change.",
+                      "subComponentName": "Close and document the changes.",
+                      "subComponentQuestions": [
+                        {
+                          "questionType": "Maturity Level 2",
+                          "questionDescription": "Include changes in the documentation within the management procedure. Examples of documentation include business and IT operational procedures, business continuity and disaster recovery documentation, configuration information, application documentation, help screens, and training materials.",
+                          "relatedGuidance": "string",
+                          "detailedReference": "string",
+                          "inputFrom": "string",
+                          "outputTo": "string, ",
+                          "questionAnswer": 0,
+                          "questionScore": 0,
+                          "questionComment": "comment"
+                        },
+                        {
+                          "questionType": "Maturity Level 3",
+                          "questionDescription": "Define an appropriate retention period for change documentation and pre- and post-change system and user documentation.",
+                          "relatedGuidance": "string",
+                          "detailedReference": "string",
+                          "inputFrom": "string",
+                          "outputTo": "string, ",
+                          "questionAnswer": 0,
+                          "questionScore": 0,
+                          "questionComment": "comment"
+                        },
+                        {
+                          "questionType": "Maturity Level 3",
+                          "questionDescription": "Subject documentation to the same level of review as the actual change.",
+                          "relatedGuidance": "string",
+                          "detailedReference": "string",
+                          "inputFrom": "string",
+                          "outputTo": "string,",
+                          "questionAnswer": 0,
+                          "questionScore": 0,
+                          "questionComment": "comment"
+                        }
+                      ]
+                    }
+                  ]
                                     },
 
                                     {
@@ -688,13 +698,4 @@
                                     }
                                   ]
                                 }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
+                              

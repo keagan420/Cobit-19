@@ -46,9 +46,9 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
             },
-            [
-
               {
                 "subComponentCode": "EG04",
                 "subComponentName": "Quality of financial information",
@@ -69,8 +69,7 @@
                   }
 
                 ]
-              }
-            ],
+              },
             {
               "subComponentCode": "EG07",
               "subComponentName": "Quality of management information",
@@ -106,9 +105,6 @@
 
               ]
             },
-
-            [
-
               {
                 "subComponentCode": "EG08",
                 "subComponentName": "Optimization of internal business process functionality",
@@ -137,10 +133,7 @@
 
                 ]
               }
-            ]
-          ]
-        }
-      ]
+            ]  
     },
 
     {
@@ -208,6 +201,8 @@
 
 
           ]
+        }
+      ]
         },
         {
           "componentName": "A",
@@ -1088,5 +1083,4 @@
         }
       ]
     }
-  ]
-}
+  

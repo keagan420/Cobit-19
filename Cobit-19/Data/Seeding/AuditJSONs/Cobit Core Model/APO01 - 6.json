@@ -46,9 +46,9 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
             },
-            [
-
               {
                 "subComponentCode": "EG08",
                 "subComponentName": "Optimization of internal business process functionality",
@@ -76,10 +76,8 @@
                   }
 
                 ]
-              }
-            ],
-            [
-
+              },
+           
               {
                 "subComponentCode": "EG11",
                 "subComponentName": "Compliance with internal policies",
@@ -107,10 +105,7 @@
                   }
 
                 ]
-              }
-            ],
-            [
-
+              },
               {
                 "subComponentCode": "EG12",
                 "subComponentName": "Managed digital transformation programs",
@@ -147,10 +142,6 @@
                 ]
               }
             ]
-
-          ]
-        }
-      ]
     },
 
     {
@@ -175,8 +166,10 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
             },
-            [
+            
               {
                 "subComponentCode": "AG11",
                 "subComponentName": "I&T compliance with internal policies",
@@ -204,7 +197,7 @@
                   }
                 ]
               }
-            ]
+            
           ]
         },
 
@@ -1670,5 +1663,4 @@
         }
       ]
     }
-  ]
-}
+  

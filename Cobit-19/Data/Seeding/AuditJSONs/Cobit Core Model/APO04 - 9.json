@@ -9,7 +9,7 @@
   "maturityLevel3PercFinal": 0,
   "maturityLevel4PercFinal": 0,
   "maturityLevel5PercFinal": 0,
-  "components": [  
+  "components": [
     {
       "componentCode": "EG",
       "componentDescription": "Enterprise Goals",
@@ -46,42 +46,38 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-            [
-
-              {
-                "subComponentCode": "EG13",
-                "subComponentName": "Product and business innovation",
-                "subComponentQuestions": [
-                  {
-                    "questionType": "Enterprise goal",
-                    "questionDescription": "Level of awareness and understanding of business innovation opportunities",
-                    "questionAnswer": 0,
-                    "questionScore": 0,
-                    "questionComment": "comment"
-                  },
-                  {
-                    "questionType": "Enterprise goal",
-                    "questionDescription": "Stakeholder satisfaction with levels of product and innovation expertise and ideas",
-                    "questionAnswer": 0,
-                    "questionScore": 0,
-                    "questionComment": "comment"
-                  },
-                  {
-                    "questionType": "Enterprise goal",
-                    "questionDescription": "Number of approved product and service initiatives resulting from innovative ideas",
-                    "questionAnswer": 0,
-                    "questionScore": 0,
-                    "questionComment": "comment"
-                  }
-
-                ]
-              }
-            ]
+            }
           ]
+        },
 
 
+        {
+          "subComponentCode": "EG13",
+          "subComponentName": "Product and business innovation",
+          "subComponentQuestions": [
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Level of awareness and understanding of business innovation opportunities",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Stakeholder satisfaction with levels of product and innovation expertise and ideas",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Number of approved product and service initiatives resulting from innovative ideas",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
 
+          ]
         }
       ]
     },
@@ -122,8 +118,10 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
             },
-            [
+            
               {
                 "subComponentCode": "AG13",
                 "subComponentName": "Knowledge, expertise and initiatives for business innovation",
@@ -151,7 +149,6 @@
                   }
                 ]
               }
-            ]
           ]
         },
         {
@@ -863,5 +860,4 @@
         }
       ]
     }
-  ]
-}
+ 
