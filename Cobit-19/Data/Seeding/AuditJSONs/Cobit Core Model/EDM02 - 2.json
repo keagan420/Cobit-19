@@ -11,29 +11,36 @@
   "maturityLevel5PercFinal": 0,
   "components": [
     {
-      "subComponentCode": "EG08",
-      "subComponentName": "Optimization of internal business process functionality",
-      "subComponentQuestions": [
+      "componentCode": "EG",
+      "componentDescription": "Enterprise Goals",
+      "componentPercFinal": 0,
+      "subComponents": [
         {
-          "questionType": "Enterprise goal",
-          "questionDescription": "Satisfaction levels of board and executive management with business process capabilities",
-          "questionAnswer": 0,
-          "questionScore": 0,
-          "questionComment": "comment"
-        },
-        {
-          "questionType": "Enterprise goal",
-          "questionDescription": "Satisfaction levels of customers with service delivery capabilities",
-          "questionAnswer": 0,
-          "questionScore": 0,
-          "questionComment": "comment"
-        },
-        {
-          "questionType": "Enterprise goal",
-          "questionDescription": "Satisfaction levels of suppliers with supply chain capabilities",
-          "questionAnswer": 0,
-          "questionScore": 0,
-          "questionComment": "comment"
+          "subComponentCode": "EG08",
+          "subComponentName": "Optimization of internal business process functionality",
+          "subComponentQuestions": [
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Satisfaction levels of board and executive management with business process capabilities",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Satisfaction levels of customers with service delivery capabilities",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Satisfaction levels of suppliers with supply chain capabilities",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
         },
 
         {
@@ -67,48 +74,47 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-
-            [
-              {
-                "subComponentCode": "EG12",
-                "subComponentName": "Managed digital transformation programs",
-                "subComponentQuestions": [
-                  {
-                    "questionType": "Enterprise goal",
-                    "questionDescription": "Number of programs on time and within budget",
-                    "questionAnswer": 0,
-                    "questionScore": 0,
-                    "questionComment": "comment"
-                  },
-                  {
-                    "questionType": "Enterprise goal",
-                    "questionDescription": "Percent of stakeholders satisfied with program delivery",
-                    "questionAnswer": 0,
-                    "questionScore": 0,
-                    "questionComment": "comment"
-                  },
-                  {
-                    "questionType": "Enterprise goal",
-                    "questionDescription": "Percent of business transformation programs stopped",
-                    "questionAnswer": 0,
-                    "questionScore": 0,
-                    "questionComment": "comment"
-                  },
-                  {
-                    "questionType": "Enterprise goal",
-                    "questionDescription": "Percent of business transformation programs with regular reported status updates",
-                    "questionAnswer": 0,
-                    "questionScore": 0,
-                    "questionComment": "comment"
-                  }
-                ]
-              }
-            ]
+            }
           ]
         },
 
+
         {
+          "subComponentCode": "EG12",
+          "subComponentName": "Managed digital transformation programs",
+          "subComponentQuestions": [
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Number of programs on time and within budget",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Percent of stakeholders satisfied with program delivery",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Percent of business transformation programs stopped",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            },
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Percent of business transformation programs with regular reported status updates",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        }
+      ]
+    }, {
           "componentCode": "AG",
           "componentDescription": "Alignment Goals",
           "componentPercFinal": 0,
@@ -867,5 +873,5 @@
         }
       ]
     }
-  ]
-}
+  
+

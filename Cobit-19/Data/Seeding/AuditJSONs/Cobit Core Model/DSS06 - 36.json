@@ -148,6 +148,8 @@
             }
 
           ]
+        }
+      ]
         },
 
         {
@@ -187,8 +189,9 @@
                   "questionScore": 0,
                   "questionComment": "comment"
                 }
-
               ]
+            }
+          ]
             },
             {
               "componentName": "A",
@@ -1082,7 +1085,6 @@
             }
           ]
         }
-      ]
-    }
-  ]
-}
+      
+    
+  

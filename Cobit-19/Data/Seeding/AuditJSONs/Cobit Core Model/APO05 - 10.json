@@ -46,9 +46,9 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
             },
-            [
-
               {
                 "subComponentCode": "EG08",
                 "subComponentName": "Optimization of internal business process functionality",
@@ -76,11 +76,8 @@
                   }
 
                 ]
-              }
-            ],
-
-            [
-
+              },
+           
               {
                 "subComponentCode": "EG12",
                 "subComponentName": "Managed digital transformation programs",
@@ -117,10 +114,6 @@
                 ]
               }
             ]
-
-          ]
-        }
-      ]
     },
 
     {
@@ -145,8 +138,10 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
             },
-            [
+            
               {
                 "subComponentCode": "AG05",
                 "subComponentName": "Delivery of I&T services in line with business requirements",
@@ -174,7 +169,6 @@
                   }
                 ]
               }
-            ]
           ]
         },
         {
@@ -975,5 +969,4 @@
         }
       ]
     }
-  ]
-}
+ 

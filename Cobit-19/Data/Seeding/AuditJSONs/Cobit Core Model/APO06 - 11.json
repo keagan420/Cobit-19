@@ -46,9 +46,9 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
             },
-            [
-
               {
                 "subComponentCode": "EG04",
                 "subComponentName": "Quality of financial information",
@@ -69,10 +69,8 @@
                   }
 
                 ]
-              }
-            ],
-            [
-
+              },
+           
               {
                 "subComponentCode": "EG07",
                 "subComponentName": "Quality of management information",
@@ -107,10 +105,8 @@
                   }
 
                 ]
-              }
-            ],
-            [
-
+              },
+           
               {
                 "subComponentCode": "EG08",
                 "subComponentName": "Optimization of internal business process functionality",
@@ -138,10 +134,8 @@
                   }
 
                 ]
-              }
-            ],
-            [
-
+              },
+          
               {
                 "subComponentCode": "EG09",
                 "subComponentName": "Optimization of business process costs",
@@ -163,12 +157,8 @@
 
 
                 ]
-              }
-            ],
-
-            [
-
-              {
+              },
+            {
                 "subComponentCode": "EG12",
                 "subComponentName": "Managed digital transformation programs",
                 "subComponentQuestions": [
@@ -204,10 +194,6 @@
                 ]
               }
             ]
-
-          ]
-        }
-      ]
     },
 
     {
@@ -232,8 +218,10 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
             },
-            [
+            
               {
                 "subComponentCode": "AG09",
                 "subComponentName": "Delivering programs on time, on budget and meeting requirements and quality standards",
@@ -262,7 +250,7 @@
                 ]
               }
             ]
-          ]
+          
         },
         {
           "componentName": "A",
@@ -1056,14 +1044,9 @@
                   "questionScore": 0,
                   "questionComment": "comment"
                 }
-
-
               ]
             }
           ]
-
-
-
         },
         {
           "componentName": "D",
@@ -1130,5 +1113,4 @@
         }
       ]
     }
-  ]
-}
+  

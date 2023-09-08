@@ -11,41 +11,45 @@
   "maturityLevel5PercFinal": 0,
   "components": [
     {
-      "subComponentCode": "EG01",
-      "subComponentName": "Portfolio of competitive products and services",
-      "subComponentQuestions": [
-        {
-          "questionType": "Enterprise goal",
-          "questionDescription": "Percent of products and services that meet or exceed targets in revenues and/or market share",
-          "questionAnswer": 0,
-          "questionScore": 0,
-          "questionComment": "comment"
-        },
-        {
-          "questionType": "Enterprise goal",
-          "questionDescription": "Percent of products and services that meet or exceed customer satisfaction targets",
-          "questionAnswer": 0,
-          "questionScore": 0,
-          "questionComment": "comment"
-        },
-        {
-          "questionType": "Enterprise goal",
-          "questionDescription": "Percent of products and services that provide competitive advantage",
-          "questionAnswer": 0,
-          "questionScore": 0,
-          "questionComment": "comment"
-        },
-        {
-          "questionType": "Enterprise goal",
-          "questionDescription": "Time to market for new products and services",
-          "questionAnswer": 0,
-          "questionScore": 0,
-          "questionComment": "comment"
-        },
-
-
-        [
-
+      "componentCode": "EG",
+      "componentDescription": "Enterprise Goals",
+      "componentPercFinal": 0,
+      "subComponents": [
+        
+          {
+            "subComponentCode": "EG01",
+            "subComponentName": "Portfolio of competitive products and services",
+            "subComponentQuestions": [
+              {
+                "questionType": "Enterprise goal",
+                "questionDescription": "Percent of products and services that meet or exceed targets in revenues and/or market share",
+                "questionAnswer": 0,
+                "questionScore": 0,
+                "questionComment": "comment"
+              },
+              {
+                "questionType": "Enterprise goal",
+                "questionDescription": "Percent of products and services that meet or exceed customer satisfaction targets",
+                "questionAnswer": 0,
+                "questionScore": 0,
+                "questionComment": "comment"
+              },
+              {
+                "questionType": "Enterprise goal",
+                "questionDescription": "Percent of products and services that provide competitive advantage",
+                "questionAnswer": 0,
+                "questionScore": 0,
+                "questionComment": "comment"
+              },
+              {
+                "questionType": "Enterprise goal",
+                "questionDescription": "Time to market for new products and services",
+                "questionAnswer": 0,
+                "questionScore": 0,
+                "questionComment": "comment"
+              }
+            ]
+          },
           {
             "subComponentCode": "EG08",
             "subComponentName": "Optimization of internal business process functionality",
@@ -74,9 +78,8 @@
 
             ]
           }
-        ]
       ]
-    
+
     },
 {
   "componentCode": "AG",
@@ -108,6 +111,8 @@
           "questionScore": 0,
           "questionComment": "comment"
         }
+      ]
+    }
        
                 ]
               },
@@ -910,6 +915,6 @@
         }
       ]
     }
-  ]
-}
+  
+
 

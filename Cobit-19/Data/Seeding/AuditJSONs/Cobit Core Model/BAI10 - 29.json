@@ -39,10 +39,9 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
             },
-
-            [
-
               {
                 "subComponentCode": "EG06",
                 "subComponentName": "Business service continuity and availability",
@@ -79,9 +78,6 @@
                 ]
               }
             ]
-          ]
-        }
-      ]
     },
 
     {

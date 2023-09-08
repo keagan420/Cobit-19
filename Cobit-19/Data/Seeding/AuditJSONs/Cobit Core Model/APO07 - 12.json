@@ -46,9 +46,9 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
             },
-            [
-
               {
                 "subComponentCode": "EG10",
                 "subComponentName": "Staff skills, motivation and productivity",
@@ -83,10 +83,7 @@
                   }
 
                 ]
-              }
-            ],
-            [
-
+              },
               {
                 "subComponentCode": "EG13",
                 "subComponentName": "Product and business innovation",
@@ -116,10 +113,6 @@
                 ]
               }
             ]
-
-          ]
-        }
-      ]
     },
 
     {
@@ -151,8 +144,9 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
             },
-            [
               {
                 "subComponentCode": "AG13",
                 "subComponentName": "Knowledge, expertise and initiatives for business innovation",
@@ -181,7 +175,6 @@
                 ]
               }
             ]
-          ]
         },
         {
           "componentName": "A",
@@ -1487,5 +1480,4 @@
         }
       ]
     }
-  ]
-}
+  

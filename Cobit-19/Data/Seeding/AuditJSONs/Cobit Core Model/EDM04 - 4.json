@@ -46,8 +46,10 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
             },
-            [
+            
 
               {
                 "subComponentCode": "EG08",
@@ -115,7 +117,7 @@
                 ]
               }
             ]
-          ]
+          
         },
 
         {
@@ -148,6 +150,10 @@
                   "questionAnswer": 0,
                   "questionScore": 0,
                   "questionComment": "comment"
+                }
+              ]
+            }
+          ]
                 },
                 {
                   "componentName": "A",
@@ -764,10 +770,10 @@
                 }
               ]
             }
-          ]
-        }
-      ]
-    }
-  ]
-}
+          
+        
+      
+    
+  
+
 

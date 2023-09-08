@@ -46,9 +46,10 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
+            }
+          ]
             },
-            [
-
+            
               {
                 "subComponentCode": "EG05",
                 "subComponentName": "Customer-oriented service culture",
@@ -83,9 +84,7 @@
                   }
 
                 ]
-              }
-            ],
-            [
+              },
 
               {
                 "subComponentCode": "EG08",
@@ -114,10 +113,7 @@
                   }
 
                 ]
-              }
-            ],
-            [
-
+              },
               {
                 "subComponentCode": "EG12",
                 "subComponentName": "Managed digital transformation programs",
@@ -154,10 +150,6 @@
                 ]
               }
             ]
-
-          ]
-        }
-      ]
     },
 
     {
@@ -196,9 +188,12 @@
               "questionAnswer": 0,
               "questionScore": 0,
               "questionComment": "comment"
-            },
-
-            {
+            }
+          ]
+        }
+      ]
+    },
+    {
               "componentName": "A",
               "componentDescription": "Processes",
               "componentPercFinal": 0,
@@ -1379,7 +1374,4 @@
             }
           ]
         }
-      ]
-    }
-  ]
-}
+      
