@@ -451,10 +451,17 @@ namespace Cobit_19.Business.ObjectiveAudits
                 {
                     (int MLevelAnswerVals, double MLevelWeightedVals, double MLevelfinalPerc) = calculateSubComponentScore(MLevelQuestions);
 
-                    int finalAnswerValues = MLevelAnswerVals + inputAnswerVals + outputAnswerVals + RGAnswerVals;
-                    double finalWeightedValues = MLevelWeightedVals + inputWeightedVals + outputWeightedVals + RGWeightedVals;
-                    double finalMLevelPerc = Math.Round((finalWeightedValues / finalAnswerValues) * 100, 2);
-                    MLevelPercs[Mlevel] = finalMLevelPerc;
+                    if (MLevelAnswerVals != 0)
+                    {
+                        int finalAnswerValues = MLevelAnswerVals + inputAnswerVals + outputAnswerVals + RGAnswerVals;
+                        double finalWeightedValues = MLevelWeightedVals + inputWeightedVals + outputWeightedVals + RGWeightedVals;
+                        double finalMLevelPerc = Math.Round((finalWeightedValues / finalAnswerValues) * 100, 2);
+                        MLevelPercs[Mlevel] = finalMLevelPerc;
+                    }
+                    else
+                    {
+                        MLevelPercs[Mlevel] = 0;
+                    }
                 }
             }
 
