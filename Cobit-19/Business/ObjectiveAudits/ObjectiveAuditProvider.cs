@@ -163,16 +163,25 @@ namespace Cobit_19.Business.ObjectiveAudits
             }
         }
 
-        public List<SubComponentQuestionDto> GetSubComponentMLevelQuestions(SubComponentDto subComp)
+        public List<SubComponentQuestionDto> GetSubComponentMLevelQuestions(SubComponentDto subComp, string MLevelType = null)
         {
             var subCompQuestions = subComp.subComponentQuestions;
+            List<SubComponentQuestionDto> MLevelQuestions = null;
 
-            var query = subCompQuestions.Where(question => question.questionType.Contains("Maturity Level"));
-            var MLevelQuestios = query.ToList();
-
-            if (MLevelQuestios.Count > 0)
+            if (MLevelType != null)
             {
-                return MLevelQuestios;
+                var query = subCompQuestions.Where(question => question.questionType.Contains(MLevelType));
+                MLevelQuestions = query.ToList();
+            }
+            else
+            {
+                var query = subCompQuestions.Where(question => question.questionType.Contains("Maturity Level"));
+                MLevelQuestions = query.ToList();
+            }
+
+            if (MLevelQuestions != null && MLevelQuestions.Count > 0)
+            {
+                return MLevelQuestions;
             }
             else
             {
@@ -180,8 +189,10 @@ namespace Cobit_19.Business.ObjectiveAudits
             }
         }
 
-        public List<SubComponentQuestionDto> GetSubComponentInputQuestions(SubComponentDto subComp)
+        public List<SubComponentQuestionDto> GetSubComponentInputQuestions(SubComponentDto subComp, string subCode = "None")
         {
+
+
             var SubCompQuestions = subComp.subComponentQuestions;
 
             var query = SubCompQuestions.Where(question => 
@@ -205,6 +216,61 @@ namespace Cobit_19.Business.ObjectiveAudits
 
             var query = SubCompQuestions.Where(question =>
                 question.questionType.Equals("Output"));
+
+            var outputQuestions = query.ToList();
+
+            if (outputQuestions.Count > 0)
+            {
+                return outputQuestions;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public List<SubComponentQuestionDto> GetSubComponentOutputQuestionsByCode(ComponentDto infoFlowComponents, string subCode)
+        {
+            var subComps = infoFlowComponents.subComponents;
+
+            var selectedSubComp = subComps.Where(subComp => subComp.subComponentCode.Equals(subCode)).FirstOrDefault();
+
+            if (selectedSubComp == null)
+            {
+                return null;
+            }
+
+            var subCompQuestions = selectedSubComp.subComponentQuestions;
+
+            var query = subCompQuestions.Where(question =>
+                question.questionType.Equals("Output"));
+
+            var outputQuestions = query.ToList();
+
+            if (outputQuestions.Count > 0)
+            {
+                return outputQuestions;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public List<SubComponentQuestionDto> GetSubComponentInputQuestionsByCode(ComponentDto infoFlowComponents, string subCode)
+        {
+            var subComps = infoFlowComponents.subComponents;
+
+            var selectedSubComp = subComps.Where(subComp => subComp.subComponentCode.Equals(subCode)).FirstOrDefault();
+
+            if (selectedSubComp == null)
+            {
+                return null;
+            }
+            var subCompQuestions = selectedSubComp.subComponentQuestions;
+
+            var query = subCompQuestions.Where(question =>
+                question.questionType.Equals("Input"));
 
             var outputQuestions = query.ToList();
 
@@ -277,28 +343,69 @@ namespace Cobit_19.Business.ObjectiveAudits
             }
         }
 
-        public double calculateComponentScore(List<ComponentQuestionDto> compQuestions)
+        public (int, double, double) calculateComponentScore(ComponentDto component, bool hasSubComps)
         {
             double finalPercentage;
             int answerValueSum = 0;
             double weightedValueSum = 0;
 
-            foreach (ComponentQuestionDto compQuestion in compQuestions)
+            if (hasSubComps == false)
             {
-                answerValueSum += compQuestion.questionAnswer;
-                weightedValueSum += compQuestion.questionScore;
+                var compQuestions = component.componentQuestions;
+                foreach (ComponentQuestionDto compQuestion in compQuestions)
+                {
+                    answerValueSum += compQuestion.questionAnswer;
+                    weightedValueSum += compQuestion.questionScore;
+                }
+
+                if (weightedValueSum == 0 || answerValueSum == 0)
+                {
+                    return ((answerValueSum, weightedValueSum, 0));
+                }
+                else
+                {
+                    finalPercentage = (weightedValueSum / answerValueSum) * 100;
+                    return (answerValueSum, weightedValueSum, Math.Round(finalPercentage, 2));
+                }
             }
+            else
+            {
+                var subComps = component.subComponents;
 
-            finalPercentage = (weightedValueSum / answerValueSum) * 100;
+                foreach (var subComp in subComps)
+                {
+                    List<SubComponentQuestionDto> subCompQuestions = subComp.subComponentQuestions;
 
-            return Math.Round(finalPercentage, 2);
+                    foreach (SubComponentQuestionDto subCompQuestion in subCompQuestions)
+                    {
+                        answerValueSum += subCompQuestion.questionAnswer;
+                        weightedValueSum += subCompQuestion.questionScore;
+                    }
+
+                }
+
+                if (weightedValueSum == 0 || answerValueSum == 0)
+                {
+                    return ((answerValueSum, weightedValueSum, 0));
+                }
+                else
+                {
+                    finalPercentage = (weightedValueSum / answerValueSum) * 100;
+                    return (answerValueSum, weightedValueSum, Math.Round(finalPercentage, 2));
+                }
+            }
         }
 
-        public double calculateSubComponentScore(List<SubComponentQuestionDto> subCompQuestions)
+        public (int, double, double) calculateSubComponentScore(List<SubComponentQuestionDto> subCompQuestions)
         {
             double finalPercentage;
             int answerValueSum = 0;
             double weightedValueSum = 0;
+
+            if (subCompQuestions == null)
+            {
+                return (0, 0, 0);
+            }
 
             foreach (SubComponentQuestionDto subCompQuestion in subCompQuestions)
             {
@@ -308,12 +415,161 @@ namespace Cobit_19.Business.ObjectiveAudits
 
             if (weightedValueSum == 0 || answerValueSum == 0)
             {
-                return 0;
+                return ((answerValueSum, weightedValueSum, 0));
             }
             else
             {
                 finalPercentage = (weightedValueSum / answerValueSum) * 100;
-                return Math.Round(finalPercentage, 2);
+                return (answerValueSum, weightedValueSum, Math.Round(finalPercentage, 2));
+            }
+        }
+
+
+        public Dictionary<string, double> calculateProcessSubComponentScores(SubComponentDto subComponent, ComponentDto infoFlowComponent)
+        {
+            List<SubComponentQuestionDto> subCompQuestions = subComponent.subComponentQuestions;
+            List<SubComponentQuestionDto> inputQuestions = GetSubComponentInputQuestionsByCode(infoFlowComponent, subComponent.subComponentCode);
+            List<SubComponentQuestionDto> outputQuestions = GetSubComponentOutputQuestionsByCode(infoFlowComponent, subComponent.subComponentCode);
+            List<SubComponentQuestionDto> relatedGuidanceQuestions = GetSubComponentRelatedGuidanceQuestions(subComponent);
+
+            (int inputAnswerVals, double inputWeightedVals, double inputfinalPerc) = calculateSubComponentScore(inputQuestions);
+            (int outputAnswerVals, double outputWeightedVals, double outputfinalPerc) = calculateSubComponentScore(outputQuestions);
+            (int RGAnswerVals, double RGWeightedVals, double RGfinalPerc) = calculateSubComponentScore(relatedGuidanceQuestions);
+
+            List<string> MLevels = new List<string> { "Maturity Level 1", "Maturity Level 2", "Maturity Level 3", "Maturity Level 4", "Maturity Level 5" };
+            Dictionary<string, double> MLevelPercs = new Dictionary<string, double>();
+
+            foreach (string Mlevel in MLevels)
+            {
+                List<SubComponentQuestionDto> MLevelQuestions = GetSubComponentMLevelQuestions(subComponent, Mlevel);
+
+                if (MLevelQuestions == null)
+                {
+                    MLevelPercs[Mlevel] = 0;
+                }
+                else
+                {
+                    (int MLevelAnswerVals, double MLevelWeightedVals, double MLevelfinalPerc) = calculateSubComponentScore(MLevelQuestions);
+
+                    if (MLevelAnswerVals != 0)
+                    {
+                        int finalAnswerValues = MLevelAnswerVals + inputAnswerVals + outputAnswerVals + RGAnswerVals;
+                        double finalWeightedValues = MLevelWeightedVals + inputWeightedVals + outputWeightedVals + RGWeightedVals;
+                        double finalMLevelPerc = Math.Round((finalWeightedValues / finalAnswerValues) * 100, 2);
+                        MLevelPercs[Mlevel] = finalMLevelPerc;
+                    }
+                    else
+                    {
+                        MLevelPercs[Mlevel] = 0;
+                    }
+                }
+            }
+
+            return MLevelPercs;
+        }
+
+        public double calculateFinalProcessComponentScore(ComponentDto processComp, ComponentDto infoFlowComp)
+        {
+            List<SubComponentDto> subComps = processComp.subComponents;
+            int valueCount = 0;
+            double maturityLevelSum = 0;
+
+            foreach (SubComponentDto subComp in subComps)
+            {
+                Dictionary<string, double> MLevelPercs = calculateProcessSubComponentScores(subComp, infoFlowComp);
+
+                foreach (var kvp in MLevelPercs)
+                {
+                    if (kvp.Value != 0)
+                    {
+                        valueCount++;
+                        maturityLevelSum += kvp.Value;
+                    }
+                }
+            }
+
+            return Math.Round(maturityLevelSum / valueCount, 2);
+        }
+
+        public double calculateFinalMaturityLevelPercs(FullObjectiveAuditDto fullAudit, string MLevel)
+        {
+            ComponentDto processComp = fullAudit.components[2];
+            ComponentDto infoFlowComp = fullAudit.components[4];
+            List<SubComponentDto> processSubComps = processComp.subComponents;
+            int valueCount = 0;
+            double maturityLevelSum = 0;
+
+            foreach (SubComponentDto subComp in processSubComps)
+            {
+                var MLevelPercs = calculateProcessSubComponentScores(subComp, infoFlowComp);
+
+                foreach (var kvp in MLevelPercs)
+                {
+                    if (kvp.Key == MLevel)
+                    {
+                        maturityLevelSum += kvp.Value;
+                    }
+                }
+            }
+            
+            foreach (ComponentDto component in fullAudit.components)
+            {
+                if (component.componentName != "A")
+                {
+                    maturityLevelSum += component.componentPercFinal;
+                    valueCount++;
+                }
+            }
+
+            double finalMaturityPerc = maturityLevelSum / valueCount;
+
+            return Math.Round(finalMaturityPerc, 2);
+        }
+
+        public int CalculateFinalMaturityLevel(FullObjectiveAuditDto fullAudit)
+        {
+            double level1Perc = fullAudit.maturityLevel1PercFinal;
+            double level2Perc = fullAudit.maturityLevel2PercFinal;
+            double level3Perc = fullAudit.maturityLevel3PercFinal;
+            double level4Perc = fullAudit.maturityLevel4PercFinal;
+            double level5Perc = fullAudit.maturityLevel5PercFinal;
+
+            if (level1Perc > 0.93 &&
+                level2Perc > 0.93 &&
+                level3Perc > 0.93 &&
+                level4Perc > 0.93 &&
+                level5Perc > 0.5)
+            {
+                return 5; // Maturity Level 5
+            }
+            else if (level1Perc > 0.93 &&
+                     level2Perc > 0.93 &&
+                     level3Perc > 0.93 &&
+                     level4Perc > 0.5)
+            {
+                return 4; // Maturity Level 4
+            }
+            else if (level1Perc > 0.93 &&
+                     level2Perc > 0.93 &&
+                     level3Perc > 0.5)
+            {
+                return 3; // Maturity Level 3
+            }
+            else if (level1Perc > 0.5 &&
+                     level2Perc > 0.5 &&
+                     level3Perc > 0.5 &&
+                     level4Perc > 0.5)
+            {
+                return 2; // Maturity Level 2
+            }
+            else if (level1Perc <= 0.5 ||
+                     level2Perc <= 0.5)
+            {
+                return 1; // Maturity Level 1
+            }
+            else
+            {
+                return 0; // Default if no conditions are met
             }
         }
     }

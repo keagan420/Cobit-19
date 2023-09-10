@@ -22,6 +22,8 @@
     public ComponentDto component;
     public List<SubComponentQuestionDto> MLevelQuestions;
     public List<SubComponentQuestionDto> relatedGuidanceQuestions;
+    public List<SubComponentQuestionDto> inputQuestions;
+    public List<SubComponentQuestionDto> outputQuestions;
     public string auditJsonString;
 
 
@@ -33,6 +35,8 @@
             subCompQuestions = subComponent.subComponentQuestions;
             MLevelQuestions = objectiveAuditProvider.GetSubComponentMLevelQuestions(subComponent);
             relatedGuidanceQuestions = objectiveAuditProvider.GetSubComponentRelatedGuidanceQuestions(subComponent);
+            inputQuestions = objectiveAuditProvider.GetSubComponentInputQuestions(subComponent);
+            outputQuestions = objectiveAuditProvider.GetSubComponentOutputQuestions(subComponent);
             component = auditJSON.components[componentID];
         }
         else
@@ -42,8 +46,65 @@
         }
     }
 
-    private void updateFullAudit()
+    private void updateComponent(ChangeEventArgs e, ComponentQuestionDto compQuestion = null, SubComponentQuestionDto subCompQuestion = null)
     {
+
+        if (subCompQuestion != null)
+        {
+            updateSubCompQuestion(subCompQuestion, e);
+        }
+        else
+        {
+            updateCompQuestion(compQuestion, e);
+        }
+
+        if (componentID == 2)
+        {
+            ComponentDto infoFlowComp = auditJSON.components[4];
+            double processCompFinalPerc = objectiveAuditProvider.calculateFinalProcessComponentScore(component, infoFlowComp);
+            component.componentPercFinal = processCompFinalPerc;
+        }
+        else if (subComponentID != -1)
+        {
+            double finalPerc = objectiveAuditProvider.calculateComponentScore(component, true).Item3;
+            component.componentPercFinal = finalPerc;
+        }
+        else
+        {
+            double finalPerc = objectiveAuditProvider.calculateComponentScore(component, false).Item3;
+            component.componentPercFinal = finalPerc;
+        }
+
+        List<string> MLevels = new List<string> { "Maturity Level 1", "Maturity Level 2", "Maturity Level 3", "Maturity Level 4", "Maturity Level 5" };
+
+        foreach (string MLevel in MLevels)
+        {
+            double finalMaturityLevelPerc = objectiveAuditProvider.calculateFinalMaturityLevelPercs(auditJSON, MLevel);
+
+            if (MLevel == "Maturity Level 1")
+            {
+                auditJSON.maturityLevel1PercFinal = finalMaturityLevelPerc;
+            }
+            else if (MLevel == "Maturity Level 2")
+            {
+                auditJSON.maturityLevel2PercFinal = finalMaturityLevelPerc;
+            }
+            else if (MLevel == "Maturity Level 3")
+            {
+                auditJSON.maturityLevel3PercFinal = finalMaturityLevelPerc;
+            }
+            else if (MLevel == "Maturity Level 4")
+            {
+                auditJSON.maturityLevel4PercFinal = finalMaturityLevelPerc;
+            }
+            else if (MLevel == "Maturity Level 5")
+            {
+                auditJSON.maturityLevel5PercFinal = finalMaturityLevelPerc;
+            }
+        }
+
+        auditJSON.maturityLevel = objectiveAuditProvider.CalculateFinalMaturityLevel(auditJSON);
+
         auditJsonString = AuditJSONParsingService.auditTemplateSerializer(auditJSON);
 
         objectiveAuditProvider.updateAuditJSON(objectiveAuditId, auditJsonString);
@@ -58,12 +119,6 @@
             subCompQuestion.questionAnswer = int.Parse(e.Value.ToString());
             subCompQuestion.questionScore = objectiveAuditProvider.calculateAnswerScore(subCompQuestion.questionAnswer);
         }
-
-        auditJsonString = AuditJSONParsingService.auditTemplateSerializer(auditJSON);
-
-        objectiveAuditProvider.updateAuditJSON(objectiveAuditId, auditJsonString);
-
-        StateHasChanged();
     }
 
     private void updateCompQuestion(ComponentQuestionDto compQuestion, ChangeEventArgs e)
@@ -72,13 +127,10 @@
         {
             compQuestion.questionAnswer = int.Parse(e.Value.ToString());
             compQuestion.questionScore = objectiveAuditProvider.calculateAnswerScore(compQuestion.questionAnswer);
+
+
         }
 
-        auditJsonString = AuditJSONParsingService.auditTemplateSerializer(auditJSON);
-
-        objectiveAuditProvider.updateAuditJSON(objectiveAuditId, auditJsonString);
-
-        StateHasChanged();
     }
 
 }
@@ -91,7 +143,7 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateSubComponentScore(subCompQuestions)</div>
+            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateSubComponentScore(subCompQuestions).Item3</div>
         </div>
 
         <table class="table table-bordered mt-4">
@@ -115,7 +167,7 @@
                     <tr>
                         <td>@subCompQuestion.questionDescription</td>
                         <td>
-                            <select name="answer" value="@subCompQuestion.questionAnswer" @onchange="@((e) => updateSubCompQuestion(subCompQuestion, e))">
+                            <select name="answer" value="@subCompQuestion.questionAnswer" @onchange="@((e) => updateComponent(e, subCompQuestion: subCompQuestion))">
                                 @for (int j = 0; j <= 10; j++)
                                 {
                                     <option value="@j">@j</option>
@@ -142,7 +194,7 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateSubComponentScore(subCompQuestions)</div>
+            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateSubComponentScore(subCompQuestions).Item3</div>
         </div>
 
         <table class="table table-bordered mt-4">
@@ -166,7 +218,7 @@
                     <tr>
                         <td>@subCompQuestion.questionDescription</td>
                         <td>
-                            <select name="answer" @bind="subCompQuestion.questionAnswer" @oninput="() => {subCompQuestion.questionScore = objectiveAuditProvider.calculateAnswerScore(subCompQuestion.questionAnswer); updateFullAudit();}">
+                            <select name="answer" value="@subCompQuestion.questionAnswer" @onchange="@((e) => updateComponent(e, subCompQuestion: subCompQuestion))">
                                 @for (int j = 0; j <= 10; j++)
                                 {
                                     <option value="@j">@j</option>
@@ -193,7 +245,7 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateSubComponentScore(MLevelQuestions)</div>
+            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateSubComponentScore(MLevelQuestions).Item3</div>
         </div>
 
         <table class="table table-bordered mt-4">
@@ -219,7 +271,7 @@
                         <td>@MLevelQuestion.questionType</td>
                         <td>@MLevelQuestion.questionDescription</td>
                         <td>
-                            <select name="answer" @bind="MLevelQuestion.questionAnswer" @oninput="() => {MLevelQuestion.questionScore = objectiveAuditProvider.calculateAnswerScore(MLevelQuestion.questionAnswer); updateFullAudit();}">
+                            <select name="answer" value="@MLevelQuestion.questionAnswer" @onchange="@((e) => updateComponent(e, subCompQuestion: MLevelQuestion))">
                                 @for (int j = 0; j <= 10; j++)
                                 {
                                     <option value="@j">@j</option>
@@ -239,48 +291,59 @@
             </tbody>
         </table>
 
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Related Guidance</th>
-                    <th>Detailed Reference</th>
-                    <th>Importance</th>
-                    <th>N (Not achieved)</th>
-                    <th>P (Partially achieved)</th>
-                    <th>L (Largely achieved)</th>
-                    <th>F (Fully achieved)</th>
-                    <th>Score</th>
-                    <th>Comment</th>
-                </tr>
-            </thead>
+        @if (relatedGuidanceQuestions != null)
+            {
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Related Guidance</th>
+                            <th>Detailed Reference</th>
+                            <th>Importance</th>
+                            <th>N (Not achieved)</th>
+                            <th>P (Partially achieved)</th>
+                            <th>L (Largely achieved)</th>
+                            <th>F (Fully achieved)</th>
+                            <th>Score</th>
+                            <th>Comment</th>
+                        </tr>
+                    </thead>
 
-            <tbody>
-                @for (int i = 0; i < relatedGuidanceQuestions.Count; i++)
-                {
-                    SubComponentQuestionDto relatedGuidanceQuestion = relatedGuidanceQuestions[i];
-                    <tr>
-                        <td>@relatedGuidanceQuestion.relatedGuidance</td>
-                        <td>@relatedGuidanceQuestion.detailedReference</td>
-                        <td>
-                            <select name="answer" @bind="relatedGuidanceQuestion.questionAnswer" @oninput="() => {relatedGuidanceQuestion.questionScore = objectiveAuditProvider.calculateAnswerScore(relatedGuidanceQuestion.questionAnswer); updateFullAudit();}">
-                                @for (int j = 0; j <= 10; j++)
-                                {
-                                    <option value="@i">@i</option>
-                                }
-                            </select>
-                        </td>
-                        <td><div class="bg-danger rounded-3 text-center" style="width: 100px; height: 50px;">@(objectiveAuditProvider.GetAnswerAchievement(relatedGuidanceQuestion.questionAnswer) == 0 ? "X" : " ")</div></td>
-                        <td><div class="bg-warning rounded-3 text-center" style="width: 100px; height: 50px;">@(objectiveAuditProvider.GetAnswerAchievement(relatedGuidanceQuestion.questionAnswer) == 1 ? "X" : " ")</div></td>
-                        <td><div class="bg-success rounded-3 text-center" style="width: 100px; height: 50px;">@(objectiveAuditProvider.GetAnswerAchievement(relatedGuidanceQuestion.questionAnswer) == 2 ? "X" : " ")</div></td>
-                        <td><div class="bg-primary rounded-3 text-center" style="width: 100px; height: 50px;">@(objectiveAuditProvider.GetAnswerAchievement(relatedGuidanceQuestion.questionAnswer) == 3 ? "X" : " ")</div></td>
-                        <td>@objectiveAuditProvider.calculateAnswerScore(relatedGuidanceQuestion.questionAnswer)</td>
-                        <td>
-                            <input type="text" />
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+                    <tbody>
+                        @for (int i = 0; i < relatedGuidanceQuestions.Count; i++)
+                        {
+                            SubComponentQuestionDto relatedGuidanceQuestion = relatedGuidanceQuestions[i];
+                            <tr>
+                                <td>@relatedGuidanceQuestion.relatedGuidance</td>
+                                <td>@relatedGuidanceQuestion.detailedReference</td>
+                                <td>
+                                    <select name="answer" value="@relatedGuidanceQuestion.questionAnswer" @onchange="@((e) => updateComponent(e, subCompQuestion: relatedGuidanceQuestion))">
+                                        @for (int j = 0; j <= 10; j++)
+                                        {
+                                            <option value="@j">@j</option>
+                                        }
+                                    </select>
+                                </td>
+                                <td><div class="bg-danger rounded-3 text-center" style="width: 100px; height: 50px;">@(
+                            objectiveAuditProvider.GetAnswerAchievement(relatedGuidanceQuestion.questionAnswer) == 0 ? "X" : " "
+                            )</div></td>
+                                <td><div class="bg-warning rounded-3 text-center" style="width: 100px; height: 50px;">@(
+                            objectiveAuditProvider.GetAnswerAchievement(relatedGuidanceQuestion.questionAnswer) == 1 ? "X" : " "
+                            )</div></td>
+                                <td><div class="bg-success rounded-3 text-center" style="width: 100px; height: 50px;">@(
+                            objectiveAuditProvider.GetAnswerAchievement(relatedGuidanceQuestion.questionAnswer) == 2 ? "X" : " "
+                            )</div></td>
+                                <td><div class="bg-primary rounded-3 text-center" style="width: 100px; height: 50px;">@(
+                            objectiveAuditProvider.GetAnswerAchievement(relatedGuidanceQuestion.questionAnswer) == 3 ? "X" : " "
+                            )</div></td>
+                                <td>@objectiveAuditProvider.calculateAnswerScore(relatedGuidanceQuestion.questionAnswer)</td>
+                                <td>
+                                    <input type="text" />
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+            </table>
+        }
     }
     else if (componentID == 3)
     {
@@ -289,7 +352,7 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateComponentScore(compQuestions)</div>
+            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateComponentScore(component, false).Item3</div>
         </div>
 
         <table class="table table-bordered mt-4">
@@ -315,7 +378,7 @@
                         <td>@compQuestion.questionType</td>
                         <td>@compQuestion.questionDescription</td>
                         <td>
-                            <select name="answer" @bind="compQuestion.questionAnswer" @oninput="() => {compQuestion.questionScore = objectiveAuditProvider.calculateAnswerScore(compQuestion.questionAnswer); updateFullAudit();}">
+                            <select name="answer" value="@compQuestion.questionAnswer" @onchange="@((e) => updateComponent(e, compQuestion: compQuestion))">
                                 @for (int j = 0; j <= 10; j++)
                                 {
                                     <option value="@j">@j</option>
@@ -342,92 +405,115 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateSubComponentScore(subCompQuestions)</div>
+            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateSubComponentScore(subCompQuestions).Item3</div>
         </div>
 
-        <table class="table table-bordered mt-4">
-            <thead>
-                <tr>
-                    <th>Description</th>
-                    <th>From</th>
-                    <th>Importance</th>
-                    <th>N (Not achieved)</th>
-                    <th>P (Partially achieved)</th>
-                    <th>L (Largely achieved)</th>
-                    <th>F (Fully achieved)</th>
-                    <th>Score</th>
-                    <th>Comment</th>
-                </tr>
-            </thead>
+        @if (inputQuestions != null)
+            {
+                <table class="table table-bordered mt-4">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>From</th>
+                            <th>Importance</th>
+                            <th>N (Not achieved)</th>
+                            <th>P (Partially achieved)</th>
+                            <th>L (Largely achieved)</th>
+                            <th>F (Fully achieved)</th>
+                            <th>Score</th>
+                            <th>Comment</th>
+                        </tr>
+                    </thead>
 
-            <tbody>
-                @for (int i = 0; i < subCompQuestions.Count; i++)
-                {
-                    SubComponentQuestionDto subCompQuestion = subCompQuestions[i];
-                    <tr>
-                        <td>@subCompQuestion.questionDescription</td>
-                        <td>
-                            <select name="answer" @bind="subCompQuestion.questionAnswer" @oninput="() => {subCompQuestion.questionScore = objectiveAuditProvider.calculateAnswerScore(subCompQuestion.questionAnswer); updateFullAudit();}">
-                                @for (int j = 0; j <= 10; j++)
-                                {
-                                    <option value="@j">@j</option>
-                                }
-                            </select>
-                        </td>
-                        <td><div class="bg-danger rounded-3 text-center" style="width: 100px; height: 50px;">@(objectiveAuditProvider.GetAnswerAchievement(subCompQuestion.questionAnswer) == 0 ? "X" : " ")</div></td>
-                        <td><div class="bg-warning rounded-3 text-center" style="width: 100px; height: 50px;">@(objectiveAuditProvider.GetAnswerAchievement(subCompQuestion.questionAnswer) == 1 ? "X" : " ")</div></td>
-                        <td><div class="bg-success rounded-3 text-center" style="width: 100px; height: 50px;">@(objectiveAuditProvider.GetAnswerAchievement(subCompQuestion.questionAnswer) == 2 ? "X" : " ")</div></td>
-                        <td><div class="bg-primary rounded-3 text-center" style="width: 100px; height: 50px;">@(objectiveAuditProvider.GetAnswerAchievement(subCompQuestion.questionAnswer) == 3 ? "X" : " ")</div></td>
-                        <td>@objectiveAuditProvider.calculateAnswerScore(subCompQuestion.questionAnswer)</td>
-                        <td>
-                            <input type="text" />
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+                    <tbody>
+                        @for (int i = 0; i < inputQuestions.Count; i++)
+                        {
+                            SubComponentQuestionDto inputQuestion = inputQuestions[i];
+                            <tr>
+                                <td>@inputQuestion.questionDescription</td>
+                                <td>@inputQuestion.inputFrom</td>
+                                <td>
+                                    <select name="answer" value="@inputQuestion.questionAnswer" @onchange="@((e) => updateComponent(e, subCompQuestion: inputQuestion))">
+                                        @for (int j = 0; j <= 10; j++)
+                                        {
+                                            <option value="@j">@j</option>
+                                        }
+                                    </select>
+                                </td>
+                                <td><div class="bg-danger rounded-3 text-center" style="width: 100px; height: 50px;">@(
+                            objectiveAuditProvider.GetAnswerAchievement(inputQuestion.questionAnswer) == 0 ? "X" : " "
+                            )</div></td>
+                                <td><div class="bg-warning rounded-3 text-center" style="width: 100px; height: 50px;">@(
+                                        objectiveAuditProvider.GetAnswerAchievement(inputQuestion.questionAnswer) == 1 ? "X" : " "
+                            )</div></td>
+                                <td><div class="bg-success rounded-3 text-center" style="width: 100px; height: 50px;">@(
+                            objectiveAuditProvider.GetAnswerAchievement(inputQuestion.questionAnswer) == 2 ? "X" : " "
+                            )</div></td>
+                                <td><div class="bg-primary rounded-3 text-center" style="width: 100px; height: 50px;">@(
+                            objectiveAuditProvider.GetAnswerAchievement(inputQuestion.questionAnswer) == 3 ? "X" : " "
+                            )</div></td>
+                            <td>@objectiveAuditProvider.calculateAnswerScore(inputQuestion.questionAnswer)</td>
+                                <td>
+                                    <input type="text" />
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+            </table>
+        }
 
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Description</th>
-                    <th>To</th>
-                    <th>Importance</th>
-                    <th>N (Not achieved)</th>
-                    <th>P (Partially achieved)</th>
-                    <th>L (Largely achieved)</th>
-                    <th>F (Fully achieved)</th>
-                    <th>Score</th>
-                    <th>Comment</th>
-                </tr>
-            </thead>
+        @if (outputQuestions != null)
+            {
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>To</th>
+                            <th>Importance</th>
+                            <th>N (Not achieved)</th>
+                            <th>P (Partially achieved)</th>
+                            <th>L (Largely achieved)</th>
+                            <th>F (Fully achieved)</th>
+                            <th>Score</th>
+                            <th>Comment</th>
+                        </tr>
+                    </thead>
 
-            <tbody>
-                @foreach (SubComponentQuestionDto subCompQuestion in subCompQuestions)
-                {
-                    <tr>
-                        <td>@subCompQuestion.questionDescription</td>
-                        <td>@subCompQuestion.outputTo</td>
-                        <td>
-                            <select name="answer" @bind="subCompQuestion.questionAnswer" @oninput="() => {subCompQuestion.questionScore = objectiveAuditProvider.calculateAnswerScore(subCompQuestion.questionAnswer); updateFullAudit();}">
-                                @for (int j = 0; j <= 10; j++)
-                                {
-                                    <option value="@j">@j</option>
-                                }
-                            </select>
-                        </td>
-                        <td><div class="bg-danger rounded-3 text-center" style="width: 100px; height: 50px;">@(objectiveAuditProvider.GetAnswerAchievement(subCompQuestion.questionAnswer) == 0 ? "X" : " ")</div></td>
-                        <td><div class="bg-warning rounded-3 text-center" style="width: 100px; height: 50px;">@(objectiveAuditProvider.GetAnswerAchievement(subCompQuestion.questionAnswer) == 1 ? "X" : " ")</div></td>
-                        <td><div class="bg-success rounded-3 text-center" style="width: 100px; height: 50px;">@(objectiveAuditProvider.GetAnswerAchievement(subCompQuestion.questionAnswer) == 2 ? "X" : " ")</div></td>
-                        <td><div class="bg-primary rounded-3 text-center" style="width: 100px; height: 50px;">@(objectiveAuditProvider.GetAnswerAchievement(subCompQuestion.questionAnswer) == 3 ? "X" : " ")</div></td>
-                        <td>@objectiveAuditProvider.calculateAnswerScore(subCompQuestion.questionAnswer)</td>
-                        <td>
-                            <input type="text" />
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+                    <tbody>
+                        @foreach (SubComponentQuestionDto outputQuestion in outputQuestions)
+                        {
+                            <tr>
+                            <td>@outputQuestion.questionDescription</td>
+                            <td>@outputQuestion.outputTo</td>
+                                <td>
+                                <select name="answer" value="@outputQuestion.questionAnswer" @onchange="@((e) => updateComponent(e, subCompQuestion: outputQuestion))">
+                                        @for (int j = 0; j <= 10; j++)
+                                        {
+                                            <option value="@j">@j</option>
+                                        }
+                                    </select>
+                                </td>
+                                <td><div class="bg-danger rounded-3 text-center" style="width: 100px; height: 50px;">@(
+                                        objectiveAuditProvider.GetAnswerAchievement(outputQuestion.questionAnswer) == 0 ? "X" : " "
+                            )</div></td>
+                                <td><div class="bg-warning rounded-3 text-center" style="width: 100px; height: 50px;">@(
+                            objectiveAuditProvider.GetAnswerAchievement(outputQuestion.questionAnswer) == 1 ? "X" : " "
+                            )</div></td>
+                                <td><div class="bg-success rounded-3 text-center" style="width: 100px; height: 50px;">@(
+                            objectiveAuditProvider.GetAnswerAchievement(outputQuestion.questionAnswer) == 2 ? "X" : " "
+                            )</div></td>
+                                <td><div class="bg-primary rounded-3 text-center" style="width: 100px; height: 50px;">@(
+                                        objectiveAuditProvider.GetAnswerAchievement(outputQuestion.questionAnswer) == 3 ? "X" : " "
+                            )</div></td>
+                            <td>@objectiveAuditProvider.calculateAnswerScore(outputQuestion.questionAnswer)</td>
+                                <td>
+                                    <input type="text" />
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+            </table>
+        }
     }
     else if (componentID == 5)
     {
@@ -436,7 +522,7 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateComponentScore(compQuestions)</div>
+            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateComponentScore(component, false).Item3</div>
         </div>
 
         <table class="table table-bordered mt-4">
@@ -462,7 +548,7 @@
                         <td>@compQuestion.questionSkill</td>
                         <td>@compQuestion.relatedGuidance</td>
                         <td>
-                            <select name="answer" @bind="compQuestion.questionAnswer" @oninput="() => {compQuestion.questionScore = objectiveAuditProvider.calculateAnswerScore(compQuestion.questionAnswer); updateFullAudit();}">
+                            <select name="answer" value="@compQuestion.questionAnswer" @onchange="@((e) => updateComponent(e, compQuestion: compQuestion))">
                                 @for (int j = 0; j <= 10; j++)
                                 {
                                     <option value="@j">@j</option>
@@ -489,7 +575,7 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateComponentScore(compQuestions)</div>
+            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateComponentScore(component, false).Item3</div>
         </div>
 
         <table class="table table-bordered mt-4">
@@ -516,7 +602,7 @@
                         <td>@compQuestion.relevantPolicy</td>
                         <td>@compQuestion.policyDescription</td>
                         <td>
-                            <select name="answer" @bind="compQuestion.questionAnswer" @oninput="() => {compQuestion.questionScore = objectiveAuditProvider.calculateAnswerScore(compQuestion.questionAnswer); updateFullAudit();}">
+                            <select name="answer" value="@compQuestion.questionAnswer" @onchange="@((e) => updateComponent(e, compQuestion: compQuestion))">
                                 @for (int j = 0; j <= 10; j++)
                                 {
                                     <option value="@j">@j</option>
@@ -543,7 +629,7 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateComponentScore(compQuestions)</div>
+            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateComponentScore(component, false).Item3</div>
         </div>
 
         <table class="table table-bordered mt-4">
@@ -569,7 +655,7 @@
                         <td>@compQuestion.keyCultureElement</td>
                         <td>@compQuestion.detailedReference</td>
                         <td>
-                            <select name="answer" @bind="compQuestion.questionAnswer" @oninput="() => {compQuestion.questionScore = objectiveAuditProvider.calculateAnswerScore(compQuestion.questionAnswer); updateFullAudit();}">
+                            <select name="answer" value="@compQuestion.questionAnswer" @onchange="@((e) => updateComponent(e, compQuestion: compQuestion))">
                                 @for (int j = 0; j <= 10; j++)
                                 {
                                     <option value="@j">@j</option>
@@ -596,7 +682,7 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateComponentScore(compQuestions)</div>
+            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateComponentScore(component, false).Item3</div>
         </div>
 
         <table class="table table-bordered mt-4">
@@ -620,7 +706,7 @@
                     <tr>
                         <td>@compQuestion.questionDescription</td>
                         <td>
-                            <select name="answer" value="@compQuestion.questionAnswer" @onchange="@((e) => updateCompQuestion(compQuestion, e))">
+                            <select name="answer" value="@compQuestion.questionAnswer" @onchange="@((e) => updateComponent(e, compQuestion: compQuestion))">
                                 @for (int j = 0; j <= 10; j++)
                                 {
                                     <option value="@j">@j</option>
