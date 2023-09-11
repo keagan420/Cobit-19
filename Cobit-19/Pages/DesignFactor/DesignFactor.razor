@@ -64,7 +64,7 @@
 
             await auditProvider.updateAnswerAsync(answerEditorDto);
 
-            // I feel this is sucha bad way to do this but i cant think of a better way
+            // I feel this is such a bad way to do this but i cant think of a better way
             _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Answer = answerEditorDto.Answer;
             _designFactorDto.Questions.First(x => x.ID == questionId).Answers.First().Odds = answerEditorDto.Odds;
 
@@ -125,75 +125,85 @@
 }
 
 <AuthorizeView>
-    <div class="container-sm">
+    <div class="container">
         <div class="row">
-            @if (_designFactorDto is null)
-            {
-                <p><em>Loading...</em></p>
-            }
-            else
-            {
-                <div class="border border-dark bg-light">
-                    <div>
-                        <h3> Design Factor : @_designFactorDto.Description</h3>
-                    </div>
-                    @if (_designFactorDto.Questions.Count == 0)
-                    {
-                        <tr>
-                            <td colspan="4">No questions found.</td>
-                        </tr>
-                    }
-                    else
-                    {
-                        <table class="table border-3 table-bordered" >
-                            <thead>
-                                <tr style="background-color: purple; color: white;">
-                                    <th>Description</th>
-                                    @if (getFirstAnswer().Odds == 0)
-                                    {
-                                        @if (getFirstAnswer().AnswerRange <= 8)
+            <div class="col-9">
+                @if (_designFactorDto is null)
+                {
+                    <p><em>Loading...</em></p>
+                }
+                else
+                {
+                    <div class="border border-dark bg-light p-3">
+                        <div>
+                            <h3> Design Factor : @_designFactorDto.Description</h3>
+                        </div>
+                        @if (_designFactorDto.Questions.Count == 0)
+                        {
+                            <tr>
+                                <td colspan="4">No questions found.</td>
+                            </tr>
+                        }
+                        else
+                        {
+                            <table class="table border-3 table-bordered" >
+                                <thead>
+                                    <tr style="background-color: purple; color: white;">
+                                        <th>Description</th>
+                                        @if (getFirstAnswer().Odds == 0)
                                         {
-                                            @for (int i = 1; i <= getFirstAnswer().AnswerRange; i++)
+                                            @if (getFirstAnswer().AnswerRange <= 8)
                                             {
-                                                <th>@i</th>
+                                                @for (int i = 1; i <= getFirstAnswer().AnswerRange; i++)
+                                                {
+                                                    <th>@i</th>
+                                                }
                                             }
-                                        }
-                                        else if (getFirstAnswer().AnswerRange == 100)
-                                        {
-                                            <th>Value(%)</th>
+                                            else if (getFirstAnswer().AnswerRange == 100)
+                                            {
+                                                <th>Value(%)</th>
+                                            }
+                                            else
+                                            {
+                                                <th>Value(1 - @getFirstAnswer().AnswerRange)</th>
+                                            }
                                         }
                                         else
                                         {
                                             <th>Value(1 - @getFirstAnswer().AnswerRange)</th>
+                                            <th>Likelihood(1 - @getFirstAnswer().AnswerRange)</th>
                                         }
-                                    }
-                                    else
+                                        <th>Baseline</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var q in _designFactorDto.Questions)
                                     {
-                                        <th>Value(1 - @getFirstAnswer().AnswerRange)</th>
-                                        <th>Likelihood(1 - @getFirstAnswer().AnswerRange)</th>
-                                    }
-                                    <th>Baseline</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var q in _designFactorDto.Questions)
-                                {
-                                    <tr>
-                                        <td>
-                                            @q.Question
-                                        </td>
-                                        @if (getFirstAnswer().Odds == 0)
-                                        {
-
-                                            @if (q.Answers.First().AnswerRange <= 8)
+                                        <tr>
+                                            <td>
+                                                @q.Question
+                                            </td>
+                                            @if (getFirstAnswer().Odds == 0)
                                             {
-                                                @for (int i = 1; i <= q.Answers.First().AnswerRange; i++)
+
+                                                @if (q.Answers.First().AnswerRange <= 8)
+                                                {
+                                                    @for (int i = 1; i <= q.Answers.First().AnswerRange; i++)
+                                                    {
+                                                        <td>
+                                                            <input type="radio" name="@q.ID" id="@q.ID" value="@i"
+                                                            class="form-check-input"
+                                                            @onchange="((e) => Update(q.ID, UpdateType.answer, e))"
+                                                            checked="@IsAnswerSelected(q.Answers.First().Answer, i)" />
+                                                        </td>
+                                                    }
+                                                }
+                                                else
                                                 {
                                                     <td>
-                                                        <input type="radio" name="@q.ID" id="@q.ID" value="@i"
-                                                        class="form-check-input"
-                                                        @onchange="((e) => Update(q.ID, UpdateType.answer, e))"
-                                                        checked="@IsAnswerSelected(q.Answers.First().Answer, i)" />
+                                                        <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
+                                                        class="form-control"
+                                                        @onchange="((e) => Update(q.ID, UpdateType.answer, e))" />
                                                     </td>
                                                 }
                                             }
@@ -203,74 +213,79 @@
                                                     <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
                                                     class="form-control"
                                                     @onchange="((e) => Update(q.ID, UpdateType.answer, e))" />
+                                                </td> 
+                                                <td>
+                                                    <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Odds"
+                                                    class="form-control"
+                                                    @onchange="((e) => Update(q.ID, UpdateType.odds, e))" />
                                                 </td>
                                             }
-                                        }
-                                        else
-                                        {
                                             <td>
-                                                <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Answer"
-                                                class="form-control"
-                                                @onchange="((e) => Update(q.ID, UpdateType.answer, e))" />
-                                            </td> 
-                                            <td>
-                                                <input type="number" name="@q.ID" id="@q.ID" min="0" max="@q.Answers.First().AnswerRange" value="@q.Answers.First().Odds"
-                                                class="form-control"
-                                                @onchange="((e) => Update(q.ID, UpdateType.odds, e))" />
+                                                <b>
+                                                    @q.BaseAnswer
+                                                </b>
                                             </td>
-                                        }
-                                        <td>
-                                            <b>
-                                                @q.BaseAnswer
-                                            </b>
-                                        </td>
-                                    </tr>
-                                }
-                            </tbody>
-                        </table>
-                    }
-                </div>
-            }
-
-            @if (_designFactorDto is not null)
-            {
-                <div class="container-fluid border-dark border mt-4 mb-5 bg-light p-3">
-                    <div class="col">
-                        <div class="panel panel-primary">
-
-                            <div class="panel-heading p-2" style="color: white; background-color : purple">
-                                Info Panel - @_designFactorDto.Description
-                            </div>
-
-                            <div class="panel-body">
-                                <p>
-                                    The output section of this tab contains the calculated relative importance of each of the 40 COBIT
-                                    2019 governance and management objectives. The results are represented as a bar chart and as a spider diagram.
-                                </p>
-                            </div>
-                        </div>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        }
                     </div>
+                }
 
-                    <DesignFactorChart Values="@_mappedObjectives"></DesignFactorChart>
-
-                    <div class="row m-3">
+                @if (_designFactorDto is not null)
+                {
+                    <div class="container-fluid border-dark border mt-3 p-3 bg-light">
                         <div class="col">
-                            @if (_isPreviousButtonDFId != -1)
-                            {
-                        <button type="button" onclick="@(() => NavButtonPress(_isPreviousButtonDFId))" class="btn btn-primary btn-lg">Back</button>
-                            }
+                            <div class="panel panel-primary">
+
+                                <div class="panel-heading p-2" style="color: white; background-color : purple">
+                                    Data view - @_designFactorDto.Description
+                                </div>
+
+                                <div class="panel-body">
+                                    <p>
+                                        The output section of this tab contains the calculated relative importance of each of the 40 COBIT
+                                        2019 governance and management objectives. The results are represented as a bar chart and as a spider diagram.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col">
-                            <div class="float-end">
-                                @if (_isNextButtonDFId != -1)
+
+                        <DesignFactorChart Values="@_mappedObjectives"></DesignFactorChart>
+
+                        <div class="row m-3">
+                            <div class="col">
+                                @if (_isPreviousButtonDFId != -1)
                                 {
-                                    <button type="button" onclick="@(() => NavButtonPress(_isNextButtonDFId))" class="btn btn-primary btn-lg">Next</button>
+                            <button type="button" onclick="@(() => NavButtonPress(_isPreviousButtonDFId))" class="btn btn-primary btn-lg">Back</button>
                                 }
+                            </div>
+                            <div class="col">
+                                <div class="float-end">
+                                    @if (_isNextButtonDFId != -1)
+                                    {
+                                        <button type="button" onclick="@(() => NavButtonPress(_isNextButtonDFId))" class="btn btn-primary btn-lg">Next</button>
+                                    }
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            }
+                }
+            </div>
+            <div class="col">
+                @if (_designFactorDto is not null)
+                {
+                ;
+                    <InfoPannel Header="Info Panel">
+                        <Body>
+                            <div>
+                                <p>@_designFactorDto.Information</p>
+                            </div>
+                        </Body>
+                    </InfoPannel>
+                }
+            </div>
         </div>
     </div>
 </AuthorizeView>
