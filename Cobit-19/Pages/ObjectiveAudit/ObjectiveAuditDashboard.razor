@@ -26,18 +26,21 @@
 }
 
 <div class="container">
+    <div class="border-bottom text-center mb-2">
+        <h6 class="text-secondary">Maturity Assesments for @auditObject.objectiveName</h6>
+    </div>
     <div class="mb-5 row">
-        <ComponentSelectBar objectiveAuditId="@objectiveAuditId" />
+        <ComponentSelectBar objectiveAuditId="@objectiveAuditId" selectedPage="Dashboard"/>
     </div>
 
     <div class="row">
-        <div class="col border pb-5 col-md-5 mx-4 rounded text-center bg-black rounded-3">
-            <h3>Description</h3>
-            <p class="text-secondary">@auditObject.objectiveDescription</p>
+        <div class="col border col-md-5 mx-4 text-center bg-dark rounded-3">
+            <h3 class="text-white">Description</h3>
+            <p class="text-white">@auditObject.objectiveDescription</p>
         </div>
-        <div class="col border pb-5 col-md-5 mx-4 rounded text-center bg-black rounded-3">
-            <h3>Purpose</h3>
-            <p class="text-secondary">@auditObject.objectivePurpose</p>
+        <div class="col border col-md-5 mx-4 text-center bg-dark rounded-3">
+            <h3 class="text-white">Purpose</h3>
+            <p class="text-white">@auditObject.objectivePurpose</p>
         </div>
     </div>
 

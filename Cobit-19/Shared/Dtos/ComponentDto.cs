@@ -4,7 +4,7 @@
     {
         public string componentName { get; set; }
         public string componentDescription { get; set; }
-        public double componentPercFinal { get; set; }
+        public int componentPercFinal { get; set; }
         public List<SubComponentDto>? subComponents { get; set; }
         public List<ComponentQuestionDto>? componentQuestions { get; set; }
     }

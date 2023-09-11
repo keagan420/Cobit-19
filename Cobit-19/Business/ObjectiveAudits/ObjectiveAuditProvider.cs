@@ -343,7 +343,7 @@ namespace Cobit_19.Business.ObjectiveAudits
             }
         }
 
-        public (int, double, double) calculateComponentScore(ComponentDto component, bool hasSubComps)
+        public (int, double, int) calculateComponentScore(ComponentDto component, bool hasSubComps)
         {
             double finalPercentage;
             int answerValueSum = 0;
@@ -365,7 +365,7 @@ namespace Cobit_19.Business.ObjectiveAudits
                 else
                 {
                     finalPercentage = (weightedValueSum / answerValueSum) * 100;
-                    return (answerValueSum, weightedValueSum, Math.Round(finalPercentage, 2));
+                    return (answerValueSum, weightedValueSum, Convert.ToInt32(finalPercentage));
                 }
             }
             else
@@ -391,7 +391,7 @@ namespace Cobit_19.Business.ObjectiveAudits
                 else
                 {
                     finalPercentage = (weightedValueSum / answerValueSum) * 100;
-                    return (answerValueSum, weightedValueSum, Math.Round(finalPercentage, 2));
+                    return (answerValueSum, weightedValueSum, Convert.ToInt32(finalPercentage));
                 }
             }
         }
@@ -420,7 +420,7 @@ namespace Cobit_19.Business.ObjectiveAudits
             else
             {
                 finalPercentage = (weightedValueSum / answerValueSum) * 100;
-                return (answerValueSum, weightedValueSum, Math.Round(finalPercentage, 2));
+                return (answerValueSum, weightedValueSum, Convert.ToInt32(finalPercentage));
             }
         }
 
@@ -468,7 +468,7 @@ namespace Cobit_19.Business.ObjectiveAudits
             return MLevelPercs;
         }
 
-        public double calculateFinalProcessComponentScore(ComponentDto processComp, ComponentDto infoFlowComp)
+        public int calculateFinalProcessComponentScore(ComponentDto processComp, ComponentDto infoFlowComp)
         {
             List<SubComponentDto> subComps = processComp.subComponents;
             int valueCount = 0;
@@ -488,7 +488,7 @@ namespace Cobit_19.Business.ObjectiveAudits
                 }
             }
 
-            return Math.Round(maturityLevelSum / valueCount, 2);
+            return Convert.ToInt32(maturityLevelSum / valueCount);
         }
 
         public double calculateFinalMaturityLevelPercs(FullObjectiveAuditDto fullAudit, string MLevel)
