@@ -69,6 +69,11 @@
         );
     }
 
+    private void viewAuditButtonPress()
+    {
+        navigationManager.NavigateTo("/objectiveAuditSelect?AuditId=" + AuditId);
+    }
+
     private void ReportButtonPress()
     {
         navigationManager.NavigateTo("/DesignFactorReport?AuditId=" + AuditId);

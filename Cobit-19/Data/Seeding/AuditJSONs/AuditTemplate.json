@@ -1,3 +1,4 @@
+
 {
   "objectiveName": "name",
   "objectiveDescription": "description",
@@ -11,12 +12,52 @@
   "maturityLevel5PercFinal": 0,
   "components": [
     {
+      "componentCode": "EG",
+      "componentDescription": "Enterprise Goals",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "EG04",
+          "subComponentName": "Quality of financial information",
+          "subComponentQuestions": [
+            {
+              "questionType": "Enterprise goal",
+              "questionDescription": "Question",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "componentCode": "AG",
+      "componentDescription": "Alignment Goals",
+      "componentPercFinal": 0,
+      "subComponents": [
+        {
+          "subComponentCode": "AG10",
+          "subComponentName": "Quality of I&T management information",
+          "subComponentQuestions": [
+            {
+              "questionType": "Alignment goal",
+              "questionDescription": "Question",
+              "questionAnswer": 0,
+              "questionScore": 0,
+              "questionComment": "comment"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "componentCode": "A",
       "componentDescription": "Processes",
       "componentPercFinal": 0,
       "subComponents": [
         {
-          "subComponentCode": "EDM01.02",
+          "subComponentCode": "subCompCode",
           "subComponentName": "Sub process name",
           "subComponentDescription": "Description",
           "subComponentQuestions": [
