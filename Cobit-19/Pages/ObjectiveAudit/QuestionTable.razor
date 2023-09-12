@@ -352,6 +352,10 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
+            else
+            {
+                <div class="col-sm text-center">Component @component.componentName - @component.componentDescription</div>
+            }
             <div class="col-sm text-center">Total - <span class="badge bg-primary">@objectiveAuditProvider.calculateComponentScore(component, false).Item3 % </span></div>
         </div>
 
@@ -410,8 +414,12 @@
 
         @if (inputQuestions != null)
             {
+                <h3></h3>
                 <table class="table table-bordered mt-4">
                     <thead>
+                        <tr>
+                        <th colspan="9">@subComponent.subComponentCode generated the following outputs, and outputs were forwarded to all relevant down-stream processes.</th>
+                        </tr>
                         <tr>
                             <th>Description</th>
                             <th>From</th>
@@ -466,6 +474,9 @@
             {
                 <table class="table table-bordered">
                     <thead>
+                        <tr>
+                        <th colspan="9">@subComponent.subComponentCode received the following inputs from upstream processes</th>
+                        </tr>
                         <tr>
                             <th>Description</th>
                             <th>To</th>
@@ -522,6 +533,10 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
+            else
+            {
+                <div class="col-sm text-center">Component @component.componentName - @component.componentDescription</div>
+            }
             <div class="col-sm text-center">Total - <span class="badge bg-primary">@objectiveAuditProvider.calculateComponentScore(component, false).Item3 % </span></div>
         </div>
 
@@ -575,6 +590,10 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
+            else
+            {
+                <div class="col-sm text-center">Component @component.componentName - @component.componentDescription</div>
+            }
             <div class="col-sm text-center">Total - <span class="badge bg-primary">@objectiveAuditProvider.calculateComponentScore(component, false).Item3 % </span></div>
         </div>
 
@@ -601,6 +620,7 @@
                     <tr>
                         <td>@compQuestion.relevantPolicy</td>
                         <td>@compQuestion.policyDescription</td>
+                        <td>@compQuestion.detailedReference</td>
                         <td>
                             <select name="answer" value="@compQuestion.questionAnswer" @onchange="@((e) => updateComponent(e, compQuestion: compQuestion))">
                                 @for (int j = 0; j <= 10; j++)
@@ -628,6 +648,10 @@
             @if (subComponentID != -1)
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
+            }
+            else
+            {
+                <div class="col-sm text-center">Component @component.componentName - @component.componentDescription</div>
             }
             <div class="col-sm text-center">Total - <span class="badge bg-primary">@objectiveAuditProvider.calculateComponentScore(component, false).Item3 % </span></div>
         </div>
@@ -681,6 +705,10 @@
             @if (subComponentID != -1)
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
+            }
+            else
+            {
+                <div class="col-sm text-center">Component @component.componentName - @component.componentDescription</div>
             }
             <div class="col-sm text-center">Total - <span class="badge bg-primary">@objectiveAuditProvider.calculateComponentScore(component, false).Item3 % </span></div>
         </div>
