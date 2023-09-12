@@ -16,6 +16,7 @@ namespace Cobit_19.Shared.Dtos
         public DateTime? DateCompleted { get; set; }
         public ObjectiveModel Objective { get; set; } = default!;
         public int ObjectiveScore { get; set; }
+        public string? UserAuditObject { get; set; }
         public IList<ObjectiveAuditMemberDto> ObjectiveAuditMembers { get; set; } = default!;
     }
 }

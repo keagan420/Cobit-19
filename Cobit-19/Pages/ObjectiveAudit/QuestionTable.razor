@@ -61,17 +61,17 @@
         if (componentID == 2)
         {
             ComponentDto infoFlowComp = auditJSON.components[4];
-            double processCompFinalPerc = objectiveAuditProvider.calculateFinalProcessComponentScore(component, infoFlowComp);
+            int processCompFinalPerc = objectiveAuditProvider.calculateFinalProcessComponentScore(component, infoFlowComp);
             component.componentPercFinal = processCompFinalPerc;
         }
         else if (subComponentID != -1)
         {
-            double finalPerc = objectiveAuditProvider.calculateComponentScore(component, true).Item3;
+            int finalPerc = objectiveAuditProvider.calculateComponentScore(component, true).Item3;
             component.componentPercFinal = finalPerc;
         }
         else
         {
-            double finalPerc = objectiveAuditProvider.calculateComponentScore(component, false).Item3;
+            int finalPerc = objectiveAuditProvider.calculateComponentScore(component, false).Item3;
             component.componentPercFinal = finalPerc;
         }
 
@@ -143,7 +143,7 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateSubComponentScore(subCompQuestions).Item3</div>
+            <div class="col-sm text-center">Total - <span class="badge bg-primary">@objectiveAuditProvider.calculateSubComponentScore(subCompQuestions).Item3 % </span></div>
         </div>
 
         <table class="table table-bordered mt-4">
@@ -194,7 +194,7 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateSubComponentScore(subCompQuestions).Item3</div>
+            <div class="col-sm text-center">Total - <span class="badge bg-primary">@objectiveAuditProvider.calculateSubComponentScore(subCompQuestions).Item3 % </span></div>
         </div>
 
         <table class="table table-bordered mt-4">
@@ -245,7 +245,7 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateSubComponentScore(MLevelQuestions).Item3</div>
+            <div class="col-sm text-center">Total - <span class="badge bg-primary">@objectiveAuditProvider.calculateSubComponentScore(subCompQuestions).Item3 % </span></div>
         </div>
 
         <table class="table table-bordered mt-4">
@@ -352,7 +352,11 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateComponentScore(component, false).Item3</div>
+            else
+            {
+                <div class="col-sm text-center">Component @component.componentName - @component.componentDescription</div>
+            }
+            <div class="col-sm text-center">Total - <span class="badge bg-primary">@objectiveAuditProvider.calculateComponentScore(component, false).Item3 % </span></div>
         </div>
 
         <table class="table table-bordered mt-4">
@@ -405,13 +409,17 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateSubComponentScore(subCompQuestions).Item3</div>
+            <div class="col-sm text-center">Total - <span class="badge bg-primary">@objectiveAuditProvider.calculateSubComponentScore(subCompQuestions).Item3 % </span></div>
         </div>
 
         @if (inputQuestions != null)
             {
+                <h3></h3>
                 <table class="table table-bordered mt-4">
                     <thead>
+                        <tr>
+                        <th colspan="9">@subComponent.subComponentCode generated the following outputs, and outputs were forwarded to all relevant down-stream processes.</th>
+                        </tr>
                         <tr>
                             <th>Description</th>
                             <th>From</th>
@@ -466,6 +474,9 @@
             {
                 <table class="table table-bordered">
                     <thead>
+                        <tr>
+                        <th colspan="9">@subComponent.subComponentCode received the following inputs from upstream processes</th>
+                        </tr>
                         <tr>
                             <th>Description</th>
                             <th>To</th>
@@ -522,7 +533,11 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateComponentScore(component, false).Item3</div>
+            else
+            {
+                <div class="col-sm text-center">Component @component.componentName - @component.componentDescription</div>
+            }
+            <div class="col-sm text-center">Total - <span class="badge bg-primary">@objectiveAuditProvider.calculateComponentScore(component, false).Item3 % </span></div>
         </div>
 
         <table class="table table-bordered mt-4">
@@ -575,7 +590,11 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateComponentScore(component, false).Item3</div>
+            else
+            {
+                <div class="col-sm text-center">Component @component.componentName - @component.componentDescription</div>
+            }
+            <div class="col-sm text-center">Total - <span class="badge bg-primary">@objectiveAuditProvider.calculateComponentScore(component, false).Item3 % </span></div>
         </div>
 
         <table class="table table-bordered mt-4">
@@ -601,6 +620,7 @@
                     <tr>
                         <td>@compQuestion.relevantPolicy</td>
                         <td>@compQuestion.policyDescription</td>
+                        <td>@compQuestion.detailedReference</td>
                         <td>
                             <select name="answer" value="@compQuestion.questionAnswer" @onchange="@((e) => updateComponent(e, compQuestion: compQuestion))">
                                 @for (int j = 0; j <= 10; j++)
@@ -629,7 +649,11 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateComponentScore(component, false).Item3</div>
+            else
+            {
+                <div class="col-sm text-center">Component @component.componentName - @component.componentDescription</div>
+            }
+            <div class="col-sm text-center">Total - <span class="badge bg-primary">@objectiveAuditProvider.calculateComponentScore(component, false).Item3 % </span></div>
         </div>
 
         <table class="table table-bordered mt-4">
@@ -682,7 +706,11 @@
             {
                 <div class="col-sm text-center">@subComponent.subComponentCode - @subComponent.subComponentName</div>
             }
-            <div class="col-sm text-center">Total: @objectiveAuditProvider.calculateComponentScore(component, false).Item3</div>
+            else
+            {
+                <div class="col-sm text-center">Component @component.componentName - @component.componentDescription</div>
+            }
+            <div class="col-sm text-center">Total - <span class="badge bg-primary">@objectiveAuditProvider.calculateComponentScore(component, false).Item3 % </span></div>
         </div>
 
         <table class="table table-bordered mt-4">
