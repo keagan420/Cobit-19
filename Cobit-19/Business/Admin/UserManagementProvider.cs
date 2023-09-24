@@ -57,5 +57,22 @@ namespace Cobit_19.Business.Admin
             var result = await _userManager.DeleteAsync(user);
             return result.Succeeded;
         }
+
+        public async Task<string> getUserRole(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+
+            var roles = await _userManager.GetRolesAsync(user);
+
+            if (roles.Count == 1)
+            {
+                string userRole = roles[0];
+                return userRole;
+            }
+            else
+            {
+                return null; //Can a user have more than one role? Note for later discussion.
+            }
+        }
     }
 }
