@@ -17,10 +17,26 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<AppDbContext>(options => {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), sqlServerOptions =>
+
+    var env = Environment.GetEnvironmentVariable("RUNTIME");
+
+    if (env != "Production")
     {
-        sqlServerOptions.CommandTimeout(1000); // Set the command timeout to 120 seconds (adjust as needed)
-    });
+        // Use development connection string
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DevelopmentConnection"), sqlServerOptions =>
+        {
+            sqlServerOptions.CommandTimeout(1000); // Set the command timeout to 120 seconds (adjust as needed)
+        });
+    }
+    else
+    {
+        // Use production connection string
+        options.UseSqlServer(builder.Configuration.GetConnectionString("ProductionConnection"), sqlServerOptions =>
+        {
+            sqlServerOptions.CommandTimeout(1000); // Set the command timeout to 120 seconds (adjust as needed)
+        });
+    }
+
     options.EnableSensitiveDataLogging();
 });
 
@@ -51,6 +67,14 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
+}
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    var context = services.GetRequiredService<AppDbContext>();
+    context.Database.Migrate();
 }
 
 app.UseHttpsRedirection();
