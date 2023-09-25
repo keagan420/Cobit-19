@@ -34,16 +34,17 @@
     {
         _objectiveAuditDto = objectiveAuditProvider.getByID(ObjectiveAuditID);
         _objectiveAuditMemberDtos = objectiveAuditProvider.getMembersByObjectiveAuditID(ObjectiveAuditID);
-        _userDtos = userManagementProvider.GetAllUsers();
         _membersDisplayList = new List<ObjectiveAuditMemberDto>();
         auditJSON = objectiveAuditProvider.getAuditJSON(ObjectiveAuditID);
         fullAudit = AuditJSONParsingService.parseAuditTemplate(auditJSON);
         objectiveType = fullAudit.typeOfObjective;
+        _userDtos = await userManagementProvider.GetAllAuditorsByAuditIDAsync(AuditId, objectiveType);
 
-        PopulateMembersListAsync();
+
+        PopulateMembersList();
     }
 
-    private async Task PopulateMembersListAsync()
+    private void PopulateMembersList()
     {
         foreach (var user in _userDtos)
         {
@@ -55,31 +56,8 @@
                 UserDto = user
             };
 
-            userRole = await userManagementProvider.getUserRole(user.ID);
-
-            if (objectiveType == "Governance")
-            {
-                if (userRole != "Management Auditor")
-                {
-                    correctRole = true;
-                }
-            }
-
-            if (objectiveType == "Management")
-            {
-                if (userRole != "Governance Auditor")
-                {
-                    correctRole = true;
-                }
-            }
-
-            Console.WriteLine(correctRole);
-
-
             if (_objectiveAuditMemberDtos.Any(a => a.ApplicationUserID == user.ID))
-            {
-                    member.Selected = true;
-            }
+                member.Selected = true;
 
             _membersDisplayList.Add(member);
         }
